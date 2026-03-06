@@ -1,0 +1,87 @@
+category_name: research
+display_name: AI/ML Research Papers
+
+sources:
+  - name: arXiv
+    type: arxiv
+    url: "http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.LG&start=0&max_results=30"
+  
+  - name: Semantic Scholar
+    type: semantic_scholar
+    url: "https://api.semanticscholar.org/graph/v1/paper/search?query=machine learning"
+  
+  - name: PubMed
+    type: pubmed
+    url: "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=artificial intelligence"
+  
+  - name: bioRxiv
+    type: biorxiv
+    url: "https://api.biorxiv.org/details/biorxiv/2024-01-01/2024-12-31/0/100"
+  
+  - name: OpenAlex
+    type: openalex
+    url: "https://api.openalex.org/works?search=machine learning"
+  
+  - name: CrossRef
+    type: crossref
+    url: "https://api.crossref.org/works?query=machine learning"
+
+entities:
+  - name: Research Areas
+    display_name: Research Areas
+    keywords:
+      - machine learning
+      - deep learning
+      - neural networks
+      - natural language processing
+      - computer vision
+      - reinforcement learning
+      - transfer learning
+      - federated learning
+  
+  - name: Key Researchers
+    display_name: Key Researchers
+    keywords:
+      - Hinton
+      - LeCun
+      - Bengio
+      - Goodfellow
+      - Ng
+      - Karpathy
+      - Schmidhuber
+  
+  - name: Institutions
+    display_name: Top Institutions
+    keywords:
+      - Stanford
+      - MIT
+      - Berkeley
+      - Carnegie Mellon
+      - Google Brain
+      - OpenAI
+      - DeepMind
+      - Facebook AI
+  
+  - name: Venues
+    display_name: Top Venues
+    keywords:
+      - NeurIPS
+      - ICML
+      - ICLR
+      - ACL
+      - CVPR
+      - ICCV
+      - ECCV
+      - AAAI
+  
+  - name: Techniques
+    display_name: Key Techniques
+    keywords:
+      - transformer
+      - BERT
+      - GPT
+      - diffusion
+      - attention mechanism
+      - convolutional neural network
+      - recurrent neural network
+      - graph neural network

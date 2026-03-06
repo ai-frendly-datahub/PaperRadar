@@ -1,0 +1,104 @@
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+
+from paperradar.analyzer import apply_entity_rules
+from paperradar.collector import collect_sources
+from paperradar.config_loader import load_category_config, load_settings
+from paperradar.raw_logger import RawLogger
+from paperradar.reporter import generate_report
+from paperradar.search_index import SearchIndex
+from paperradar.storage import RadarStorage
+
+
+def run(
+    *,
+    category: str,
+    config_path: Path | None = None,
+    categories_dir: Path | None = None,
+    per_source_limit: int = 30,
+    recent_days: int = 7,
+    timeout: int = 15,
+    keep_days: int = 90,
+) -> Path:
+    """Execute the paper collection pipeline."""
+    settings = load_settings(config_path)
+    category_cfg = load_category_config(category, categories_dir=categories_dir)
+
+    print(f"[PaperRadar] Collecting '{category_cfg.display_name}' from {len(category_cfg.sources)} sources...")
+    collected, errors = collect_sources(
+        category_cfg.sources,
+        category=category_cfg.category_name,
+        limit_per_source=per_source_limit,
+        timeout=timeout,
+    )
+
+    raw_logger = RawLogger(settings.raw_data_dir)
+    for source in category_cfg.sources:
+        source_papers = [p for p in collected if p.source == source.name]
+        if source_papers:
+            _ = raw_logger.log(source_papers, source_name=source.name)
+
+    analyzed = apply_entity_rules(collected, category_cfg.entities)
+
+    storage = RadarStorage(settings.database_path)
+    storage.upsert_papers(analyzed)
+    _ = storage.delete_older_than(keep_days)
+
+    with SearchIndex(settings.search_db_path) as search_idx:
+        for paper in analyzed:
+            search_idx.upsert(
+                paper.doi or paper.arxiv_id or paper.link,
+                paper.title,
+                paper.abstract,
+                " ".join(paper.authors),
+            )
+
+    recent_papers = storage.recent_papers(category_cfg.category_name, days=recent_days)
+    storage.close()
+
+    stats = {
+        "sources": len(category_cfg.sources),
+        "collected": len(collected),
+        "matched": sum(1 for p in collected if p.matched_entities),
+        "window_days": recent_days,
+    }
+
+    output_path = settings.report_dir / f"{category_cfg.category_name}_report.html"
+    _ = generate_report(
+        category=category_cfg,
+        articles=analyzed[:50],
+        output_path=output_path,
+        stats=stats,
+        errors=errors,
+    )
+    print(f"[PaperRadar] Report generated at {output_path}")
+    if errors:
+        print(f"[PaperRadar] {len(errors)} source(s) had issues. See report for details.")
+    return output_path
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="PaperRadar: Academic paper collection")
+    _ = parser.add_argument("--category", required=True, help="Category name (e.g., 'research')")
+    _ = parser.add_argument("--config", type=Path, default=None, help="Path to config.yaml")
+    _ = parser.add_argument("--categories-dir", type=Path, default=None, help="Custom categories directory")
+    _ = parser.add_argument("--per-source-limit", type=int, default=30, help="Max papers per source")
+    _ = parser.add_argument("--recent-days", type=int, default=7, help="Report window (days)")
+    _ = parser.add_argument("--timeout", type=int, default=15, help="HTTP timeout (seconds)")
+    _ = parser.add_argument("--keep-days", type=int, default=90, help="Retention window (days)")
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    run(
+        category=args.category,
+        config_path=args.config,
+        categories_dir=args.categories_dir,
+        per_source_limit=args.per_source_limit,
+        recent_days=args.recent_days,
+        timeout=args.timeout,
+        keep_days=args.keep_days,
+    )

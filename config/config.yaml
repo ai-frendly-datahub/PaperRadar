@@ -1,0 +1,4 @@
+database_path: data/papers.duckdb
+report_dir: reports
+raw_data_dir: data/raw
+search_db_path: data/search_index.db

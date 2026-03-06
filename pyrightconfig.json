@@ -1,0 +1,10 @@
+{
+  "typeCheckingMode": "strict",
+  "pythonVersion": "3.11",
+  "include": ["paperradar", "main.py"],
+  "exclude": ["**/node_modules", "**/__pycache__", "tests"],
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+  "reportUnusedVariable": true,
+  "reportUnusedImport": true
+}
