@@ -31,7 +31,6 @@ htmlcov/
 .mypy_cache/
 .ruff_cache/
 
-data/
 reports/
 *.duckdb
 *.db
