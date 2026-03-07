@@ -5,7 +5,9 @@ from pathlib import Path
 
 from paperradar.analyzer import apply_entity_rules
 from paperradar.collector import collect_sources
+from paperradar.common.validators import validate_article
 from paperradar.config_loader import load_category_config, load_settings
+from paperradar.models import Paper
 from paperradar.raw_logger import RawLogger
 from paperradar.reporter import generate_report
 from paperradar.search_index import SearchIndex
@@ -26,7 +28,9 @@ def run(
     settings = load_settings(config_path)
     category_cfg = load_category_config(category, categories_dir=categories_dir)
 
-    print(f"[PaperRadar] Collecting '{category_cfg.display_name}' from {len(category_cfg.sources)} sources...")
+    print(
+        f"[PaperRadar] Collecting '{category_cfg.display_name}' from {len(category_cfg.sources)} sources..."
+    )
     collected, errors = collect_sources(
         category_cfg.sources,
         category=category_cfg.category_name,
@@ -42,12 +46,23 @@ def run(
 
     analyzed = apply_entity_rules(collected, category_cfg.entities)
 
+    validated_articles: list[Paper] = []
+    validation_errors: list[str] = []
+    for article in analyzed:
+        is_valid, validation_msgs = validate_article(article)
+        if is_valid:
+            validated_articles.append(article)
+        else:
+            validation_errors.append(f"{article.link}: {', '.join(validation_msgs)}")
+
+    errors.extend(validation_errors)
+
     storage = RadarStorage(settings.database_path)
-    storage.upsert_papers(analyzed)
+    storage.upsert_papers(validated_articles)
     _ = storage.delete_older_than(keep_days)
 
     with SearchIndex(settings.search_db_path) as search_idx:
-        for paper in analyzed:
+        for paper in validated_articles:
             search_idx.upsert(
                 paper.doi or paper.arxiv_id or paper.link,
                 paper.title,
@@ -55,20 +70,21 @@ def run(
                 " ".join(paper.authors),
             )
 
-    recent_papers = storage.recent_papers(category_cfg.category_name, days=recent_days)
+    _ = storage.recent_papers(category_cfg.category_name, days=recent_days)
     storage.close()
 
     stats = {
         "sources": len(category_cfg.sources),
         "collected": len(collected),
         "matched": sum(1 for p in collected if p.matched_entities),
+        "validated": len(validated_articles),
         "window_days": recent_days,
     }
 
     output_path = settings.report_dir / f"{category_cfg.category_name}_report.html"
     _ = generate_report(
         category=category_cfg,
-        articles=analyzed[:50],
+        articles=validated_articles[:50],
         output_path=output_path,
         stats=stats,
         errors=errors,
@@ -83,8 +99,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="PaperRadar: Academic paper collection")
     _ = parser.add_argument("--category", required=True, help="Category name (e.g., 'research')")
     _ = parser.add_argument("--config", type=Path, default=None, help="Path to config.yaml")
-    _ = parser.add_argument("--categories-dir", type=Path, default=None, help="Custom categories directory")
-    _ = parser.add_argument("--per-source-limit", type=int, default=30, help="Max papers per source")
+    _ = parser.add_argument(
+        "--categories-dir", type=Path, default=None, help="Custom categories directory"
+    )
+    _ = parser.add_argument(
+        "--per-source-limit", type=int, default=30, help="Max papers per source"
+    )
     _ = parser.add_argument("--recent-days", type=int, default=7, help="Report window (days)")
     _ = parser.add_argument("--timeout", type=int, default=15, help="HTTP timeout (seconds)")
     _ = parser.add_argument("--keep-days", type=int, default=90, help="Retention window (days)")

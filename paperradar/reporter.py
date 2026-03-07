@@ -5,6 +5,8 @@ from pathlib import Path
 
 from jinja2 import Template
 
+from .models import CategoryConfig, Paper
+
 
 REPORT_TEMPLATE = """
 <!DOCTYPE html>
@@ -191,15 +193,15 @@ REPORT_TEMPLATE = """
 
 
 def generate_report(
-    category,
-    articles: list,
+    category: CategoryConfig,
+    articles: list[Paper],
     output_path: Path,
-    stats: dict,
+    stats: dict[str, int],
     errors: list[str],
 ) -> Path:
     """Generate HTML report."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    
+
     template = Template(REPORT_TEMPLATE)
     html = template.render(
         category=category,
@@ -208,8 +210,8 @@ def generate_report(
         errors=errors,
         generated_at=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     )
-    
+
     with open(output_path, "w") as f:
         f.write(html)
-    
+
     return output_path
