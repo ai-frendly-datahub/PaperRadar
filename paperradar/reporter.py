@@ -119,6 +119,31 @@ REPORT_TEMPLATE = """
             padding-top: 20px;
             border-top: 1px solid #ddd;
         }
+        .charts-section {
+            margin: 30px 0;
+        }
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .chart-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .chart-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        .chart-wrap {
+            position: relative;
+            height: 280px;
+        }
     </style>
 </head>
 <body>
@@ -155,6 +180,39 @@ REPORT_TEMPLATE = """
         </div>
         {% endif %}
 
+        <div class="charts-section">
+            <h2 style="margin-bottom: 20px; color: #333;">📊 Visualizations</h2>
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <div class="chart-title">Entity Distribution</div>
+                    <div class="chart-wrap">
+                        <canvas id="chartEntities"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-title">Publication Timeline</div>
+                    <div class="chart-wrap">
+                        <canvas id="chartTimeline"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <div class="chart-title">Source Distribution</div>
+                    <div class="chart-wrap">
+                        <canvas id="chartSources"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-title">Venue Distribution</div>
+                    <div class="chart-wrap">
+                        <canvas id="chartVenues"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="margin-bottom: 20px; color: #333;">📄 Recent Papers</h2>
         <div class="papers">
             {% for paper in articles %}
             <div class="paper-card">
@@ -187,6 +245,212 @@ REPORT_TEMPLATE = """
             Generated on {{ generated_at }} | PaperRadar v0.1.0
         </footer>
     </div>
+
+    <script id="articles-data" type="application/json">{{ articles_json|tojson }}</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script>
+      (function () {
+        function readJson(id, fallback) {
+          const el = document.getElementById(id);
+          if (!el) return fallback;
+          const txt = (el.textContent || "").trim();
+          if (!txt) return fallback;
+          try { return JSON.parse(txt); } catch (e) { return fallback; }
+        }
+
+        const articles = readJson("articles-data", []);
+
+        function getArticleDate(a) {
+          const v = a && (a.published_at || a.published || a.date);
+          if (!v) return null;
+          const s = String(v);
+          const direct = new Date(s);
+          if (!isNaN(direct.getTime())) return direct;
+          const m = s.match(/^(\\d{4})-(\\d{2})-(\\d{2})/);
+          if (m) {
+            const d = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+            if (!isNaN(d.getTime())) return d;
+          }
+          return null;
+        }
+
+        function toDayKey(d) {
+          const y = d.getFullYear();
+          const m = String(d.getMonth() + 1).padStart(2, "0");
+          const day = String(d.getDate()).padStart(2, "0");
+          return y + "-" + m + "-" + day;
+        }
+
+        function buildTimeline(items) {
+          const map = new Map();
+          for (const a of items) {
+            const d = getArticleDate(a);
+            if (!d) continue;
+            const k = toDayKey(d);
+            map.set(k, (map.get(k) || 0) + 1);
+          }
+          const keys = Array.from(map.keys()).sort();
+          return { labels: keys, values: keys.map(k => map.get(k) || 0) };
+        }
+
+        function buildSources(items) {
+          const map = new Map();
+          for (const a of items) {
+            const s = (a && a.source) ? String(a.source) : "unknown";
+            const key = s.trim() || "unknown";
+            map.set(key, (map.get(key) || 0) + 1);
+          }
+          const pairs = Array.from(map.entries()).sort((a, b) => b[1] - a[1]);
+          const labels = pairs.map(p => p[0]);
+          const values = pairs.map(p => p[1]);
+          return { labels, values };
+        }
+
+        function buildVenues(items) {
+          const map = new Map();
+          for (const a of items) {
+            const v = (a && a.venue) ? String(a.venue).trim() : null;
+            if (!v) continue;
+            map.set(v, (map.get(v) || 0) + 1);
+          }
+          const pairs = Array.from(map.entries()).sort((a, b) => b[1] - a[1]);
+          const top = pairs.slice(0, 10);
+          const rest = pairs.slice(10).reduce((acc, p) => acc + p[1], 0);
+          const labels = top.map(p => p[0]);
+          const values = top.map(p => p[1]);
+          if (rest > 0) { labels.push("other"); values.push(rest); }
+          return { labels, values };
+        }
+
+        function buildEntities(items) {
+          const map = new Map();
+          for (const a of items) {
+            const ent = a && a.matched_entities;
+            if (!ent) continue;
+            for (const [name, keywords] of Object.entries(ent)) {
+              map.set(name, (map.get(name) || 0) + (Array.isArray(keywords) ? keywords.length : 1));
+            }
+          }
+          const pairs = Array.from(map.entries()).sort((a, b) => b[1] - a[1]).slice(0, 12);
+          return { labels: pairs.map(p => p[0]), values: pairs.map(p => p[1]) };
+        }
+
+        function palette(n) {
+          const base = [
+            "rgba(102,126,234,.86)",
+            "rgba(118,75,162,.78)",
+            "rgba(51,214,197,.86)",
+            "rgba(246,200,76,.86)",
+            "rgba(120,162,255,.78)",
+            "rgba(255,91,110,.74)",
+            "rgba(160,118,255,.70)",
+            "rgba(95,222,132,.70)"
+          ];
+          const out = [];
+          for (let i = 0; i < n; i++) out.push(base[i % base.length]);
+          return out;
+        }
+
+        if (!window.Chart) return;
+
+        const timeline = buildTimeline(articles);
+        const sources = buildSources(articles);
+        const venues = buildVenues(articles);
+        const entities = buildEntities(articles);
+
+        const entityCanvas = document.getElementById("chartEntities");
+        if (entityCanvas && entities.labels.length) {
+          new Chart(entityCanvas.getContext("2d"), {
+            type: "bar",
+            data: {
+              labels: entities.labels,
+              datasets: [{
+                label: "count",
+                data: entities.values,
+                backgroundColor: "rgba(102,126,234,.35)",
+                borderColor: "rgba(102,126,234,.72)",
+                borderWidth: 1.2,
+                borderRadius: 8
+              }]
+            },
+            options: {
+              plugins: { legend: { display: false } },
+              scales: { y: { beginAtZero: true } }
+            }
+          });
+        }
+
+        const timelineCanvas = document.getElementById("chartTimeline");
+        if (timelineCanvas && timeline.labels.length) {
+          new Chart(timelineCanvas.getContext("2d"), {
+            type: "line",
+            data: {
+              labels: timeline.labels,
+              datasets: [{
+                label: "papers/day",
+                data: timeline.values,
+                tension: 0.3,
+                fill: true,
+                borderColor: "rgba(118,75,162,.84)",
+                backgroundColor: "rgba(118,75,162,.15)",
+                pointRadius: 3,
+                pointBackgroundColor: "rgba(118,75,162,.84)"
+              }]
+            },
+            options: {
+              plugins: { legend: { display: false } },
+              scales: { y: { beginAtZero: true } }
+            }
+          });
+        }
+
+        const sourcesCanvas = document.getElementById("chartSources");
+        if (sourcesCanvas && sources.labels.length) {
+          const colors = palette(sources.labels.length);
+          new Chart(sourcesCanvas.getContext("2d"), {
+            type: "doughnut",
+            data: {
+              labels: sources.labels,
+              datasets: [{
+                label: "papers",
+                data: sources.values,
+                backgroundColor: colors.map(c => c.replace(")", ", .35)").replace("rgba", "rgba")),
+                borderColor: colors.map(c => c.replace(")", ", .80)").replace("rgba", "rgba")),
+                borderWidth: 1.2
+              }]
+            },
+            options: {
+              cutout: "62%",
+              plugins: { legend: { position: "bottom" } }
+            }
+          });
+        }
+
+        const venuesCanvas = document.getElementById("chartVenues");
+        if (venuesCanvas && venues.labels.length) {
+          const colors = palette(venues.labels.length);
+          new Chart(venuesCanvas.getContext("2d"), {
+            type: "bar",
+            data: {
+              labels: venues.labels,
+              datasets: [{
+                label: "papers",
+                data: venues.values,
+                backgroundColor: "rgba(51,214,197,.35)",
+                borderColor: "rgba(51,214,197,.72)",
+                borderWidth: 1.2,
+                borderRadius: 8
+              }]
+            },
+            options: {
+              indexAxis: "y",
+              plugins: { legend: { display: false } },
+              scales: { x: { beginAtZero: true } }
+            }
+          });
+        }
+      })();
+    </script>
 </body>
 </html>
 """
@@ -202,10 +466,26 @@ def generate_report(
     """Generate HTML report."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    articles_json = []
+    for paper in articles:
+        paper_data = {
+            "title": paper.title,
+            "link": paper.link,
+            "source": paper.source,
+            "published": paper.published.isoformat() if paper.published else None,
+            "published_at": paper.published.isoformat() if paper.published else None,
+            "abstract": paper.abstract,
+            "authors": paper.authors,
+            "venue": paper.venue,
+            "matched_entities": paper.matched_entities or {},
+        }
+        articles_json.append(paper_data)
+
     template = Template(REPORT_TEMPLATE)
     html = template.render(
         category=category,
         articles=articles,
+        articles_json=articles_json,
         stats=stats,
         errors=errors,
         generated_at=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
