@@ -36,6 +36,21 @@ jobs:
       - name: Run paper collection
         run: |
           python main.py --category research --recent-days 7 --keep-days 90
+
+      - name: Run Quality Checks
+        if: always()
+        run: |
+          python scripts/check_quality.py > quality_report.txt 2>&1 || true
+          cat quality_report.txt >> $GITHUB_STEP_SUMMARY
+        continue-on-error: true
+
+      - name: Archive Quality Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-report-${{ github.run_number }}
+          path: quality_report.txt
+          retention-days: 30
       
       - name: Commit DuckDB changes
         uses: stefanzweifel/git-auto-commit-action@v5
