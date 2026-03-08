@@ -1,0 +1,823 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Research Papers Report</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .stat-value { font-size: 2em; font-weight: bold; }
+        .stat-label { font-size: 0.9em; opacity: 0.9; }
+        .papers {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .paper-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .paper-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .paper-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+        .paper-authors {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .paper-abstract {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .paper-meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 0.85em;
+        }
+        .badge {
+            background: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #666;
+        }
+        .badge.venue { background: #e3f2fd; color: #1976d2; }
+        .badge.citations { background: #f3e5f5; color: #7b1fa2; }
+        .paper-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .paper-link:hover { text-decoration: underline; }
+        .errors {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .error-title { color: #c62828; font-weight: 600; margin-bottom: 10px; }
+        .error-item { color: #d32f2f; font-size: 0.9em; margin: 5px 0; }
+        footer {
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI/ML Research Papers</h1>
+            <p>Academic Paper Collection Report</p>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Sources</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">60</div>
+                    <div class="stat-label">Collected</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">59</div>
+                    <div class="stat-label">Matched</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">7d</div>
+                    <div class="stat-label">Window</div>
+                </div>
+            </div>
+        </header>
+
+        
+        <div class="errors">
+            <div class="error-title">⚠️ Collection Errors (34)</div>
+            
+            <div class="error-item">Semantic Scholar: 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine%20learning&limit=30&fields=title,authors,abstract,venue,citationCount,url,externalIds</div>
+            
+            <div class="error-item">PubMed: Expecting value: line 1 column 1 (char 0)</div>
+            
+            <div class="error-item">bioRxiv: 403 Client Error: Forbidden for url: https://api.biorxiv.org/details/biorxiv/machine%20learning/0/30</div>
+            
+            <div class="error-item">OpenAlex: 'NoneType' object has no attribute 'replace'</div>
+            
+            <div class="error-item">https://doi.org/10.15556/ijiim.02.01.003: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.15556/ijiim.01.02.002: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.20431/2349-0381.0303002: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.23970/ahrqepcmethqualimprcdiff: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.3998/mjcsl.8273: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.3998/mjcsl.7452: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.3998/mjcsl.6294: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.3998/mjcsl.5730: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.3998/mjcsl.3643: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.3998/mjcsl.4120: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.3998/mjcsl.2741: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.56251/watu4873: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.58524/jcss.v4i2.890: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.32628/cseit251116279: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.71126/nijre.v2i1.16: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.1504/ijims.2028.10076630: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.5705/ss.202025.0109: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.5705/ss.202025.0087: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.1504/ijims.2028.10075219: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.5705/ss.202025.0245: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.5705/ss.202024.0423: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.1504/ijcis.2028.10073919: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.1504/ijims.2028.10076530: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.5705/ss.202025.0083: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.1504/ijims.2028.10076831: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.51432/978-1-914266-09-6-2: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.29300/attalim.v24i1.8860: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.6007/ijarbss/v14-i5/21493: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.54870/1551-3440.1695: summary is missing or not a string</div>
+            
+            <div class="error-item">https://doi.org/10.1515/9783111679228-003: summary is missing or not a string</div>
+            
+        </div>
+        
+
+        <div class="papers">
+            
+            <div class="paper-card">
+                <div class="paper-title">RoboPocket: Improve Robot Policies Instantly with Your Phone</div>
+                
+                <div class="paper-authors">
+                    Junjie Fang, Wendi Chen, Han Xue, Fangyuan Zhou, Tian Le, Yi Wang, Yuting Zhang, Jun Lv, Chuan Wen, Cewu Lu
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predo...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05504v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation</div>
+                
+                <div class="paper-authors">
+                    Zeju Qiu, Lixin Liu, Adrian Weller, Han Shi, Weiyang Liu
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (P...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05500v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks</div>
+                
+                <div class="paper-authors">
+                    Shangwen Sun, Alfredo Canziani, Yann LeCun, Jiachen Zhu
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    We study two recurring phenomena in Transformer language models: massive activations, in which a small number of tokens exhibit extreme outliers in a few channels, and attention sinks, in which certai...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05498v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation</div>
+                
+                <div class="paper-authors">
+                    Helena Casademunt, Bartosz Cywiński, Khoi Tran, Arya Jakkli, Samuel Marks, Neel Nanda
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Large language models sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the model answers truthfully -- an...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05494v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought</div>
+                
+                <div class="paper-authors">
+                    Siddharth Boppana, Annabel Ma, Max Loeffler, Raphael Sarfati, Eric Bigelow, Atticus Geiger, Owen Lewis, Jack Merullo
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    We provide evidence of performative chain-of-thought (CoT) in reasoning models, where a model becomes strongly confident in its final answer, but continues generating tokens without revealing its inte...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05488v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation</div>
+                
+                <div class="paper-authors">
+                    Benjamin Feuer, Lucas Rosenblatt, Oussama Elachqar
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    As AI models progress beyond simple chatbots into more complex workflows, we draw ever closer to the event horizon beyond which AI systems will be utilized in autonomous, self-maintaining feedback loo...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05485v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">SurvHTE-Bench: A Benchmark for Heterogeneous Treatment Effect Estimation in Survival Analysis</div>
+                
+                <div class="paper-authors">
+                    Shahriar Noroozizadeh, Xiaobin Shen, Jeremy C. Weiss, George H. Chen
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Estimating heterogeneous treatment effects (HTEs) from right-censored survival data is critical in high-stakes applications such as precision medicine and individualized policy-making. Yet, the surviv...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05483v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval</div>
+                
+                <div class="paper-authors">
+                    Artem Vazhentsev, Maria Marina, Daniil Moskovskiy, Sergey Pletenev, Mikhail Seleznyov, Mikhail Salnikov, Elena Tutubalina, Vasily Konovalov, Irina Nikishina, Alexander Panchenko, Viktor Moskvoretskii
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Trustworthiness is a core research challenge for agentic AI systems built on Large Language Models (LLMs). To enhance trust, natural language claims from diverse sources, including human-written text,...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05471v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Distributed Partial Information Puzzles: Examining Common Ground Construction Under Epistemic Asymmetry</div>
+                
+                <div class="paper-authors">
+                    Yifan Zhu, Mariah Bradford, Kenneth Lai, Timothy Obiso, Videep Venkatesha, James Pustejovsky, Nikhil Krishnaswamy
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Establishing common ground, a shared set of beliefs and mutually recognized facts, is fundamental to collaboration, yet remains a challenge for current AI systems, especially in multimodal, multiparty...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05450v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">RealWonder: Real-Time Physical Action-Conditioned Video Generation</div>
+                
+                <div class="paper-authors">
+                    Wei Liu, Ziyu Chen, Zizhang Li, Yue Wang, Hong-Xing Yu, Jiajun Wu
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Current video generation models cannot simulate physical consequences of 3D actions like forces and robotic manipulations, as they lack structural understanding of how actions affect 3D scenes. We pre...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05449v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Residual RL--MPC for Robust Microrobotic Cell Pushing Under Time-Varying Flow</div>
+                
+                <div class="paper-authors">
+                    Yanda Yang, Sambeeta Das
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Contact-rich micromanipulation in microfluidic flow is challenging because small disturbances can break pushing contact and induce large lateral drift. We study planar cell pushing with a magnetic rol...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05448v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Planning in 8 Tokens: A Compact Discrete Tokenizer for Latent World Model</div>
+                
+                <div class="paper-authors">
+                    Dongwon Kim, Gawon Seo, Jinsung Lee, Minsu Cho, Suha Kwak
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    World models provide a powerful framework for simulating environment dynamics conditioned on actions or instructions, enabling downstream tasks such as action planning or policy learning. Recent appro...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05438v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">SAIL: Similarity-Aware Guidance and Inter-Caption Augmentation-based Learning for Weakly-Supervised Dense Video Captioning</div>
+                
+                <div class="paper-authors">
+                    Ye-Chan Kim, SeungJu Cha, Si-Woo Kim, Minju Jeon, Hyungee Kim, Dong-Jin Kim
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Weakly-Supervised Dense Video Captioning aims to localize and describe events in videos trained only on caption annotations, without temporal boundaries. Prior work introduced an implicit supervision ...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05437v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Ensembling Language Models with Sequential Monte Carlo</div>
+                
+                <div class="paper-authors">
+                    Robin Shing Moon Chan, Tianyu Liu, Samuel Kiegeland, Clemente Pasti, Jacob Hoover Vigly, Timothy J. O'Donnell, Ryan Cotterell, Tim Vieira
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Practitioners have access to an abundance of language models and prompting strategies for solving many language modeling tasks; yet prior work shows that modeling performance is highly sensitive to bo...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05432v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">RelaxFlow: Text-Driven Amodal 3D Generation</div>
+                
+                <div class="paper-authors">
+                    Jiayin Zhu, Guoji Fu, Xiaolu Liu, Qiyuan He, Yicong Li, Angela Yao
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Image-to-3D generation faces inherent semantic ambiguity under occlusion, where partial observation alone is often insufficient to determine object category. In this work, we formalize text-driven amo...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05425v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">MobileFetalCLIP: Selective Repulsive Knowledge Distillation for Mobile Fetal Ultrasound Analysis</div>
+                
+                <div class="paper-authors">
+                    Numan Saeed, Fadillah Adamsyah Maani, Mohammad Yaqub
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Fetal ultrasound AI could transform prenatal care in low-resource settings, yet current foundation models exceed 300M visual parameters, precluding deployment on point-of-care devices. Standard knowle...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05421v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">The Spatial and Temporal Resolution of Motor Intention in Multi-Target Prediction</div>
+                
+                <div class="paper-authors">
+                    Marie Dominique Schmidt, Ioannis Iossifidis
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Reaching for grasping, and manipulating objects are essential motor functions in everyday life. Decoding human motor intentions is a central challenge for rehabilitation and assistive technologies. Th...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05418v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Dissociating Direct Access from Inference in AI Introspection</div>
+                
+                <div class="paper-authors">
+                    Harvey Lederman, Kyle Mahowald
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Introspection is a foundational cognitive ability, but its mechanism is not well understood. Recent work has shown that AI models can introspect. We study their mechanism of introspection, first exten...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05414v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Judge Reliability Harness: Stress Testing the Reliability of LLM Judges</div>
+                
+                <div class="paper-authors">
+                    Sunishchal Dev, Andrew Sloan, Joshua Kavner, Nicholas Kong, Morgan Sandler
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    We present the Judge Reliability Harness, an open source library for constructing validation suites that test the reliability of LLM judges. As LLM based scoring is widely deployed in AI benchmarks, m...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05399v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Legal interpretation and AI: from expert systems to argumentation and LLMs</div>
+                
+                <div class="paper-authors">
+                    Václav Janeček, Giovanni Sartor
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    AI and Law research has encountered legal interpretation in different ways, in the context of its evolving approaches and methodologies. Research on expert system has focused on legal knowledge engine...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05392v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Learning Causal Structure of Time Series using Best Order Score Search</div>
+                
+                <div class="paper-authors">
+                    Irene Gema Castillo Mansilla, Urmi Ninad
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Causal structure learning from observational data is central to many scientific and policy domains, but the time series setting common to many disciplines poses several challenges due to temporal depe...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05370v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">PACE: A Personalized Adaptive Curriculum Engine for 9-1-1 Call-taker Training</div>
+                
+                <div class="paper-authors">
+                    Zirong Chen, Hongchao Zhang, Meiyi Ma
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    9-1-1 call-taking training requires mastery of over a thousand interdependent skills, covering diverse incident types and protocol-specific nuances. A nationwide labor shortage is already straining tr...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05361v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Ailed: A Psyche-Driven Chess Engine with Dynamic Emotional Modulation</div>
+                
+                <div class="paper-authors">
+                    Diego Armando Resendez Prado
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Chess engines passed human strength years ago, but they still don't play like humans. A grandmaster under clock pressure blunders in ways a club player on a hot streak never would. Conventional engine...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05352v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Building AI Coding Agents for the Terminal: Scaffolding, Harness, Context Engineering, and Lessons Learned</div>
+                
+                <div class="paper-authors">
+                    Nghi D. Q. Bui
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    The landscape of AI coding assistance is undergoing a fundamental shift from complex IDE plugins to versatile, terminal-native agents. Operating directly where developers manage source control, execut...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05344v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">GALACTIC: Global and Local Agnostic Counterfactuals for Time-series Clustering</div>
+                
+                <div class="paper-authors">
+                    Christos Fragkathoulas, Eleni Psaroudaki, Themis Palpanas, Evaggelia Pitoura
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Time-series clustering is a fundamental tool for pattern discovery, yet existing explainability methods, primarily based on feature attribution or metadata, fail to identify the transitions that move ...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05318v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">PersianPunc: A Large-Scale Dataset and BERT-Based Approach for Persian Punctuation Restoration</div>
+                
+                <div class="paper-authors">
+                    Mohammad Javad Ranjbar Kalahroodi, Heshaam Faili, Azadeh Shakery
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Punctuation restoration is essential for improving the readability and downstream utility of automatic speech recognition (ASR) outputs, yet remains underexplored for Persian despite its importance. W...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05314v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Latent-Mark: An Audio Watermark Robust to Neural Resynthesis</div>
+                
+                <div class="paper-authors">
+                    Yen-Shan Chen, Shih-Yu Lai, Ying-Jung Tsou, Yi-Cheng Lin, Bing-Yu Chen, Yun-Nung Chen, Hung-Yi Lee, Shang-Tse Chen
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    While existing audio watermarking techniques have achieved strong robustness against traditional digital signal processing (DSP) attacks, they remain vulnerable to neural resynthesis. This occurs beca...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05310v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">Med-V1: Small Language Models for Zero-shot and Scalable Biomedical Evidence Attribution</div>
+                
+                <div class="paper-authors">
+                    Qiao Jin, Yin Fang, Lauren He, Yifan Yang, Guangzhi Xiong, Zhizheng Wang, Nicholas Wan, Joey Chan, Donald C. Comeau, Robert Leaman, Charalampos S. Floudas, Aidong Zhang, Michael F. Chiang, Yifan Peng, Zhiyong Lu
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Assessing whether an article supports an assertion is essential for hallucination detection and claim verification. While large language models (LLMs) have the potential to automate this task, achievi...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05308v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">UniSTOK: Uniform Inductive Spatio-Temporal Kriging</div>
+                
+                <div class="paper-authors">
+                    Lewei Xie, Haoyu Zhang, Juan Yuan, Liangjun You, Yulong Chen, Yifan Zhang
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Spatio-temporal kriging aims to infer signals at unobserved locations from observed sensors and is critical to applications such as transportation and environmental monitoring. In practice, however, o...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05301v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+            <div class="paper-card">
+                <div class="paper-title">WavSLM: Single-Stream Speech Language Modeling via WavLM Distillation</div>
+                
+                <div class="paper-authors">
+                    Luca Della Libera, Cem Subakan, Mirco Ravanelli
+                </div>
+                
+                
+                <div class="paper-abstract">
+                    Large language models show that simple autoregressive training can yield scalable and coherent generation, but extending this paradigm to speech remains challenging due to the entanglement of semantic...
+                </div>
+                
+                <div class="paper-meta">
+                    
+                    
+                    <span class="badge">arXiv</span>
+                </div>
+                <a href="https://arxiv.org/abs/2603.05299v1" class="paper-link" target="_blank">Read Paper →</a>
+            </div>
+            
+        </div>
+
+        <footer>
+            Generated on 2026-03-09 02:48:14 | PaperRadar v0.1.0
+        </footer>
+    </div>
+</body>
+</html>
