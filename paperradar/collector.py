@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
+from typing import cast
 from xml.etree import ElementTree as ET
 
 import requests
@@ -11,6 +12,27 @@ from .models import Paper, Source
 _DEFAULT_HEADERS: dict[str, str] = {
     "User-Agent": "Mozilla/5.0 (compatible; PaperRadarBot/1.0; +https://github.com/zzragida/ai-frendly-datahub)",
 }
+
+
+def _reconstruct_abstract(inverted_index: dict[str, list[int]] | None) -> str:
+    """
+    Reconstruct abstract text from Semantic Scholar's inverted index format.
+
+    Args:
+        inverted_index: Dictionary mapping words to lists of positions
+
+    Returns:
+        Reconstructed abstract text with words in correct order
+    """
+    if not inverted_index:
+        return ""
+    # Build word list: {word: [position1, position2, ...]}
+    words: list[tuple[int, str]] = []
+    for word, positions in inverted_index.items():
+        for pos in positions:
+            words.append((pos, word))
+    words.sort(key=lambda x: x[0])
+    return " ".join(w for _, w in words)
 
 
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10))
@@ -237,7 +259,10 @@ def _collect_openalex(source: Source, category: str, limit: int, timeout: int) -
     for work in data.get("results", []):
         title = work.get("title", "")
         authors = [a.get("author", {}).get("display_name", "") for a in work.get("authorships", [])]
-        abstract = work.get("abstract_inverted_index", {})
+        raw_abstract = work.get("abstract_inverted_index")
+        abstract = ""
+        if isinstance(raw_abstract, dict):
+            abstract = _reconstruct_abstract(cast(dict[str, list[int]], raw_abstract))
         doi = work.get("doi", "").replace("https://doi.org/", "")
         url_str = work.get("url", "")
 
@@ -245,7 +270,7 @@ def _collect_openalex(source: Source, category: str, limit: int, timeout: int) -
             Paper(
                 title=title,
                 link=url_str,
-                abstract=str(abstract),
+                abstract=abstract,
                 authors=authors,
                 published=None,
                 source=source.name,
