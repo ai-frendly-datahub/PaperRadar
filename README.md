@@ -1,5 +1,8 @@
 # PaperRadar
 
+**🌐 Live Report**: https://ai-frendly-datahub.github.io/PaperRadar/
+
+
 Academic paper collection and analysis platform. Aggregates research papers from 7 major sources (arXiv, Semantic Scholar, PubMed, bioRxiv, OpenAlex, CrossRef, SSRN) with entity extraction, full-text search, and HTML reporting.
 
 ## Features
