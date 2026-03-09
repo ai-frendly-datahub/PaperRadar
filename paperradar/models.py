@@ -36,6 +36,7 @@ class Paper:
     pdf_url: Optional[str] = None
     venue: Optional[str] = None
     citation_count: Optional[int] = None
+    collected_at: Optional[datetime] = None
     categories: list[str] = field(default_factory=list)
     keywords: list[str] = field(default_factory=list)
     matched_entities: dict[str, list[str]] = field(default_factory=dict)

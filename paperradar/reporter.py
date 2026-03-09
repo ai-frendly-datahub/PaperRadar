@@ -1,11 +1,191 @@
 from __future__ import annotations
 
+from collections import Counter
 from datetime import datetime
+from itertools import combinations
 from pathlib import Path
+from typing import Any, Union, cast
 
+import networkx as nx
+import plotly.graph_objects as go
 from jinja2 import Template
 
 from .models import CategoryConfig, Paper
+
+
+DEFAULT_NETWORK_NODE_LIMIT = 80
+
+
+def _normalize_label(value: object) -> str:
+    text = str(value).strip()
+    if not text:
+        return ""
+    return " ".join(text.split())
+
+
+def _build_cooccurrence_network(
+    groups: list[list[object]],
+    max_nodes: int = DEFAULT_NETWORK_NODE_LIMIT,
+) -> tuple[dict[str, int], dict[tuple[str, str], int]]:
+    frequency: Counter[str] = Counter()
+    normalized_groups: list[list[str]] = []
+
+    for group in groups:
+        unique_names: set[str] = set()
+        for raw_name in group:
+            normalized = _normalize_label(raw_name)
+            if normalized:
+                unique_names.add(normalized)
+        names = sorted(unique_names)
+        if not names:
+            continue
+        frequency.update(names)
+        normalized_groups.append(names)
+
+    top_nodes = {
+        name
+        for name, _ in sorted(frequency.items(), key=lambda item: (-item[1], item[0]))[:max_nodes]
+    }
+
+    node_counts: Counter[str] = Counter()
+    edge_counts: Counter[tuple[str, str]] = Counter()
+    for names in normalized_groups:
+        selected = sorted([name for name in names if name in top_nodes])
+        if not selected:
+            continue
+        node_counts.update(selected)
+        if len(selected) < 2:
+            continue
+        for left, right in combinations(selected, 2):
+            edge_counts[(left, right)] += 1
+
+    return dict(node_counts), dict(edge_counts)
+
+
+def _build_network_html(
+    node_counts: dict[str, int],
+    edge_counts: dict[tuple[str, str], int],
+    include_plotlyjs: Union[str, bool],
+) -> str:
+    if not node_counts:
+        return '<div class="network-empty">Not enough co-occurrence data.</div>'
+
+    graph = cast(Any, nx.Graph())
+    for node, frequency in node_counts.items():
+        graph.add_node(node, frequency=frequency)
+
+    for (left, right), weight in edge_counts.items():
+        if left in node_counts and right in node_counts and left != right:
+            graph.add_edge(left, right, weight=weight)
+
+    raw_positions: Any
+    if graph.number_of_nodes() == 1:
+        raw_positions = nx.circular_layout(graph)
+    else:
+        raw_positions = nx.spring_layout(graph, seed=42, weight="weight")
+
+    positions: dict[str, tuple[float, float]] = {}
+    for node in node_counts:
+        point = raw_positions[node]
+        positions[node] = (float(point[0]), float(point[1]))
+
+    edge_x: list[float] = []
+    edge_y: list[float] = []
+    node_degree: Counter[str] = Counter()
+    for left, right in cast(list[tuple[str, str]], list(graph.edges())):
+        left_pos = positions[left]
+        right_pos = positions[right]
+        edge_x.extend([left_pos[0], right_pos[0], float("nan")])
+        edge_y.extend([left_pos[1], right_pos[1], float("nan")])
+        node_degree[left] += 1
+        node_degree[right] += 1
+
+    edge_trace: Any = go.Scatter(
+        x=edge_x,
+        y=edge_y,
+        mode="lines",
+        hoverinfo="skip",
+        line={"width": 1.0, "color": "rgba(148,163,184,0.5)"},
+    )
+
+    max_frequency = max(node_counts.values())
+    node_x: list[float] = []
+    node_y: list[float] = []
+    marker_sizes: list[float] = []
+    marker_colors: list[int] = []
+    hover_text: list[str] = []
+    labels: list[str] = []
+
+    ordered_nodes = sorted(node_counts.keys(), key=lambda name: (-node_counts[name], name.lower()))
+    for node in ordered_nodes:
+        pos = positions[node]
+        frequency = node_counts[node]
+        degree = node_degree[node]
+        node_x.append(pos[0])
+        node_y.append(pos[1])
+        marker_sizes.append(12.0 + (frequency / max_frequency) * 24.0)
+        marker_colors.append(degree)
+        labels.append(node)
+        hover_text.append(f"{node}<br>Frequency: {frequency}<br>Connections: {degree}")
+
+    node_trace: Any = go.Scatter(
+        x=node_x,
+        y=node_y,
+        mode="markers+text",
+        text=labels,
+        textposition="top center",
+        hoverinfo="text",
+        hovertext=hover_text,
+        marker={
+            "size": marker_sizes,
+            "color": marker_colors,
+            "colorscale": "Blues",
+            "showscale": False,
+            "line": {"width": 1.2, "color": "rgba(30,41,59,0.85)"},
+            "opacity": 0.94,
+        },
+        textfont={"size": 10, "color": "#1e293b"},
+    )
+
+    fig: Any = go.Figure(data=[edge_trace, node_trace])
+    fig.update_layout(
+        showlegend=False,
+        margin={"l": 8, "r": 8, "t": 8, "b": 8},
+        hovermode="closest",
+        paper_bgcolor="white",
+        plot_bgcolor="white",
+        xaxis={"showgrid": False, "showticklabels": False, "zeroline": False},
+        yaxis={"showgrid": False, "showticklabels": False, "zeroline": False},
+    )
+
+    return cast(
+        str,
+        fig.to_html(
+            full_html=False,
+            include_plotlyjs=include_plotlyjs,
+            config={"displayModeBar": False, "responsive": True},
+        ),
+    )
+
+
+def _build_topic_network_html(
+    entities_json: list[dict[str, list[str]]],
+    include_plotlyjs: Union[str, bool],
+) -> str:
+    groups: list[list[object]] = [
+        list(entity_map.keys()) for entity_map in entities_json if entity_map
+    ]
+    node_counts, edge_counts = _build_cooccurrence_network(groups)
+    return _build_network_html(node_counts, edge_counts, include_plotlyjs)
+
+
+def _build_author_network_html(
+    articles: list[Paper],
+    include_plotlyjs: Union[str, bool],
+) -> str:
+    groups: list[list[object]] = [list(paper.authors) for paper in articles if paper.authors]
+    node_counts, edge_counts = _build_cooccurrence_network(groups)
+    return _build_network_html(node_counts, edge_counts, include_plotlyjs)
 
 
 REPORT_TEMPLATE = """
@@ -144,6 +324,21 @@ REPORT_TEMPLATE = """
             position: relative;
             height: 280px;
         }
+        .network-wrap {
+            min-height: 360px;
+        }
+        .network-wrap .plotly-graph-div {
+            width: 100%;
+            height: 360px;
+        }
+        .network-empty {
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 0.95em;
+        }
     </style>
 </head>
 <body>
@@ -208,6 +403,32 @@ REPORT_TEMPLATE = """
                     <div class="chart-wrap">
                         <canvas id="chartVenues"></canvas>
                     </div>
+                </div>
+            </div>
+            <div class="charts-grid" style="margin-top:12px">
+                <div class="chart-card">
+                    <div class="chart-title">Data Freshness (collection lag)</div>
+                    <div class="chart-wrap"><canvas id="chartFreshness"></canvas></div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-title">Entity Extraction Rate</div>
+                    <div class="chart-wrap"><canvas id="chartEntityRate"></canvas></div>
+                </div>
+            </div>
+            <div class="charts-grid" style="margin-top:12px">
+                <div class="chart-card">
+                    <div class="chart-title">Source Health</div>
+                    <div class="chart-wrap"><canvas id="chartSourceHealth"></canvas></div>
+                </div>
+            </div>
+            <div class="charts-grid" style="margin-top:12px">
+                <div class="chart-card">
+                    <div class="chart-title">Co-topic Network</div>
+                    <div class="network-wrap">{{ co_topic_network_html | safe }}</div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-title">Co-author Network</div>
+                    <div class="network-wrap">{{ co_author_network_html | safe }}</div>
                 </div>
             </div>
         </div>
@@ -449,6 +670,143 @@ REPORT_TEMPLATE = """
             }
           });
         }
+
+         // Chart 1: Data Freshness (collection lag in hours)
+         function buildFreshness(items) {
+           const lagBuckets = { "0-1h": 0, "1-6h": 0, "6-24h": 0, "1-3d": 0, "3-7d": 0, "7d+": 0 };
+           const now = new Date();
+           for (const a of items) {
+             const pubStr = a && (a.published_at || a.published);
+             const collStr = a && a.collected_at;
+             if (!pubStr || !collStr) continue;
+             const pubDate = new Date(String(pubStr));
+             const collDate = new Date(String(collStr));
+             if (isNaN(pubDate.getTime()) || isNaN(collDate.getTime())) continue;
+             const lagMs = collDate.getTime() - pubDate.getTime();
+             const lagHours = lagMs / (1000 * 60 * 60);
+             if (lagHours < 1) lagBuckets["0-1h"]++;
+             else if (lagHours < 6) lagBuckets["1-6h"]++;
+             else if (lagHours < 24) lagBuckets["6-24h"]++;
+             else if (lagHours < 72) lagBuckets["1-3d"]++;
+             else if (lagHours < 168) lagBuckets["3-7d"]++;
+             else lagBuckets["7d+"]++;
+           }
+           return { labels: Object.keys(lagBuckets), values: Object.values(lagBuckets) };
+         }
+
+         const freshnessData = buildFreshness(articles);
+         const freshnessCanvas = document.getElementById("chartFreshness");
+         if (freshnessCanvas && freshnessData.labels.length) {
+           new Chart(freshnessCanvas.getContext("2d"), {
+             type: "bar",
+             data: {
+               labels: freshnessData.labels,
+               datasets: [{
+                 label: "papers",
+                 data: freshnessData.values,
+                 backgroundColor: "rgba(120,162,255,.35)",
+                 borderColor: "rgba(120,162,255,.72)",
+                 borderWidth: 1.2,
+                 borderRadius: 8
+               }]
+             },
+             options: {
+               plugins: { legend: { display: false } },
+               scales: { y: { beginAtZero: true } }
+             }
+           });
+         }
+
+         // Chart 2: Entity Extraction Rate (doughnut with center text)
+         function buildEntityRate(items) {
+           let withEntities = 0, withoutEntities = 0;
+           for (const a of items) {
+             const ents = a && a.matched_entities;
+             if (ents && Object.keys(ents).length > 0) withEntities++;
+             else withoutEntities++;
+           }
+           return { with: withEntities, without: withoutEntities };
+         }
+
+         const entityRateData = buildEntityRate(articles);
+         const entityRateCanvas = document.getElementById("chartEntityRate");
+         if (entityRateCanvas) {
+           const total = entityRateData.with + entityRateData.without;
+           const pct = total > 0 ? Math.round((entityRateData.with / total) * 100) : 0;
+           const plugin = {
+             id: "textCenter",
+             beforeDatasetsDraw(c) {
+               const { width, height } = c.chartArea;
+               const x = c.chartArea.left + width / 2;
+               const y = c.chartArea.top + height / 2;
+               c.ctx.save();
+               c.ctx.font = "bold 24px sans-serif";
+               c.ctx.fillStyle = "rgba(15,23,42,.8)";
+               c.ctx.textAlign = "center";
+               c.ctx.textBaseline = "middle";
+               c.ctx.fillText(pct + "%", x, y);
+               c.ctx.restore();
+             }
+           };
+           new Chart(entityRateCanvas.getContext("2d"), {
+             type: "doughnut",
+             data: {
+               labels: ["With entities", "Without entities"],
+               datasets: [{
+                 data: [entityRateData.with, entityRateData.without],
+                 backgroundColor: ["rgba(95,222,132,.35)", "rgba(255,91,110,.35)"],
+                 borderColor: ["rgba(95,222,132,.80)", "rgba(255,91,110,.80)"],
+                 borderWidth: 1.2
+               }]
+             },
+             options: {
+               cutout: "62%",
+               plugins: {
+                 legend: { position: "bottom" },
+                 tooltip: { enabled: true }
+               }
+             },
+             plugins: [plugin]
+           });
+         }
+
+         // Chart 3: Source Health (horizontal bar, sorted descending)
+         function buildSourceHealth(items) {
+           const map = new Map();
+           for (const a of items) {
+             const s = (a && a.source) ? String(a.source) : "unknown";
+             const key = s.trim() || "unknown";
+             map.set(key, (map.get(key) || 0) + 1);
+           }
+           const pairs = Array.from(map.entries()).sort((a, b) => b[1] - a[1]);
+           return { labels: pairs.map(p => p[0]), values: pairs.map(p => p[1]) };
+         }
+
+         const sourceHealthData = buildSourceHealth(articles);
+         const sourceHealthCanvas = document.getElementById("chartSourceHealth");
+         if (sourceHealthCanvas && sourceHealthData.labels.length) {
+           const colors = palette(sourceHealthData.labels.length);
+           new Chart(sourceHealthCanvas.getContext("2d"), {
+             type: "bar",
+             data: {
+               labels: sourceHealthData.labels,
+               datasets: [{
+                 label: "papers",
+                 data: sourceHealthData.values,
+                 backgroundColor: colors.map(c => c.replace(")", ", .35)").replace("rgba", "rgba")),
+                 borderColor: colors.map(c => c.replace(")", ", .80)").replace("rgba", "rgba")),
+                 borderWidth: 1.2,
+                 borderRadius: 8
+               }]
+             },
+             options: {
+               indexAxis: "y",
+               plugins: { legend: { display: false } },
+               scales: { x: { beginAtZero: true } }
+             }
+           });
+         }
+
       })();
     </script>
 </body>
@@ -466,9 +824,11 @@ def generate_report(
     """Generate HTML report."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    articles_json = []
+    articles_json: list[dict[str, Any]] = []
+    entities_json: list[dict[str, list[str]]] = []
     for paper in articles:
-        paper_data = {
+        matched_entities = paper.matched_entities or {}
+        paper_data: dict[str, Any] = {
             "title": paper.title,
             "link": paper.link,
             "source": paper.source,
@@ -477,15 +837,24 @@ def generate_report(
             "abstract": paper.abstract,
             "authors": paper.authors,
             "venue": paper.venue,
-            "matched_entities": paper.matched_entities or {},
+            "matched_entities": matched_entities,
+            "collected_at": paper.collected_at.isoformat()
+            if hasattr(paper, "collected_at") and paper.collected_at
+            else None,
         }
         articles_json.append(paper_data)
+        entities_json.append(matched_entities)
+
+    co_topic_network_html = _build_topic_network_html(entities_json, include_plotlyjs="cdn")
+    co_author_network_html = _build_author_network_html(articles, include_plotlyjs="cdn")
 
     template = Template(REPORT_TEMPLATE)
     html = template.render(
         category=category,
         articles=articles,
         articles_json=articles_json,
+        co_topic_network_html=co_topic_network_html,
+        co_author_network_html=co_author_network_html,
         stats=stats,
         errors=errors,
         generated_at=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -544,7 +913,7 @@ def generate_index_html(report_dir: Path) -> Path:
         key=lambda p: p.name,
     )
 
-    reports = []
+    reports: list[dict[str, str]] = []
     for html_file in html_files:
         name = html_file.stem
         display_name = name.replace("_report", "").replace("_", " ").title()
