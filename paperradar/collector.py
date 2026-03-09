@@ -5,9 +5,11 @@ from typing import cast
 from xml.etree import ElementTree as ET
 
 import requests
+from pybreaker import CircuitBreakerError
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from .models import Paper, Source
+from .resilience import get_circuit_breaker_manager
 
 _DEFAULT_HEADERS: dict[str, str] = {
     "User-Agent": "Mozilla/5.0 (compatible; PaperRadarBot/1.0; +https://github.com/zzragida/ai-frendly-datahub)",
@@ -35,7 +37,6 @@ def _reconstruct_abstract(inverted_index: dict[str, list[int]] | None) -> str:
     return " ".join(w for _, w in words)
 
 
-@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10))
 def collect_sources(
     sources: list[Source],
     *,
@@ -46,27 +47,85 @@ def collect_sources(
     """Fetch papers from all configured sources."""
     papers: list[Paper] = []
     errors: list[str] = []
+    manager = get_circuit_breaker_manager()
 
     for source in sources:
         try:
+            breaker = manager.get_breaker(source.name)
             if source.type.lower() == "arxiv":
-                papers.extend(_collect_arxiv(source, category, limit_per_source, timeout))
+                papers.extend(
+                    breaker.call(
+                        _collect_arxiv,
+                        source,
+                        category,
+                        limit_per_source,
+                        timeout,
+                    )
+                )
             elif source.type.lower() == "pubmed":
-                papers.extend(_collect_pubmed(source, category, limit_per_source, timeout))
+                papers.extend(
+                    breaker.call(
+                        _collect_pubmed,
+                        source,
+                        category,
+                        limit_per_source,
+                        timeout,
+                    )
+                )
             elif source.type.lower() == "semantic_scholar":
                 papers.extend(
-                    _collect_semantic_scholar(source, category, limit_per_source, timeout)
+                    breaker.call(
+                        _collect_semantic_scholar,
+                        source,
+                        category,
+                        limit_per_source,
+                        timeout,
+                    )
                 )
             elif source.type.lower() == "biorxiv":
-                papers.extend(_collect_biorxiv(source, category, limit_per_source, timeout))
+                papers.extend(
+                    breaker.call(
+                        _collect_biorxiv,
+                        source,
+                        category,
+                        limit_per_source,
+                        timeout,
+                    )
+                )
             elif source.type.lower() == "ssrn":
-                papers.extend(_collect_ssrn(source, category, limit_per_source, timeout))
+                papers.extend(
+                    breaker.call(
+                        _collect_ssrn,
+                        source,
+                        category,
+                        limit_per_source,
+                        timeout,
+                    )
+                )
             elif source.type.lower() == "openalex":
-                papers.extend(_collect_openalex(source, category, limit_per_source, timeout))
+                papers.extend(
+                    breaker.call(
+                        _collect_openalex,
+                        source,
+                        category,
+                        limit_per_source,
+                        timeout,
+                    )
+                )
             elif source.type.lower() == "crossref":
-                papers.extend(_collect_crossref(source, category, limit_per_source, timeout))
+                papers.extend(
+                    breaker.call(
+                        _collect_crossref,
+                        source,
+                        category,
+                        limit_per_source,
+                        timeout,
+                    )
+                )
             else:
                 errors.append(f"{source.name}: Unsupported source type '{source.type}'")
+        except CircuitBreakerError:
+            errors.append(f"{source.name}: Circuit breaker open (source unavailable)")
         except Exception as exc:
             errors.append(f"{source.name}: {exc}")
 

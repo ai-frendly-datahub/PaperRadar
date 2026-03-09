@@ -1,4 +1,5 @@
 from __future__ import annotations
+from typing import Optional
 
 import argparse
 from pathlib import Path
@@ -72,8 +73,8 @@ def _send_notifications(
 def run(
     *,
     category: str,
-    config_path: Path | None = None,
-    categories_dir: Path | None = None,
+    config_path: Optional[Path] = None,
+    categories_dir: Optional[Path] = None,
     per_source_limit: int = 30,
     recent_days: int = 7,
     timeout: int = 15,

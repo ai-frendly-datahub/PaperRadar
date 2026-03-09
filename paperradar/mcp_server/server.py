@@ -4,7 +4,7 @@ import asyncio
 from importlib import import_module
 import os
 from pathlib import Path
-from typing import Callable, Protocol, cast
+from typing import Optional, Callable, Protocol, cast
 
 from .tools import (
     handle_paper_by_doi,
@@ -150,7 +150,7 @@ class _StdioContext(Protocol):
     async def __aexit__(
         self,
         exc_type: type[BaseException] | None,
-        exc_value: BaseException | None,
+        exc_value: Optional[BaseException],
         traceback: object,
     ) -> object: ...
 

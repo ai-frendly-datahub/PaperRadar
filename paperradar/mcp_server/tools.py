@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import cast
+from typing import Optional, cast
 
 import duckdb
 
@@ -93,7 +93,7 @@ def handle_recent_papers(*, db_path: Path, days: int = 7, limit: int = 20) -> st
             [cutoff, limit],
         )
         rows = cast(
-            list[tuple[str, str, str, str | None, str | None, str | None, int | None, datetime]],
+            list[tuple[str, str, str, Optional[str], Optional[str], Optional[str], Optional[int], datetime]],
             cursor.fetchall(),
         )
     finally:
