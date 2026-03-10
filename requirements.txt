@@ -8,3 +8,4 @@ tenacity>=8.2.0
 networkx>=3.0
 plotly>=5.14.0
 pybreaker>=1.0.0
+numpy>=1.24.0
