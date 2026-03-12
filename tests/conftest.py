@@ -1,8 +1,16 @@
 from __future__ import annotations
 
 import pytest
+import structlog
 
 from paperradar.logger import setup_logging
+
+
+@pytest.fixture(autouse=True)
+def reset_structlog() -> object:
+    structlog.reset_defaults()
+    yield
+    structlog.reset_defaults()
 
 
 @pytest.fixture(scope="session", autouse=True)
