@@ -8,6 +8,7 @@ from paperradar.analyzer import apply_entity_rules
 from paperradar.collector import collect_sources
 from paperradar.common.validators import validate_article
 from paperradar.config_loader import load_category_config, load_settings
+from paperradar.date_storage import apply_date_storage_policy
 from paperradar.models import Paper
 from paperradar.raw_logger import RawLogger
 from paperradar.reporter import generate_report
@@ -79,6 +80,9 @@ def run(
     recent_days: int = 7,
     timeout: int = 15,
     keep_days: int = 90,
+    keep_raw_days: int = 180,
+    keep_report_days: int = 90,
+    snapshot_db: bool = False,
 ) -> Path:
     """Execute the paper collection pipeline."""
     settings = load_settings(config_path)
@@ -174,6 +178,15 @@ def parse_args() -> argparse.Namespace:
     _ = parser.add_argument("--recent-days", type=int, default=7, help="Report window (days)")
     _ = parser.add_argument("--timeout", type=int, default=15, help="HTTP timeout (seconds)")
     _ = parser.add_argument("--keep-days", type=int, default=90, help="Retention window (days)")
+    _ = parser.add_argument(
+        "--keep-raw-days", type=int, default=180, help="Retention window for raw JSONL directories"
+    )
+    _ = parser.add_argument(
+        "--keep-report-days", type=int, default=90, help="Retention window for dated HTML reports"
+    )
+    _ = parser.add_argument(
+        "--snapshot-db", action="store_true", default=False, help="Create a dated DuckDB snapshot after each run"
+    )
     return parser.parse_args()
 
 
@@ -187,4 +200,10 @@ if __name__ == "__main__":
         recent_days=args.recent_days,
         timeout=args.timeout,
         keep_days=args.keep_days,
+        keep_raw_days=args.keep_raw_days,
+        keep_report_days=args.keep_report_days,
+        snapshot_db=args.snapshot_db,
+        keep_raw_days=args.keep_raw_days,
+        keep_report_days=args.keep_report_days,
+        snapshot_db=args.snapshot_db,
     )
