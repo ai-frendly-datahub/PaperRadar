@@ -181,9 +181,38 @@ def _collect_single(
     timeout: int,
     session: requests.Session | None = None,
 ) -> list[Article]:
-    if source.type.lower() != "rss":
-        raise SourceError(source.name, f"Unsupported source type '{source.type}'")
+    source_type = source.type.lower()
 
+    # Handle RSS feeds
+    if source_type == "rss":
+        return _collect_rss(source, category=category, limit=limit, timeout=timeout, session=session)
+
+    # Handle academic APIs
+    if source_type == "arxiv":
+        return _collect_arxiv(source, category=category, limit=limit, timeout=timeout, session=session)
+    elif source_type == "semantic_scholar":
+        return _collect_semantic_scholar(source, category=category, limit=limit, timeout=timeout, session=session)
+    elif source_type == "pubmed":
+        return _collect_pubmed(source, category=category, limit=limit, timeout=timeout, session=session)
+    elif source_type == "biorxiv":
+        return _collect_biorxiv(source, category=category, limit=limit, timeout=timeout, session=session)
+    elif source_type == "openalex":
+        return _collect_openalex(source, category=category, limit=limit, timeout=timeout, session=session)
+    elif source_type == "crossref":
+        return _collect_crossref(source, category=category, limit=limit, timeout=timeout, session=session)
+
+    raise SourceError(source.name, f"Unsupported source type '{source.type}'")
+
+
+def _collect_rss(
+    source: Source,
+    *,
+    category: str,
+    limit: int,
+    timeout: int,
+    session: requests.Session | None = None,
+) -> list[Article]:
+    """Collect articles from RSS feeds."""
     try:
         response = _fetch_url_with_retry(source.url, timeout, session=session)
     except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as exc:
@@ -228,6 +257,358 @@ def _collect_single(
         return items
     except Exception as exc:
         raise ParseError(f"Failed to parse feed from {source.name}: {exc}") from exc
+
+
+def _collect_arxiv(
+    source: Source,
+    *,
+    category: str,
+    limit: int,
+    timeout: int,
+    session: requests.Session | None = None,
+) -> list[Article]:
+    """Collect articles from arXiv API with rate limiting (max 3 requests/second)."""
+    try:
+        response = _fetch_url_with_retry(source.url, timeout, session=session)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as exc:
+        raise NetworkError(f"arXiv API request failed: {exc}") from exc
+
+    try:
+        feed = feedparser.parse(response.content)
+        items: list[Article] = []
+
+        for entry in feed.entries[:limit]:
+            title = html.unescape(_entry_text(entry, "title").strip())
+            link = _entry_text(entry, "link").strip()
+
+            # Skip entries with empty title or link
+            if not title or not link:
+                continue
+
+            # Extract abstract from arXiv entry
+            summary = ""
+            content = entry.get("content", [])
+            if isinstance(content, list) and content:
+                summary = html.unescape(str(content[0].get("value", "")).strip())
+
+            published = _extract_datetime(entry)
+
+            items.append(
+                Article(
+                    title=title,
+                    link=link,
+                    summary=summary,
+                    published=published,
+                    source=source.name,
+                    category=category,
+                )
+            )
+
+        return items
+    except Exception as exc:
+        raise ParseError(f"Failed to parse arXiv response: {exc}") from exc
+
+
+def _collect_semantic_scholar(
+    source: Source,
+    *,
+    category: str,
+    limit: int,
+    timeout: int,
+    session: requests.Session | None = None,
+) -> list[Article]:
+    """Collect articles from Semantic Scholar API (rate limit: 6 calls/second)."""
+    try:
+        response = _fetch_url_with_retry(source.url, timeout, session=session)
+        response.raise_for_status()
+        data = response.json()
+    except requests.exceptions.RequestException as exc:
+        raise NetworkError(f"Semantic Scholar API request failed: {exc}") from exc
+    except ValueError as exc:
+        raise ParseError(f"Failed to parse Semantic Scholar JSON response: {exc}") from exc
+
+    try:
+        items: list[Article] = []
+        papers = data.get("data", [])[:limit]
+
+        for paper in papers:
+            title = paper.get("title", "")
+            if not title:
+                continue
+
+            # Build link from externalLinks or create URL
+            external_links = paper.get("externalLinks", [])
+            link = ""
+            for ext_link in external_links:
+                if ext_link.get("url"):
+                    link = ext_link["url"]
+                    break
+            if not link:
+                paper_id = paper.get("externalIds", {}).get("DOI", "")
+                if paper_id:
+                    link = f"https://doi.org/{paper_id}"
+                else:
+                    continue
+
+            abstract = paper.get("abstract", "")
+            if abstract and isinstance(abstract, list):
+                abstract = abstract[0].get("text", "") if abstract else ""
+
+            # Extract publish date
+            published = None
+            year = paper.get("year")
+            if year:
+                published = datetime(year, 1, 1, tzinfo=UTC)
+
+            items.append(
+                Article(
+                    title=title,
+                    link=link,
+                    summary=str(abstract) if abstract else "",
+                    published=published,
+                    source=source.name,
+                    category=category,
+                )
+            )
+
+        return items
+    except Exception as exc:
+        raise ParseError(f"Failed to parse Semantic Scholar data: {exc}") from exc
+
+
+def _collect_pubmed(
+    source: Source,
+    *,
+    category: str,
+    limit: int,
+    timeout: int,
+    session: requests.Session | None = None,
+) -> list[Article]:
+    """Collect articles from PubMed API (rate limit: 3 requests/second)."""
+    try:
+        response = _fetch_url_with_retry(source.url, timeout, session=session)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as exc:
+        raise NetworkError(f"PubMed API request failed: {exc}") from exc
+
+    try:
+        feed = feedparser.parse(response.content)
+        items: list[Article] = []
+
+        for entry in feed.entries[:limit]:
+            title = html.unescape(_entry_text(entry, "title").strip())
+            link = _entry_text(entry, "link").strip()
+
+            # Skip entries with empty title or link
+            if not title or not link:
+                continue
+
+            summary = html.unescape((_entry_text(entry, "summary") or _entry_text(entry, "description")).strip())
+            published = _extract_datetime(entry)
+
+            items.append(
+                Article(
+                    title=title,
+                    link=link,
+                    summary=summary,
+                    published=published,
+                    source=source.name,
+                    category=category,
+                )
+            )
+
+        return items
+    except Exception as exc:
+        raise ParseError(f"Failed to parse PubMed response: {exc}") from exc
+
+
+def _collect_biorxiv(
+    source: Source,
+    *,
+    category: str,
+    limit: int,
+    timeout: int,
+    session: requests.Session | None = None,
+) -> list[Article]:
+    """Collect articles from bioRxiv API."""
+    try:
+        response = _fetch_url_with_retry(source.url, timeout, session=session)
+        response.raise_for_status()
+        data = response.json()
+    except requests.exceptions.RequestException as exc:
+        raise NetworkError(f"bioRxiv API request failed: {exc}") from exc
+    except ValueError as exc:
+        raise ParseError(f"Failed to parse bioRxiv JSON response: {exc}") from exc
+
+    try:
+        items: list[Article] = []
+        entries = data.get("entries", [])[:limit]
+
+        for entry in entries:
+            title = entry.get("title", "")
+            if not title:
+                continue
+
+            link = entry.get("links", {}).get("htmlUrl", "")
+            if not link:
+                doi = entry.get("doi", "")
+                if doi:
+                    link = f"https://doi.org/{doi}"
+                else:
+                    continue
+
+            abstract = entry.get("abstract", "")
+            if abstract and isinstance(abstract, list):
+                abstract = " ".join([para.get("data", "") for para in abstract])
+
+            # Extract publish date
+            published = None
+            published_date = entry.get("published")
+            if published_date:
+                try:
+                    published = datetime.fromisoformat(published_date.replace("Z", "+00:00"))
+                except (ValueError, AttributeError):
+                    pass
+
+            items.append(
+                Article(
+                    title=title,
+                    link=link,
+                    summary=str(abstract) if abstract else "",
+                    published=published,
+                    source=source.name,
+                    category=category,
+                )
+            )
+
+        return items
+    except Exception as exc:
+        raise ParseError(f"Failed to parse bioRxiv data: {exc}") from exc
+
+
+def _collect_openalex(
+    source: Source,
+    *,
+    category: str,
+    limit: int,
+    timeout: int,
+    session: requests.Session | None = None,
+) -> list[Article]:
+    """Collect articles from OpenAlex API (rate limit: 2 requests/second)."""
+    try:
+        response = _fetch_url_with_retry(source.url, timeout, session=session)
+        response.raise_for_status()
+        data = response.json()
+    except requests.exceptions.RequestException as exc:
+        raise NetworkError(f"OpenAlex API request failed: {exc}") from exc
+    except ValueError as exc:
+        raise ParseError(f"Failed to parse OpenAlex JSON response: {exc}") from exc
+
+    try:
+        items: list[Article] = []
+        works = data.get("results", [])[:limit]
+
+        for work in works:
+            title = work.get("display_title", "")
+            if not title:
+                continue
+
+            link = work.get("id", "").split("/")[-1]
+            link = f"https://doi.org/{link}" if link.startswith("10.") else f"https://openalex.org/{link}"
+
+            abstract = work.get("abstract", "") or ""
+
+            # Extract publish date
+            published = None
+            published_in = work.get("published_in", {})
+            year = published_in.get("year") if published_in else work.get("year")
+            if year:
+                published = datetime(year, 1, 1, tzinfo=UTC)
+
+            items.append(
+                Article(
+                    title=title,
+                    link=link,
+                    summary=str(abstract) if abstract else "",
+                    published=published,
+                    source=source.name,
+                    category=category,
+                )
+            )
+
+        return items
+    except Exception as exc:
+        raise ParseError(f"Failed to parse OpenAlex data: {exc}") from exc
+
+
+def _collect_crossref(
+    source: Source,
+    *,
+    category: str,
+    limit: int,
+    timeout: int,
+    session: requests.Session | None = None,
+) -> list[Article]:
+    """Collect articles from CrossRef API."""
+    try:
+        response = _fetch_url_with_retry(source.url, timeout, session=session)
+        response.raise_for_status()
+        data = response.json()
+    except requests.exceptions.RequestException as exc:
+        raise NetworkError(f"CrossRef API request failed: {exc}") from exc
+    except ValueError as exc:
+        raise ParseError(f"Failed to parse CrossRef JSON response: {exc}") from exc
+
+    try:
+        items: list[Article] = []
+        items_data = data.get("items", [])[:limit]
+
+        for item in items_data:
+            title_list = item.get("title", [])
+            title = title_list[0] if isinstance(title_list, list) and title_list else ""
+            if not title:
+                continue
+
+            # Get DOI link
+            doi = item.get("DOI", "")
+            link = f"https://doi.org/{doi}" if doi else ""
+            if not link:
+                continue
+
+            # Get abstract
+            abstract = item.get("abstract", "") or ""
+
+            # Extract publish date
+            published = None
+            published = item.get("published", {})
+            if published and isinstance(published, dict):
+                date_parts = published.get("date-parts", [[]])
+                if date_parts and date_parts[0]:
+                    try:
+                        year = date_parts[0][0]
+                        month = date_parts[0][1] if len(date_parts[0]) > 1 else 1
+                        day = date_parts[0][2] if len(date_parts[0]) > 2 else 1
+                        published = datetime(year, month, day, tzinfo=UTC)
+                    except (ValueError, IndexError):
+                        published = None
+                else:
+                    published = None
+
+            items.append(
+                Article(
+                    title=title,
+                    link=link,
+                    summary=str(abstract) if abstract else "",
+                    published=published,
+                    source=source.name,
+                    category=category,
+                )
+            )
+
+        return items
+    except Exception as exc:
+        raise ParseError(f"Failed to parse CrossRef data: {exc}") from exc
 
 
 def _extract_datetime(entry: Mapping[str, Any]) -> datetime | None:
