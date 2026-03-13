@@ -24,7 +24,7 @@ def setup_logging() -> None:
         logger_factory=structlog.stdlib.LoggerFactory(),
         cache_logger_on_first_use=True,
     )
-    
+
     logging.basicConfig(
         format="%(message)s",
         stream=sys.stdout,

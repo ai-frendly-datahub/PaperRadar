@@ -3,11 +3,12 @@ from __future__ import annotations
 import re
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Optional, cast
+from typing import cast
 
 import duckdb
 
 from ..search_index import SearchIndex
+
 
 _ALLOWED_SQL = re.compile(r"^\s*(SELECT|WITH|EXPLAIN)\b", re.IGNORECASE)
 
@@ -93,7 +94,7 @@ def handle_recent_papers(*, db_path: Path, days: int = 7, limit: int = 20) -> st
             [cutoff, limit],
         )
         rows = cast(
-            list[tuple[str, str, str, Optional[str], Optional[str], Optional[str], Optional[int], datetime]],
+            list[tuple[str, str, str, str | None, str | None, str | None, int | None, datetime]],
             cursor.fetchall(),
         )
     finally:

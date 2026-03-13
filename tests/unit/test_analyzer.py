@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from paperradar.analyzer import apply_entity_rules
 from paperradar.models import EntityDefinition, Paper
@@ -13,11 +13,11 @@ def test_entity_matching():
         link="https://example.com",
         abstract="This paper discusses transformer architectures and BERT models",
         authors=["John Doe"],
-        published=datetime.now(timezone.utc),
+        published=datetime.now(UTC),
         source="arXiv",
         category="research",
     )
-    
+
     entities = [
         EntityDefinition(
             name="Techniques",
@@ -25,9 +25,9 @@ def test_entity_matching():
             keywords=["transformer", "BERT", "GPT"],
         ),
     ]
-    
+
     result = apply_entity_rules([paper], entities)
-    
+
     assert len(result) == 1
     assert "Techniques" in result[0].matched_entities
     assert "transformer" in result[0].matched_entities["Techniques"]
@@ -40,11 +40,11 @@ def test_no_entity_match():
         link="https://example.com",
         abstract="This is about something else",
         authors=["Jane Doe"],
-        published=datetime.now(timezone.utc),
+        published=datetime.now(UTC),
         source="arXiv",
         category="research",
     )
-    
+
     entities = [
         EntityDefinition(
             name="Techniques",
@@ -52,7 +52,7 @@ def test_no_entity_match():
             keywords=["transformer", "BERT"],
         ),
     ]
-    
+
     result = apply_entity_rules([paper], entities)
-    
+
     assert len(result[0].matched_entities) == 0

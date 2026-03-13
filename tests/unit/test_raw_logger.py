@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 import tempfile
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from paperradar.models import Paper
@@ -14,21 +14,21 @@ def test_raw_logger_log():
     with tempfile.TemporaryDirectory() as tmpdir:
         raw_dir = Path(tmpdir)
         logger = RawLogger(raw_dir)
-        
+
         paper = Paper(
             title="Test Paper",
             link="https://example.com",
             abstract="Test abstract",
             authors=["Author 1"],
-            published=datetime.now(timezone.utc),
+            published=datetime.now(UTC),
             source="arXiv",
             category="research",
         )
-        
+
         log_file = logger.log([paper], source_name="test_source")
-        
+
         assert log_file.exists()
-        
+
         # Verify JSONL format
         with open(log_file) as f:
             line = f.readline()

@@ -1,12 +1,11 @@
 from __future__ import annotations
 
-import re
 import shutil
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from itertools import combinations
 from pathlib import Path
-from typing import Any, Union, cast
+from typing import Any, cast
 
 import networkx as nx
 import plotly.graph_objects as go
@@ -67,7 +66,7 @@ def _build_cooccurrence_network(
 def _build_network_html(
     node_counts: dict[str, int],
     edge_counts: dict[tuple[str, str], int],
-    include_plotlyjs: Union[str, bool],
+    include_plotlyjs: str | bool,
 ) -> str:
     if not node_counts:
         return '<div class="network-empty">Not enough co-occurrence data.</div>'
@@ -172,7 +171,7 @@ def _build_network_html(
 
 def _build_topic_network_html(
     entities_json: list[dict[str, list[str]]],
-    include_plotlyjs: Union[str, bool],
+    include_plotlyjs: str | bool,
 ) -> str:
     groups: list[list[object]] = [
         list(entity_map.keys()) for entity_map in entities_json if entity_map
@@ -183,7 +182,7 @@ def _build_topic_network_html(
 
 def _build_author_network_html(
     articles: list[Paper],
-    include_plotlyjs: Union[str, bool],
+    include_plotlyjs: str | bool,
 ) -> str:
     groups: list[list[object]] = [list(paper.authors) for paper in articles if paper.authors]
     node_counts, edge_counts = _build_cooccurrence_network(groups)
@@ -257,7 +256,7 @@ def generate_report(
 
     _ = output_path.write_text(html, encoding="utf-8")
 
-    now_ts = datetime.now(timezone.utc)
+    now_ts = datetime.now(UTC)
     date_stamp = now_ts.strftime("%Y%m%d")
     dated_name = f"{category.category_name}_{date_stamp}.html"
     dated_path = output_path.parent / dated_name

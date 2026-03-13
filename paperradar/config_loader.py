@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-from typing import Optional, Any, cast
+from typing import cast
 
 import yaml
 
@@ -17,7 +17,7 @@ from .models import (
 )
 
 
-def load_settings(config_path: Optional[Path] = None) -> RadarSettings:
+def load_settings(config_path: Path | None = None) -> RadarSettings:
     """Load settings from config/config.yaml."""
     if config_path is None:
         config_path = Path(__file__).parent.parent / "config" / "config.yaml"
@@ -33,7 +33,7 @@ def load_settings(config_path: Optional[Path] = None) -> RadarSettings:
     )
 
 
-def load_category_config(category: str, categories_dir: Optional[Path] = None) -> CategoryConfig:
+def load_category_config(category: str, categories_dir: Path | None = None) -> CategoryConfig:
     """Load category config from YAML."""
     if categories_dir is None:
         categories_dir = Path(__file__).parent.parent / "config" / "categories"
@@ -72,7 +72,7 @@ def _resolve_env_refs(value: object) -> object:
 
 
 def load_notification_config(
-    config_path: Optional[Path] = None,
+    config_path: Path | None = None,
 ) -> NotificationConfig:
     """Load notification configuration from notifications.yaml.
 

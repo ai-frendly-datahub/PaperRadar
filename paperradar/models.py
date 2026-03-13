@@ -1,5 +1,4 @@
 from __future__ import annotations
-from typing import Optional
 
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -28,15 +27,15 @@ class Paper:
     link: str
     abstract: str
     authors: list[str]
-    published: Optional[datetime]
+    published: datetime | None
     source: str
     category: str
-    doi: Optional[str] = None
-    arxiv_id: Optional[str] = None
-    pdf_url: Optional[str] = None
-    venue: Optional[str] = None
-    citation_count: Optional[int] = None
-    collected_at: Optional[datetime] = None
+    doi: str | None = None
+    arxiv_id: str | None = None
+    pdf_url: str | None = None
+    venue: str | None = None
+    citation_count: int | None = None
+    collected_at: datetime | None = None
     categories: list[str] = field(default_factory=list)
     keywords: list[str] = field(default_factory=list)
     matched_entities: dict[str, list[str]] = field(default_factory=dict)
@@ -78,7 +77,7 @@ class TelegramSettings:
 class NotificationConfig:
     enabled: bool
     channels: list[str]
-    email: Optional[EmailSettings] = None
-    webhook_url: Optional[str] = None
-    telegram: Optional[TelegramSettings] = None
+    email: EmailSettings | None = None
+    webhook_url: str | None = None
+    telegram: TelegramSettings | None = None
     rules: dict[str, object] = field(default_factory=dict)

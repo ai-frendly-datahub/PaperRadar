@@ -6,7 +6,8 @@ from functools import lru_cache
 from importlib import import_module
 from typing import Protocol, cast
 
-from .models import Paper as Article, EntityDefinition
+from .models import EntityDefinition
+from .models import Paper as Article
 
 
 class _KoreanAnalyzerLike(Protocol):

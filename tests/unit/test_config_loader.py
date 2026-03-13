@@ -16,9 +16,9 @@ report_dir: reports
 raw_data_dir: data/raw
 search_db_path: data/search.db
 """)
-        
+
         settings = load_settings(config_file)
-        
+
         assert settings.database_path == Path("data/papers.duckdb")
         assert settings.report_dir == Path("reports")
 
@@ -42,9 +42,9 @@ entities:
     display_name: Entity 1
     keywords: [keyword1, keyword2]
 """)
-        
+
         config = load_category_config("test", categories_dir=categories_dir)
-        
+
         assert config.category_name == "test"
         assert config.display_name == "Test Category"
         assert len(config.sources) == 1

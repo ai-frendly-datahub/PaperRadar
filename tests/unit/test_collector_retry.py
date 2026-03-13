@@ -10,6 +10,7 @@ import requests
 from paperradar import collector as collector_module
 from paperradar.models import Source
 
+
 RSS_CONTENT = b"""<?xml version="1.0"?>
 <rss version="2.0">
     <channel>
