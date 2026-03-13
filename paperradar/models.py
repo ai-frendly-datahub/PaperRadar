@@ -20,25 +20,15 @@ class EntityDefinition:
 
 
 @dataclass
-class Paper:
-    """Academic paper model."""
-
+class Article:
     title: str
     link: str
-    abstract: str
-    authors: list[str]
+    summary: str
     published: datetime | None
     source: str
     category: str
-    doi: str | None = None
-    arxiv_id: str | None = None
-    pdf_url: str | None = None
-    venue: str | None = None
-    citation_count: int | None = None
-    collected_at: datetime | None = None
-    categories: list[str] = field(default_factory=list)
-    keywords: list[str] = field(default_factory=list)
     matched_entities: dict[str, list[str]] = field(default_factory=dict)
+    collected_at: datetime | None = None
 
 
 @dataclass

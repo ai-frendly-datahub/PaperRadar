@@ -1,36 +1,29 @@
 from __future__ import annotations
 
+import json
 from datetime import UTC, datetime, timedelta
+from pathlib import Path
+
+import duckdb
+
+from paperradar.search_index import SearchIndex
 
 
-UTC = UTC
-from importlib import import_module  # noqa: E402
-from pathlib import Path  # noqa: E402
-
-import duckdb  # noqa: E402
-
-
-SearchIndex = import_module("paperradar.search_index").SearchIndex
-tools = import_module("paperradar.mcp_server.tools")
-
-
-def _init_papers_table(db_path: Path) -> None:
+def _init_articles_table(db_path: Path) -> None:
     conn = duckdb.connect(str(db_path))
     try:
         _ = conn.execute(
             """
-            CREATE TABLE papers (
-                paper_id VARCHAR PRIMARY KEY,
-                title VARCHAR NOT NULL,
-                url VARCHAR,
-                source_name VARCHAR,
-                arxiv_id VARCHAR,
-                doi VARCHAR,
-                venue VARCHAR,
-                citation_count INTEGER,
-                publication_date DATE,
-                abstract VARCHAR,
-                collected_at TIMESTAMP
+            CREATE TABLE articles (
+                id BIGINT PRIMARY KEY,
+                category TEXT NOT NULL,
+                source TEXT NOT NULL,
+                title TEXT NOT NULL,
+                link TEXT NOT NULL UNIQUE,
+                summary TEXT,
+                published TIMESTAMP,
+                collected_at TIMESTAMP NOT NULL,
+                entities_json TEXT
             )
             """
         )
@@ -38,43 +31,32 @@ def _init_papers_table(db_path: Path) -> None:
         conn.close()
 
 
-def _seed_paper(
+def _seed_article(
     *,
     db_path: Path,
-    paper_id: str,
+    article_id: int,
     title: str,
-    url: str,
-    source_name: str,
-    arxiv_id: str | None = None,
-    doi: str | None = None,
-    venue: str | None = None,
-    citation_count: int | None = None,
-    publication_date: str | None = None,
-    abstract: str | None = None,
-    collected_at: datetime | None = None,
+    link: str,
+    collected_at: datetime,
+    entities: dict[str, list[str]] | None = None,
 ) -> None:
     conn = duckdb.connect(str(db_path))
     try:
         _ = conn.execute(
             """
-            INSERT INTO papers (
-                paper_id, title, url, source_name, arxiv_id, doi,
-                venue, citation_count, publication_date, abstract, collected_at
-            )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO articles (id, category, source, title, link, summary, published, collected_at, entities_json)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             [
-                paper_id,
+                article_id,
+                "coffee",
+                "Test Source",
                 title,
-                url,
-                source_name,
-                arxiv_id,
-                doi,
-                venue,
-                citation_count,
-                publication_date,
-                abstract,
-                collected_at or datetime.now(tz=UTC),
+                link,
+                "summary",
+                None,
+                collected_at,
+                json.dumps(entities or {}, ensure_ascii=False),
             ],
         )
     finally:
@@ -82,230 +64,132 @@ def _seed_paper(
 
 
 def test_handle_search(tmp_path: Path) -> None:
-    db_path = tmp_path / "papers.duckdb"
+    from mcp_server.tools import handle_search
+
+    db_path = tmp_path / "radar.duckdb"
     search_db_path = tmp_path / "search.db"
-    _init_papers_table(db_path)
+    _init_articles_table(db_path)
 
-    now = datetime.now(tz=UTC)
-    recent_paper_id = "arxiv:2301.12345"
-    old_paper_id = "arxiv:2201.54321"
+    now = datetime.now(UTC)
+    recent_link = "https://example.com/recent"
+    old_link = "https://example.com/old"
 
-    _seed_paper(
+    _seed_article(
         db_path=db_path,
-        paper_id=recent_paper_id,
-        title="Recent machine learning advances",
-        url="https://arxiv.org/abs/2301.12345",
-        source_name="arXiv",
-        arxiv_id="2301.12345",
-        doi="10.48550/arXiv.2301.12345",
-        abstract="This paper explores recent advances in machine learning.",
+        article_id=1,
+        title="Recent coffee demand",
+        link=recent_link,
         collected_at=now - timedelta(days=2),
     )
-    _seed_paper(
+    _seed_article(
         db_path=db_path,
-        paper_id=old_paper_id,
-        title="Old machine learning paper",
-        url="https://arxiv.org/abs/2201.54321",
-        source_name="arXiv",
-        arxiv_id="2201.54321",
-        doi="10.48550/arXiv.2201.54321",
-        abstract="This is an old paper about machine learning.",
+        article_id=2,
+        title="Old coffee demand",
+        link=old_link,
         collected_at=now - timedelta(days=20),
     )
 
     with SearchIndex(search_db_path) as idx:
-        idx.upsert(
-            recent_paper_id,
-            "Recent machine learning advances",
-            "This paper explores recent advances in machine learning.",
-            "",
-        )
-        idx.upsert(
-            old_paper_id,
-            "Old machine learning paper",
-            "This is an old paper about machine learning.",
-            "",
-        )
+        idx.upsert(recent_link, "Recent coffee demand", "Demand is rising")
+        idx.upsert(old_link, "Old coffee demand", "Demand was low")
 
-    output = tools.handle_search(
+    output = handle_search(
         search_db_path=search_db_path,
         db_path=db_path,
-        query="recent machine learning",
+        query="last 7 days coffee",
         limit=10,
     )
 
-    assert "Recent machine learning advances" in output
-    assert "Old machine learning paper" not in output
-    assert "arXiv" in output or "2301" in output
+    assert "Recent coffee demand" in output
+    assert "Old coffee demand" not in output
 
 
-def test_handle_recent_papers(tmp_path: Path) -> None:
-    db_path = tmp_path / "papers.duckdb"
-    _init_papers_table(db_path)
-    now = datetime.now(tz=UTC)
+def test_handle_recent_updates(tmp_path: Path) -> None:
+    from mcp_server.tools import handle_recent_updates
 
-    _seed_paper(
+    db_path = tmp_path / "radar.duckdb"
+    _init_articles_table(db_path)
+    now = datetime.now(UTC)
+
+    _seed_article(
         db_path=db_path,
-        paper_id="arxiv:2301.99999",
-        title="Very recent paper",
-        url="https://arxiv.org/abs/2301.99999",
-        source_name="arXiv",
-        arxiv_id="2301.99999",
-        venue="NeurIPS 2023",
-        citation_count=15,
-        abstract="A very recent paper.",
+        article_id=1,
+        title="Most recent",
+        link="https://example.com/1",
+        collected_at=now - timedelta(hours=1),
+    )
+    _seed_article(
+        db_path=db_path,
+        article_id=2,
+        title="Older",
+        link="https://example.com/2",
         collected_at=now - timedelta(days=2),
     )
-    _seed_paper(
-        db_path=db_path,
-        paper_id="arxiv:2210.00001",
-        title="Older paper",
-        url="https://arxiv.org/abs/2210.00001",
-        source_name="arXiv",
-        arxiv_id="2210.00001",
-        venue="ICML 2022",
-        citation_count=5,
-        abstract="An older paper.",
-        collected_at=now - timedelta(days=20),
-    )
 
-    output = tools.handle_recent_papers(db_path=db_path, days=7, limit=10)
+    output = handle_recent_updates(db_path=db_path, days=1, limit=10)
 
-    assert "Very recent paper" in output
-    assert "Older paper" not in output
-    assert "NeurIPS 2023" in output or "15" in output
+    assert "Most recent" in output
+    assert "Older" not in output
 
 
 def test_handle_sql_select(tmp_path: Path) -> None:
-    db_path = tmp_path / "papers.duckdb"
-    _init_papers_table(db_path)
-    now = datetime.now(tz=UTC)
+    from mcp_server.tools import handle_sql
 
-    _seed_paper(
-        db_path=db_path,
-        paper_id="arxiv:2301.11111",
-        title="Paper 1",
-        url="https://arxiv.org/abs/2301.11111",
-        source_name="arXiv",
-        collected_at=now,
-    )
-    _seed_paper(
-        db_path=db_path,
-        paper_id="arxiv:2301.22222",
-        title="Paper 2",
-        url="https://arxiv.org/abs/2301.22222",
-        source_name="Semantic Scholar",
-        collected_at=now,
-    )
-    _seed_paper(
-        db_path=db_path,
-        paper_id="arxiv:2301.33333",
-        title="Paper 3",
-        url="https://arxiv.org/abs/2301.33333",
-        source_name="PubMed",
-        collected_at=now,
-    )
+    db_path = tmp_path / "radar.duckdb"
+    _init_articles_table(db_path)
 
-    output = tools.handle_sql(db_path=db_path, query="SELECT COUNT(*) AS total FROM papers")
+    output = handle_sql(db_path=db_path, query="SELECT COUNT(*) AS total FROM articles")
 
     assert "total" in output
-    assert "3" in output
+    assert "0" in output
 
 
 def test_handle_sql_blocked(tmp_path: Path) -> None:
-    db_path = tmp_path / "papers.duckdb"
-    _init_papers_table(db_path)
+    from mcp_server.tools import handle_sql
 
-    output = tools.handle_sql(db_path=db_path, query="DROP TABLE papers")
+    db_path = tmp_path / "radar.duckdb"
+    _init_articles_table(db_path)
+
+    output = handle_sql(db_path=db_path, query="DROP TABLE articles")
 
     assert "Only SELECT/WITH/EXPLAIN queries are allowed" in output
 
 
-def test_handle_stats(tmp_path: Path) -> None:
-    db_path = tmp_path / "papers.duckdb"
-    _init_papers_table(db_path)
-    now = datetime.now(tz=UTC)
+def test_handle_top_trends(tmp_path: Path) -> None:
+    from mcp_server.tools import handle_top_trends
 
-    _seed_paper(
+    db_path = tmp_path / "radar.duckdb"
+    _init_articles_table(db_path)
+    now = datetime.now(UTC)
+
+    _seed_article(
         db_path=db_path,
-        paper_id="arxiv:2301.44444",
-        title="arXiv paper 1",
-        url="https://arxiv.org/abs/2301.44444",
-        source_name="arXiv",
-        collected_at=now,
+        article_id=1,
+        title="a",
+        link="https://example.com/a",
+        collected_at=now - timedelta(days=1),
+        entities={"Region": ["ethiopia", "kenya"], "Roaster": ["blue bottle"]},
     )
-    _seed_paper(
+    _seed_article(
         db_path=db_path,
-        paper_id="arxiv:2301.55555",
-        title="arXiv paper 2",
-        url="https://arxiv.org/abs/2301.55555",
-        source_name="arXiv",
-        collected_at=now,
-    )
-    _seed_paper(
-        db_path=db_path,
-        paper_id="ss:12345",
-        title="Semantic Scholar paper",
-        url="https://semanticscholar.org/paper/12345",
-        source_name="Semantic Scholar",
-        collected_at=now,
+        article_id=2,
+        title="b",
+        link="https://example.com/b",
+        collected_at=now - timedelta(days=1),
+        entities={"Region": ["brazil"]},
     )
 
-    output = tools.handle_stats(db_path=db_path)
+    output = handle_top_trends(db_path=db_path, days=7, limit=10)
 
-    assert "arXiv" in output
-    assert "2" in output
-    assert "Semantic Scholar" in output
-
-
-def test_handle_paper_by_doi(tmp_path: Path) -> None:
-    db_path = tmp_path / "papers.duckdb"
-    _init_papers_table(db_path)
-    now = datetime.now(tz=UTC)
-
-    test_doi = "10.1234/test.doi"
-    _seed_paper(
-        db_path=db_path,
-        paper_id="doi:10.1234/test.doi",
-        title="Paper with DOI",
-        url="https://example.com/paper",
-        source_name="CrossRef",
-        doi=test_doi,
-        venue="Nature",
-        citation_count=42,
-        abstract="This is a test paper.",
-        collected_at=now,
-    )
-
-    output = tools.handle_paper_by_doi(db_path=db_path, identifier=test_doi)
-
-    assert "Paper with DOI" in output
-    assert test_doi in output
-    assert "not found" not in output.lower()
+    assert "Region" in output
+    assert "3" in output
+    assert "Roaster" in output
+    assert "1" in output
 
 
-def test_handle_paper_by_arxiv_id(tmp_path: Path) -> None:
-    db_path = tmp_path / "papers.duckdb"
-    _init_papers_table(db_path)
-    now = datetime.now(tz=UTC)
+def test_handle_price_watch_stub() -> None:
+    from mcp_server.tools import handle_price_watch
 
-    test_arxiv_id = "2301.12345"
-    _seed_paper(
-        db_path=db_path,
-        paper_id="arxiv:2301.12345",
-        title="arXiv paper lookup",
-        url="https://arxiv.org/abs/2301.12345",
-        source_name="arXiv",
-        arxiv_id=test_arxiv_id,
-        doi="10.48550/arXiv.2301.12345",
-        venue="NeurIPS 2023",
-        citation_count=8,
-        abstract="Test abstract for arXiv paper.",
-        collected_at=now,
-    )
+    output = handle_price_watch(threshold=10.0)
 
-    output = tools.handle_paper_by_doi(db_path=db_path, identifier=test_arxiv_id)
-
-    assert "arXiv paper lookup" in output
-    assert test_arxiv_id in output
-    assert "not found" not in output.lower()
+    assert "Not available in template project" in output

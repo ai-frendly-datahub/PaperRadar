@@ -5,7 +5,7 @@ from collections.abc import Iterable
 from datetime import UTC, datetime
 from pathlib import Path
 
-from .models import Paper as Article
+from .models import Article
 
 
 class RawLogger:
@@ -49,7 +49,7 @@ class RawLogger:
                 record = {
                     "title": article.title,
                     "link": article.link,
-                    "abstract": article.abstract,
+                    "summary": article.summary,
                     "published": article.published.isoformat() if article.published else None,
                     "source": article.source,
                     "category": article.category,

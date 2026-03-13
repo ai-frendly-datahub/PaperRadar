@@ -6,8 +6,7 @@ from functools import lru_cache
 from importlib import import_module
 from typing import Protocol, cast
 
-from .models import EntityDefinition
-from .models import Paper as Article
+from .models import Article, EntityDefinition
 
 
 class _KoreanAnalyzerLike(Protocol):
@@ -90,7 +89,7 @@ def apply_entity_rules(
         normalized_entities.append((entity, normalized_keywords))
 
     for article in articles:
-        haystack = f"{article.title}\n{article.abstract}"
+        haystack = f"{article.title}\n{article.summary}"
         haystack_lower = haystack.lower()
         matches: dict[str, list[str]] = {}
         for entity, keywords_with_patterns in normalized_entities:

@@ -1,5 +1,5 @@
 """
-Unit tests for paperradar.common.validators module.
+Unit tests for radar.common.validators module.
 
 Tests cover:
 - Title normalization
@@ -22,7 +22,7 @@ from paperradar.common.validators import (
     validate_article,
     validate_url_format,
 )
-from paperradar.models import Paper
+from paperradar.models import Article
 
 
 class TestNormalizeTitle:
@@ -123,6 +123,7 @@ class TestIsSimilarUrl:
     def test_different_paths_below_threshold(self) -> None:
         url1 = "https://example.com/article/123"
         url2 = "https://example.com/article/456"
+        # Paths are NOT similar enough (0.75 < 0.8 threshold)
         assert is_similar_url(url1, url2) is False
 
     def test_similar_paths_high_threshold(self) -> None:
@@ -258,12 +259,11 @@ class TestValidateArticle:
     """Tests for validate_article function."""
 
     def test_valid_article(self) -> None:
-        article = Paper(
+        article = Article(
             title="Valid Article",
             link="https://example.com/article",
-            abstract="This is a summary",
-            authors=["Author"],
-            published=datetime.now(tz=UTC),
+            summary="This is a summary",
+            published=datetime.now(UTC),
             source="Example Source",
             category="news",
         )
@@ -272,12 +272,11 @@ class TestValidateArticle:
         assert errors == []
 
     def test_article_missing_title(self) -> None:
-        article = Paper(
+        article = Article(
             title="",
             link="https://example.com/article",
-            abstract="Summary",
-            authors=["Author"],
-            published=datetime.now(tz=UTC),
+            summary="Summary",
+            published=datetime.now(UTC),
             source="Source",
             category="news",
         )
@@ -286,12 +285,11 @@ class TestValidateArticle:
         assert any("title" in error for error in errors)
 
     def test_article_invalid_url(self) -> None:
-        article = Paper(
+        article = Article(
             title="Title",
             link="not-a-url",
-            abstract="Summary",
-            authors=["Author"],
-            published=datetime.now(tz=UTC),
+            summary="Summary",
+            published=datetime.now(UTC),
             source="Source",
             category="news",
         )
@@ -300,12 +298,11 @@ class TestValidateArticle:
         assert any("link" in error for error in errors)
 
     def test_article_missing_summary(self) -> None:
-        article = Paper(
+        article = Article(
             title="Title",
             link="https://example.com/article",
-            abstract="",
-            authors=["Author"],
-            published=datetime.now(tz=UTC),
+            summary="",
+            published=datetime.now(UTC),
             source="Source",
             category="news",
         )
@@ -314,12 +311,11 @@ class TestValidateArticle:
         assert any("summary" in error for error in errors)
 
     def test_article_missing_source(self) -> None:
-        article = Paper(
+        article = Article(
             title="Title",
             link="https://example.com/article",
-            abstract="Summary",
-            authors=["Author"],
-            published=datetime.now(tz=UTC),
+            summary="Summary",
+            published=datetime.now(UTC),
             source="",
             category="news",
         )
@@ -328,12 +324,11 @@ class TestValidateArticle:
         assert any("source" in error for error in errors)
 
     def test_article_missing_category(self) -> None:
-        article = Paper(
+        article = Article(
             title="Title",
             link="https://example.com/article",
-            abstract="Summary",
-            authors=["Author"],
-            published=datetime.now(tz=UTC),
+            summary="Summary",
+            published=datetime.now(UTC),
             source="Source",
             category="",
         )
@@ -342,12 +337,11 @@ class TestValidateArticle:
         assert any("category" in error for error in errors)
 
     def test_article_multiple_errors(self) -> None:
-        article = Paper(
+        article = Article(
             title="",
             link="invalid",
-            abstract="",
-            authors=["Author"],
-            published=datetime.now(tz=UTC),
+            summary="",
+            published=datetime.now(UTC),
             source="",
             category="",
         )
@@ -356,11 +350,10 @@ class TestValidateArticle:
         assert len(errors) >= 4
 
     def test_article_with_none_published(self) -> None:
-        article = Paper(
+        article = Article(
             title="Title",
             link="https://example.com/article",
-            abstract="Summary",
-            authors=["Author"],
+            summary="Summary",
             published=None,
             source="Source",
             category="news",
@@ -370,12 +363,11 @@ class TestValidateArticle:
         assert errors == []
 
     def test_article_with_matched_entities(self) -> None:
-        article = Paper(
+        article = Article(
             title="Title",
             link="https://example.com/article",
-            abstract="Summary",
-            authors=["Author"],
-            published=datetime.now(tz=UTC),
+            summary="Summary",
+            published=datetime.now(UTC),
             source="Source",
             category="news",
             matched_entities={"entity1": ["keyword1", "keyword2"]},
@@ -409,12 +401,11 @@ class TestValidatorsIntegration:
         assert normalize_title(title) == "article"
 
     def test_article_object_validation(self) -> None:
-        article = Paper(
+        article = Article(
             title="Valid Article Title",
             link="https://example.com/news/article-123",
-            abstract="This is a comprehensive summary of the article content.",
-            authors=["Author"],
-            published=datetime.now(tz=UTC),
+            summary="This is a comprehensive summary of the article content.",
+            published=datetime.now(UTC),
             source="News Source",
             category="technology",
         )

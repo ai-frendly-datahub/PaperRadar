@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import threading
-from typing import Any
 
 import structlog
 from pybreaker import CircuitBreaker, CircuitBreakerListener, CircuitBreakerState
@@ -27,6 +26,11 @@ class SourceCircuitBreakerListener(CircuitBreakerListener):
             after=new_state.name,
         )
 
+    def before_call(
+        self, cb: CircuitBreaker, func: object, *args: object, **kwargs: object
+    ) -> None:
+        """Called before the circuit breaker executes a function."""
+
     def failure(
         self,
         cb: CircuitBreaker,
@@ -47,14 +51,6 @@ class SourceCircuitBreakerListener(CircuitBreakerListener):
             source=cb.name,
         )
 
-    def before_call(self, cb: CircuitBreaker, *args: Any, **kwargs: Any) -> None:
-        """Called before circuit breaker executes a call."""
-        pass
-
-    def after_call(self, cb: CircuitBreaker, *args: Any, **kwargs: Any) -> None:
-        """Called after circuit breaker executes a call."""
-        pass
-
 
 class SourceCircuitBreakerManager:
     """Thread-safe registry of per-source circuit breakers."""
@@ -69,7 +65,7 @@ class SourceCircuitBreakerManager:
         """Get or create a circuit breaker for a source.
 
         Args:
-            source_name: Name of the source (e.g., 'arXiv', 'PubMed')
+            source_name: Name of the source (e.g., 'BBC News', 'Reuters')
 
         Returns:
             CircuitBreaker instance for the source

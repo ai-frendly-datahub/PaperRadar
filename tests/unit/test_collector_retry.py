@@ -1,17 +1,27 @@
 from __future__ import annotations
 
-from collections.abc import Callable
-from typing import Any, cast
+import time
 from unittest.mock import Mock, patch
 
+# pyright: reportPrivateUsage=false
 import pytest
 import requests
 
-from paperradar import collector as collector_module
-from paperradar.models import Source
+from paperradar.collector import RateLimiter, _collect_single, collect_sources
+from paperradar.exceptions import NetworkError, SourceError
+from paperradar.models import Article, Source
 
 
-RSS_CONTENT = b"""<?xml version="1.0"?>
+class TestCollectorRetryLogic:
+    """Test HTTP retry logic with exponential backoff."""
+
+    def test_retry_on_timeout(self) -> None:
+        """Should retry on request timeout and eventually succeed."""
+        source = Source(name="test_feed", type="rss", url="http://example.com/feed")
+
+        with patch("radar.collector.requests.get") as mock_get:
+            mock_response = Mock()
+            mock_response.content = b"""<?xml version="1.0"?>
 <rss version="2.0">
     <channel>
         <item>
@@ -22,41 +32,39 @@ RSS_CONTENT = b"""<?xml version="1.0"?>
         </item>
     </channel>
 </rss>"""
-
-
-def _collect_single_callable() -> Callable[..., list[Any]]:
-    target = getattr(collector_module, "_collect_single", None)
-    if target is None:
-        pytest.skip("paperradar.collector._collect_single is not available in this collector shape")
-    return cast(Callable[..., list[Any]], target)
-
-
-class TestCollectorRetryLogic:
-    def test_retry_on_timeout(self) -> None:
-        collect_single = _collect_single_callable()
-        source = Source(name="test_feed", type="rss", url="http://example.com/feed")
-        with patch("paperradar.collector.requests.get") as mock_get:
-            mock_response = Mock()
-            mock_response.content = RSS_CONTENT
             mock_response.raise_for_status = Mock()
+
             mock_get.side_effect = [
                 requests.exceptions.Timeout("timeout"),
                 requests.exceptions.Timeout("timeout"),
                 mock_response,
             ]
 
-            articles = collect_single(source, category="test", limit=10, timeout=15)
+            articles = _collect_single(source, category="test", limit=10, timeout=15)
 
             assert len(articles) == 1
-            assert getattr(articles[0], "title", None) == "Test Article"
+            assert articles[0].title == "Test Article"
+            assert isinstance(articles[0], Article)
             assert mock_get.call_count == 3
+            assert collect_sources([], category="test") == ([], [])
 
     def test_retry_on_5xx_error(self) -> None:
-        collect_single = _collect_single_callable()
+        """Should retry on 5xx server errors."""
         source = Source(name="test_feed", type="rss", url="http://example.com/feed")
-        with patch("paperradar.collector.requests.get") as mock_get:
+
+        with patch("radar.collector.requests.get") as mock_get:
             mock_response = Mock()
-            mock_response.content = RSS_CONTENT
+            mock_response.content = b"""<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <item>
+            <title>Test Article</title>
+            <link>http://example.com/article</link>
+            <description>Test summary</description>
+            <pubDate>Mon, 01 Jan 2024 12:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>"""
             mock_response.raise_for_status = Mock()
 
             error_response = Mock()
@@ -64,50 +72,114 @@ class TestCollectorRetryLogic:
             error_response.raise_for_status = Mock(
                 side_effect=requests.exceptions.HTTPError("503 Service Unavailable")
             )
-            mock_get.side_effect = [error_response, error_response, mock_response]
 
-            articles = collect_single(source, category="test", limit=10, timeout=15)
+            mock_get.side_effect = [
+                error_response,
+                error_response,
+                mock_response,
+            ]
+
+            articles = _collect_single(source, category="test", limit=10, timeout=15)
 
             assert len(articles) == 1
-            assert getattr(articles[0], "title", None) == "Test Article"
+            assert articles[0].title == "Test Article"
             assert mock_get.call_count == 3
 
     def test_4xx_error_retries_and_raises(self) -> None:
-        collect_single = _collect_single_callable()
+        """Should retry on 4xx errors (RequestException) and raise after max retries."""
         source = Source(name="test_feed", type="rss", url="http://example.com/feed")
-        with patch("paperradar.collector.requests.get") as mock_get:
+
+        with patch("radar.collector.requests.get") as mock_get:
             mock_get.side_effect = requests.exceptions.HTTPError("404 Not Found")
 
-            with pytest.raises(requests.exceptions.HTTPError):
-                collect_single(source, category="test", limit=10, timeout=15)
+            with pytest.raises(SourceError):
+                _ = _collect_single(source, category="test", limit=10, timeout=15)
 
             assert mock_get.call_count == 3
 
     def test_max_retries_exceeded(self) -> None:
-        collect_single = _collect_single_callable()
+        """Should raise after 3 failed attempts."""
         source = Source(name="test_feed", type="rss", url="http://example.com/feed")
-        with patch("paperradar.collector.requests.get") as mock_get:
+
+        with patch("radar.collector.requests.get") as mock_get:
             mock_get.side_effect = requests.exceptions.Timeout("timeout")
 
-            with pytest.raises(requests.exceptions.Timeout):
-                collect_single(source, category="test", limit=10, timeout=15)
+            with pytest.raises(NetworkError):
+                _ = _collect_single(source, category="test", limit=10, timeout=15)
 
             assert mock_get.call_count == 3
 
     def test_connection_error_retry(self) -> None:
-        collect_single = _collect_single_callable()
+        """Should retry on connection errors."""
         source = Source(name="test_feed", type="rss", url="http://example.com/feed")
-        with patch("paperradar.collector.requests.get") as mock_get:
+
+        with patch("radar.collector.requests.get") as mock_get:
             mock_response = Mock()
-            mock_response.content = RSS_CONTENT
+            mock_response.content = b"""<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <item>
+            <title>Test Article</title>
+            <link>http://example.com/article</link>
+            <description>Test summary</description>
+            <pubDate>Mon, 01 Jan 2024 12:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>"""
             mock_response.raise_for_status = Mock()
+
             mock_get.side_effect = [
                 requests.exceptions.ConnectionError("connection failed"),
                 requests.exceptions.ConnectionError("connection failed"),
                 mock_response,
             ]
 
-            articles = collect_single(source, category="test", limit=10, timeout=15)
+            articles = _collect_single(source, category="test", limit=10, timeout=15)
 
             assert len(articles) == 1
             assert mock_get.call_count == 3
+
+    def test_session_reuse(self) -> None:
+        sources = [
+            Source(name="feed_1", type="rss", url="http://host1.example.com/feed"),
+            Source(name="feed_2", type="rss", url="http://host2.example.com/feed"),
+            Source(name="feed_3", type="rss", url="http://host3.example.com/feed"),
+        ]
+
+        mock_breaker = Mock()
+        mock_breaker.call.side_effect = lambda func, *args, **kwargs: func(*args, **kwargs)
+        mock_manager = Mock()
+        mock_manager.get_breaker.return_value = mock_breaker
+
+        with (
+            patch("radar.collector.requests.Session.get") as mock_get,
+            patch("radar.collector.get_circuit_breaker_manager", return_value=mock_manager),
+        ):
+            mock_response = Mock()
+            mock_response.content = b"""<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <item>
+            <title>Test Article</title>
+            <link>http://example.com/article</link>
+            <description>Test summary</description>
+            <pubDate>Mon, 01 Jan 2024 12:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>"""
+            mock_response.raise_for_status = Mock()
+            mock_get.return_value = mock_response
+
+            collect_sources(sources, category="test", limit_per_source=10)
+            assert mock_get.call_count == 3
+
+    def test_rate_limiter_enforces_delay(self) -> None:
+        limiter = RateLimiter(min_interval=0.3)
+
+        start = time.monotonic()
+        limiter.acquire()
+        limiter.acquire()
+        limiter.acquire()
+        elapsed = time.monotonic() - start
+
+        assert elapsed >= 0.6
