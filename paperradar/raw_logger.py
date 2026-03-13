@@ -1,40 +1,65 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime
+import uuid
+from collections.abc import Iterable
+from datetime import datetime, timezone
 from pathlib import Path
 
-from .models import Paper
+from .models import Paper as Article
 
 
 class RawLogger:
-    """Log raw paper data to JSONL."""
+    def __init__(self, raw_dir: Path):
+        self.raw_dir: Path = raw_dir
 
-    def __init__(self, raw_data_dir: Path) -> None:
-        self.raw_data_dir = raw_data_dir
+    def log(
+        self,
+        articles: Iterable[Article],
+        *,
+        source_name: str,
+        run_id: str | None = None,
+    ) -> Path:
+        now = datetime.now(timezone.utc)
+        date_dir = self.raw_dir / now.date().isoformat()
+        safe_source_name = source_name.replace("/", "_").replace("\\", "_")
 
-    def log(self, papers: list[Paper], source_name: str) -> Path:
-        """Log papers to JSONL file."""
-        today = datetime.now().strftime("%Y-%m-%d")
-        log_dir = self.raw_data_dir / today
-        log_dir.mkdir(parents=True, exist_ok=True)
+        if run_id is not None:
+            output_path = date_dir / f"{safe_source_name}_{run_id}.jsonl"
+        else:
+            output_path = date_dir / f"{safe_source_name}.jsonl"
 
-        log_file = log_dir / f"{source_name}.jsonl"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
 
-        with open(log_file, "a") as f:
-            for paper in papers:
+        existing_links: set[str] = set()
+        if run_id is not None and output_path.exists():
+            try:
+                with output_path.open("r", encoding="utf-8") as handle:
+                    for line in handle:
+                        if line.strip():
+                            record = json.loads(line)
+                            existing_links.add(record.get("link", ""))
+            except (json.JSONDecodeError, IOError):
+                pass
+
+        with output_path.open("a", encoding="utf-8") as handle:
+            for article in articles:
+                if run_id is not None and article.link in existing_links:
+                    continue
+
                 record = {
-                    "title": paper.title,
-                    "link": paper.link,
-                    "abstract": paper.abstract,
-                    "authors": paper.authors,
-                    "source": paper.source,
-                    "arxiv_id": paper.arxiv_id,
-                    "doi": paper.doi,
-                    "venue": paper.venue,
-                    "citation_count": paper.citation_count,
-                    "timestamp": datetime.now().isoformat(),
+                    "title": article.title,
+                    "link": article.link,
+                    "abstract": article.abstract,
+                    "published": article.published.isoformat() if article.published else None,
+                    "source": article.source,
+                    "category": article.category,
+                    "matched_entities": article.matched_entities,
+                    "logged_at": now.isoformat(),
                 }
-                f.write(json.dumps(record) + "\n")
+                _ = handle.write(json.dumps(record, ensure_ascii=False))
+                _ = handle.write("\n")
+                if run_id is not None:
+                    existing_links.add(article.link)
 
-        return log_file
+        return output_path
