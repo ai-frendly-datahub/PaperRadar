@@ -1,14 +1,13 @@
 from __future__ import annotations
 
 import argparse
+from datetime import UTC
 from pathlib import Path
-from typing import Optional
 
 from paperradar.analyzer import apply_entity_rules
 from paperradar.collector import collect_sources
 from paperradar.common.validators import validate_article
 from paperradar.config_loader import load_category_config, load_settings
-from paperradar.date_storage import apply_date_storage_policy
 from paperradar.models import Paper
 from paperradar.raw_logger import RawLogger
 from paperradar.reporter import generate_report
@@ -26,7 +25,7 @@ def _send_notifications(
     report_path: Path,
 ) -> None:
     import os
-    from datetime import datetime, timezone
+    from datetime import datetime
 
     email_to = os.environ.get("NOTIFICATION_EMAIL")
     webhook_url = os.environ.get("NOTIFICATION_WEBHOOK")
@@ -47,7 +46,7 @@ def _send_notifications(
         collected_count=collected_count,
         matched_count=matched_count,
         errors_count=errors_count,
-        timestamp=datetime.now(timezone.utc),
+        timestamp=datetime.now(UTC),
         report_url=str(report_path),
     )
 
@@ -74,8 +73,8 @@ def _send_notifications(
 def run(
     *,
     category: str,
-    config_path: Optional[Path] = None,
-    categories_dir: Optional[Path] = None,
+    config_path: Path | None = None,
+    categories_dir: Path | None = None,
     per_source_limit: int = 30,
     recent_days: int = 7,
     timeout: int = 15,

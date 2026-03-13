@@ -20,7 +20,7 @@ def _apply_entity_rules_py39(papers: list[Paper], entities: list[EntityDefinitio
     for paper in papers:
         haystack = f"{paper.title}\n{paper.abstract}".lower()
         matches: dict[str, list[str]] = {}
-        for entity, lowered_entity in zip(entities, lowered_entities):
+        for entity, lowered_entity in zip(entities, lowered_entities, strict=False):
             hit_keywords = [kw for kw in lowered_entity.keywords if kw and kw in haystack]
             if hit_keywords:
                 matches[entity.name] = hit_keywords
