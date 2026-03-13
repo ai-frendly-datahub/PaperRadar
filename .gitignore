@@ -55,3 +55,4 @@ reports/*.html
 !reports/.gitkeep
 docs/reports/*.html
 !docs/reports/.gitkeep
+data/daily/
