@@ -251,7 +251,7 @@ def generate_report(
         co_author_network_html=co_author_network_html,
         stats=stats,
         errors=errors,
-        generated_at=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        generated_at=datetime.now(tz=UTC).strftime("%Y-%m-%d %H:%M:%S"),
     )
 
     _ = output_path.write_text(html, encoding="utf-8")
@@ -285,7 +285,7 @@ def generate_index_html(report_dir: Path) -> Path:
     template = _get_jinja_env().get_template("index.html")
     html = template.render(
         reports=reports,
-        generated_at=datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC"),
+        generated_at=datetime.now(tz=UTC).strftime("%Y-%m-%d %H:%M:%S UTC"),
     )
 
     index_path = report_dir / "index.html"

@@ -11,7 +11,7 @@ Tests cover:
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 
 import pytest
 
@@ -263,7 +263,7 @@ class TestValidateArticle:
             link="https://example.com/article",
             abstract="This is a summary",
             authors=["Author"],
-            published=datetime.now(),
+            published=datetime.now(tz=UTC),
             source="Example Source",
             category="news",
         )
@@ -277,7 +277,7 @@ class TestValidateArticle:
             link="https://example.com/article",
             abstract="Summary",
             authors=["Author"],
-            published=datetime.now(),
+            published=datetime.now(tz=UTC),
             source="Source",
             category="news",
         )
@@ -291,7 +291,7 @@ class TestValidateArticle:
             link="not-a-url",
             abstract="Summary",
             authors=["Author"],
-            published=datetime.now(),
+            published=datetime.now(tz=UTC),
             source="Source",
             category="news",
         )
@@ -305,7 +305,7 @@ class TestValidateArticle:
             link="https://example.com/article",
             abstract="",
             authors=["Author"],
-            published=datetime.now(),
+            published=datetime.now(tz=UTC),
             source="Source",
             category="news",
         )
@@ -319,7 +319,7 @@ class TestValidateArticle:
             link="https://example.com/article",
             abstract="Summary",
             authors=["Author"],
-            published=datetime.now(),
+            published=datetime.now(tz=UTC),
             source="",
             category="news",
         )
@@ -333,7 +333,7 @@ class TestValidateArticle:
             link="https://example.com/article",
             abstract="Summary",
             authors=["Author"],
-            published=datetime.now(),
+            published=datetime.now(tz=UTC),
             source="Source",
             category="",
         )
@@ -347,7 +347,7 @@ class TestValidateArticle:
             link="invalid",
             abstract="",
             authors=["Author"],
-            published=datetime.now(),
+            published=datetime.now(tz=UTC),
             source="",
             category="",
         )
@@ -375,7 +375,7 @@ class TestValidateArticle:
             link="https://example.com/article",
             abstract="Summary",
             authors=["Author"],
-            published=datetime.now(),
+            published=datetime.now(tz=UTC),
             source="Source",
             category="news",
             matched_entities={"entity1": ["keyword1", "keyword2"]},
@@ -414,7 +414,7 @@ class TestValidatorsIntegration:
             link="https://example.com/news/article-123",
             abstract="This is a comprehensive summary of the article content.",
             authors=["Author"],
-            published=datetime.now(),
+            published=datetime.now(tz=UTC),
             source="News Source",
             category="technology",
         )

@@ -1,8 +1,8 @@
 from __future__ import annotations
-from typing import Optional
 
 import argparse
 from pathlib import Path
+from typing import Optional
 
 from paperradar.analyzer import apply_entity_rules
 from paperradar.collector import collect_sources
@@ -185,7 +185,10 @@ def parse_args() -> argparse.Namespace:
         "--keep-report-days", type=int, default=90, help="Retention window for dated HTML reports"
     )
     _ = parser.add_argument(
-        "--snapshot-db", action="store_true", default=False, help="Create a dated DuckDB snapshot after each run"
+        "--snapshot-db",
+        action="store_true",
+        default=False,
+        help="Create a dated DuckDB snapshot after each run",
     )
     return parser.parse_args()
 
@@ -200,9 +203,6 @@ if __name__ == "__main__":
         recent_days=args.recent_days,
         timeout=args.timeout,
         keep_days=args.keep_days,
-        keep_raw_days=args.keep_raw_days,
-        keep_report_days=args.keep_report_days,
-        snapshot_db=args.snapshot_db,
         keep_raw_days=args.keep_raw_days,
         keep_report_days=args.keep_report_days,
         snapshot_db=args.snapshot_db,

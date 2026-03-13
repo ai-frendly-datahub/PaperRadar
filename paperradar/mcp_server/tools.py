@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import cast
 
@@ -80,7 +80,7 @@ def handle_recent_papers(*, db_path: Path, days: int = 7, limit: int = 20) -> st
     if limit <= 0:
         return "No recent papers found."
 
-    cutoff = datetime.now() - timedelta(days=days)
+    cutoff = datetime.now(tz=UTC) - timedelta(days=days)
     conn = duckdb.connect(str(db_path), read_only=True)
     try:
         cursor = conn.execute(

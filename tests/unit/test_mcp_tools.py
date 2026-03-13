@@ -4,10 +4,10 @@ from datetime import UTC, datetime, timedelta
 
 
 UTC = UTC
-from importlib import import_module
-from pathlib import Path
+from importlib import import_module  # noqa: E402
+from pathlib import Path  # noqa: E402
 
-import duckdb
+import duckdb  # noqa: E402
 
 
 SearchIndex = import_module("paperradar.search_index").SearchIndex

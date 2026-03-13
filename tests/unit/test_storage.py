@@ -51,6 +51,6 @@ def test_storage_delete_old():
 
         storage.upsert_papers([paper])
         # Delete papers older than 365 days (should not delete recent papers)
-        deleted = storage.delete_older_than(365)
+        _ = storage.delete_older_than(365)
 
         storage.close()
