@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import threading
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import cast
 from xml.etree import ElementTree as ET
 
@@ -32,7 +32,7 @@ def _parse_iso_or_year(date_str: str, year: int | None) -> datetime | None:
         if result:
             return result
     if year is not None and 1900 < year < 2100:
-        return datetime(year, 1, 1, tzinfo=timezone.utc)
+        return datetime(year, 1, 1, tzinfo=UTC)
     return None
 
 
@@ -44,7 +44,7 @@ def _parse_pubmed_date(date_str: str) -> datetime | None:
     date_str = date_str.strip().split(" ")[0]
     for fmt in ("%Y/%m/%d", "%Y%m%d", "%Y"):
         try:
-            return datetime.strptime(date_str, fmt).replace(tzinfo=timezone.utc)
+            return datetime.strptime(date_str, fmt).replace(tzinfo=UTC)
         except ValueError:
             continue
     return None
@@ -58,7 +58,7 @@ def _parse_date_parts(date_parts: list[int]) -> datetime | None:
         year = int(date_parts[0])
         month = int(date_parts[1]) if len(date_parts) > 1 else 1
         day = int(date_parts[2]) if len(date_parts) > 2 else 1
-        return datetime(year, month, day, tzinfo=timezone.utc)
+        return datetime(year, month, day, tzinfo=UTC)
     except (ValueError, IndexError, TypeError):
         return None
 

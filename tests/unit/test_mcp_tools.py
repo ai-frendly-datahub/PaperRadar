@@ -1,9 +1,9 @@
 from __future__ import annotations
-from typing import Optional
 
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
-UTC = timezone.utc
+
+UTC = UTC
 from importlib import import_module
 from pathlib import Path
 
@@ -45,13 +45,13 @@ def _seed_paper(
     title: str,
     url: str,
     source_name: str,
-    arxiv_id: Optional[str] = None,
-    doi: Optional[str] = None,
-    venue: Optional[str] = None,
-    citation_count: Optional[int] = None,
-    publication_date: Optional[str] = None,
-    abstract: Optional[str] = None,
-    collected_at: Optional[datetime] = None,
+    arxiv_id: str | None = None,
+    doi: str | None = None,
+    venue: str | None = None,
+    citation_count: int | None = None,
+    publication_date: str | None = None,
+    abstract: str | None = None,
+    collected_at: datetime | None = None,
 ) -> None:
     conn = duckdb.connect(str(db_path))
     try:

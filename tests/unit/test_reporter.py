@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import tempfile
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from paperradar.models import CategoryConfig, EntityDefinition, Paper, Source
@@ -25,7 +25,7 @@ def test_report_generation():
             link="https://example.com",
             abstract="Test abstract",
             authors=["Author 1"],
-            published=datetime.now(timezone.utc),
+            published=datetime.now(UTC),
             source="arXiv",
             category="research",
         )
@@ -63,7 +63,7 @@ def test_report_includes_cooccurrence_network_graphs() -> None:
             ],
         )
 
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         paper_a = Paper(
             title="Paper A",
             link="https://example.com/a",

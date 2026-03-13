@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import duckdb
@@ -70,7 +70,7 @@ class RadarStorage:
                     paper.citation_count,
                     paper.categories,
                     paper.keywords,
-                    datetime.now(timezone.utc),
+                    datetime.now(UTC),
                     paper.source,
                     paper.category,
                 ],
@@ -80,7 +80,7 @@ class RadarStorage:
 
     def recent_papers(self, category: str, days: int = 7) -> list[tuple[object, ...]]:
         """Get recent papers."""
-        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+        cutoff = datetime.now(UTC) - timedelta(days=days)
 
         result = self.conn.execute(
             """
@@ -95,7 +95,7 @@ class RadarStorage:
 
     def delete_older_than(self, days: int) -> int:
         """Delete papers older than N days."""
-        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+        cutoff = datetime.now(UTC) - timedelta(days=days)
 
         self.conn.execute(
             """
@@ -122,4 +122,3 @@ class RadarStorage:
 
         snapshot_root = Path(snapshot_dir) if snapshot_dir else self.db_path.parent / "daily"
         return cleanup_date_directories(snapshot_root, keep_days=keep_days)
-
