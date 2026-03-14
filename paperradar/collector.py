@@ -185,21 +185,35 @@ def _collect_single(
 
     # Handle RSS feeds
     if source_type == "rss":
-        return _collect_rss(source, category=category, limit=limit, timeout=timeout, session=session)
+        return _collect_rss(
+            source, category=category, limit=limit, timeout=timeout, session=session
+        )
 
     # Handle academic APIs
     if source_type == "arxiv":
-        return _collect_arxiv(source, category=category, limit=limit, timeout=timeout, session=session)
+        return _collect_arxiv(
+            source, category=category, limit=limit, timeout=timeout, session=session
+        )
     elif source_type == "semantic_scholar":
-        return _collect_semantic_scholar(source, category=category, limit=limit, timeout=timeout, session=session)
+        return _collect_semantic_scholar(
+            source, category=category, limit=limit, timeout=timeout, session=session
+        )
     elif source_type == "pubmed":
-        return _collect_pubmed(source, category=category, limit=limit, timeout=timeout, session=session)
+        return _collect_pubmed(
+            source, category=category, limit=limit, timeout=timeout, session=session
+        )
     elif source_type == "biorxiv":
-        return _collect_biorxiv(source, category=category, limit=limit, timeout=timeout, session=session)
+        return _collect_biorxiv(
+            source, category=category, limit=limit, timeout=timeout, session=session
+        )
     elif source_type == "openalex":
-        return _collect_openalex(source, category=category, limit=limit, timeout=timeout, session=session)
+        return _collect_openalex(
+            source, category=category, limit=limit, timeout=timeout, session=session
+        )
     elif source_type == "crossref":
-        return _collect_crossref(source, category=category, limit=limit, timeout=timeout, session=session)
+        return _collect_crossref(
+            source, category=category, limit=limit, timeout=timeout, session=session
+        )
 
     raise SourceError(source.name, f"Unsupported source type '{source.type}'")
 
@@ -290,7 +304,7 @@ def _collect_arxiv(
             summary = ""
             content = entry.get("content", [])
             if isinstance(content, list) and content:
-                summary = html.unescape(str(content[0].get("value", "")).strip())
+                summary = html.unescape(str(content[0].get("value", "")).strip()) if content else ""
 
             published = _extract_datetime(entry)
 
@@ -353,7 +367,9 @@ def _collect_semantic_scholar(
 
             abstract = paper.get("abstract", "")
             if abstract and isinstance(abstract, list):
-                abstract = abstract[0].get("text", "") if abstract else ""
+                abstract = (
+                    abstract[0].get("text", "") if abstract and isinstance(abstract, list) else ""
+                )
 
             # Extract publish date
             published = None
@@ -404,7 +420,9 @@ def _collect_pubmed(
             if not title or not link:
                 continue
 
-            summary = html.unescape((_entry_text(entry, "summary") or _entry_text(entry, "description")).strip())
+            summary = html.unescape(
+                (_entry_text(entry, "summary") or _entry_text(entry, "description")).strip()
+            )
             published = _extract_datetime(entry)
 
             items.append(
@@ -515,7 +533,11 @@ def _collect_openalex(
                 continue
 
             link = work.get("id", "").split("/")[-1]
-            link = f"https://doi.org/{link}" if link.startswith("10.") else f"https://openalex.org/{link}"
+            link = (
+                f"https://doi.org/{link}"
+                if link.startswith("10.")
+                else f"https://openalex.org/{link}"
+            )
 
             abstract = work.get("abstract", "") or ""
 
