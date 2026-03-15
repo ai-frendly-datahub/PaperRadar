@@ -49,6 +49,10 @@ class Article:
     matched_entities: dict[str, list[str]] = field(default_factory=dict)
     collected_at: datetime | None = None
 
+    @property
+    def abstract(self) -> str:
+        return self.summary
+
 
 @dataclass
 class CategoryConfig:
