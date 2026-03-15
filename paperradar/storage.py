@@ -108,6 +108,10 @@ class RadarStorage:
         """Alias for upsert_articles — accepts Paper objects too."""
         self.upsert_articles(papers)
 
+    def recent_papers(self, category: str, *, days: int = 7, limit: int = 200) -> list[Article]:
+        """Alias for recent_articles — Paper-specific naming."""
+        return self.recent_articles(category, days=days, limit=limit)
+
     def recent_articles(self, category: str, *, days: int = 7, limit: int = 200) -> list[Article]:
         """최근 N일 내 기사 반환."""
         since = _utc_naive(datetime.now(UTC) - timedelta(days=days))
