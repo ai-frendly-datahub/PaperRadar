@@ -37,6 +37,10 @@ class Paper:
     keywords: list[str] = field(default_factory=list)
     matched_entities: dict[str, list[str]] = field(default_factory=dict)
 
+    @property
+    def summary(self) -> str:
+        return self.abstract
+
 
 @dataclass
 class Article:

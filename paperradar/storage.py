@@ -104,6 +104,10 @@ class RadarStorage:
                 pass
             raise StorageError("Failed to upsert articles") from exc
 
+    def upsert_papers(self, papers: Iterable[Article]) -> None:
+        """Alias for upsert_articles — accepts Paper objects too."""
+        self.upsert_articles(papers)
+
     def recent_articles(self, category: str, *, days: int = 7, limit: int = 200) -> list[Article]:
         """최근 N일 내 기사 반환."""
         since = _utc_naive(datetime.now(UTC) - timedelta(days=days))
