@@ -9,4 +9,4 @@ networkx>=3.0
 plotly>=5.14.0
 pybreaker>=1.0.0
 numpy>=1.24.0
-radar-core>=0.1.0
+radar-core>=0.2.0
