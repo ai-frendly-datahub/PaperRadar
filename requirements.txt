@@ -10,3 +10,4 @@ plotly>=5.14.0
 pybreaker>=1.0.0
 numpy>=1.24.0
 radar-core>=0.2.0
+playwright>=1.40.0

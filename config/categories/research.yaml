@@ -26,6 +26,14 @@ sources:
     type: crossref
     url: "https://api.crossref.org/works?query=machine learning"
 
+  # --- JavaScript-rendered sources (Playwright) ---
+  - name: "RISS 학술검색"
+    type: "javascript"
+    url: "https://www.riss.kr/search/Search.do?isDetailSearch=Y&searchGubun=true&queryText=znSubject"
+  - name: "KCI 학술지"
+    type: "javascript"
+    url: "https://www.kci.go.kr/kciportal/main.kci"
+
 entities:
   - name: Research Areas
     display_name: Research Areas
