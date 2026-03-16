@@ -8,5 +8,8 @@ class RadarStorage(_RadarStorage):
     def upsert_papers(self, papers):
         return self.upsert_articles(papers)
 
+    def recent_papers(self, category, days=7):
+        return self.recent_articles(category, days=days)
+
 
 __all__ = ["RadarStorage", "StorageError"]
