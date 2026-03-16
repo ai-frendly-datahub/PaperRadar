@@ -204,9 +204,10 @@ def validate_article(article: Paper) -> tuple[bool, list[str]]:
         errors.append(f"link has invalid URL format: {article.link}")
 
     # Validate summary
-    if not article.abstract:
+    _summary = getattr(article, "abstract", None) or getattr(article, "summary", None)
+    if not _summary:
         errors.append("summary is missing or not a string")
-    elif len(article.abstract.strip()) == 0:
+    elif len(_summary.strip()) == 0:
         errors.append("summary is empty")
 
     # Validate source
