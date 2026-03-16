@@ -10,7 +10,7 @@ from paperradar.common.validators import validate_article
 from paperradar.config_loader import load_category_config, load_settings
 from paperradar.models import Paper
 from paperradar.raw_logger import RawLogger
-from paperradar.reporter import generate_report
+from paperradar.reporter import generate_index_html, generate_report
 from paperradar.search_index import SearchIndex
 from paperradar.storage import RadarStorage
 
@@ -148,6 +148,7 @@ def run(
         stats=stats,
         errors=errors,
     )
+    generate_index_html(settings.report_dir)
     print(f"[PaperRadar] Report generated at {output_path}")
     if errors:
         print(f"[PaperRadar] {len(errors)} source(s) had issues. See report for details.")
