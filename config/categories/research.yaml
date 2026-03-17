@@ -4,35 +4,27 @@ display_name: AI/ML Research Papers
 sources:
   - name: arXiv
     type: arxiv
-    url: "http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.LG&start=0&max_results=30"
+    url: "https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.LG&start=0&max_results=30"
   
   - name: Semantic Scholar
     type: semantic_scholar
-    url: "https://api.semanticscholar.org/graph/v1/paper/search?query=machine learning"
+    url: "https://api.semanticscholar.org/graph/v1/paper/search?query=artificial+intelligence&limit=20&fields=title,abstract,authors,year,venue,citationCount,url"
   
   - name: PubMed
     type: pubmed
-    url: "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=artificial intelligence"
+    url: "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=artificial+intelligence&retmax=20&sort=date"
   
   - name: bioRxiv
     type: biorxiv
-    url: "https://api.biorxiv.org/details/biorxiv/2024-01-01/2024-12-31/0/100"
-  
+    url: "https://api.biorxiv.org/details/biorxiv/2025-01-01/2026-12-31/0/30"
+
   - name: OpenAlex
     type: openalex
-    url: "https://api.openalex.org/works?search=machine learning"
-  
+    url: "https://api.openalex.org/works?search=artificial+intelligence&per_page=20&sort=publication_date:desc"
+
   - name: CrossRef
     type: crossref
-    url: "https://api.crossref.org/works?query=machine learning"
-
-  # --- JavaScript-rendered sources (Playwright) ---
-  - name: "RISS 학술검색"
-    type: "javascript"
-    url: "https://www.riss.kr/search/Search.do?isDetailSearch=Y&searchGubun=true&queryText=znSubject"
-  - name: "KCI 학술지"
-    type: "javascript"
-    url: "https://www.kci.go.kr/kciportal/main.kci"
+    url: "https://api.crossref.org/works?query=artificial+intelligence&rows=20&sort=published&order=desc"
 
 entities:
   - name: Research Areas
