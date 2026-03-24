@@ -61,7 +61,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'chore: update paper database'
-          file_pattern: "data/ reports/*_summary.json"
+          file_pattern: "data/"
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
