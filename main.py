@@ -13,6 +13,7 @@ from paperradar.raw_logger import RawLogger
 from paperradar.reporter import generate_index_html, generate_report
 from paperradar.search_index import SearchIndex
 from paperradar.storage import RadarStorage
+from radar_core.date_storage import apply_date_storage_policy
 
 
 def _send_notifications(
@@ -150,6 +151,20 @@ def run(
     )
     generate_index_html(settings.report_dir)
     print(f"[PaperRadar] Report generated at {output_path}")
+
+    raw_data_dir = getattr(settings, "raw_data_dir", settings.database_path.parent / "raw")
+    date_storage = apply_date_storage_policy(
+        database_path=settings.database_path,
+        raw_data_dir=raw_data_dir,
+        report_dir=settings.report_dir,
+        keep_raw_days=keep_raw_days,
+        keep_report_days=keep_report_days,
+        snapshot_db=snapshot_db,
+    )
+    snapshot_path = date_storage.get("snapshot_path")
+    if isinstance(snapshot_path, str) and snapshot_path:
+        print(f"[PaperRadar] Snapshot saved at {snapshot_path}")
+
     if errors:
         print(f"[PaperRadar] {len(errors)} source(s) had issues. See report for details.")
 
