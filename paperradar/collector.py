@@ -23,6 +23,7 @@ from .exceptions import NetworkError, ParseError, SourceError
 from .models import Article, Source
 from .resilience import get_circuit_breaker_manager
 
+
 logger = structlog.get_logger(__name__)
 
 _DEFAULT_HEADERS: dict[str, str] = {

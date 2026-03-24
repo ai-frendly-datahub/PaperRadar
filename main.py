@@ -4,6 +4,8 @@ import argparse
 from datetime import UTC
 from pathlib import Path
 
+from radar_core.date_storage import apply_date_storage_policy
+
 from paperradar.analyzer import apply_entity_rules
 from paperradar.collector import collect_sources
 from paperradar.common.validators import validate_article
@@ -13,7 +15,6 @@ from paperradar.raw_logger import RawLogger
 from paperradar.reporter import generate_index_html, generate_report
 from paperradar.search_index import SearchIndex
 from paperradar.storage import RadarStorage
-from radar_core.date_storage import apply_date_storage_policy
 
 
 def _send_notifications(

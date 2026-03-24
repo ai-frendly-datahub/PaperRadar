@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from radar_core.storage import RadarStorage as _RadarStorage
 from radar_core.exceptions import StorageError
+from radar_core.storage import RadarStorage as _RadarStorage
 
 
 class RadarStorage(_RadarStorage):
