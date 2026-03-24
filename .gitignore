@@ -32,7 +32,8 @@ htmlcov/
 .ruff_cache/
 
 reports/
-*.duckdb
+data/*.duckdb
+!data/snapshots/**/*.duckdb
 *.db
 
 .env
