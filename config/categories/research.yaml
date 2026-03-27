@@ -2,29 +2,39 @@ category_name: research
 display_name: AI/ML Research Papers
 
 sources:
-  - name: arXiv
-    type: arxiv
-    url: "https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.LG&start=0&max_results=30"
-  
-  - name: Semantic Scholar
-    type: semantic_scholar
-    url: "https://api.semanticscholar.org/graph/v1/paper/search?query=artificial+intelligence&limit=20&fields=title,abstract,authors,year,venue,citationCount,url"
-  
-  - name: PubMed
-    type: pubmed
-    url: "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=artificial+intelligence&retmax=20&sort=date"
-  
-  - name: bioRxiv
-    type: biorxiv
-    url: "https://api.biorxiv.org/details/biorxiv/2025-01-01/2026-12-31/0/30"
+  # === arXiv RSS feeds (daily paper updates) ===
+  - name: "arXiv CS.AI"
+    type: "rss"
+    url: "http://rss.arxiv.org/rss/cs.AI"
 
-  - name: OpenAlex
-    type: openalex
-    url: "https://api.openalex.org/works?search=artificial+intelligence&per_page=20&sort=publication_date:desc"
+  - name: "arXiv CS.CL"
+    type: "rss"
+    url: "http://rss.arxiv.org/rss/cs.CL"
 
-  - name: CrossRef
-    type: crossref
-    url: "https://api.crossref.org/works?query=artificial+intelligence&rows=20&sort=published&order=desc"
+  - name: "arXiv CS.LG"
+    type: "rss"
+    url: "http://rss.arxiv.org/rss/cs.LG"
+
+  # === AI research lab blogs ===
+  - name: "Google AI Blog"
+    type: "rss"
+    url: "https://blog.google/technology/ai/rss/"
+
+  - name: "OpenAI Blog"
+    type: "rss"
+    url: "https://openai.com/news/rss.xml"
+
+  - name: "DeepMind Blog"
+    type: "rss"
+    url: "https://deepmind.google/blog/rss.xml"
+
+  - name: "Hugging Face Blog"
+    type: "rss"
+    url: "https://huggingface.co/blog/feed.xml"
+
+  - name: "Distill.pub"
+    type: "rss"
+    url: "https://distill.pub/rss.xml"
 
 entities:
   - name: Research Areas
