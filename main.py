@@ -135,9 +135,11 @@ def run(
     storage.close()
 
     stats = {
+        "article_count": len(validated_articles),
+        "source_count": len({p.source for p in validated_articles if p.source}),
+        "matched_count": sum(1 for p in validated_articles if p.matched_entities),
         "sources": len(category_cfg.sources),
         "collected": len(collected),
-        "matched": sum(1 for p in collected if p.matched_entities),
         "validated": len(validated_articles),
         "window_days": recent_days,
     }
@@ -145,7 +147,7 @@ def run(
     output_path = settings.report_dir / f"{category_cfg.category_name}_report.html"
     _ = generate_report(
         category=category_cfg,
-        articles=validated_articles[:50],
+        articles=validated_articles,
         output_path=output_path,
         stats=stats,
         errors=errors,
