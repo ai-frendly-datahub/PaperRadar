@@ -15,7 +15,19 @@ sources:
     type: "rss"
     url: "http://rss.arxiv.org/rss/cs.LG"
 
-  # === AI research lab blogs ===
+  - name: "arXiv CS.CV"
+    type: "rss"
+    url: "http://rss.arxiv.org/rss/cs.CV"
+
+  - name: "arXiv CS.NE"
+    type: "rss"
+    url: "http://rss.arxiv.org/rss/cs.NE"
+
+  - name: "arXiv Stat.ML"
+    type: "rss"
+    url: "http://rss.arxiv.org/rss/stat.ML"
+
+  # === AI Research Labs ===
   - name: "Google AI Blog"
     type: "rss"
     url: "https://blog.google/technology/ai/rss/"
@@ -28,6 +40,18 @@ sources:
     type: "rss"
     url: "https://deepmind.google/blog/rss.xml"
 
+  - name: "Anthropic Research"
+    type: "rss"
+    url: "https://www.anthropic.com/research/rss.xml"
+
+  - name: "Meta AI Blog"
+    type: "rss"
+    url: "https://ai.meta.com/blog/rss/"
+
+  - name: "Microsoft Research"
+    type: "rss"
+    url: "https://www.microsoft.com/en-us/research/feed/"
+
   - name: "Hugging Face Blog"
     type: "rss"
     url: "https://huggingface.co/blog/feed.xml"
@@ -36,22 +60,86 @@ sources:
     type: "rss"
     url: "https://distill.pub/rss.xml"
 
+  # === AI News/Aggregators ===
+  - name: "Papers With Code"
+    type: "rss"
+    url: "https://paperswithcode.com/rss"
+
+  - name: "Towards Data Science"
+    type: "rss"
+    url: "https://towardsdatascience.com/feed"
+
+  - name: "AI News"
+    type: "rss"
+    url: "https://artificialintelligence-news.com/feed/"
+
+  - name: "The Gradient"
+    type: "rss"
+    url: "https://thegradient.pub/rss/"
+
+  - name: "Import AI"
+    type: "rss"
+    url: "https://importai.substack.com/feed"
+
+  - name: "The Batch (DeepLearning.AI)"
+    type: "rss"
+    url: "https://www.deeplearning.ai/the-batch/feed/"
+
 entities:
   - name: Research Areas
     display_name: Research Areas
     keywords:
+      # Core ML
       - machine learning
       - deep learning
       - neural networks
+      - supervised learning
+      - unsupervised learning
+      - semi-supervised learning
+      - self-supervised learning
+      # NLP
       - natural language processing
+      - NLP
+      - language model
+      - LLM
+      - large language model
+      - text generation
+      - machine translation
+      - sentiment analysis
+      - named entity recognition
+      - question answering
+      # Vision
       - computer vision
+      - image classification
+      - object detection
+      - semantic segmentation
+      - image generation
+      - video understanding
+      # RL
       - reinforcement learning
+      - RL
+      - multi-agent
+      - RLHF
+      # Other areas
       - transfer learning
       - federated learning
-  
+      - few-shot learning
+      - zero-shot learning
+      - meta-learning
+      - continual learning
+      - representation learning
+      - multimodal
+      - speech recognition
+      - robotics
+      - AI safety
+      - alignment
+      - interpretability
+      - explainability
+
   - name: Key Researchers
     display_name: Key Researchers
     keywords:
+      # Pioneers
       - Hinton
       - LeCun
       - Bengio
@@ -59,39 +147,168 @@ entities:
       - Ng
       - Karpathy
       - Schmidhuber
-  
+      - Sutskever
+      - Altman
+      - Amodei
+      # Current leaders
+      - Fei-Fei Li
+      - Yann LeCun
+      - Geoffrey Hinton
+      - Yoshua Bengio
+      - Demis Hassabis
+      - Sam Altman
+      - Dario Amodei
+      - Ilya Sutskever
+      - Andrew Ng
+      - Andrej Karpathy
+
   - name: Institutions
     display_name: Top Institutions
     keywords:
+      # Universities
       - Stanford
       - MIT
       - Berkeley
       - Carnegie Mellon
+      - CMU
+      - Princeton
+      - Harvard
+      - Oxford
+      - Cambridge
+      - Toronto
+      - ETH Zurich
+      - Tsinghua
+      - Peking
+      - KAIST
+      - Seoul National
+      # Industry labs
       - Google Brain
+      - Google DeepMind
       - OpenAI
-      - DeepMind
-      - Facebook AI
-  
+      - Anthropic
+      - Meta AI
+      - FAIR
+      - Microsoft Research
+      - NVIDIA
+      - Apple
+      - Amazon
+      - Hugging Face
+      - Stability AI
+      - Cohere
+      - Midjourney
+
   - name: Venues
     display_name: Top Venues
     keywords:
+      # ML/AI conferences
       - NeurIPS
       - ICML
       - ICLR
+      - AAAI
+      - IJCAI
+      # NLP conferences
       - ACL
+      - EMNLP
+      - NAACL
+      - COLING
+      # Vision conferences
       - CVPR
       - ICCV
       - ECCV
-      - AAAI
-  
+      - WACV
+      # Journals
+      - JMLR
+      - TPAMI
+      - Nature
+      - Science
+      # Workshops
+      - workshop
+      - tutorial
+      - spotlight
+      - oral
+      - poster
+
   - name: Techniques
     display_name: Key Techniques
     keywords:
+      # Architectures
       - transformer
+      - attention mechanism
+      - self-attention
+      - cross-attention
+      - convolutional neural network
+      - CNN
+      - recurrent neural network
+      - RNN
+      - LSTM
+      - GRU
+      - graph neural network
+      - GNN
+      - mixture of experts
+      - MoE
+      - state space model
+      - Mamba
+      # Foundation models
       - BERT
       - GPT
+      - GPT-4
+      - Claude
+      - LLaMA
+      - Gemini
+      - PaLM
+      - T5
+      - CLIP
+      - DALL-E
+      - Stable Diffusion
+      - Midjourney
+      - Sora
+      # Techniques
       - diffusion
-      - attention mechanism
-      - convolutional neural network
-      - recurrent neural network
-      - graph neural network
+      - diffusion model
+      - VAE
+      - GAN
+      - flow matching
+      - contrastive learning
+      - RLHF
+      - DPO
+      - fine-tuning
+      - prompt engineering
+      - in-context learning
+      - chain of thought
+      - RAG
+      - retrieval augmented
+      - quantization
+      - pruning
+      - distillation
+      - adapter
+      - LoRA
+      - prefix tuning
+      # Optimization
+      - Adam
+      - SGD
+      - gradient descent
+      - dropout
+      - batch normalization
+      - layer normalization
+      - regularization
+
+  - name: Tasks
+    display_name: AI Tasks
+    keywords:
+      - classification
+      - regression
+      - clustering
+      - generation
+      - summarization
+      - translation
+      - question answering
+      - dialogue
+      - chatbot
+      - code generation
+      - reasoning
+      - benchmark
+      - evaluation
+      - SOTA
+      - state-of-the-art
+      - baseline
+      - ablation
