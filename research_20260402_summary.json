@@ -1,9 +1,9 @@
 {
-  "date": "2026-04-01",
+  "date": "2026-04-02",
   "category": "research",
   "article_count": 323,
   "source_count": 14,
-  "matched_count": 244,
+  "matched_count": 243,
   "top_entities": [
     {
       "name": "Tasks",
@@ -11,18 +11,18 @@
     },
     {
       "name": "Research Areas",
-      "count": 182
+      "count": 181
     },
     {
       "name": "Techniques",
       "count": 112
     },
     {
-      "name": "Venues",
+      "name": "Institutions",
       "count": 37
     },
     {
-      "name": "Institutions",
+      "name": "Venues",
       "count": 36
     }
   ],
@@ -42,5 +42,5 @@
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-04-01T22:04:18.881456+09:00"
+  "generated_at": "2026-04-02T03:52:39.088674+09:00"
 }
