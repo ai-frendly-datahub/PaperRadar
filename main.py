@@ -124,11 +124,15 @@ def run(
 
     with SearchIndex(settings.search_db_path) as search_idx:
         for paper in validated_articles:
+            # Article 객체의 속성 사용 (Paper가 아닌 Article)
+            paper_id = getattr(paper, 'doi', None) or getattr(paper, 'arxiv_id', None) or paper.link
+            abstract = getattr(paper, 'abstract', None) or getattr(paper, 'summary', '') or ''
+            authors = " ".join(getattr(paper, 'authors', [])) if hasattr(paper, 'authors') else ''
             search_idx.upsert(
-                paper.doi or paper.arxiv_id or paper.link,
+                paper_id,
                 paper.title,
-                paper.abstract,
-                " ".join(paper.authors),
+                abstract,
+                authors,
             )
 
     _ = storage.recent_papers(category_cfg.category_name, days=recent_days)
