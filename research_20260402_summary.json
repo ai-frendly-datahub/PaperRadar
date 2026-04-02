@@ -3,11 +3,11 @@
   "category": "research",
   "article_count": 321,
   "source_count": 14,
-  "matched_count": 244,
+  "matched_count": 243,
   "top_entities": [
     {
       "name": "Tasks",
-      "count": 206
+      "count": 205
     },
     {
       "name": "Research Areas",
@@ -15,7 +15,7 @@
     },
     {
       "name": "Techniques",
-      "count": 131
+      "count": 130
     },
     {
       "name": "Venues",
@@ -42,5 +42,5 @@
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-04-02T16:04:22.675421+09:00"
+  "generated_at": "2026-04-02T21:57:24.918969+09:00"
 }
