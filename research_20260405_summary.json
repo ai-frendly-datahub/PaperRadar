@@ -1,16 +1,16 @@
 {
-  "date": "2026-04-04",
+  "date": "2026-04-05",
   "category": "research",
   "article_count": 162,
   "source_count": 8,
   "matched_count": 96,
   "top_entities": [
     {
-      "name": "Research Areas",
-      "count": 32
+      "name": "Institutions",
+      "count": 31
     },
     {
-      "name": "Institutions",
+      "name": "Research Areas",
       "count": 31
     },
     {
@@ -36,5 +36,5 @@
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-04-04T21:39:23.885049+09:00"
+  "generated_at": "2026-04-05T03:32:37.939200+09:00"
 }
