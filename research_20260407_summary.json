@@ -3,7 +3,7 @@
   "category": "research",
   "article_count": 331,
   "source_count": 14,
-  "matched_count": 247,
+  "matched_count": 248,
   "top_entities": [
     {
       "name": "Tasks",
@@ -15,7 +15,7 @@
     },
     {
       "name": "Techniques",
-      "count": 122
+      "count": 123
     },
     {
       "name": "Venues",
@@ -23,7 +23,11 @@
     },
     {
       "name": "Institutions",
-      "count": 36
+      "count": 37
+    },
+    {
+      "name": "Key Researchers",
+      "count": 2
     }
   ],
   "sources": {
@@ -42,5 +46,5 @@
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-04-07T16:07:55.073623+09:00"
+  "generated_at": "2026-04-07T22:05:51.878707+09:00"
 }
