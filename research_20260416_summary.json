@@ -1,9 +1,9 @@
 {
-  "date": "2026-04-15",
+  "date": "2026-04-16",
   "category": "research",
-  "article_count": 330,
+  "article_count": 331,
   "source_count": 14,
-  "matched_count": 324,
+  "matched_count": 325,
   "top_entities": [
     {
       "name": "ResearchGeneral",
@@ -11,15 +11,15 @@
     },
     {
       "name": "Tasks",
-      "count": 232
+      "count": 234
     },
     {
       "name": "Research Areas",
-      "count": 210
+      "count": 211
     },
     {
       "name": "Techniques",
-      "count": 113
+      "count": 114
     },
     {
       "name": "Venues",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Institutions",
-      "count": 34
+      "count": 33
     },
     {
       "name": "Key Researchers",
@@ -43,12 +43,12 @@
     "arXiv Stat.ML": 30,
     "Google AI Blog": 20,
     "OpenAI Blog": 30,
-    "DeepMind Blog": 27,
+    "DeepMind Blog": 28,
     "Microsoft Research": 10,
     "Distill.pub": 30,
     "Towards Data Science": 20,
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-04-15T22:09:49.448731+09:00"
+  "generated_at": "2026-04-16T04:05:50.426419+09:00"
 }
