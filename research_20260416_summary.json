@@ -1,25 +1,25 @@
 {
   "date": "2026-04-16",
   "category": "research",
-  "article_count": 331,
-  "source_count": 14,
-  "matched_count": 325,
+  "article_count": 319,
+  "source_count": 13,
+  "matched_count": 313,
   "top_entities": [
     {
       "name": "ResearchGeneral",
-      "count": 3726
+      "count": 3687
     },
     {
       "name": "Tasks",
-      "count": 234
+      "count": 233
     },
     {
       "name": "Research Areas",
-      "count": 211
+      "count": 210
     },
     {
       "name": "Techniques",
-      "count": 114
+      "count": 113
     },
     {
       "name": "Venues",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Institutions",
-      "count": 33
+      "count": 31
     },
     {
       "name": "Key Researchers",
@@ -47,8 +47,7 @@
     "Microsoft Research": 10,
     "Distill.pub": 30,
     "Towards Data Science": 20,
-    "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-04-16T04:05:50.426419+09:00"
+  "generated_at": "2026-04-16T11:02:02.213423+09:00"
 }
