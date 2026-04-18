@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-18",
+  "date": "2026-04-19",
   "category": "research",
   "article_count": 225,
   "source_count": 10,
@@ -19,7 +19,7 @@
     },
     {
       "name": "Techniques",
-      "count": 59
+      "count": 60
     },
     {
       "name": "Venues",
@@ -42,5 +42,5 @@
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-04-18T21:45:45.276227+09:00"
+  "generated_at": "2026-04-19T03:38:00.316896+09:00"
 }
