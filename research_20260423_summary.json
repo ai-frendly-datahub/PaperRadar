@@ -3,15 +3,15 @@
   "category": "research",
   "article_count": 329,
   "source_count": 14,
-  "matched_count": 322,
+  "matched_count": 323,
   "top_entities": [
     {
       "name": "ResearchGeneral",
-      "count": 3504
+      "count": 3508
     },
     {
       "name": "Tasks",
-      "count": 205
+      "count": 206
     },
     {
       "name": "Research Areas",
@@ -23,7 +23,7 @@
     },
     {
       "name": "Institutions",
-      "count": 35
+      "count": 37
     },
     {
       "name": "Venues",
@@ -50,5 +50,5 @@
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-04-23T16:26:31.535777+09:00"
+  "generated_at": "2026-04-23T22:10:43.261053+09:00"
 }
