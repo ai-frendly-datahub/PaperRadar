@@ -3,11 +3,11 @@
 **🌐 Live Report**: https://ai-frendly-datahub.github.io/PaperRadar/
 
 
-Academic paper collection and analysis platform. Aggregates research papers from 7 major sources (arXiv, Semantic Scholar, PubMed, bioRxiv, OpenAlex, CrossRef, SSRN) with entity extraction, full-text search, and HTML reporting.
+Academic paper and research-signal collection platform. Current configuration mixes arXiv RSS/API, AI lab blogs, research aggregators, citation feeds, and benchmark/implementation sources for entity extraction, search, and HTML reporting.
 
 ## Features
 
-- **7 Paper Sources**: arXiv, Semantic Scholar, PubMed, bioRxiv, OpenAlex, CrossRef, SSRN
+- **Research Source Mix**: arXiv, AI labs, benchmark feeds, citation/impact sources, newsletters
 - **Entity Extraction**: Automatic tagging of research areas, authors, institutions, venues, techniques
 - **Full-Text Search**: SQLite FTS5 for fast paper searching
 - **DuckDB Storage**: Efficient paper database with retention policies
@@ -52,7 +52,7 @@ Edit `config/categories/research.yaml` to customize:
 ```
 PaperRadar/
 ├── paperradar/              # Main package
-│   ├── collector.py         # 7 paper source collectors
+│   ├── collector.py         # RSS + paper source collectors
 │   ├── analyzer.py          # Entity extraction
 │   ├── reporter.py          # HTML report generation
 │   ├── storage.py           # DuckDB storage
@@ -77,15 +77,12 @@ PaperRadar/
 
 ## Paper Sources
 
-| Source | Type | Rate Limit | Auth | Coverage |
-|--------|------|-----------|------|----------|
-| arXiv | API | 3 req/sec | None | CS, Physics, Math |
-| Semantic Scholar | API | 100 req/5min | Optional | Multidisciplinary |
-| PubMed | API | Unlimited | None | Biomedical |
-| bioRxiv | API | Free | None | Biology preprints |
-| OpenAlex | API | 10 req/sec | None | Multidisciplinary |
-| CrossRef | API | Free | None | Published papers |
-| SSRN | Scrape | - | None | Social sciences |
+| Source Group | Examples | Role |
+|-------------|----------|------|
+| Official research feeds | arXiv RSS, arXiv API | Preprint intake |
+| Lab / platform blogs | OpenAI, DeepMind, Hugging Face | Model release and implementation signals |
+| Aggregators | Papers With Code, Semantic Scholar AI | Benchmark, citation, discovery |
+| API-based impact feeds | OpenAlex | Citation and impact tracking |
 
 ## Data Schema
 
@@ -194,3 +191,15 @@ Contributions welcome! Please:
 ## Support
 
 For issues, questions, or suggestions, please open a GitHub issue.
+
+<!-- DATAHUB-OPS-AUDIT:START -->
+## DataHub Operations
+
+- CI/CD workflows: `paper-crawler.yml`, `pr-checks.yml`, `radar-crawler.yml`.
+- GitHub Pages visualization: `reports/index.html` (valid HTML); https://ai-frendly-datahub.github.io/PaperRadar/.
+- Latest remote Pages check: HTTP 200, HTML.
+- Local workspace audit: 55 Python files parsed, 0 syntax errors.
+- Re-run audit from the workspace root: `python scripts/audit_ci_pages_readme.py --syntax-check --write`.
+- Latest audit report: `_workspace/2026-04-14_github_ci_pages_readme_audit.md`.
+- Latest Pages URL report: `_workspace/2026-04-14_github_pages_url_check.md`.
+<!-- DATAHUB-OPS-AUDIT:END -->

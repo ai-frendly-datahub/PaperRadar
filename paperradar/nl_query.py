@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from radar_core.nl_query import ParsedQuery, parse_query
+
 
 class NLQueryParser:
     """Parse natural language queries for papers."""

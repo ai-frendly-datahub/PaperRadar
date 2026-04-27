@@ -7,7 +7,7 @@ from unittest.mock import Mock, patch
 import requests
 
 from paperradar import collector as collector_module
-from paperradar.models import Paper, Source
+from paperradar.models import Article, Paper, Source
 
 
 ARXIV_XML = b"""<?xml version=\"1.0\" encoding=\"UTF-8\"?>
@@ -43,6 +43,13 @@ def _collect_arxiv_callable() -> Callable[..., list[Paper]]:
     if target is None:
         raise AssertionError("_collect_arxiv is unavailable")
     return cast(Callable[..., list[Paper]], target)
+
+
+def _collect_openalex_callable() -> Callable[..., list[Article]]:
+    target = getattr(collector_module, "_collect_openalex", None)
+    if target is None:
+        raise AssertionError("_collect_openalex is unavailable")
+    return cast(Callable[..., list[Article]], target)
 
 
 def test_collect_arxiv_retries_on_transient_http_errors() -> None:
@@ -87,3 +94,43 @@ def test_collect_arxiv_uses_session_not_requests_get() -> None:
     assert len(papers) == 1
     assert papers[0].arxiv_id == "2401.00001v1"
     mocked_requests_get.assert_not_called()
+
+
+def test_collect_openalex_accepts_current_api_schema_for_citation_snapshot() -> None:
+    collect_openalex = _collect_openalex_callable()
+    source = Source(
+        name="OpenAlex AI Citation Feed",
+        type="openalex",
+        url="https://api.openalex.org/works",
+        config={"event_model": "citation_snapshot"},
+    )
+    response = Mock()
+    response.raise_for_status = Mock()
+    response.json.return_value = {
+        "results": [
+            {
+                "id": "https://openalex.org/W4385245566",
+                "doi": "https://doi.org/10.1145/example",
+                "display_name": "Current OpenAlex Schema Paper",
+                "publication_year": 2023,
+                "publication_date": "2023-05-01",
+                "cited_by_count": 1234,
+            }
+        ]
+    }
+    session = Mock(spec=requests.Session)
+    session.get.return_value = response
+
+    articles = collect_openalex(
+        source,
+        category="research",
+        limit=10,
+        timeout=15,
+        session=session,
+    )
+
+    assert len(articles) == 1
+    assert articles[0].title == "Current OpenAlex Schema Paper"
+    assert articles[0].published is None
+    assert articles[0].link == "https://doi.org/10.1145/example"
+    assert "Citation count: 1234" in articles[0].summary

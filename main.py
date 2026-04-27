@@ -9,8 +9,13 @@ from radar_core.date_storage import apply_date_storage_policy
 from paperradar.analyzer import apply_entity_rules
 from paperradar.collector import collect_sources
 from paperradar.common.validators import validate_article
-from paperradar.config_loader import load_category_config, load_settings
+from paperradar.config_loader import (
+    load_category_config,
+    load_category_quality_config,
+    load_settings,
+)
 from paperradar.models import Paper
+from paperradar.quality_report import build_quality_report, write_quality_report
 from paperradar.raw_logger import RawLogger
 from paperradar.reporter import generate_index_html, generate_report
 from paperradar.search_index import SearchIndex
@@ -88,6 +93,7 @@ def run(
     """Execute the paper collection pipeline."""
     settings = load_settings(config_path)
     category_cfg = load_category_config(category, categories_dir=categories_dir)
+    quality_config = load_category_quality_config(category, categories_dir=categories_dir)
 
     print(
         f"[PaperRadar] Collecting '{category_cfg.display_name}' from {len(category_cfg.sources)} sources..."
@@ -136,7 +142,13 @@ def run(
             )
 
     _ = storage.recent_papers(category_cfg.category_name, days=recent_days)
+    stored_quality_articles = storage.recent_articles(
+        category_cfg.category_name,
+        days=max(recent_days, 14),
+        limit=max(500, per_source_limit * max(len(category_cfg.sources), 1) * 2),
+    )
     storage.close()
+    quality_articles = stored_quality_articles if stored_quality_articles else validated_articles
 
     stats = {
         "article_count": len(validated_articles),
@@ -148,6 +160,12 @@ def run(
         "window_days": recent_days,
     }
 
+    quality_report = build_quality_report(
+        category=category_cfg,
+        articles=quality_articles,
+        errors=errors,
+        quality_config=quality_config,
+    )
     output_path = settings.report_dir / f"{category_cfg.category_name}_report.html"
     _ = generate_report(
         category=category_cfg,
@@ -155,9 +173,16 @@ def run(
         output_path=output_path,
         stats=stats,
         errors=errors,
+        quality_report=quality_report,
+    )
+    quality_paths = write_quality_report(
+        quality_report,
+        output_dir=settings.report_dir,
+        category_name=category_cfg.category_name,
     )
     generate_index_html(settings.report_dir)
     print(f"[PaperRadar] Report generated at {output_path}")
+    print(f"[PaperRadar] Quality report generated at {quality_paths['latest']}")
 
     raw_data_dir = getattr(settings, "raw_data_dir", settings.database_path.parent / "raw")
     date_storage = apply_date_storage_policy(

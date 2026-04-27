@@ -33,6 +33,7 @@ class Paper:
     categories: list[str] = field(default_factory=list)
     keywords: list[str] = field(default_factory=list)
     matched_entities: dict[str, list[str]] = field(default_factory=dict)
+    ontology: dict[str, object] | None = None
 
     @property
     def summary(self) -> str:

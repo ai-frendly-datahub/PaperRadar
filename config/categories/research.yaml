@@ -1,595 +1,747 @@
 category_name: research
 display_name: AI/ML Research Papers
-
+data_quality:
+  priority: P2
+  primary_motion: intelligence
+  weakest_dimension: verification
+  quality_outputs:
+    freshness_report: reports/research_quality.json
+    dated_freshness_report_pattern: reports/research_YYYYMMDD_quality.json
+    tracked_event_models:
+    - paper_release
+    - citation_snapshot
+    - code_repository
+    - benchmark_result
+  event_models:
+    paper_release:
+      date_fields:
+      - published_date
+      - collected_at
+      required_fields:
+      - paper_id
+      - title
+      - source_url
+    citation_snapshot:
+      date_fields:
+      - metric_date
+      - collected_at
+      required_fields:
+      - paper_id
+      - citation_count
+      - source
+    code_repository:
+      date_fields:
+      - repository_created_at
+      - last_updated_at
+      - collected_at
+      required_fields:
+      - paper_id
+      - repository
+      - source_url
+    benchmark_result:
+      date_fields:
+      - result_date
+      - collected_at
+      required_fields:
+      - paper_id
+      - benchmark_name
+      - metric_name
+      - metric_value
+  canonical_keys:
+    paper:
+    - arxiv_id
+    - doi
+    - normalized_title
+    repository:
+    - host
+    - owner
+    - repo
+  freshness_sla:
+    paper_release_days: 3
+    citation_snapshot_days: 14
+    code_repository_days: 14
+    benchmark_result_days: 30
+  quality_gates:
+  - paper title, arXiv id, DOI를 canonical key로 정리한다
+  - 논문 발표일과 코드 공개일을 별도 이벤트로 유지한다
+  - citation count는 수집 source와 기준일을 함께 기록한다
+  - 재현성 점수는 code availability와 benchmark 근거를 분리한다
+source_backlog:
+  operational_candidates:
+  - id: openalex_citation_api
+    name: OpenAlex citation API
+    signal_type: citation_snapshot
+    activation_gate: DOI/arXiv mapping, metric date retention, and citation source
+      caveats
+  - id: semantic_scholar_citation_api
+    name: Semantic Scholar citation API
+    signal_type: citation_snapshot
+    activation_gate: API key/quota, paper id mapping, and missing DOI policy
+  - id: paperswithcode_benchmark_data
+    name: Papers with Code benchmark data
+    signal_type: benchmark_result
+    activation_gate: benchmark taxonomy, metric direction, and paper repository mapping
+  - id: github_repository_metrics
+    name: GitHub repository metrics
+    signal_type: code_repository
+    activation_gate: repository evidence extraction, star/fork timestamp policy, and
+      paper mapping
 sources:
-  # === arXiv RSS feeds (daily paper updates) ===
-  - name: "arXiv CS.AI"
-    type: "rss"
-    url: "http://export.arxiv.org/rss/cs.AI"
-    language: en
-    country: US
-    trust_tier: T1_official
-    collection_tier: C1_rss
-    content_type: academic
-
-  - name: "arXiv CS.CL"
-    type: "rss"
-    url: "http://export.arxiv.org/rss/cs.CL"
-    language: en
-    country: US
-    trust_tier: T1_official
-    collection_tier: C1_rss
-    content_type: academic
-
-  - name: "arXiv CS.LG"
-    type: "rss"
-    url: "http://export.arxiv.org/rss/cs.LG"
-    language: en
-    country: US
-    trust_tier: T1_official
-    collection_tier: C1_rss
-    content_type: academic
-
-  - name: "arXiv CS.CV"
-    type: "rss"
-    url: "http://export.arxiv.org/rss/cs.CV"
-    language: en
-    country: US
-    trust_tier: T1_official
-    collection_tier: C1_rss
-    content_type: academic
-
-  - name: "arXiv CS.NE"
-    type: "rss"
-    url: "http://export.arxiv.org/rss/cs.NE"
-    language: en
-    country: US
-    trust_tier: T1_official
-    collection_tier: C1_rss
-    content_type: academic
-
-  - name: "arXiv Stat.ML"
-    type: "rss"
-    url: "http://export.arxiv.org/rss/stat.ML"
-    language: en
-    country: US
-    trust_tier: T1_official
-    collection_tier: C1_rss
-    content_type: academic
-
-  # === AI Research Labs ===
-  - name: "Google AI Blog"
-    type: "rss"
-    url: "https://blog.google/technology/ai/rss/"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: blog
-
-  - name: "OpenAI Blog"
-    type: "rss"
-    url: "https://openai.com/news/rss.xml"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: blog
-
-  - name: "DeepMind Blog"
-    type: "rss"
-    url: "https://deepmind.google/blog/rss.xml"
-    language: en
-    country: GB
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: blog
-
-  - name: "Anthropic Research"
-    type: "rss"
-    url: "https://www.anthropic.com/research/rss.xml"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: blog
-
-  - name: "Meta AI Blog"
-    type: "rss"
-    url: "https://ai.meta.com/blog/rss/"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: blog
-
-  - name: "Microsoft Research"
-    type: "rss"
-    url: "https://www.microsoft.com/en-us/research/feed/"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: blog
-
-  - name: "Hugging Face Blog"
-    type: "rss"
-    url: "https://huggingface.co/blog/feed.xml"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: blog
-
-  - name: "Distill.pub"
-    type: "rss"
-    url: "https://distill.pub/rss.xml"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: academic
-
-  # === AI News/Aggregators ===
-  - name: "Papers With Code"
-    type: "rss"
-    url: "https://paperswithcode.com/rss"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: aggregator
-
-  - name: "Semantic Scholar AI"
-    type: "rss"
-    url: "https://www.semanticscholar.org/feed/research/artificial-intelligence"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: aggregator
-
-  - name: "Towards Data Science"
-    type: "rss"
-    url: "https://towardsdatascience.com/feed"
-    language: en
-    country: US
-    trust_tier: T3_professional
-    collection_tier: C1_rss
-    content_type: blog
-
-  - name: "AI News"
-    type: "rss"
-    url: "https://artificialintelligence-news.com/feed/"
-    language: en
-    country: US
-    trust_tier: T3_professional
-    collection_tier: C1_rss
-    content_type: news
-
-  - name: "The Gradient"
-    type: "rss"
-    url: "https://thegradient.pub/rss/"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: blog
-
-  - name: "Import AI"
-    type: "rss"
-    url: "https://importai.substack.com/feed"
-    language: en
-    country: US
-    trust_tier: T3_professional
-    collection_tier: C1_rss
-    content_type: newsletter
-
-  - name: "The Batch (DeepLearning.AI)"
-    type: "rss"
-    url: "https://www.deeplearning.ai/the-batch/feed/"
-    language: en
-    country: US
-    trust_tier: T2_institutional
-    collection_tier: C1_rss
-    content_type: newsletter
-
+- name: arXiv CS.AI
+  type: rss
+  url: http://export.arxiv.org/rss/cs.AI
+  language: en
+  country: US
+  trust_tier: T1_official
+  collection_tier: C1_rss
+  content_type: academic
+  config:
+    event_model: paper_release
+- name: arXiv CS.CL
+  type: rss
+  url: http://export.arxiv.org/rss/cs.CL
+  language: en
+  country: US
+  trust_tier: T1_official
+  collection_tier: C1_rss
+  content_type: academic
+  config:
+    event_model: paper_release
+- name: arXiv CS.LG
+  type: rss
+  url: http://export.arxiv.org/rss/cs.LG
+  language: en
+  country: US
+  trust_tier: T1_official
+  collection_tier: C1_rss
+  content_type: academic
+  config:
+    event_model: paper_release
+- name: arXiv CS.CV
+  type: rss
+  url: http://export.arxiv.org/rss/cs.CV
+  language: en
+  country: US
+  trust_tier: T1_official
+  collection_tier: C1_rss
+  content_type: academic
+  config:
+    event_model: paper_release
+- name: arXiv CS.NE
+  type: rss
+  url: http://export.arxiv.org/rss/cs.NE
+  language: en
+  country: US
+  trust_tier: T1_official
+  collection_tier: C1_rss
+  content_type: academic
+  config:
+    event_model: paper_release
+- name: arXiv Stat.ML
+  type: rss
+  url: http://export.arxiv.org/rss/stat.ML
+  language: en
+  country: US
+  trust_tier: T1_official
+  collection_tier: C1_rss
+  content_type: academic
+  config:
+    event_model: paper_release
+- name: arXiv API Recent AI
+  type: arxiv
+  url: http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&start=0&max_results=30&sortBy=submittedDate&sortOrder=descending
+  language: en
+  country: US
+  trust_tier: T1_official
+  collection_tier: C4_api
+  content_type: preprint
+  producer_role: research_repository
+  info_purpose:
+  - preprint_velocity
+  - research_pipeline
+  - paper_release
+  notes: Official arXiv API query for recent AI and ML preprints.
+  config:
+    event_model: paper_release
+- name: Google AI Blog
+  type: rss
+  url: https://blog.google/technology/ai/rss/
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: blog
+  config:
+    event_model: editorial_coverage
+- name: OpenAI Blog
+  type: rss
+  url: https://openai.com/news/rss.xml
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: model_release
+  producer_role: research_lab
+  info_purpose:
+  - model_release
+  - api_update
+  - research_rollout
+  notes: Model release and API rollout updates from a major applied AI lab.
+  config:
+    event_model: paper_release
+- name: DeepMind Blog
+  type: rss
+  url: https://deepmind.google/blog/rss.xml
+  language: en
+  country: GB
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: blog
+  config:
+    event_model: editorial_coverage
+- name: Anthropic Research
+  type: rss
+  url: https://www.anthropic.com/research/rss.xml
+  enabled: false
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: blog
+  config:
+    skip_reason: Official RSS endpoint returned 404 during 2026-04-23 source audit;
+      keep disabled until a current Anthropic research feed or API is confirmed.
+    reenable_gate: Validate endpoint returns feed entries and add a parser smoke test.
+- name: Meta AI Blog
+  type: rss
+  url: https://ai.meta.com/blog/rss/
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: blog
+  config:
+    event_model: editorial_coverage
+- name: Microsoft Research
+  type: rss
+  url: https://www.microsoft.com/en-us/research/feed/
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: blog
+  notes: Institutional research blog; quiet windows of 3-4 days are common between
+    publication bursts.
+  config:
+    freshness_sla_days: 4
+    event_model: editorial_coverage
+- name: Hugging Face Blog
+  type: rss
+  url: https://huggingface.co/blog/feed.xml
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: implementation
+  producer_role: model_platform
+  info_purpose:
+  - implementation
+  - model_release
+  - library_update
+  notes: Implementation guides, model release notes, and library update signals.
+  config:
+    event_model: code_repository
+- name: Distill.pub
+  type: rss
+  url: https://distill.pub/rss.xml
+  enabled: false
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: academic
+  config:
+    skip_reason: Feed is reachable but publishes historical entries only; disabled
+      until new Distill research posts resume.
+    reenable_gate: Confirm a recent entry inside the paper_release freshness SLA.
+- name: Papers With Code
+  type: rss
+  url: https://paperswithcode.com/rss
+  enabled: false
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: benchmark_leaderboard
+  producer_role: research_platform
+  info_purpose:
+  - benchmark
+  - leaderboard
+  - implementation
+  - code_repository
+  notes: Benchmark leaderboard and code implementation updates tied to research reproducibility.
+  config:
+    skip_reason: Configured RSS endpoint returns HTML/no feed entries; requires API
+      or custom parser activation.
+    reenable_gate: Add parser/API smoke that yields benchmark_result or code_repository
+      events.
+- name: Semantic Scholar AI
+  type: semantic_scholar
+  url: https://api.semanticscholar.org/graph/v1/paper/search?query=artificial%20intelligence&limit=30&fields=title,abstract,year,externalIds,externalLinks
+  enabled: false
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C4_api
+  content_type: citation_signal
+  producer_role: research_index
+  info_purpose:
+  - citation
+  - impact_tracking
+  - literature_scan
+  notes: Research discovery feed useful for citation and impact tracking.
+  config:
+    event_model: citation_snapshot
+    skip_reason: Public web feed returned 404 and unauthenticated API probe returned
+      429; activation requires API key/quota policy.
+    reenable_gate: Provide API key/quota handling and a real transport smoke test.
+- name: OpenAlex AI Citation Feed
+  type: openalex
+  url: https://api.openalex.org/works?search=artificial+intelligence&per-page=30&sort=cited_by_count:desc
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C4_api
+  content_type: citation_signal
+  producer_role: research_index
+  info_purpose:
+  - citation
+  - impact_tracking
+  - literature_scan
+  notes: OpenAlex API feed emphasizing citation and impact signals for recent AI research.
+  config:
+    event_model: citation_snapshot
+- name: Towards Data Science
+  type: rss
+  url: https://towardsdatascience.com/feed
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: blog
+  config:
+    event_model: editorial_coverage
+- name: AI News
+  type: rss
+  url: https://artificialintelligence-news.com/feed/
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  config:
+    event_model: editorial_coverage
+- name: The Gradient
+  type: rss
+  url: https://thegradient.pub/rss/
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: blog
+  config:
+    event_model: editorial_coverage
+- name: Import AI
+  type: rss
+  url: https://importai.substack.com/feed
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: newsletter
+  config:
+    event_model: editorial_coverage
+- name: The Batch (DeepLearning.AI)
+  type: rss
+  url: https://www.deeplearning.ai/the-batch/feed/
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: newsletter
+  config:
+    event_model: editorial_coverage
 entities:
-  - name: Research Areas
-    display_name: Research Areas
-    keywords:
-      # Core ML
-      - machine learning
-      - deep learning
-      - neural networks
-      - supervised learning
-      - unsupervised learning
-      - semi-supervised learning
-      - self-supervised learning
-      # NLP
-      - natural language processing
-      - NLP
-      - language model
-      - LLM
-      - large language model
-      - text generation
-      - machine translation
-      - sentiment analysis
-      - named entity recognition
-      - question answering
-      # Vision
-      - computer vision
-      - image classification
-      - object detection
-      - semantic segmentation
-      - image generation
-      - video understanding
-      # RL
-      - reinforcement learning
-      - RL
-      - multi-agent
-      - RLHF
-      # Other areas
-      - transfer learning
-      - federated learning
-      - few-shot learning
-      - zero-shot learning
-      - meta-learning
-      - continual learning
-      - representation learning
-      - multimodal
-      - speech recognition
-      - robotics
-      - AI safety
-      - alignment
-      - interpretability
-      - explainability
-
-  - name: Key Researchers
-    display_name: Key Researchers
-    keywords:
-      # Pioneers
-      - Hinton
-      - LeCun
-      - Bengio
-      - Goodfellow
-      - Ng
-      - Karpathy
-      - Schmidhuber
-      - Sutskever
-      - Altman
-      - Amodei
-      # Current leaders
-      - Fei-Fei Li
-      - Yann LeCun
-      - Geoffrey Hinton
-      - Yoshua Bengio
-      - Demis Hassabis
-      - Sam Altman
-      - Dario Amodei
-      - Ilya Sutskever
-      - Andrew Ng
-      - Andrej Karpathy
-
-  - name: Institutions
-    display_name: Top Institutions
-    keywords:
-      # Universities
-      - Stanford
-      - MIT
-      - Berkeley
-      - Carnegie Mellon
-      - CMU
-      - Princeton
-      - Harvard
-      - Oxford
-      - Cambridge
-      - Toronto
-      - ETH Zurich
-      - Tsinghua
-      - Peking
-      - KAIST
-      - Seoul National
-      # Industry labs
-      - Google Brain
-      - Google DeepMind
-      - OpenAI
-      - Anthropic
-      - Meta AI
-      - FAIR
-      - Microsoft Research
-      - NVIDIA
-      - Apple
-      - Amazon
-      - Hugging Face
-      - Stability AI
-      - Cohere
-      - Midjourney
-
-  - name: Venues
-    display_name: Top Venues
-    keywords:
-      # ML/AI conferences
-      - NeurIPS
-      - ICML
-      - ICLR
-      - AAAI
-      - IJCAI
-      # NLP conferences
-      - ACL
-      - EMNLP
-      - NAACL
-      - COLING
-      # Vision conferences
-      - CVPR
-      - ICCV
-      - ECCV
-      - WACV
-      # Journals
-      - JMLR
-      - TPAMI
-      - Nature
-      - Science
-      # Workshops
-      - workshop
-      - tutorial
-      - spotlight
-      - oral
-      - poster
-
-  - name: Techniques
-    display_name: Key Techniques
-    keywords:
-      # Architectures
-      - transformer
-      - attention mechanism
-      - self-attention
-      - cross-attention
-      - convolutional neural network
-      - CNN
-      - recurrent neural network
-      - RNN
-      - LSTM
-      - GRU
-      - graph neural network
-      - GNN
-      - mixture of experts
-      - MoE
-      - state space model
-      - Mamba
-      # Foundation models
-      - BERT
-      - GPT
-      - GPT-4
-      - Claude
-      - LLaMA
-      - Gemini
-      - PaLM
-      - T5
-      - CLIP
-      - DALL-E
-      - Stable Diffusion
-      - Midjourney
-      - Sora
-      # Techniques
-      - diffusion
-      - diffusion model
-      - VAE
-      - GAN
-      - flow matching
-      - contrastive learning
-      - RLHF
-      - DPO
-      - fine-tuning
-      - prompt engineering
-      - in-context learning
-      - chain of thought
-      - RAG
-      - retrieval augmented
-      - quantization
-      - pruning
-      - distillation
-      - adapter
-      - LoRA
-      - prefix tuning
-      # Optimization
-      - Adam
-      - SGD
-      - gradient descent
-      - dropout
-      - batch normalization
-      - layer normalization
-      - regularization
-
-  - name: Tasks
-    display_name: AI Tasks
-    keywords:
-      - classification
-      - regression
-      - clustering
-      - generation
-      - summarization
-      - translation
-      - question answering
-      - dialogue
-      - chatbot
-      - code generation
-      - reasoning
-      - benchmark
-      - evaluation
-      - SOTA
-      - state-of-the-art
-      - baseline
-      - ablation
-
-  - name: ResearchGeneral
-    display_name: Research General
-    keywords:
-      - paper
-      - papers
-      - research
-      - study
-      - studies
-      - article
-      - articles
-      - publication
-      - publications
-      - published
-      - preprint
-      - preprints
-      - arxiv
-      - journal
-      - conference
-      - proceedings
-      - author
-      - authors
-      - researcher
-      - researchers
-      - scientist
-      - scientists
-      - abstract
-      - introduction
-      - method
-      - methods
-      - methodology
-      - result
-      - results
-      - experiment
-      - experiments
-      - experimental
-      - analysis
-      - conclusion
-      - conclusions
-      - discussion
-      - dataset
-      - datasets
-      - data
-      - model
-      - models
-      - approach
-      - approaches
-      - propose
-      - proposed
-      - novel
-      - new
-      - sota
-      - state-of-the-art
-      - outperform
-      - outperforms
-      - improve
-      - improvement
-      - achieve
-      - achieves
-      - demonstrate
-      - demonstrates
-      - show
-      - shows
-      - find
-      - findings
-      - discover
-      - discovery
-      - breakthrough
-      - advance
-      - advances
-      - contribution
-      - contributions
-      - present
-      - presents
-      - introduce
-      - introduces
-      - investigate
-      - investigates
-      - explore
-      - explores
-      - evaluate
-      - evaluates
-      - evaluate
-      - evaluation
-      - compare
-      - comparison
-      - extensive
-      - comprehensive
-      - framework
-      - architecture
-      - algorithm
-      - algorithms
-      # 추가 일반 키워드
-      - learn
-      - learns
-      - learning
-      - learned
-      - train
-      - trains
-      - training
-      - trained
-      - neural
-      - network
-      - networks
-      - layer
-      - layers
-      - model
-      - models
-      - modeling
-      - predict
-      - predicts
-      - prediction
-      - predictions
-      - classify
-      - classification
-      - generate
-      - generates
-      - generation
-      - generative
-      - optimize
-      - optimizes
-      - optimization
-      - parameter
-      - parameters
-      - performance
-      - accuracy
-      - loss
-      - error
-      - compute
-      - computing
-      - computational
-      - efficient
-      - efficiency
-      - scale
-      - scales
-      - scaling
-      - large
-      - small
-      - fast
-      - faster
-      - speed
-      - task
-      - tasks
-      - input
-      - output
-      - feature
-      - features
-      - representation
-      - representations
-      - embedding
-      - embeddings
-      - attention
-      - token
-      - tokens
-      - sequence
-      - sequences
-      - language
-      - text
-      - image
-      - images
-      - vision
-      - audio
-      - speech
-      - video
-      - multimodal
-      - AI
-      - artificial intelligence
-      - ML
-      - DL
-      - NLP
-      - CV
-      - RL
+- name: Research Areas
+  display_name: Research Areas
+  keywords:
+  - machine learning
+  - deep learning
+  - neural networks
+  - supervised learning
+  - unsupervised learning
+  - semi-supervised learning
+  - self-supervised learning
+  - natural language processing
+  - NLP
+  - language model
+  - LLM
+  - large language model
+  - text generation
+  - machine translation
+  - sentiment analysis
+  - named entity recognition
+  - question answering
+  - computer vision
+  - image classification
+  - object detection
+  - semantic segmentation
+  - image generation
+  - video understanding
+  - reinforcement learning
+  - RL
+  - multi-agent
+  - RLHF
+  - transfer learning
+  - federated learning
+  - few-shot learning
+  - zero-shot learning
+  - meta-learning
+  - continual learning
+  - representation learning
+  - multimodal
+  - speech recognition
+  - robotics
+  - AI safety
+  - alignment
+  - interpretability
+  - explainability
+- name: Key Researchers
+  display_name: Key Researchers
+  keywords:
+  - Hinton
+  - LeCun
+  - Bengio
+  - Goodfellow
+  - Ng
+  - Karpathy
+  - Schmidhuber
+  - Sutskever
+  - Altman
+  - Amodei
+  - Fei-Fei Li
+  - Yann LeCun
+  - Geoffrey Hinton
+  - Yoshua Bengio
+  - Demis Hassabis
+  - Sam Altman
+  - Dario Amodei
+  - Ilya Sutskever
+  - Andrew Ng
+  - Andrej Karpathy
+- name: Institutions
+  display_name: Top Institutions
+  keywords:
+  - Stanford
+  - MIT
+  - Berkeley
+  - Carnegie Mellon
+  - CMU
+  - Princeton
+  - Harvard
+  - Oxford
+  - Cambridge
+  - Toronto
+  - ETH Zurich
+  - Tsinghua
+  - Peking
+  - KAIST
+  - Seoul National
+  - Google Brain
+  - Google DeepMind
+  - OpenAI
+  - Anthropic
+  - Meta AI
+  - FAIR
+  - Microsoft Research
+  - NVIDIA
+  - Apple
+  - Amazon
+  - Hugging Face
+  - Stability AI
+  - Cohere
+  - Midjourney
+- name: Venues
+  display_name: Top Venues
+  keywords:
+  - NeurIPS
+  - ICML
+  - ICLR
+  - AAAI
+  - IJCAI
+  - ACL
+  - EMNLP
+  - NAACL
+  - COLING
+  - CVPR
+  - ICCV
+  - ECCV
+  - WACV
+  - JMLR
+  - TPAMI
+  - Nature
+  - Science
+  - workshop
+  - tutorial
+  - spotlight
+  - oral
+  - poster
+- name: Techniques
+  display_name: Key Techniques
+  keywords:
+  - transformer
+  - attention mechanism
+  - self-attention
+  - cross-attention
+  - convolutional neural network
+  - CNN
+  - recurrent neural network
+  - RNN
+  - LSTM
+  - GRU
+  - graph neural network
+  - GNN
+  - mixture of experts
+  - MoE
+  - state space model
+  - Mamba
+  - BERT
+  - GPT
+  - GPT-4
+  - Claude
+  - LLaMA
+  - Gemini
+  - PaLM
+  - T5
+  - CLIP
+  - DALL-E
+  - Stable Diffusion
+  - Midjourney
+  - Sora
+  - diffusion
+  - diffusion model
+  - VAE
+  - GAN
+  - flow matching
+  - contrastive learning
+  - RLHF
+  - DPO
+  - fine-tuning
+  - prompt engineering
+  - in-context learning
+  - chain of thought
+  - RAG
+  - retrieval augmented
+  - quantization
+  - pruning
+  - distillation
+  - adapter
+  - LoRA
+  - prefix tuning
+  - Adam
+  - SGD
+  - gradient descent
+  - dropout
+  - batch normalization
+  - layer normalization
+  - regularization
+- name: Tasks
+  display_name: AI Tasks
+  keywords:
+  - classification
+  - regression
+  - clustering
+  - generation
+  - summarization
+  - translation
+  - question answering
+  - dialogue
+  - chatbot
+  - code generation
+  - reasoning
+  - benchmark
+  - evaluation
+  - SOTA
+  - state-of-the-art
+  - baseline
+  - ablation
+- name: ResearchGeneral
+  display_name: Research General
+  keywords:
+  - paper
+  - papers
+  - research
+  - study
+  - studies
+  - article
+  - articles
+  - publication
+  - publications
+  - published
+  - preprint
+  - preprints
+  - arxiv
+  - journal
+  - conference
+  - proceedings
+  - author
+  - authors
+  - researcher
+  - researchers
+  - scientist
+  - scientists
+  - abstract
+  - introduction
+  - method
+  - methods
+  - methodology
+  - result
+  - results
+  - experiment
+  - experiments
+  - experimental
+  - analysis
+  - conclusion
+  - conclusions
+  - discussion
+  - dataset
+  - datasets
+  - data
+  - model
+  - models
+  - approach
+  - approaches
+  - propose
+  - proposed
+  - novel
+  - new
+  - sota
+  - state-of-the-art
+  - outperform
+  - outperforms
+  - improve
+  - improvement
+  - achieve
+  - achieves
+  - demonstrate
+  - demonstrates
+  - show
+  - shows
+  - find
+  - findings
+  - discover
+  - discovery
+  - breakthrough
+  - advance
+  - advances
+  - contribution
+  - contributions
+  - present
+  - presents
+  - introduce
+  - introduces
+  - investigate
+  - investigates
+  - explore
+  - explores
+  - evaluate
+  - evaluates
+  - evaluate
+  - evaluation
+  - compare
+  - comparison
+  - extensive
+  - comprehensive
+  - framework
+  - architecture
+  - algorithm
+  - algorithms
+  - learn
+  - learns
+  - learning
+  - learned
+  - train
+  - trains
+  - training
+  - trained
+  - neural
+  - network
+  - networks
+  - layer
+  - layers
+  - model
+  - models
+  - modeling
+  - predict
+  - predicts
+  - prediction
+  - predictions
+  - classify
+  - classification
+  - generate
+  - generates
+  - generation
+  - generative
+  - optimize
+  - optimizes
+  - optimization
+  - parameter
+  - parameters
+  - performance
+  - accuracy
+  - loss
+  - error
+  - compute
+  - computing
+  - computational
+  - efficient
+  - efficiency
+  - scale
+  - scales
+  - scaling
+  - large
+  - small
+  - fast
+  - faster
+  - speed
+  - task
+  - tasks
+  - input
+  - output
+  - feature
+  - features
+  - representation
+  - representations
+  - embedding
+  - embeddings
+  - attention
+  - token
+  - tokens
+  - sequence
+  - sequences
+  - language
+  - text
+  - image
+  - images
+  - vision
+  - audio
+  - speech
+  - video
+  - multimodal
+  - AI
+  - artificial intelligence
+  - ML
+  - DL
+  - NLP
+  - CV
+  - RL

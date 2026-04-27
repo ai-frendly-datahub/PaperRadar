@@ -20,7 +20,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 from .exceptions import NetworkError, ParseError, SourceError
-from .models import Article, Source
+from .models import Article, Paper, Source
 from .resilience import get_circuit_breaker_manager
 
 
@@ -189,12 +189,7 @@ def collect_sources(
     errors: list[str] = []
     manager = get_circuit_breaker_manager()
     workers = _resolve_max_workers(max_workers)
-    source_hosts: dict[str, str] = {
-        source.name: (urlparse(source.url).netloc.lower() or source.name) for source in sources
-    }
-    rate_limiters: dict[str, RateLimiter] = {
-        host: RateLimiter(min_interval=min_interval_per_host) for host in set(source_hosts.values())
-    }
+    enabled_sources = [source for source in sources if source.enabled]
     throttler = AdaptiveThrottler(min_delay=max(0.001, min_interval_per_host))
     health_store = CrawlHealthStore(
         health_db_path or os.environ.get("RADAR_CRAWL_HEALTH_DB_PATH", _DEFAULT_HEALTH_DB_PATH)
@@ -203,8 +198,14 @@ def collect_sources(
     session = _create_session()
 
     _js_types = {"javascript", "browser"}
-    rss_sources = [s for s in sources if s.type.lower() not in _js_types]
-    js_sources = [s for s in sources if s.type.lower() in _js_types]
+    rss_sources = [s for s in enabled_sources if s.type.lower() not in _js_types]
+    js_sources = [s for s in enabled_sources if s.type.lower() in _js_types]
+    source_hosts: dict[str, str] = {
+        source.name: (urlparse(source.url).netloc.lower() or source.name) for source in rss_sources
+    }
+    rate_limiters: dict[str, RateLimiter] = {
+        host: RateLimiter(min_interval=min_interval_per_host) for host in set(source_hosts.values())
+    }
 
     def _collect_for_source(source: Source) -> tuple[list[Article], list[str]]:
         if health_store.is_disabled(source.name):
@@ -359,6 +360,8 @@ def _collect_rss(
             # Skip entries with empty title or link
             if not title or title == "(no title)" or not link:
                 continue
+            if not summary:
+                summary = title
 
             items.append(
                 Article(
@@ -383,7 +386,7 @@ def _collect_arxiv(
     limit: int,
     timeout: int,
     session: requests.Session | None = None,
-) -> list[Article]:
+) -> list[Paper]:
     """Collect articles from arXiv API with rate limiting (max 3 requests/second)."""
     try:
         response = _fetch_url_with_retry(
@@ -398,32 +401,38 @@ def _collect_arxiv(
 
     try:
         feed = feedparser.parse(response.content)
-        items: list[Article] = []
+        items: list[Paper] = []
 
         for entry in feed.entries[:limit]:
             title = html.unescape(_entry_text(entry, "title").strip())
-            link = _entry_text(entry, "link").strip()
+            raw_id = _entry_text(entry, "id").strip()
+            link = _entry_text(entry, "link").strip() or raw_id
 
             # Skip entries with empty title or link
             if not title or not link:
                 continue
 
             # Extract abstract from arXiv entry
-            summary = ""
+            summary = html.unescape(_entry_text(entry, "summary").strip())
             content = entry.get("content", [])
-            if isinstance(content, list) and content:
+            if not summary and isinstance(content, list) and content:
                 summary = html.unescape(str(content[0].get("value", "")).strip()) if content else ""
 
             published = _extract_datetime(entry)
+            arxiv_id = _extract_arxiv_id(raw_id or link)
+            authors = _extract_authors(entry)
 
             items.append(
-                Article(
+                Paper(
                     title=title,
                     link=link,
-                    summary=summary,
+                    abstract=summary,
+                    authors=authors,
                     published=published,
                     source=source.name,
                     category=category,
+                    arxiv_id=arxiv_id,
+                    pdf_url=f"https://arxiv.org/pdf/{arxiv_id}.pdf" if arxiv_id else None,
                 )
             )
 
@@ -656,31 +665,57 @@ def _collect_openalex(
         works = data.get("results", [])[:limit]
 
         for work in works:
-            title = work.get("display_title", "")
+            title = work.get("display_title") or work.get("display_name") or work.get("title") or ""
             if not title:
                 continue
 
-            link = work.get("id", "").split("/")[-1]
-            link = (
-                f"https://doi.org/{link}"
-                if link.startswith("10.")
-                else f"https://openalex.org/{link}"
-            )
+            doi = str(work.get("doi") or work.get("ids", {}).get("doi") or "").strip()
+            openalex_id = str(work.get("id") or "").strip()
+            if doi:
+                link = doi if doi.startswith("http") else f"https://doi.org/{doi}"
+            elif openalex_id:
+                link = openalex_id if openalex_id.startswith("http") else f"https://openalex.org/{openalex_id}"
+            else:
+                continue
 
+            citation_count = work.get("cited_by_count")
+            publication_date = str(work.get("publication_date") or "").strip()
+            publication_year = work.get("publication_year") or work.get("year")
+            summary_parts: list[str] = []
             abstract = work.get("abstract", "") or ""
+            if abstract:
+                summary_parts.append(str(abstract))
+            if doi:
+                summary_parts.append(f"DOI: {doi}")
+            if isinstance(citation_count, int):
+                summary_parts.append(f"Citation count: {citation_count}")
+            if publication_date:
+                summary_parts.append(f"Publication date: {publication_date}")
+            elif publication_year:
+                summary_parts.append(f"Publication year: {publication_year}")
+            if openalex_id:
+                summary_parts.append(f"OpenAlex ID: {openalex_id}")
 
             # Extract publish date
             published = None
-            published_in = work.get("published_in", {})
-            year = published_in.get("year") if published_in else work.get("year")
-            if year:
-                published = datetime(year, 1, 1, tzinfo=UTC)
+            if publication_date:
+                try:
+                    published = datetime.fromisoformat(publication_date).replace(tzinfo=UTC)
+                except ValueError:
+                    published = None
+            elif publication_year:
+                try:
+                    published = datetime(int(publication_year), 1, 1, tzinfo=UTC)
+                except (TypeError, ValueError):
+                    published = None
+            if source.config.get("event_model") == "citation_snapshot":
+                published = None
 
             items.append(
                 Article(
                     title=title,
                     link=link,
-                    summary=str(abstract) if abstract else "",
+                    summary=". ".join(summary_parts),
                     published=published,
                     source=source.name,
                     category=category,
@@ -787,6 +822,33 @@ def _extract_datetime(entry: Mapping[str, Any]) -> datetime | None:
             except Exception:
                 continue
     return None
+
+
+def _extract_arxiv_id(value: str) -> str | None:
+    if not value:
+        return None
+    parsed = urlparse(value)
+    candidate = parsed.path.rsplit("/", maxsplit=1)[-1] if parsed.path else value
+    candidate = candidate.strip()
+    return candidate or None
+
+
+def _extract_authors(entry: Mapping[str, Any]) -> list[str]:
+    authors_raw = entry.get("authors", [])
+    authors: list[str] = []
+    if isinstance(authors_raw, list):
+        for author in authors_raw:
+            if isinstance(author, Mapping):
+                name = author.get("name")
+                if isinstance(name, str) and name.strip():
+                    authors.append(name.strip())
+    if authors:
+        return authors
+
+    author = entry.get("author")
+    if isinstance(author, str) and author.strip():
+        return [author.strip()]
+    return []
 
 
 def _entry_text(entry: Mapping[str, Any], key: str) -> str:

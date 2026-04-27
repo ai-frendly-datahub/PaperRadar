@@ -3,6 +3,53 @@ from __future__ import annotations
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
+import duckdb
+
+
+def _init_articles_db(db_path: Path, *, rows: int) -> None:
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    conn = duckdb.connect(str(db_path))
+    try:
+        conn.execute(
+            """
+            CREATE TABLE articles (
+                id BIGINT PRIMARY KEY,
+                category TEXT NOT NULL,
+                source TEXT NOT NULL,
+                title TEXT NOT NULL,
+                link TEXT NOT NULL UNIQUE,
+                summary TEXT,
+                published TIMESTAMP,
+                collected_at TIMESTAMP NOT NULL,
+                entities_json TEXT
+            )
+            """
+        )
+        for idx in range(rows):
+            conn.execute(
+                """
+                INSERT INTO articles (id, category, source, title, link, summary, published, collected_at, entities_json)
+                VALUES (?, 'research', 'Test', ?, ?, 'summary', NULL, ?, '{}')
+                """,
+                [
+                    idx + 1,
+                    f"Title {idx + 1}",
+                    f"https://example.com/{idx + 1}",
+                    datetime.now(UTC).replace(tzinfo=None),
+                ],
+            )
+    finally:
+        conn.close()
+
+
+def _init_empty_health_db(db_path: Path) -> None:
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    conn = duckdb.connect(str(db_path))
+    try:
+        conn.execute("CREATE TABLE crawl_health (source TEXT, status TEXT)")
+    finally:
+        conn.close()
+
 
 def test_snapshot_database_creates_file(tmp_path: Path) -> None:
     from paperradar.date_storage import snapshot_database
@@ -39,6 +86,60 @@ def test_snapshot_database_returns_none_for_missing_source(tmp_path: Path) -> No
     missing_db = tmp_path / "nonexistent.duckdb"
     result = snapshot_database(missing_db)
     assert result is None
+
+
+def test_latest_snapshot_path_returns_newest_snapshot_layout(tmp_path: Path) -> None:
+    from paperradar.date_storage import latest_snapshot_path
+
+    db_file = tmp_path / "data" / "papers.duckdb"
+    older = tmp_path / "data" / "snapshots" / "2026-04-09" / "papers.duckdb"
+    newer = tmp_path / "data" / "snapshots" / "2026-04-10" / "papers.duckdb"
+    ignored = tmp_path / "data" / "snapshots" / "not-a-date" / "papers.duckdb"
+    older.parent.mkdir(parents=True)
+    newer.parent.mkdir(parents=True)
+    ignored.parent.mkdir(parents=True)
+    older.write_text("older")
+    newer.write_text("newer")
+    ignored.write_text("ignored")
+
+    assert latest_snapshot_path(db_file) == newer
+
+
+def test_latest_snapshot_path_supports_daily_flat_layout(tmp_path: Path) -> None:
+    from paperradar.date_storage import latest_snapshot_path
+
+    db_file = tmp_path / "data" / "papers.duckdb"
+    older = tmp_path / "data" / "daily" / "2026-04-09.duckdb"
+    newer = tmp_path / "data" / "daily" / "2026-04-10.duckdb"
+    older.parent.mkdir(parents=True)
+    older.write_text("older")
+    newer.write_text("newer")
+
+    assert latest_snapshot_path(db_file) == newer
+
+
+def test_resolve_read_database_path_prefers_primary_with_records(tmp_path: Path) -> None:
+    from paperradar.date_storage import resolve_read_database_path
+
+    db_file = tmp_path / "data" / "papers.duckdb"
+    snapshot = tmp_path / "data" / "snapshots" / "2026-04-10" / "papers.duckdb"
+    _init_articles_db(db_file, rows=1)
+    _init_articles_db(snapshot, rows=2)
+
+    assert resolve_read_database_path(db_file) == db_file
+
+
+def test_resolve_read_database_path_falls_back_to_snapshot_with_records(
+    tmp_path: Path,
+) -> None:
+    from paperradar.date_storage import resolve_read_database_path
+
+    db_file = tmp_path / "data" / "papers.duckdb"
+    snapshot = tmp_path / "data" / "snapshots" / "2026-04-10" / "papers.duckdb"
+    _init_empty_health_db(db_file)
+    _init_articles_db(snapshot, rows=2)
+
+    assert resolve_read_database_path(db_file) == snapshot
 
 
 def test_snapshot_database_custom_snapshot_root(tmp_path: Path) -> None:

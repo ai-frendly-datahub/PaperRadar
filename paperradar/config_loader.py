@@ -19,17 +19,25 @@ from .models import (
 
 def load_settings(config_path: Path | None = None) -> RadarSettings:
     """Load settings from config/config.yaml."""
+    resolve_relative_paths = config_path is None
     if config_path is None:
         config_path = Path(__file__).parent.parent / "config" / "config.yaml"
+    project_root = config_path.resolve().parents[1]
 
-    with open(config_path) as f:
+    with open(config_path, encoding="utf-8") as f:
         config = yaml.safe_load(f)
 
+    def _path(key: str) -> Path:
+        value = Path(config[key])
+        if resolve_relative_paths and not value.is_absolute():
+            return (project_root / value).resolve()
+        return value
+
     return RadarSettings(
-        database_path=Path(config["database_path"]),
-        report_dir=Path(config["report_dir"]),
-        raw_data_dir=Path(config["raw_data_dir"]),
-        search_db_path=Path(config["search_db_path"]),
+        database_path=_path("database_path"),
+        report_dir=_path("report_dir"),
+        raw_data_dir=_path("raw_data_dir"),
+        search_db_path=_path("search_db_path"),
     )
 
 
@@ -39,7 +47,7 @@ def load_category_config(category: str, categories_dir: Path | None = None) -> C
         categories_dir = Path(__file__).parent.parent / "config" / "categories"
 
     config_file = categories_dir / f"{category}.yaml"
-    with open(config_file) as f:
+    with open(config_file, encoding="utf-8") as f:
         config = yaml.safe_load(f)
 
     sources = [Source(**src) for src in config.get("sources", [])]
@@ -51,6 +59,28 @@ def load_category_config(category: str, categories_dir: Path | None = None) -> C
         sources=sources,
         entities=entities,
     )
+
+
+def load_category_quality_config(
+    category: str, categories_dir: Path | None = None
+) -> dict[str, object]:
+    """Load data quality metadata from a category YAML."""
+    if categories_dir is None:
+        categories_dir = Path(__file__).parent.parent / "config" / "categories"
+
+    config_file = categories_dir / f"{category}.yaml"
+    with open(config_file, encoding="utf-8") as f:
+        config = yaml.safe_load(f)
+
+    if not isinstance(config, dict):
+        return {"data_quality": {}, "source_backlog": {}}
+
+    data_quality = config.get("data_quality", {})
+    source_backlog = config.get("source_backlog", {})
+    return {
+        "data_quality": data_quality if isinstance(data_quality, dict) else {},
+        "source_backlog": source_backlog if isinstance(source_backlog, dict) else {},
+    }
 
 
 def _resolve_env_refs(value: object) -> object:
@@ -91,7 +121,7 @@ def load_notification_config(
     if not config_file.exists():
         return NotificationConfig(enabled=False, channels=[])
 
-    with open(config_file) as f:
+    with open(config_file, encoding="utf-8") as f:
         raw = yaml.safe_load(f)
 
     if not isinstance(raw, dict):

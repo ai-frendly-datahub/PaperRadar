@@ -13,6 +13,19 @@ from ..search_index import SearchIndex
 _ALLOWED_SQL = re.compile(r"^\s*(SELECT|WITH|EXPLAIN)\b", re.IGNORECASE)
 
 
+def _record_table(conn: duckdb.DuckDBPyConnection) -> str:
+    tables = {str(row[0]) for row in conn.execute("SHOW TABLES").fetchall()}
+    if "papers" in tables:
+        row = conn.execute("SELECT COUNT(*) FROM papers").fetchone()
+        if row and int(row[0]) > 0:
+            return "papers"
+        if "articles" not in tables:
+            return "papers"
+    if "articles" in tables:
+        return "articles"
+    return "papers"
+
+
 def _format_rows(columns: list[str], rows: list[tuple[object, ...]]) -> str:
     if not rows:
         return "No rows returned."
@@ -45,14 +58,25 @@ def handle_search(*, search_db_path: Path, db_path: Path, query: str, limit: int
     placeholders = ", ".join("?" for _ in paper_ids)
     conn = duckdb.connect(str(db_path), read_only=True)
     try:
-        rows = conn.execute(
-            f"""
-            SELECT paper_id, title, url, source_name, arxiv_id, doi
-            FROM papers
-            WHERE paper_id IN ({placeholders})
-            """,
-            paper_ids,
-        ).fetchall()
+        if _record_table(conn) == "papers":
+            rows = conn.execute(
+                f"""
+                SELECT paper_id, title, url, source_name, arxiv_id, doi
+                FROM papers
+                WHERE paper_id IN ({placeholders})
+                """,
+                paper_ids,
+            ).fetchall()
+        else:
+            rows = conn.execute(
+                f"""
+                SELECT link AS paper_id, title, link AS url, source AS source_name,
+                       NULL AS arxiv_id, NULL AS doi
+                FROM articles
+                WHERE link IN ({placeholders})
+                """,
+                paper_ids,
+            ).fetchall()
     finally:
         conn.close()
 
@@ -83,16 +107,29 @@ def handle_recent_papers(*, db_path: Path, days: int = 7, limit: int = 20) -> st
     cutoff = datetime.now(tz=UTC) - timedelta(days=days)
     conn = duckdb.connect(str(db_path), read_only=True)
     try:
-        cursor = conn.execute(
-            """
-            SELECT title, source_name, url, arxiv_id, doi, venue, citation_count, collected_at
-            FROM papers
-            WHERE collected_at >= ?
-            ORDER BY collected_at DESC
-            LIMIT ?
-            """,
-            [cutoff, limit],
-        )
+        if _record_table(conn) == "papers":
+            cursor = conn.execute(
+                """
+                SELECT title, source_name, url, arxiv_id, doi, venue, citation_count, collected_at
+                FROM papers
+                WHERE collected_at >= ?
+                ORDER BY collected_at DESC
+                LIMIT ?
+                """,
+                [cutoff, limit],
+            )
+        else:
+            cursor = conn.execute(
+                """
+                SELECT title, source, link, NULL AS arxiv_id, NULL AS doi, NULL AS venue,
+                       NULL AS citation_count, collected_at
+                FROM articles
+                WHERE collected_at >= ?
+                ORDER BY collected_at DESC
+                LIMIT ?
+                """,
+                [cutoff, limit],
+            )
         rows = cast(
             list[tuple[str, str, str, str | None, str | None, str | None, int | None, datetime]],
             cursor.fetchall(),
@@ -139,15 +176,26 @@ def handle_sql(*, db_path: Path, query: str) -> str:
 def handle_stats(*, db_path: Path) -> str:
     conn = duckdb.connect(str(db_path), read_only=True)
     try:
-        rows = conn.execute(
-            """
-            SELECT source_name, COUNT(*) AS paper_count
-            FROM papers
-            GROUP BY source_name
-            ORDER BY paper_count DESC
-            """,
-        ).fetchall()
-        total = conn.execute("SELECT COUNT(*) FROM papers").fetchone()
+        if _record_table(conn) == "papers":
+            rows = conn.execute(
+                """
+                SELECT source_name, COUNT(*) AS paper_count
+                FROM papers
+                GROUP BY source_name
+                ORDER BY paper_count DESC
+                """,
+            ).fetchall()
+            total = conn.execute("SELECT COUNT(*) FROM papers").fetchone()
+        else:
+            rows = conn.execute(
+                """
+                SELECT source AS source_name, COUNT(*) AS paper_count
+                FROM articles
+                GROUP BY source
+                ORDER BY paper_count DESC
+                """,
+            ).fetchall()
+            total = conn.execute("SELECT COUNT(*) FROM articles").fetchone()
     finally:
         conn.close()
 
@@ -169,16 +217,29 @@ def handle_paper_by_doi(*, db_path: Path, identifier: str) -> str:
 
     conn = duckdb.connect(str(db_path), read_only=True)
     try:
-        rows = conn.execute(
-            """
-            SELECT title, url, arxiv_id, doi, venue, citation_count,
-                   source_name, publication_date, abstract
-            FROM papers
-            WHERE doi = ? OR arxiv_id = ? OR url = ?
-            LIMIT 1
-            """,
-            [identifier.strip(), identifier.strip(), identifier.strip()],
-        ).fetchall()
+        if _record_table(conn) == "papers":
+            rows = conn.execute(
+                """
+                SELECT title, url, arxiv_id, doi, venue, citation_count,
+                       source_name, publication_date, abstract
+                FROM papers
+                WHERE doi = ? OR arxiv_id = ? OR url = ?
+                LIMIT 1
+                """,
+                [identifier.strip(), identifier.strip(), identifier.strip()],
+            ).fetchall()
+        else:
+            rows = conn.execute(
+                """
+                SELECT title, link AS url, NULL AS arxiv_id, NULL AS doi, NULL AS venue,
+                       NULL AS citation_count, source AS source_name, published AS publication_date,
+                       summary AS abstract
+                FROM articles
+                WHERE link = ?
+                LIMIT 1
+                """,
+                [identifier.strip()],
+            ).fetchall()
     finally:
         conn.close()
 

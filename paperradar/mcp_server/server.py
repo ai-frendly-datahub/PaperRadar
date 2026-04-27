@@ -14,10 +14,20 @@ from .tools import (
     handle_sql,
     handle_stats,
 )
+from ..config_loader import load_settings
+from ..date_storage import resolve_read_database_path
 
 
 def _db_path() -> Path:
-    return Path(os.getenv("RADAR_DB_PATH", "data/papers.duckdb"))
+    env_path = os.getenv("RADAR_DB_PATH")
+    if env_path:
+        return resolve_read_database_path(Path(env_path))
+
+    try:
+        settings = load_settings()
+    except FileNotFoundError:
+        return resolve_read_database_path(Path("data/papers.duckdb"))
+    return resolve_read_database_path(settings.database_path)
 
 
 def _search_db_path() -> Path:

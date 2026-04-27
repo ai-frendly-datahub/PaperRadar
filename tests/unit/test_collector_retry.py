@@ -173,6 +173,29 @@ class TestCollectorRetryLogic:
             collect_sources(sources, category="test", limit_per_source=10)
             assert mock_get.call_count == 3
 
+    def test_rss_item_without_summary_uses_title_fallback(self) -> None:
+        source = Source(name="no_summary_feed", type="rss", url="http://example.com/feed")
+
+        with patch("radar.collector.requests.get") as mock_get:
+            mock_response = Mock()
+            mock_response.content = b"""<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <item>
+            <title>Fallback Title</title>
+            <link>http://example.com/article</link>
+            <pubDate>Mon, 01 Jan 2024 12:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>"""
+            mock_response.raise_for_status = Mock()
+            mock_get.return_value = mock_response
+
+            articles = _collect_single(source, category="test", limit=10, timeout=15)
+
+        assert len(articles) == 1
+        assert articles[0].summary == "Fallback Title"
+
     def test_rate_limiter_enforces_delay(self) -> None:
         limiter = RateLimiter(min_interval=0.3)
 

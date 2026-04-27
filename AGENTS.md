@@ -2,7 +2,7 @@
 
 ## Overview
 
-PaperRadar is an academic paper collection and analysis platform. It aggregates research papers from 7 major sources, extracts entities (authors, venues, techniques), stores in DuckDB, and generates beautiful HTML reports.
+PaperRadar is an academic paper and research-signal collection platform. It aggregates arXiv RSS/API, lab blogs, citation feeds, and benchmark/implementation sources, extracts entities (authors, venues, techniques), stores them in DuckDB, and generates HTML reports.
 
 ## Architecture
 
@@ -14,7 +14,7 @@ PaperRadar follows the Standard Tier template with single `paperradar/` package:
 PaperRadar/
 ├── main.py                      # CLI: python main.py --category research
 ├── paperradar/                  # Single package (not radar/)
-│   ├── collector.py             # collect_sources() - 7 paper APIs
+│   ├── collector.py             # collect_sources() - RSS + paper APIs
 │   ├── analyzer.py              # apply_entity_rules() - keyword matching
 │   ├── reporter.py              # generate_report() - Jinja2 HTML
 │   ├── storage.py               # RadarStorage - DuckDB upsert/query
@@ -42,15 +42,15 @@ PaperRadar/
 
 ### 1. Collector (paperradar/collector.py)
 
-Implements 7 paper source collectors:
+Implements RSS plus multiple paper-source collectors:
 
 | Collector | API | Rate Limit | Auth | Parse |
 |-----------|-----|-----------|------|-------|
+| RSSCollector | RSS/Atom feeds | feed dependent | None | title, summary, published |
 | ArxivCollector | arxiv.org/api/query | 3 req/sec | None | title, authors, abstract, arxiv_id, pdf_url |
 | SemanticScholarCollector | api.semanticscholar.org | 100 req/5min | Optional | title, authors, venue, citations |
 | PubMedCollector | eutils.ncbi.nlm.nih.gov | Unlimited | None | title, authors, journal, PMID |
 | BiorxivCollector | api.biorxiv.org | Free | None | title, authors, DOI, abstract |
-| SSRNCollector | papers.ssrn.com | - | None | title, authors, downloads |
 | OpenAlexCollector | api.openalex.org | 10 req/sec | None | title, authors, concepts, citations |
 | CrossRefCollector | api.crossref.org | Free | None | DOI, title, authors, journal |
 
@@ -185,10 +185,18 @@ category_name: research
 display_name: AI/ML Research Papers
 
 sources:
-  - name: arXiv
+  - name: arXiv CS.AI
+    type: rss
+    url: "http://export.arxiv.org/rss/cs.AI"
+  - name: arXiv API Recent AI
     type: arxiv
     url: "http://export.arxiv.org/api/query?search_query=cat:cs.AI..."
-  # ... 6 more sources
+  - name: Papers With Code
+    type: rss
+    url: "https://paperswithcode.com/rss"
+  - name: OpenAlex AI Citation Feed
+    type: openalex
+    url: "https://api.openalex.org/works?search=artificial+intelligence..."
 
 entities:
   - name: Research Areas
