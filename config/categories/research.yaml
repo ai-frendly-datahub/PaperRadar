@@ -215,13 +215,18 @@ sources:
 - name: Meta AI Blog
   type: rss
   url: https://ai.meta.com/blog/rss/
+  enabled: false
   language: en
   country: US
   trust_tier: T2_institutional
   collection_tier: C1_rss
   content_type: blog
   config:
-    event_model: editorial_coverage
+    skip_reason: RSS endpoint returned 404 during 2026-04-29 source audit; current
+      official blog page is https://ai.meta.com/blog and needs a browser/HTML parser
+      before reactivation.
+    reenable_gate: Validate a current official feed or add a parser smoke test for
+      https://ai.meta.com/blog.
 - name: Microsoft Research
   type: rss
   url: https://www.microsoft.com/en-us/research/feed/
@@ -364,13 +369,18 @@ sources:
 - name: The Batch (DeepLearning.AI)
   type: rss
   url: https://www.deeplearning.ai/the-batch/feed/
+  enabled: false
   language: en
   country: US
   trust_tier: T2_institutional
   collection_tier: C1_rss
   content_type: newsletter
   config:
-    event_model: editorial_coverage
+    skip_reason: RSS endpoint returned 404 during 2026-04-29 source audit; current
+      official newsletter page is https://www.deeplearning.ai/thebatch/ and needs
+      a page/newsletter parser before reactivation.
+    reenable_gate: Validate a current official feed or add a parser smoke test for
+      https://www.deeplearning.ai/thebatch/.
 entities:
 - name: Research Areas
   display_name: Research Areas

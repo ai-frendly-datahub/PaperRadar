@@ -30,6 +30,7 @@ _DEFAULT_HEADERS: dict[str, str] = {
     "User-Agent": "Mozilla/5.0 (compatible; RadarTemplateBot/1.0; +https://github.com/zzragida/ai-frendly-datahub)",
 }
 _DEFAULT_HEALTH_DB_PATH = "data/radar_data.duckdb"
+_ARXIV_MIN_INTERVAL_SECONDS = 3.0
 _COLLECTION_CONTROL_LOCK = threading.Lock()
 _ACTIVE_THROTTLER: AdaptiveThrottler | None = None
 _ACTIVE_HEALTH_STORE: CrawlHealthStore | None = None
@@ -80,6 +81,17 @@ def _resolve_max_workers(max_workers: int | None = None) -> int:
         parsed = max_workers
 
     return max(1, min(parsed, 10))
+
+
+def _source_host(source: Source) -> str:
+    return urlparse(source.url).netloc.lower() or source.name
+
+
+def _source_min_interval(source: Source, default_interval: float) -> float:
+    host = _source_host(source)
+    if host.endswith("arxiv.org") or source.type.lower() == "arxiv":
+        return max(default_interval, _ARXIV_MIN_INTERVAL_SECONDS)
+    return default_interval
 
 
 def _create_session() -> requests.Session:
@@ -200,11 +212,20 @@ def collect_sources(
     _js_types = {"javascript", "browser"}
     rss_sources = [s for s in enabled_sources if s.type.lower() not in _js_types]
     js_sources = [s for s in enabled_sources if s.type.lower() in _js_types]
-    source_hosts: dict[str, str] = {
-        source.name: (urlparse(source.url).netloc.lower() or source.name) for source in rss_sources
-    }
+    source_hosts: dict[str, str] = {source.name: _source_host(source) for source in rss_sources}
+    host_min_intervals: dict[str, float] = {}
+    for source in rss_sources:
+        host = source_hosts[source.name]
+        host_min_intervals[host] = max(
+            host_min_intervals.get(host, min_interval_per_host),
+            _source_min_interval(source, min_interval_per_host),
+        )
     rate_limiters: dict[str, RateLimiter] = {
-        host: RateLimiter(min_interval=min_interval_per_host) for host in set(source_hosts.values())
+        host: RateLimiter(min_interval=interval)
+        for host, interval in host_min_intervals.items()
+    }
+    host_locks: dict[str, threading.Lock] = {
+        host: threading.Lock() for host in set(source_hosts.values())
     }
 
     def _collect_for_source(source: Source) -> tuple[list[Article], list[str]]:
@@ -212,18 +233,19 @@ def collect_sources(
             return [], [f"{source.name}: Source disabled (crawl health threshold reached)"]
 
         host = source_hosts[source.name]
-        rate_limiters[host].acquire()
 
         try:
-            breaker = manager.get_breaker(source.name)
-            result = breaker.call(
-                _collect_single,
-                source,
-                category=category,
-                limit=limit_per_source,
-                timeout=timeout,
-                session=session,
-            )
+            with host_locks[host]:
+                rate_limiters[host].acquire()
+                breaker = manager.get_breaker(source.name)
+                result = breaker.call(
+                    _collect_single,
+                    source,
+                    category=category,
+                    limit=limit_per_source,
+                    timeout=timeout,
+                    session=session,
+                )
             return result, []
         except CircuitBreakerError:
             return [], [f"{source.name}: Circuit breaker open (source unavailable)"]

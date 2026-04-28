@@ -7,7 +7,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from paperradar.collector import RateLimiter, collect_sources
+from paperradar.collector import RateLimiter, _source_min_interval, collect_sources
 from paperradar.exceptions import NetworkError, SourceError
 from paperradar.models import Article, Source
 
@@ -165,6 +165,81 @@ def test_rate_limiter_is_thread_safe() -> None:
         thread.join()
 
     assert errors == []
+
+
+def test_arxiv_sources_use_official_minimum_interval() -> None:
+    arxiv_rss = Source(
+        name="arXiv CS.AI",
+        type="rss",
+        url="https://export.arxiv.org/rss/cs.AI",
+    )
+    arxiv_api = Source(
+        name="arXiv API Recent AI",
+        type="arxiv",
+        url="https://export.arxiv.org/api/query?search_query=cat:cs.AI",
+    )
+    regular = Source(
+        name="Regular Feed",
+        type="rss",
+        url="https://example.com/feed",
+    )
+
+    assert _source_min_interval(arxiv_rss, 0.5) == 3.0
+    assert _source_min_interval(arxiv_api, 0.5) == 3.0
+    assert _source_min_interval(regular, 0.5) == 0.5
+
+
+def test_same_host_collection_is_serialized(tmp_path) -> None:
+    sources = [
+        Source(name="source_a", type="rss", url="https://same.example/feed-a"),
+        Source(name="source_b", type="rss", url="https://same.example/feed-b"),
+    ]
+    manager = _pass_through_manager()
+    active = 0
+    max_active = 0
+    active_lock = threading.Lock()
+
+    def delayed_collect(
+        source: Source,
+        *,
+        category: str,
+        limit: int,
+        timeout: int,
+        session: object | None = None,
+    ) -> list[Article]:
+        nonlocal active, max_active
+        with active_lock:
+            active += 1
+            max_active = max(max_active, active)
+        time.sleep(0.05)
+        with active_lock:
+            active -= 1
+        return [
+            Article(
+                title=f"article-{source.name}",
+                link=f"https://example.com/{source.name}",
+                summary="ok",
+                published=None,
+                source=source.name,
+                category=category,
+            )
+        ]
+
+    with (
+        patch("radar.collector._collect_single", side_effect=delayed_collect),
+        patch("radar.collector.get_circuit_breaker_manager", return_value=manager),
+        patch.dict(os.environ, {"RADAR_MAX_WORKERS": "2"}, clear=False),
+    ):
+        articles, errors = collect_sources(
+            sources,
+            category="test",
+            min_interval_per_host=0.0,
+            health_db_path=str(tmp_path / "health.duckdb"),
+        )
+
+    assert len(articles) == 2
+    assert errors == []
+    assert max_active == 1
 
 
 def test_env_var_radar_max_workers_is_used() -> None:
