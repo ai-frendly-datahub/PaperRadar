@@ -20,6 +20,7 @@ from paperradar.raw_logger import RawLogger
 from paperradar.reporter import generate_index_html, generate_report
 from paperradar.search_index import SearchIndex
 from paperradar.storage import RadarStorage
+from radar_core.ontology import annotate_articles_with_ontology
 
 
 def _send_notifications(
@@ -103,6 +104,15 @@ def run(
         category=category_cfg.category_name,
         limit_per_source=per_source_limit,
         timeout=timeout,
+    )
+
+    collected = annotate_articles_with_ontology(
+        collected,
+        repo_name="PaperRadar",
+        sources_by_name={source.name: source for source in category_cfg.sources},
+        category_name=category_cfg.category_name,
+        search_from=Path(__file__),
+        attach_event_model_payload=True,
     )
 
     raw_logger = RawLogger(settings.raw_data_dir)
