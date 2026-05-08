@@ -1,17 +1,17 @@
 {
-  "date": "2026-05-08",
+  "date": "2026-05-09",
   "category": "research",
-  "article_count": 329,
+  "article_count": 330,
   "source_count": 14,
-  "matched_count": 324,
+  "matched_count": 325,
   "top_entities": [
     {
       "name": "ResearchGeneral",
-      "count": 3574
+      "count": 3579
     },
     {
       "name": "Tasks",
-      "count": 199
+      "count": 198
     },
     {
       "name": "Research Areas",
@@ -42,7 +42,7 @@
     "arXiv CS.NE": 16,
     "arXiv Stat.ML": 30,
     "Google AI Blog": 20,
-    "OpenAI Blog": 28,
+    "OpenAI Blog": 29,
     "DeepMind Blog": 28,
     "Microsoft Research": 10,
     "Distill.pub": 30,
@@ -50,5 +50,5 @@
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-05-08T22:16:20.794323+09:00"
+  "generated_at": "2026-05-09T04:07:40.899687+09:00"
 }
