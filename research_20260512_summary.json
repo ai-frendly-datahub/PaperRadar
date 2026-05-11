@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-11",
+  "date": "2026-05-12",
   "category": "research",
   "article_count": 329,
   "source_count": 14,
@@ -7,7 +7,7 @@
   "top_entities": [
     {
       "name": "ResearchGeneral",
-      "count": 3586
+      "count": 3579
     },
     {
       "name": "Tasks",
@@ -46,5 +46,5 @@
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-05-11T23:34:33.107370+09:00"
+  "generated_at": "2026-05-12T04:30:06.742418+09:00"
 }
