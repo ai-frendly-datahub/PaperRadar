@@ -4,6 +4,7 @@ import argparse
 from datetime import UTC
 from pathlib import Path
 
+from radar_core.config_loader import filter_sources
 from radar_core.date_storage import apply_date_storage_policy
 
 from paperradar.analyzer import apply_entity_rules
@@ -90,17 +91,25 @@ def run(
     keep_raw_days: int = 180,
     keep_report_days: int = 90,
     snapshot_db: bool = False,
+    max_sources: int | None = None,
+    exclude_sources: tuple[str, ...] | list[str] = (),
 ) -> Path:
     """Execute the paper collection pipeline."""
     settings = load_settings(config_path)
     category_cfg = load_category_config(category, categories_dir=categories_dir)
     quality_config = load_category_quality_config(category, categories_dir=categories_dir)
 
+    effective_sources = filter_sources(
+        category_cfg.sources,
+        max_sources=max_sources,
+        exclude_sources=tuple(exclude_sources or ()),
+    )
+
     print(
-        f"[PaperRadar] Collecting '{category_cfg.display_name}' from {len(category_cfg.sources)} sources..."
+        f"[PaperRadar] Collecting '{category_cfg.display_name}' from {len(effective_sources)} sources..."
     )
     collected, errors = collect_sources(
-        category_cfg.sources,
+        effective_sources,
         category=category_cfg.category_name,
         limit_per_source=per_source_limit,
         timeout=timeout,
@@ -109,14 +118,14 @@ def run(
     collected = annotate_articles_with_ontology(
         collected,
         repo_name="PaperRadar",
-        sources_by_name={source.name: source for source in category_cfg.sources},
+        sources_by_name={source.name: source for source in effective_sources},
         category_name=category_cfg.category_name,
         search_from=Path(__file__),
         attach_event_model_payload=True,
     )
 
     raw_logger = RawLogger(settings.raw_data_dir)
-    for source in category_cfg.sources:
+    for source in effective_sources:
         source_papers = [p for p in collected if p.source == source.name]
         if source_papers:
             _ = raw_logger.log(source_papers, source_name=source.name)
@@ -155,7 +164,7 @@ def run(
     stored_quality_articles = storage.recent_articles(
         category_cfg.category_name,
         days=max(recent_days, 14),
-        limit=max(500, per_source_limit * max(len(category_cfg.sources), 1) * 2),
+        limit=max(500, per_source_limit * max(len(effective_sources), 1) * 2),
     )
     storage.close()
     quality_articles = stored_quality_articles if stored_quality_articles else validated_articles
@@ -164,7 +173,7 @@ def run(
         "article_count": len(validated_articles),
         "source_count": len({p.source for p in validated_articles if p.source}),
         "matched_count": sum(1 for p in validated_articles if p.matched_entities),
-        "sources": len(category_cfg.sources),
+        "sources": len(effective_sources),
         "collected": len(collected),
         "validated": len(validated_articles),
         "window_days": recent_days,
@@ -212,7 +221,7 @@ def run(
 
     _send_notifications(
         category_name=category_cfg.category_name,
-        sources_count=len(category_cfg.sources),
+        sources_count=len(effective_sources),
         collected_count=len(collected),
         matched_count=sum(1 for p in collected if p.matched_entities),
         errors_count=len(errors),
@@ -247,6 +256,19 @@ def parse_args() -> argparse.Namespace:
         default=False,
         help="Create a dated DuckDB snapshot after each run",
     )
+    _ = parser.add_argument(
+        "--max-sources",
+        type=int,
+        default=None,
+        help="Hard cap on number of sources iterated (after --exclude-source). Default: no cap.",
+    )
+    _ = parser.add_argument(
+        "--exclude-source",
+        action="append",
+        default=[],
+        metavar="ID_OR_NAME",
+        help="Skip this source id or name. May be repeated.",
+    )
     return parser.parse_args()
 
 
@@ -263,4 +285,6 @@ if __name__ == "__main__":
         keep_raw_days=args.keep_raw_days,
         keep_report_days=args.keep_report_days,
         snapshot_db=args.snapshot_db,
+        max_sources=args.max_sources,
+        exclude_sources=args.exclude_source,
     )
