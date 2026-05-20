@@ -150,6 +150,7 @@ sources:
 - name: arXiv API Recent AI
   type: arxiv
   url: http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&start=0&max_results=30&sortBy=submittedDate&sortOrder=descending
+  enabled: false
   language: en
   country: US
   trust_tier: T1_official
@@ -160,9 +161,11 @@ sources:
   - preprint_velocity
   - research_pipeline
   - paper_release
-  notes: Official arXiv API query for recent AI and ML preprints.
+  notes: Official arXiv API query for recent AI and ML preprints. Disabled 2026-05-20 after repeated 429/timeout responses from this runner; category RSS feeds remain active coverage.
   config:
     event_model: paper_release
+    skip_reason: export.arxiv.org API returned repeated 429/timeout responses from this runner; keep disabled until a serialized API smoke test passes.
+    reenable_gate: Validate a rate-limited API request after RSS feed collection and reset crawl-health only after a 200 response with entries.
 - name: Google AI Blog
   type: rss
   url: https://blog.google/technology/ai/rss/
@@ -396,6 +399,7 @@ entities:
   - NLP
   - language model
   - LLM
+  - LLMs
   - large language model
   - text generation
   - machine translation
@@ -411,6 +415,10 @@ entities:
   - reinforcement learning
   - RL
   - multi-agent
+  - agent
+  - agents
+  - ai agent
+  - ai agents
   - RLHF
   - transfer learning
   - federated learning
@@ -421,6 +429,7 @@ entities:
   - representation learning
   - multimodal
   - speech recognition
+  - ASR
   - robotics
   - AI safety
   - alignment
@@ -510,6 +519,7 @@ entities:
   display_name: Key Techniques
   keywords:
   - transformer
+  - transformers.js
   - attention mechanism
   - self-attention
   - cross-attention
@@ -529,6 +539,8 @@ entities:
   - GPT
   - GPT-4
   - Claude
+  - Codex
+  - Antigravity
   - LLaMA
   - Gemini
   - PaLM
@@ -552,7 +564,15 @@ entities:
   - chain of thought
   - RAG
   - retrieval augmented
+  - reranker
+  - rerankers
+  - reranking
   - quantization
+  - continuous batching
+  - PyTorch
+  - safetensors
+  - Gradio
+  - MLX
   - pruning
   - distillation
   - adapter
@@ -580,7 +600,12 @@ entities:
   - code generation
   - reasoning
   - benchmark
+  - leaderboard
+  - leaderboards
   - evaluation
+  - content provenance
+  - content authenticity
+  - created and edited
   - SOTA
   - state-of-the-art
   - baseline

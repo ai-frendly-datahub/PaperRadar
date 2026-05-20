@@ -4,15 +4,15 @@
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
-    "enabled_sources": 17,
+    "enabled_sources": 16,
     "tracked_sources": 14,
-    "fresh_sources": 10,
+    "fresh_sources": 9,
     "stale_sources": 0,
     "missing_sources": 0,
     "missing_event_sources": 0,
     "unknown_event_date_sources": 0,
     "not_tracked_sources": 7,
-    "skipped_disabled_sources": 6,
+    "skipped_disabled_sources": 7,
     "collection_error_count": 0,
     "paper_release_events": 428,
     "citation_snapshot_events": 30,
@@ -217,7 +217,7 @@
     {
       "source": "arXiv API Recent AI",
       "source_type": "arxiv",
-      "enabled": true,
+      "enabled": false,
       "trust_tier": "T1_official",
       "content_type": "preprint",
       "collection_tier": "C4_api",
@@ -244,8 +244,8 @@
       },
       "latest_canonical_key": "paper:arxiv:2605.18753v1",
       "latest_required_field_gaps": [],
-      "skip_reason": "",
-      "reenable_gate": "",
+      "skip_reason": "export.arxiv.org API returned repeated 429/timeout responses from this runner; keep disabled until a serialized API smoke test passes.",
+      "reenable_gate": "Validate a rate-limited API request after RSS feed collection and reset crawl-health only after a 200 response with entries.",
       "errors": []
     },
     {
@@ -608,7 +608,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 4,
+      "article_count": 3,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -660,7 +660,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 0,
+      "article_count": 1,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -753,26 +753,22 @@
       "event_key": "citation_snapshot:openalex-ai-citation-feed:6dca9ef7252e:2026-05-20",
       "paper_id": "10.4230/lipics.cosit.2022.18",
       "arxiv_id": "",
-      "doi": "10.4230/lipics.cosit.2022.18",
-      "normalized_title": "ai-assisted-pipeline-for-dynamic-generation-of-trustworthy-health-supplement-content-at-scale",
+      "doi": "10.4230/lipics.giscience.2023.43",
+      "normalized_title": "aion-framework-dimensional-emergence-of-ai-consciousness-observer-induced-collapse-and-cosmologi",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
       "repository_name": "",
-      "citation_count": 45559,
+      "citation_count": 14190,
       "benchmark_name": "",
       "metric_name": "",
       "metric_value": null,
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Tasks": [
-          "generation"
-        ],
         "ResearchGeneral": [
           "publication",
-          "generation",
-          "scale",
+          "framework",
           "ai"
         ]
       },
@@ -781,7 +777,46 @@
         "citation_count": true,
         "source": true
       },
-      "canonical_key": "paper:doi:10.4230-lipics.cosit.2022.18",
+      "canonical_key": "paper:doi:10.4230-lipics.giscience.2023.43",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "An integrated encyclopedia of DNA elements in the human genome",
+      "url": "https://doi.org/10.1038/nature11247",
+      "source_url": "https://doi.org/10.1038/nature11247",
+      "event_at": "2026-05-19T13:45:42.757198+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:02ba31b561b2:2026-05-19",
+      "paper_id": "10.1038/nature11247",
+      "arxiv_id": "",
+      "doi": "10.1038/nature11247",
+      "normalized_title": "an-integrated-encyclopedia-of-dna-elements-in-the-human-genome",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 19289,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1038-nature11247",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -1826,13 +1861,13 @@
       "event_key": "citation_snapshot:openalex-ai-citation-feed:115c7ad44237:2026-05-20",
       "paper_id": "10.1007/s11192-009-0146-3",
       "arxiv_id": "",
-      "doi": "10.1007/s11192-009-0146-3",
-      "normalized_title": "software-survey-vosviewer-a-computer-program-for-bibliometric-mapping",
+      "doi": "10.3102/0013189x018001032",
+      "normalized_title": "situated-cognition-and-the-culture-of-learning",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
       "repository_name": "",
-      "citation_count": 19372,
+      "citation_count": 12938,
       "benchmark_name": "",
       "metric_name": "",
       "metric_value": null,
@@ -1840,7 +1875,8 @@
       "venue": "",
       "matched_entities": {
         "ResearchGeneral": [
-          "publication"
+          "publication",
+          "learning"
         ]
       },
       "required_field_proxy": {
@@ -1848,7 +1884,48 @@
         "citation_count": true,
         "source": true
       },
-      "canonical_key": "paper:doi:10.1007-s11192-009-0146-3",
+      "canonical_key": "paper:doi:10.3102-0013189x018001032",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Global and regional mortality from 235 causes of death for 20 age groups in 1990 and 2010: a systematic analysis for the Global Burden of Disease Study 2010",
+      "url": "https://doi.org/10.1016/s0140-6736(12)61728-0",
+      "source_url": "https://doi.org/10.1016/s0140-6736(12)61728-0",
+      "event_at": "2026-05-19T13:45:42.757198+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:c5c3d7d5c6f7:2026-05-19",
+      "paper_id": "10.1016/s0140-6736(12)61728-0",
+      "arxiv_id": "",
+      "doi": "10.1016/s0140-6736(12)61728-0",
+      "normalized_title": "global-and-regional-mortality-from-235-causes-of-death-for-20-age-groups-in-1990-and-2010-a-syst",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 14220,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "study",
+          "publication",
+          "analysis"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1016-s0140-6736-12-61728-0",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -4397,20 +4474,59 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.CL",
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Local Indicators of Spatial Association—LISA",
+      "url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
+      "source_url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
+      "event_at": "2026-05-19T13:45:42.757198+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:d839ccde35e8:2026-05-19",
+      "paper_id": "10.1111/j.1538-4632.1995.tb00338.x",
+      "arxiv_id": "",
+      "doi": "10.1111/j.1538-4632.1995.tb00338.x",
+      "normalized_title": "local-indicators-of-spatial-association-lisa",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 12380,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1111-j.1538-4632.1995.tb00338.x",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "Hugging Face Blog",
       "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "Agentic AI Translate: An Agentic Translator Prototype for Translation as Communication Design",
-      "url": "https://arxiv.org/abs/2605.17041",
-      "source_url": "https://arxiv.org/abs/2605.17041",
-      "event_at": "2026-05-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cl:003b1cc5e339:2026-05-18",
-      "paper_id": "2605.17041v1",
-      "arxiv_id": "2605.17041v1",
+      "trust_tier": "T2_institutional",
+      "producer_role": "model_platform",
+      "event_model": "code_repository",
+      "title": "OlmoEarth v1.1: A more efficient family of models",
+      "url": "https://huggingface.co/blog/allenai/olmoearth-v1-1",
+      "source_url": "https://huggingface.co/blog/allenai/olmoearth-v1-1",
+      "event_at": "2026-05-19T09:38:09+00:00",
+      "event_key": "code_repository:hugging-face-blog:bda6dcb3221f:2026-05-19",
+      "paper_id": "https://huggingface.co/blog/allenai/olmoearth-v1-1",
+      "arxiv_id": "",
       "doi": "",
-      "normalized_title": "agentic-ai-translate-an-agentic-translator-prototype-for-translation-as-communication-design",
+      "normalized_title": "olmoearth-v1.1-a-more-efficient-family-of-models",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -4422,13 +4538,6 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Research Areas": [
-          "machine translation"
-        ],
-        "Tasks": [
-          "translation",
-          "dialogue"
-        ],
         "ResearchGeneral": [
           "studies",
           "arxiv",
@@ -7144,7 +7253,7 @@
       },
       "required_field_proxy": {
         "paper_id": true,
-        "title": true,
+        "repository": false,
         "source_url": true
       },
       "canonical_key": "paper:arxiv:2605.16882v1",
@@ -7152,10 +7261,10 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.AI",
+      "source": "OpenAI Blog",
       "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
       "event_model": "paper_release",
       "title": "Baba in Wonderland: Online Self-Supervised Dynamics Discovery for Executable World Models",
       "url": "https://arxiv.org/abs/2605.16725",
@@ -8416,57 +8525,50 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "PaliBench: A Multi-Reference Blueprint for Classical Language Translation Benchmarks",
-      "url": "https://arxiv.org/abs/2605.16881",
-      "source_url": "https://arxiv.org/abs/2605.16881",
+      "title": "Flow-Direct: Feedback-Efficient and Reusable Guidance for Flow Models via Non-Parametric Guidance Field",
+      "url": "https://arxiv.org/abs/2605.16348",
+      "source_url": "https://arxiv.org/abs/2605.16348",
       "event_at": "2026-05-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cl:a4c7c15a796a:2026-05-18",
-      "paper_id": "2605.16881v1",
-      "arxiv_id": "2605.16881v1",
+      "event_key": "paper_release:arxiv-cs.lg:1d6f046f41ea:2026-05-18",
+      "paper_id": "2605.16348v1",
+      "arxiv_id": "2605.16348v1",
       "doi": "",
-      "normalized_title": "palibench-a-multi-reference-blueprint-for-classical-language-translation-benchmarks",
+      "normalized_title": "flow-direct-feedback-efficient-and-reusable-guidance-for-flow-models-via-non-parametric-guidance",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
       "repository_name": "",
       "citation_count": null,
-      "benchmark_name": "PaliBench: A Multi-Reference Blueprint for Classical Language Translation Benchmarks",
+      "benchmark_name": "",
       "metric_name": "",
       "metric_value": null,
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Research Areas": [
-          "llm",
-          "machine translation",
-          "alignment"
+        "Techniques": [
+          "diffusion"
         ],
         "Tasks": [
-          "translation",
-          "benchmark",
-          "evaluation"
+          "generation"
         ],
         "ResearchGeneral": [
-          "study",
-          "article",
           "arxiv",
           "abstract",
-          "method",
+          "methods",
+          "dataset",
           "models",
-          "approach",
+          "propose",
+          "novel",
           "new",
-          "shows",
-          "contribution",
-          "introduces",
-          "evaluate",
-          "evaluate",
-          "evaluation",
-          "compare",
+          "framework",
+          "training",
+          "trained",
           "models",
-          "large",
-          "output",
-          "tokens",
-          "language"
+          "generate",
+          "generation",
+          "optimize",
+          "optimization",
+          "efficient"
         ]
       },
       "required_field_proxy": {
@@ -8474,7 +8576,369 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2605.16881v1",
+      "canonical_key": "paper:arxiv:2605.16348v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv Stat.ML",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Multi-task Linear Regression without Eigenvalue Lower Bounds: Adaptivity, Robustness and Safety",
+      "url": "https://arxiv.org/abs/2605.17126",
+      "source_url": "https://arxiv.org/abs/2605.17126",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-stat.ml:bf806e1fec0a:2026-05-18",
+      "paper_id": "2605.17126v1",
+      "arxiv_id": "2605.17126v1",
+      "doi": "",
+      "normalized_title": "multi-task-linear-regression-without-eigenvalue-lower-bounds-adaptivity-robustness-and-safety",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Techniques": [
+          "regularization"
+        ],
+        "Tasks": [
+          "regression"
+        ],
+        "ResearchGeneral": [
+          "study",
+          "arxiv",
+          "abstract",
+          "method",
+          "methodology",
+          "propose",
+          "new",
+          "achieves",
+          "demonstrate",
+          "introduce",
+          "learning",
+          "prediction",
+          "parameters",
+          "large",
+          "task",
+          "tasks"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.17126v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.LG",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Systematic Optimization of Real-Time Diffusion Model Inference on Apple M3 Ultra",
+      "url": "https://arxiv.org/abs/2605.16259",
+      "source_url": "https://arxiv.org/abs/2605.16259",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.lg:b1f9d0acd32a:2026-05-18",
+      "paper_id": "2605.16259v1",
+      "arxiv_id": "2605.16259v1",
+      "doi": "",
+      "normalized_title": "systematic-optimization-of-real-time-diffusion-model-inference-on-apple-m3-ultra",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "image generation"
+        ],
+        "Institutions": [
+          "nvidia",
+          "apple"
+        ],
+        "Techniques": [
+          "diffusion",
+          "diffusion model",
+          "quantization",
+          "distillation"
+        ],
+        "Tasks": [
+          "generation"
+        ],
+        "ResearchGeneral": [
+          "research",
+          "study",
+          "arxiv",
+          "abstract",
+          "experiments",
+          "model",
+          "models",
+          "approach",
+          "new",
+          "contribution",
+          "comprehensive",
+          "architecture",
+          "neural",
+          "model",
+          "models",
+          "generation",
+          "optimization",
+          "scale",
+          "large",
+          "token",
+          "image"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.16259v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv Stat.ML",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Sample efficient inductive matrix completion with noise and inexact side information",
+      "url": "https://arxiv.org/abs/2605.17189",
+      "source_url": "https://arxiv.org/abs/2605.17189",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-stat.ml:d590e36589c5:2026-05-18",
+      "paper_id": "2605.17189v1",
+      "arxiv_id": "2605.17189v1",
+      "doi": "",
+      "normalized_title": "sample-efficient-inductive-matrix-completion-with-noise-and-inexact-side-information",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Techniques": [
+          "gradient descent"
+        ],
+        "ResearchGeneral": [
+          "paper",
+          "arxiv",
+          "abstract",
+          "methods",
+          "experiments",
+          "analysis",
+          "dataset",
+          "new",
+          "achieve",
+          "findings",
+          "contribution",
+          "extensive",
+          "algorithm",
+          "loss",
+          "error",
+          "efficient",
+          "efficiency",
+          "scaling"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.17189v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.LG",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Geometric Asymmetry in MoE Specialization: Functional Decorrelation and Representational Overlap",
+      "url": "https://arxiv.org/abs/2605.16349",
+      "source_url": "https://arxiv.org/abs/2605.16349",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.lg:456aeab16741:2026-05-18",
+      "paper_id": "2605.16349v1",
+      "arxiv_id": "2605.16349v1",
+      "doi": "",
+      "normalized_title": "geometric-asymmetry-in-moe-specialization-functional-decorrelation-and-representational-overlap",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "alignment"
+        ],
+        "Techniques": [
+          "transformer",
+          "moe"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "results",
+          "experiments",
+          "new",
+          "achieve",
+          "find",
+          "introduce",
+          "framework",
+          "layers",
+          "representation",
+          "representations"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.16349v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv Stat.ML",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "HYVINT: Intensity-Driven Hypergraph Generation with Variational Representations",
+      "url": "https://arxiv.org/abs/2605.16836",
+      "source_url": "https://arxiv.org/abs/2605.16836",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-stat.ml:d7bcf4b430ca:2026-05-18",
+      "paper_id": "2605.16836v1",
+      "arxiv_id": "2605.16836v1",
+      "doi": "",
+      "normalized_title": "hyvint-intensity-driven-hypergraph-generation-with-variational-representations",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "generation"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "propose",
+          "new",
+          "achieves",
+          "show",
+          "framework",
+          "learning",
+          "networks",
+          "modeling",
+          "generation",
+          "generative",
+          "error",
+          "representations"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.16836v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.NE",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "ARES-LSHADE: Autoresearch-Enhanced LSHADE with Memetic Polish for the GNBG Benchmark",
+      "url": "https://arxiv.org/abs/2605.13877",
+      "source_url": "https://arxiv.org/abs/2605.13877",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ne:bdd373275958:2026-05-18",
+      "paper_id": "2605.13877v2",
+      "arxiv_id": "2605.13877v2",
+      "doi": "",
+      "normalized_title": "ares-lshade-autoresearch-enhanced-lshade-with-memetic-polish-for-the-gnbg-benchmark",
+      "repository": "github.com/anaeem1/ARES-LSHADE",
+      "repository_host": "github.com",
+      "repository_owner": "anaeem1",
+      "repository_name": "ARES-LSHADE",
+      "citation_count": null,
+      "benchmark_name": "ARES-LSHADE: Autoresearch-Enhanced LSHADE with Memetic Polish for the GNBG Benchmark",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm"
+        ],
+        "Tasks": [
+          "benchmark",
+          "evaluation"
+        ],
+        "ResearchGeneral": [
+          "research",
+          "arxiv",
+          "abstract",
+          "result",
+          "experiments",
+          "new",
+          "present",
+          "evaluation",
+          "algorithm",
+          "algorithms",
+          "optimization"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.13877v2",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -8508,6 +8972,8 @@
           "machine learning"
         ],
         "ResearchGeneral": [
+          "paper",
+          "study",
           "arxiv",
           "abstract",
           "methods",
@@ -8537,7 +9003,7 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.NE",
+      "source": "arXiv CS.LG",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
@@ -9198,20 +9664,20 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv Stat.ML",
+      "source": "arXiv CS.AI",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Online Conformal Prediction for Non-Exchangeable Panel Data",
-      "url": "https://arxiv.org/abs/2605.17705",
-      "source_url": "https://arxiv.org/abs/2605.17705",
+      "title": "Multi-Paradigm Agent Interaction in Practice:A Systematic Analysis of Generator-Evaluator, ReAct Loop,and Adversarial Evaluation in the buddyMe Framework",
+      "url": "https://arxiv.org/abs/2605.16821",
+      "source_url": "https://arxiv.org/abs/2605.16821",
       "event_at": "2026-05-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-stat.ml:191a41df9d46:2026-05-18",
-      "paper_id": "2605.17705v1",
-      "arxiv_id": "2605.17705v1",
+      "event_key": "paper_release:arxiv-cs.ai:16a3b348f69b:2026-05-18",
+      "paper_id": "2605.16821v1",
+      "arxiv_id": "2605.16821v1",
       "doi": "",
-      "normalized_title": "online-conformal-prediction-for-non-exchangeable-panel-data",
+      "normalized_title": "multi-paradigm-agent-interaction-in-practice-a-systematic-analysis-of-generator-evaluator-react-",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -9223,21 +9689,38 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Venues": [
-          "science"
+        "Research Areas": [
+          "language model",
+          "llm",
+          "large language model",
+          "multi-agent"
+        ],
+        "Tasks": [
+          "generation",
+          "evaluation"
         ],
         "ResearchGeneral": [
+          "paper",
+          "research",
+          "studies",
           "arxiv",
           "abstract",
-          "method",
-          "data",
+          "analysis",
+          "conclusions",
+          "discussion",
           "model",
-          "propose",
           "new",
+          "presents",
+          "evaluation",
+          "comprehensive",
           "framework",
+          "architecture",
           "model",
-          "prediction",
-          "feature"
+          "generation",
+          "large",
+          "task",
+          "tasks",
+          "language"
         ]
       },
       "required_field_proxy": {
@@ -9245,7 +9728,400 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2605.17705v1",
+      "canonical_key": "paper:arxiv:2605.16821v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.CL",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Retrieval-Based Multi-Label Legal Annotation: Extensible, Data-Efficient and Hallucination-Free",
+      "url": "https://arxiv.org/abs/2605.16767",
+      "source_url": "https://arxiv.org/abs/2605.16767",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.cl:0d1c25a06708:2026-05-18",
+      "paper_id": "2605.16767v1",
+      "arxiv_id": "2605.16767v1",
+      "doi": "",
+      "normalized_title": "retrieval-based-multi-label-legal-annotation-extensible-data-efficient-and-hallucination-free",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Techniques": [
+          "bert",
+          "gpt",
+          "fine-tuning"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "results",
+          "datasets",
+          "data",
+          "model",
+          "models",
+          "new",
+          "achieves",
+          "training",
+          "model",
+          "models",
+          "predict",
+          "generative",
+          "accuracy",
+          "compute",
+          "efficient",
+          "efficiency",
+          "large",
+          "task",
+          "embedding",
+          "language"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.16767v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.CV",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "A neurosymbolic Approach with Epistemic Deep Learning for Hierarchical Image Classification",
+      "url": "https://arxiv.org/abs/2605.16383",
+      "source_url": "https://arxiv.org/abs/2605.16383",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.cv:cee8d1bef871:2026-05-18",
+      "paper_id": "2605.16383v1",
+      "arxiv_id": "2605.16383v1",
+      "doi": "",
+      "normalized_title": "a-neurosymbolic-approach-with-epistemic-deep-learning-for-hierarchical-image-classification",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "deep learning",
+          "neural networks",
+          "image classification"
+        ],
+        "Techniques": [
+          "transformer"
+        ],
+        "Tasks": [
+          "classification",
+          "reasoning"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "method",
+          "results",
+          "experiments",
+          "experimental",
+          "data",
+          "model",
+          "models",
+          "approach",
+          "propose",
+          "new",
+          "achieve",
+          "show",
+          "present",
+          "framework",
+          "learning",
+          "neural",
+          "networks",
+          "layer",
+          "model",
+          "models",
+          "predictions",
+          "classification",
+          "accuracy",
+          "loss",
+          "tasks",
+          "embedding",
+          "image"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.16383v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.CL",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "A Scalable Tool for Measuring Manner and Result Verbs in Developmental Language Research",
+      "url": "https://arxiv.org/abs/2605.16654",
+      "source_url": "https://arxiv.org/abs/2605.16654",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.cl:145fbacdf3ea:2026-05-18",
+      "paper_id": "2605.16654v1",
+      "arxiv_id": "2605.16654v1",
+      "doi": "",
+      "normalized_title": "a-scalable-tool-for-measuring-manner-and-result-verbs-in-developmental-language-research",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "classification"
+        ],
+        "ResearchGeneral": [
+          "research",
+          "arxiv",
+          "abstract",
+          "result",
+          "datasets",
+          "data",
+          "model",
+          "models",
+          "approach",
+          "new",
+          "shows",
+          "present",
+          "evaluate",
+          "evaluate",
+          "learning",
+          "train",
+          "model",
+          "models",
+          "classification",
+          "generate",
+          "performance",
+          "accuracy",
+          "computational",
+          "scale",
+          "large",
+          "language"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.16654v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.CV",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Concepts Worth Having: Refining VLM-Guided Concept Bottleneck Models with Minimal Annotations",
+      "url": "https://arxiv.org/abs/2605.16405",
+      "source_url": "https://arxiv.org/abs/2605.16405",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.cv:706e594f7742:2026-05-18",
+      "paper_id": "2605.16405v1",
+      "arxiv_id": "2605.16405v1",
+      "doi": "",
+      "normalized_title": "concepts-worth-having-refining-vlm-guided-concept-bottleneck-models-with-minimal-annotations",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "evaluation"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "data",
+          "models",
+          "approach",
+          "new",
+          "shows",
+          "evaluation",
+          "learning",
+          "neural",
+          "models",
+          "predicts",
+          "predictions",
+          "compute",
+          "small",
+          "input",
+          "embedding",
+          "language",
+          "vision"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.16405v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.NE",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Necessary and sufficient conditions for universality of Kolmogorov-Arnold networks",
+      "url": "https://arxiv.org/abs/2604.23765",
+      "source_url": "https://arxiv.org/abs/2604.23765",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ne:a95f4e2f81fb:2026-05-18",
+      "paper_id": "2604.23765v2",
+      "arxiv_id": "2604.23765v2",
+      "doi": "",
+      "normalized_title": "necessary-and-sufficient-conditions-for-universality-of-kolmogorov-arnold-networks",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "paper",
+          "arxiv",
+          "abstract",
+          "show",
+          "advance",
+          "networks",
+          "layers",
+          "sequence"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2604.23765v2",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.CV",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "GeoSym127K: Scalable Symbolically-verifiable Synthesis for Multimodal Geometric Reasoning",
+      "url": "https://arxiv.org/abs/2605.16371",
+      "source_url": "https://arxiv.org/abs/2605.16371",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.cv:da270c2f2b54:2026-05-18",
+      "paper_id": "2605.16371v1",
+      "arxiv_id": "2605.16371v1",
+      "doi": "",
+      "normalized_title": "geosym127k-scalable-symbolically-verifiable-synthesis-for-multimodal-geometric-reasoning",
+      "repository": "github.com/Tomie56/GeoSym127K",
+      "repository_host": "github.com",
+      "repository_owner": "Tomie56",
+      "repository_name": "GeoSym127K",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "reinforcement learning",
+          "rl",
+          "multimodal"
+        ],
+        "Techniques": [
+          "fine-tuning"
+        ],
+        "Tasks": [
+          "reasoning",
+          "evaluation"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "dataset",
+          "datasets",
+          "data",
+          "model",
+          "models",
+          "propose",
+          "new",
+          "improvement",
+          "demonstrate",
+          "introduce",
+          "evaluation",
+          "extensive",
+          "framework",
+          "learning",
+          "model",
+          "models",
+          "performance",
+          "scaling",
+          "large",
+          "tasks",
+          "images",
+          "vision",
+          "multimodal",
+          "rl"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.16371v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -9299,20 +10175,20 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.AI",
+      "source": "arXiv CS.LG",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "PRISMat: Policy-Driven, Permutation-Invariant Autoregressive Material Generation",
-      "url": "https://arxiv.org/abs/2605.16612",
-      "source_url": "https://arxiv.org/abs/2605.16612",
+      "title": "Augmenting Human Evaluation with LLM Judges: How Many Human Reviews Do You Need?",
+      "url": "https://arxiv.org/abs/2605.16354",
+      "source_url": "https://arxiv.org/abs/2605.16354",
       "event_at": "2026-05-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:e6411da36398:2026-05-18",
-      "paper_id": "2605.16612v1",
-      "arxiv_id": "2605.16612v1",
+      "event_key": "paper_release:arxiv-cs.lg:562fb618ba7a:2026-05-18",
+      "paper_id": "2605.16354v1",
+      "arxiv_id": "2605.16354v1",
       "doi": "",
-      "normalized_title": "prismat-policy-driven-permutation-invariant-autoregressive-material-generation",
+      "normalized_title": "augmenting-human-evaluation-with-llm-judges-how-many-human-reviews-do-you-need",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -9325,39 +10201,33 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "machine learning"
-        ],
-        "Venues": [
-          "science"
+          "llm"
         ],
         "Tasks": [
-          "generation"
+          "evaluation"
         ],
         "ResearchGeneral": [
           "paper",
+          "study",
           "arxiv",
           "abstract",
+          "data",
           "model",
           "models",
-          "new",
-          "outperform",
+          "approach",
+          "approaches",
+          "propose",
           "achieve",
           "show",
-          "discovery",
-          "present",
-          "learning",
-          "training",
+          "evaluation",
           "model",
           "models",
-          "generation",
-          "parameter",
-          "error",
+          "prediction",
+          "generate",
+          "scale",
           "large",
-          "faster",
-          "task",
-          "tasks",
-          "sequence",
-          "language"
+          "language",
+          "ai"
         ]
       },
       "required_field_proxy": {
@@ -9365,7 +10235,139 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2605.16612v1",
+      "canonical_key": "paper:arxiv:2605.16354v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "TOBench: A Task-Oriented Omni-Modal Benchmark for Real-World Tool-Using Agents",
+      "url": "https://arxiv.org/abs/2605.16909",
+      "source_url": "https://arxiv.org/abs/2605.16909",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:71cbd2d45793:2026-05-18",
+      "paper_id": "2605.16909v1",
+      "arxiv_id": "2605.16909v1",
+      "doi": "",
+      "normalized_title": "tobench-a-task-oriented-omni-modal-benchmark-for-real-world-tool-using-agents",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "TOBench: A Task-Oriented Omni-Modal Benchmark for Real-World Tool-Using Agents",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "multimodal"
+        ],
+        "Techniques": [
+          "claude"
+        ],
+        "Tasks": [
+          "generation",
+          "reasoning",
+          "benchmark",
+          "evaluation"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "result",
+          "experiments",
+          "models",
+          "new",
+          "achieves",
+          "show",
+          "discovery",
+          "introduce",
+          "evaluate",
+          "evaluate",
+          "evaluation",
+          "models",
+          "generation",
+          "task",
+          "tasks",
+          "multimodal"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.16909v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv Stat.ML",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Flowing with Confidence",
+      "url": "https://arxiv.org/abs/2605.18472",
+      "source_url": "https://arxiv.org/abs/2605.18472",
+      "event_at": "2026-05-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-stat.ml:efefebf86f55:2026-05-18",
+      "paper_id": "2605.18472v1",
+      "arxiv_id": "2605.18472v1",
+      "doi": "",
+      "normalized_title": "flowing-with-confidence",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "interpretability"
+        ],
+        "Techniques": [
+          "flow matching"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "model",
+          "models",
+          "propose",
+          "new",
+          "find",
+          "algorithms",
+          "learned",
+          "network",
+          "layers",
+          "model",
+          "models",
+          "generative",
+          "compute",
+          "faster",
+          "input",
+          "text",
+          "image",
+          "images"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.18472v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -14269,7 +15271,14 @@
       "metric_value": null,
       "dataset": "",
       "venue": "",
-      "matched_entities": {},
+      "matched_entities": {
+        "Research Areas": [
+          "agent"
+        ],
+        "Tasks": [
+          "leaderboard"
+        ]
+      },
       "required_field_proxy": {
         "paper_id": true,
         "repository": false,
@@ -14349,8 +15358,14 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
+        "Research Areas": [
+          "agents"
+        ],
         "Institutions": [
           "openai"
+        ],
+        "Techniques": [
+          "codex"
         ],
         "ResearchGeneral": [
           "data",
@@ -14947,6 +15962,8 @@
           "alignment"
         ],
         "Techniques": [
+          "moe",
+          "llama",
           "quantization"
         ],
         "Tasks": [
@@ -15267,6 +16284,184 @@
       "required_field_gaps": []
     },
     {
+      "source": "arXiv CS.LG",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Universal Approximation of Nonlinear Operators and Their Derivatives",
+      "url": "https://arxiv.org/abs/2605.15285",
+      "source_url": "https://arxiv.org/abs/2605.15285",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.lg:60d323b4a114:2026-05-17",
+      "paper_id": "2605.15285v1",
+      "arxiv_id": "2605.15285v1",
+      "doi": "",
+      "normalized_title": "universal-approximation-of-nonlinear-operators-and-their-derivatives",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "research",
+          "arxiv",
+          "abstract",
+          "methods",
+          "results",
+          "analysis",
+          "novel",
+          "new",
+          "show",
+          "find",
+          "learning",
+          "optimization",
+          "accuracy",
+          "fast",
+          "input",
+          "features"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15285v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.CL",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Automatic Construction of a Legal Citation Graph from 100 Million Ukrainian Court Decisions: Large-Scale Extraction, Topological Analysis, and Ontology-Driven Clustering",
+      "url": "https://arxiv.org/abs/2605.15362",
+      "source_url": "https://arxiv.org/abs/2605.15362",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.cl:5c918b15cd1b:2026-05-17",
+      "paper_id": "2605.15362v1",
+      "arxiv_id": "2605.15362v1",
+      "doi": "",
+      "normalized_title": "automatic-construction-of-a-legal-citation-graph-from-100-million-ukrainian-court-decisions-larg",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm"
+        ],
+        "Tasks": [
+          "clustering",
+          "baseline"
+        ],
+        "ResearchGeneral": [
+          "articles",
+          "arxiv",
+          "abstract",
+          "analysis",
+          "data",
+          "new",
+          "findings",
+          "network",
+          "layer",
+          "predict",
+          "predicts",
+          "accuracy",
+          "scale",
+          "large",
+          "features"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15362v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.LG",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Privacy Evaluation of Generative Models for Trajectory Generation",
+      "url": "https://arxiv.org/abs/2605.15246",
+      "source_url": "https://arxiv.org/abs/2605.15246",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.lg:54f3ebbecb36:2026-05-17",
+      "paper_id": "2605.15246v1",
+      "arxiv_id": "2605.15246v1",
+      "doi": "",
+      "normalized_title": "privacy-evaluation-of-generative-models-for-trajectory-generation",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Venues": [
+          "nature"
+        ],
+        "Techniques": [
+          "diffusion"
+        ],
+        "Tasks": [
+          "generation",
+          "evaluation"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "methods",
+          "data",
+          "models",
+          "new",
+          "demonstrate",
+          "investigate",
+          "evaluation",
+          "networks",
+          "models",
+          "modeling",
+          "generate",
+          "generation",
+          "generative",
+          "tasks"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15246v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
       "source": "arXiv Stat.ML",
       "source_type": "rss",
       "trust_tier": "T1_official",
@@ -15405,15 +16600,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Greedy or not, here I come: Language production under vocabulary constraints in humans and resource-rational models",
-      "url": "https://arxiv.org/abs/2605.15365",
-      "source_url": "https://arxiv.org/abs/2605.15365",
+      "title": "Fluency and Faithfulness in Human and Machine Literary Translation",
+      "url": "https://arxiv.org/abs/2605.15282",
+      "source_url": "https://arxiv.org/abs/2605.15282",
       "event_at": "2026-05-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cl:7eaa2369b48c:2026-05-17",
-      "paper_id": "2605.15365v1",
-      "arxiv_id": "2605.15365v1",
+      "event_key": "paper_release:arxiv-cs.cl:5c552bc22596:2026-05-17",
+      "paper_id": "2605.15282v1",
+      "arxiv_id": "2605.15282v1",
       "doi": "",
-      "normalized_title": "greedy-or-not-here-i-come-language-production-under-vocabulary-constraints-in-humans-and-resourc",
+      "normalized_title": "fluency-and-faithfulness-in-human-and-machine-literary-translation",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -15425,18 +16620,25 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
+        "Tasks": [
+          "translation",
+          "evaluation"
+        ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
           "results",
           "models",
           "new",
-          "investigate",
-          "algorithms",
+          "show",
+          "find",
+          "evaluation",
+          "trained",
           "models",
-          "optimize",
           "large",
-          "language"
+          "language",
+          "text",
+          "speech"
         ]
       },
       "required_field_proxy": {
@@ -15444,7 +16646,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2605.15365v1",
+      "canonical_key": "paper:arxiv:2605.15282v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -15921,6 +17123,59 @@
       "required_field_gaps": []
     },
     {
+      "source": "arXiv Stat.ML",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Harnessing Unimodality in Semiparametric Contextual Pricing via Oracle Price Map Learning",
+      "url": "https://arxiv.org/abs/2605.15411",
+      "source_url": "https://arxiv.org/abs/2605.15411",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-stat.ml:c86ac0ff2011:2026-05-17",
+      "paper_id": "2605.15411v1",
+      "arxiv_id": "2605.15411v1",
+      "doi": "",
+      "normalized_title": "harnessing-unimodality-in-semiparametric-contextual-pricing-via-oracle-price-map-learning",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "benchmark",
+          "baseline"
+        ],
+        "ResearchGeneral": [
+          "study",
+          "arxiv",
+          "abstract",
+          "model",
+          "new",
+          "achieves",
+          "learns",
+          "learning",
+          "model",
+          "optimization",
+          "input"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15411v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
       "source": "arXiv CS.CV",
       "source_type": "rss",
       "trust_tier": "T1_official",
@@ -16046,11 +17301,11 @@
       "url": "https://arxiv.org/abs/2605.15309",
       "source_url": "https://arxiv.org/abs/2605.15309",
       "event_at": "2026-05-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:ff2989e75b2e:2026-05-17",
-      "paper_id": "2605.15309v1",
-      "arxiv_id": "2605.15309v1",
+      "event_key": "paper_release:arxiv-cs.cv:bb8b5079f3ea:2026-05-17",
+      "paper_id": "2605.15326v1",
+      "arxiv_id": "2605.15326v1",
       "doi": "",
-      "normalized_title": "one-pass-is-not-enough-recursive-latent-refinement-for-generative-models",
+      "normalized_title": "multimodal-object-detection-under-sparse-forest-canopy-occlusion",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -16063,23 +17318,23 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "image generation"
+          "object detection",
+          "multimodal"
         ],
         "Tasks": [
-          "generation",
-          "state-of-the-art"
+          "evaluation",
+          "baseline"
         ],
         "ResearchGeneral": [
+          "paper",
           "arxiv",
           "abstract",
-          "data",
-          "model",
-          "models",
+          "results",
+          "experimental",
+          "dataset",
+          "datasets",
           "approaches",
           "new",
-          "state-of-the-art",
-          "improve",
-          "achieve",
           "achieves",
           "show",
           "introduce",
@@ -17788,12 +19043,9 @@
           "prediction",
           "loss",
           "scale",
-          "task",
-          "tasks",
-          "feature",
-          "attention",
+          "representation",
           "image",
-          "images"
+          "multimodal"
         ]
       },
       "required_field_proxy": {
@@ -17801,7 +19053,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2605.15450v1",
+      "canonical_key": "paper:arxiv:2605.15326v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -18322,6 +19574,9 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
+        "Techniques": [
+          "diffusion"
+        ],
         "Tasks": [
           "classification"
         ],
@@ -19085,20 +20340,76 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.AI",
+      "source": "arXiv Stat.ML",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "ColPackAgent: Agent-Skill-Guided Hard-Particle Monte Carlo Workflows for Colloidal Packing",
-      "url": "https://arxiv.org/abs/2605.15625",
-      "source_url": "https://arxiv.org/abs/2605.15625",
+      "title": "FRESH: Information-Geometric Calibration of Patient-Level Models to Aggregate Evidence",
+      "url": "https://arxiv.org/abs/2605.16246",
+      "source_url": "https://arxiv.org/abs/2605.16246",
       "event_at": "2026-05-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:a7097055fd14:2026-05-17",
-      "paper_id": "2605.15625v1",
-      "arxiv_id": "2605.15625v1",
+      "event_key": "paper_release:arxiv-stat.ml:096e707ae8f6:2026-05-17",
+      "paper_id": "2605.16246v1",
+      "arxiv_id": "2605.16246v1",
       "doi": "",
-      "normalized_title": "colpackagent-agent-skill-guided-hard-particle-monte-carlo-workflows-for-colloidal-packing",
+      "normalized_title": "fresh-information-geometric-calibration-of-patient-level-models-to-aggregate-evidence",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "studies",
+          "published",
+          "arxiv",
+          "abstract",
+          "method",
+          "results",
+          "data",
+          "model",
+          "models",
+          "approach",
+          "introduces",
+          "training",
+          "trained",
+          "model",
+          "models",
+          "predictions",
+          "generative",
+          "efficient"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.16246v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv Stat.ML",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Learning Context-conditioned Gaussian Overbounds for Convolution-Based Uncertainty Propagation",
+      "url": "https://arxiv.org/abs/2605.15789",
+      "source_url": "https://arxiv.org/abs/2605.15789",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-stat.ml:d95160417782:2026-05-17",
+      "paper_id": "2605.15789v1",
+      "arxiv_id": "2605.15789v1",
+      "doi": "",
+      "normalized_title": "learning-context-conditioned-gaussian-overbounds-for-convolution-based-uncertainty-propagation",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -19111,33 +20422,34 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "language model",
-          "llm",
-          "large language model"
+          "neural networks"
         ],
         "Tasks": [
-          "benchmark"
+          "regression"
         ],
         "ResearchGeneral": [
-          "research",
-          "studies",
           "arxiv",
           "abstract",
-          "results",
+          "method",
+          "methods",
+          "experiments",
           "analysis",
-          "model",
+          "datasets",
+          "data",
           "models",
-          "new",
-          "demonstrate",
-          "show",
-          "introduce",
-          "compare",
+          "propose",
           "framework",
-          "model",
+          "learning",
+          "learned",
+          "trains",
+          "neural",
+          "networks",
           "models",
-          "performance",
-          "large",
-          "language"
+          "prediction",
+          "loss",
+          "error",
+          "scale",
+          "feature"
         ]
       },
       "required_field_proxy": {
@@ -19145,7 +20457,349 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2605.15625v1",
+      "canonical_key": "paper:arxiv:2605.15789v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv Stat.ML",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Improving the Efficiency of Subgroup Analysis in Randomized Controlled Trials with TMLE",
+      "url": "https://arxiv.org/abs/2605.15483",
+      "source_url": "https://arxiv.org/abs/2605.15483",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-stat.ml:a2af0c46098a:2026-05-17",
+      "paper_id": "2605.15483v1",
+      "arxiv_id": "2605.15483v1",
+      "doi": "",
+      "normalized_title": "improving-the-efficiency-of-subgroup-analysis-in-randomized-controlled-trials-with-tmle",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "regression",
+          "evaluation"
+        ],
+        "ResearchGeneral": [
+          "study",
+          "arxiv",
+          "abstract",
+          "analysis",
+          "data",
+          "proposed",
+          "find",
+          "advances",
+          "evaluation",
+          "efficiency"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15483v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv Stat.ML",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Kalman Filtering on Cell Complexes",
+      "url": "https://arxiv.org/abs/2605.15955",
+      "source_url": "https://arxiv.org/abs/2605.15955",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-stat.ml:fe106a2eceb5:2026-05-17",
+      "paper_id": "2605.15955v1",
+      "arxiv_id": "2605.15955v1",
+      "doi": "",
+      "normalized_title": "kalman-filtering-on-cell-complexes",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Techniques": [
+          "diffusion"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "datasets",
+          "model",
+          "approach",
+          "propose",
+          "demonstrate",
+          "introduce",
+          "framework",
+          "algorithm",
+          "learning",
+          "networks",
+          "model",
+          "parameters"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15955v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.LG",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Curriculum Learning of Physics-Informed Neural Networks based on Spatial Correlation",
+      "url": "https://arxiv.org/abs/2605.15254",
+      "source_url": "https://arxiv.org/abs/2605.15254",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.lg:a3b8e51d4d7c:2026-05-17",
+      "paper_id": "2605.15254v1",
+      "arxiv_id": "2605.15254v1",
+      "doi": "",
+      "normalized_title": "curriculum-learning-of-physics-informed-neural-networks-based-on-spatial-correlation",
+      "repository": "github.com/pigofmomo/CurriculumLearningPINN",
+      "repository_host": "github.com",
+      "repository_owner": "pigofmomo",
+      "repository_name": "CurriculumLearningPINN",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "deep learning",
+          "neural networks"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "method",
+          "experiments",
+          "propose",
+          "proposed",
+          "new",
+          "improve",
+          "show",
+          "framework",
+          "learning",
+          "training",
+          "neural",
+          "networks",
+          "optimization",
+          "accuracy",
+          "loss",
+          "computational"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15254v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv Stat.ML",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Complexity of Non-Log-Concave Sampling in Fisher Information",
+      "url": "https://arxiv.org/abs/2605.15859",
+      "source_url": "https://arxiv.org/abs/2605.15859",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-stat.ml:725af9ea008a:2026-05-17",
+      "paper_id": "2605.15859v1",
+      "arxiv_id": "2605.15859v1",
+      "doi": "",
+      "normalized_title": "complexity-of-non-log-concave-sampling-in-fisher-information",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Techniques": [
+          "diffusion"
+        ],
+        "ResearchGeneral": [
+          "study",
+          "arxiv",
+          "abstract",
+          "results",
+          "improvement",
+          "show",
+          "algorithm",
+          "optimization",
+          "accuracy"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15859v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv Stat.ML",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Node-private community estimation in stochastic block models: Tractable algorithms and lower bounds",
+      "url": "https://arxiv.org/abs/2605.15943",
+      "source_url": "https://arxiv.org/abs/2605.15943",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-stat.ml:25a100dc4ac1:2026-05-17",
+      "paper_id": "2605.15943v1",
+      "arxiv_id": "2605.15943v1",
+      "doi": "",
+      "normalized_title": "node-private-community-estimation-in-stochastic-block-models-tractable-algorithms-and-lower-boun",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "clustering"
+        ],
+        "ResearchGeneral": [
+          "paper",
+          "study",
+          "arxiv",
+          "abstract",
+          "methods",
+          "models",
+          "novel",
+          "achieve",
+          "introduce",
+          "framework",
+          "algorithms",
+          "learning",
+          "models",
+          "optimization",
+          "parameter",
+          "accuracy",
+          "scaling"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15943v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.CV",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "DiffVAS: Diffusion-Guided Visual Active Search in Partially Observable Environments",
+      "url": "https://arxiv.org/abs/2605.15519",
+      "source_url": "https://arxiv.org/abs/2605.15519",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.cv:32920daec484:2026-05-17",
+      "paper_id": "2605.15519v1",
+      "arxiv_id": "2605.15519v1",
+      "doi": "",
+      "normalized_title": "diffvas-diffusion-guided-visual-active-search-in-partially-observable-environments",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "reinforcement learning"
+        ],
+        "Techniques": [
+          "diffusion",
+          "diffusion model"
+        ],
+        "Tasks": [
+          "state-of-the-art"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "methods",
+          "experiments",
+          "datasets",
+          "model",
+          "approaches",
+          "propose",
+          "new",
+          "state-of-the-art",
+          "demonstrate",
+          "advances",
+          "extensive",
+          "framework",
+          "learn",
+          "learning",
+          "model",
+          "modeling",
+          "task"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15519v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -19246,7 +20900,7 @@
           "fair"
         ],
         "Tasks": [
-          "generation"
+          "baseline"
         ],
         "ResearchGeneral": [
           "paper",
@@ -19541,15 +21195,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Mask-Morph Graph U-Net: A Generalisable Mesh-Based Surrogate for Crashworthiness Field Prediction under Large Geometric Variation",
-      "url": "https://arxiv.org/abs/2605.15231",
-      "source_url": "https://arxiv.org/abs/2605.15231",
+      "title": "Reading the Cell, Designing the Cure: Perturbation-Conditioned Molecular Diffusion for Function-Oriented Drug Design",
+      "url": "https://arxiv.org/abs/2605.15243",
+      "source_url": "https://arxiv.org/abs/2605.15243",
       "event_at": "2026-05-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.lg:c385b26ad79e:2026-05-17",
-      "paper_id": "2605.15231v1",
-      "arxiv_id": "2605.15231v1",
+      "event_key": "paper_release:arxiv-cs.lg:666165398346:2026-05-17",
+      "paper_id": "2605.15243v1",
+      "arxiv_id": "2605.15243v1",
       "doi": "",
-      "normalized_title": "mask-morph-graph-u-net-a-generalisable-mesh-based-surrogate-for-crashworthiness-field-prediction",
+      "normalized_title": "reading-the-cell-designing-the-cure-perturbation-conditioned-molecular-diffusion-for-function-or",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -19561,8 +21215,8 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Research Areas": [
-          "neural networks"
+        "Venues": [
+          "nature"
         ],
         "Techniques": [
           "fine-tuning"
@@ -22617,7 +24271,7 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "llm"
+          "question answering"
         ],
         "Techniques": [
           "claude"
@@ -23211,10 +24865,10 @@
           "generation"
         ],
         "ResearchGeneral": [
+          "study",
           "arxiv",
           "abstract",
-          "model",
-          "models",
+          "results",
           "new",
           "improvement",
           "show",
@@ -23435,7 +25089,7 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.AI",
+      "source": "arXiv CS.LG",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
@@ -23571,12 +25225,16 @@
         "Techniques": [
           "fine-tuning"
         ],
+        "Techniques": [
+          "fine-tuning"
+        ],
         "Tasks": [
           "generation",
           "code generation",
           "reasoning"
         ],
         "ResearchGeneral": [
+          "paper",
           "arxiv",
           "abstract",
           "methods",
@@ -23612,7 +25270,7 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.AI",
+      "source": "arXiv CS.CL",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
@@ -23957,30 +25615,29 @@
       "matched_entities": {
         "Research Areas": [
           "language model",
+          "llm",
           "large language model"
         ],
-        "Techniques": [
-          "llama"
-        ],
         "Tasks": [
-          "baseline"
+          "reasoning",
+          "evaluation"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
           "model",
-          "propose",
           "new",
-          "trained",
+          "shows",
+          "findings",
+          "introduce",
+          "evaluate",
+          "evaluate",
+          "evaluation",
+          "framework",
           "model",
-          "prediction",
-          "parameters",
-          "compute",
-          "efficient",
           "large",
-          "attention",
-          "token",
-          "language"
+          "language",
+          "ai"
         ]
       },
       "required_field_proxy": {
@@ -23988,7 +25645,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2605.15250v1",
+      "canonical_key": "paper:arxiv:2605.15404v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -24055,6 +25712,253 @@
         "source_url": true
       },
       "canonical_key": "paper:arxiv:2605.15341v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Nudging Beyond the Comfort Zone: Efficient Strategy-Guided Exploration for RLVR",
+      "url": "https://arxiv.org/abs/2605.15726",
+      "source_url": "https://arxiv.org/abs/2605.15726",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:f1f307a7cbb3:2026-05-17",
+      "paper_id": "2605.15726v1",
+      "arxiv_id": "2605.15726v1",
+      "doi": "",
+      "normalized_title": "nudging-beyond-the-comfort-zone-efficient-strategy-guided-exploration-for-rlvr",
+      "repository": "github.com/tally0818/NudgeRL",
+      "repository_host": "github.com",
+      "repository_owner": "tally0818",
+      "repository_name": "NudgeRL",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "reinforcement learning",
+          "rl"
+        ],
+        "Techniques": [
+          "distillation"
+        ],
+        "Tasks": [
+          "reasoning",
+          "baseline"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "methods",
+          "results",
+          "models",
+          "approach",
+          "approaches",
+          "propose",
+          "new",
+          "outperforms",
+          "improve",
+          "demonstrate",
+          "introduces",
+          "framework",
+          "learn",
+          "learning",
+          "models",
+          "optimization",
+          "efficient",
+          "scaling",
+          "large",
+          "language",
+          "rl"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15726v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "NOVA: Fundamental Limits of Knowledge Discovery Through AI",
+      "url": "https://arxiv.org/abs/2605.15219",
+      "source_url": "https://arxiv.org/abs/2605.15219",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:49b7b366675f:2026-05-17",
+      "paper_id": "2605.15219v1",
+      "arxiv_id": "2605.15219v1",
+      "doi": "",
+      "normalized_title": "nova-fundamental-limits-of-knowledge-discovery-through-ai",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "generation"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "model",
+          "models",
+          "new",
+          "improvement",
+          "show",
+          "find",
+          "discover",
+          "discovery",
+          "advances",
+          "introduce",
+          "framework",
+          "model",
+          "models",
+          "generate",
+          "generation",
+          "scaling",
+          "small",
+          "faster",
+          "input",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15219v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "RTL-BenchMT: Dynamic Maintenance of RTL Generation Benchmark Through Agent-Assisted Analysis and Revision",
+      "url": "https://arxiv.org/abs/2605.15537",
+      "source_url": "https://arxiv.org/abs/2605.15537",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:39601d0cd3a8:2026-05-17",
+      "paper_id": "2605.15537v1",
+      "arxiv_id": "2605.15537v1",
+      "doi": "",
+      "normalized_title": "rtl-benchmt-dynamic-maintenance-of-rtl-generation-benchmark-through-agent-assisted-analysis-and-",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "RTL-BenchMT: Dynamic Maintenance of RTL Generation Benchmark Through Agent-Assisted Analysis and Revision",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "generation",
+          "benchmark"
+        ],
+        "ResearchGeneral": [
+          "paper",
+          "research",
+          "arxiv",
+          "abstract",
+          "analysis",
+          "models",
+          "propose",
+          "new",
+          "introduces",
+          "framework",
+          "models",
+          "generation",
+          "large",
+          "language"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15537v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.CL",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Dynamic Chunking for Diffusion Language Models",
+      "url": "https://arxiv.org/abs/2605.15676",
+      "source_url": "https://arxiv.org/abs/2605.15676",
+      "event_at": "2026-05-17T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.cl:2c45046dc7e0:2026-05-17",
+      "paper_id": "2605.15676v1",
+      "arxiv_id": "2605.15676v1",
+      "doi": "",
+      "normalized_title": "dynamic-chunking-for-diffusion-language-models",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Techniques": [
+          "diffusion"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "models",
+          "new",
+          "present",
+          "introduce",
+          "training",
+          "layer",
+          "models",
+          "parameter",
+          "scales",
+          "attention",
+          "tokens",
+          "sequence",
+          "language"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.15676v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -26375,6 +28279,116 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
+      "title": "Distribution-Aware Algorithm Design with LLM Agents",
+      "url": "https://arxiv.org/abs/2605.14141",
+      "source_url": "https://arxiv.org/abs/2605.14141",
+      "event_at": "2026-05-15T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:e1459359b0f6:2026-05-15",
+      "paper_id": "2605.14141v1",
+      "arxiv_id": "2605.14141v1",
+      "doi": "",
+      "normalized_title": "distribution-aware-algorithm-design-with-llm-agents",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm"
+        ],
+        "ResearchGeneral": [
+          "study",
+          "arxiv",
+          "abstract",
+          "new",
+          "improve",
+          "shows",
+          "framework",
+          "algorithm",
+          "learning",
+          "learned",
+          "optimization",
+          "computational",
+          "scale",
+          "faster",
+          "task"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.14141v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Grounded Continuation: A Linear-Time Runtime Verifier for LLM Conversations",
+      "url": "https://arxiv.org/abs/2605.14175",
+      "source_url": "https://arxiv.org/abs/2605.14175",
+      "event_at": "2026-05-15T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:eadf76b1ea7c:2026-05-15",
+      "paper_id": "2605.14175v1",
+      "arxiv_id": "2605.14175v1",
+      "doi": "",
+      "normalized_title": "grounded-continuation-a-linear-time-runtime-verifier-for-llm-conversations",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm",
+          "multi-agent"
+        ],
+        "Techniques": [
+          "rag"
+        ],
+        "Tasks": [
+          "reasoning",
+          "baseline"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "conclusions",
+          "new",
+          "accuracy"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.14175v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
       "title": "Unsteady Metrics and Benchmarking Cultures of AI Model Builders",
       "url": "https://arxiv.org/abs/2605.14164",
       "source_url": "https://arxiv.org/abs/2605.14164",
@@ -26479,21 +28493,11 @@
           "models",
           "propose",
           "new",
-          "show",
-          "learns",
-          "learning",
-          "learned",
-          "training",
-          "model",
-          "models",
-          "predict",
-          "efficient",
-          "large",
-          "task",
-          "input",
-          "language",
-          "text",
-          "vision"
+          "achieves",
+          "shows",
+          "evaluation",
+          "optimization",
+          "computational"
         ]
       },
       "required_field_proxy": {
@@ -28113,6 +30117,186 @@
       "required_field_gaps": []
     },
     {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "A Two-Dimensional Framework for AI Agent Design Patterns: Cognitive Function and Execution Topology",
+      "url": "https://arxiv.org/abs/2605.13850",
+      "source_url": "https://arxiv.org/abs/2605.13850",
+      "event_at": "2026-05-15T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:65bc63f26e8a:2026-05-15",
+      "paper_id": "2605.13850v1",
+      "arxiv_id": "2605.13850v1",
+      "doi": "",
+      "normalized_title": "a-two-dimensional-framework-for-ai-agent-design-patterns-cognitive-function-and-execution-topolo",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm"
+        ],
+        "Institutions": [
+          "anthropic"
+        ],
+        "Venues": [
+          "science"
+        ],
+        "Tasks": [
+          "classification",
+          "reasoning"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "analysis",
+          "data",
+          "model",
+          "propose",
+          "new",
+          "demonstrate",
+          "framework",
+          "architecture",
+          "network",
+          "model",
+          "classification",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.13850v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Modeling Bounded Rationality in Drug Shortage Pharmacists Using Attention-Guided Dynamic Decomposition",
+      "url": "https://arxiv.org/abs/2605.14111",
+      "source_url": "https://arxiv.org/abs/2605.14111",
+      "event_at": "2026-05-15T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:0508fb160ad5:2026-05-15",
+      "paper_id": "2605.14111v1",
+      "arxiv_id": "2605.14111v1",
+      "doi": "",
+      "normalized_title": "modeling-bounded-rationality-in-drug-shortage-pharmacists-using-attention-guided-dynamic-decompo",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "reasoning"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "results",
+          "new",
+          "show",
+          "findings",
+          "framework",
+          "modeling",
+          "performance",
+          "small",
+          "attention"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.14111v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Model-Adaptive Tool Necessity Reveals the Knowing-Doing Gap in LLM Tool Use",
+      "url": "https://arxiv.org/abs/2605.14038",
+      "source_url": "https://arxiv.org/abs/2605.14038",
+      "event_at": "2026-05-15T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:c68ec9ee21e6:2026-05-15",
+      "paper_id": "2605.14038v1",
+      "arxiv_id": "2605.14038v1",
+      "doi": "",
+      "normalized_title": "model-adaptive-tool-necessity-reveals-the-knowing-doing-gap-in-llm-tool-use",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm"
+        ],
+        "Tasks": [
+          "translation"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "results",
+          "dataset",
+          "model",
+          "models",
+          "new",
+          "find",
+          "discover",
+          "introduce",
+          "compare",
+          "layer",
+          "model",
+          "models",
+          "performance",
+          "large",
+          "token",
+          "language",
+          "text"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2605.14038v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
       "source": "OpenAI Blog",
       "source_type": "rss",
       "trust_tier": "T2_institutional",
@@ -28687,9 +30871,27 @@
       "reason": "title_proxy_canonical_key",
       "event_model": "citation_snapshot",
       "source": "OpenAlex AI Citation Feed",
+      "title": "Pattern classification and scene analysis",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:062414d4990e:2026-05-19",
+      "canonical_key": "paper:title:pattern-classification-and-scene-analysis"
+    },
+    {
+      "reason": "title_proxy_canonical_key",
+      "event_model": "citation_snapshot",
+      "source": "OpenAlex AI Citation Feed",
       "title": "Array programming with NumPy",
       "event_key": "citation_snapshot:openalex-ai-citation-feed:5babd3e0ffa2:2026-05-20",
       "canonical_key": "paper:title:array-programming-with-numpy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "code_repository",
+      "source": "Hugging Face Blog",
+      "title": "OlmoEarth v1.1: A more efficient family of models",
+      "event_key": "code_repository:hugging-face-blog:bda6dcb3221f:2026-05-19",
+      "required_field_gaps": [
+        "repository"
+      ]
     },
     {
       "reason": "title_proxy_canonical_key",

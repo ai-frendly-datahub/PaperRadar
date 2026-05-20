@@ -55,6 +55,11 @@ def test_research_config_disables_dead_rss_sources():
     config = load_category_config("research")
     sources = {source.name: source for source in config.sources}
 
+    assert sources["arXiv API Recent AI"].enabled is False
+    assert "429/timeout" in str(sources["arXiv API Recent AI"].config.get("skip_reason", ""))
+    assert "rate-limited API request" in str(
+        sources["arXiv API Recent AI"].config.get("reenable_gate", "")
+    )
     assert sources["Meta AI Blog"].enabled is False
     assert "404" in str(sources["Meta AI Blog"].config.get("skip_reason", ""))
     assert sources["The Batch (DeepLearning.AI)"].enabled is False
