@@ -11,7 +11,7 @@
     },
     {
       "name": "Research Areas",
-      "count": 301
+      "count": 299
     },
     {
       "name": "Tasks",
@@ -19,7 +19,7 @@
     },
     {
       "name": "Techniques",
-      "count": 157
+      "count": 158
     },
     {
       "name": "Institutions",
@@ -47,5 +47,5 @@
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-05-21T18:26:19.657542+09:00"
+  "generated_at": "2026-05-21T23:49:59.870530+09:00"
 }
