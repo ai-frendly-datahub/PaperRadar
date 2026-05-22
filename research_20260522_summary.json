@@ -7,7 +7,7 @@
   "top_entities": [
     {
       "name": "ResearchGeneral",
-      "count": 3383
+      "count": 3379
     },
     {
       "name": "Research Areas",
@@ -19,11 +19,11 @@
     },
     {
       "name": "Techniques",
-      "count": 158
+      "count": 157
     },
     {
       "name": "Institutions",
-      "count": 45
+      "count": 46
     },
     {
       "name": "Venues",
@@ -47,5 +47,5 @@
     "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-05-22T04:46:08.448646+09:00"
+  "generated_at": "2026-05-22T11:43:09.419753+09:00"
 }
