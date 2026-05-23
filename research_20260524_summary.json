@@ -1,0 +1,45 @@
+{
+  "date": "2026-05-24",
+  "category": "research",
+  "article_count": 196,
+  "source_count": 9,
+  "matched_count": 190,
+  "top_entities": [
+    {
+      "name": "ResearchGeneral",
+      "count": 486
+    },
+    {
+      "name": "Research Areas",
+      "count": 62
+    },
+    {
+      "name": "Techniques",
+      "count": 50
+    },
+    {
+      "name": "Institutions",
+      "count": 41
+    },
+    {
+      "name": "Venues",
+      "count": 25
+    },
+    {
+      "name": "Tasks",
+      "count": 23
+    }
+  ],
+  "sources": {
+    "Google AI Blog": 20,
+    "OpenAI Blog": 30,
+    "DeepMind Blog": 30,
+    "Microsoft Research": 10,
+    "Hugging Face Blog": 30,
+    "OpenAlex AI Citation Feed": 29,
+    "Towards Data Science": 20,
+    "AI News": 12,
+    "The Gradient": 15
+  },
+  "generated_at": "2026-05-24T04:00:21.074251+09:00"
+}
