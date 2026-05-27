@@ -1,21 +1,21 @@
 {
   "date": "2026-05-27",
   "category": "research",
-  "article_count": 341,
-  "source_count": 14,
-  "matched_count": 335,
+  "article_count": 353,
+  "source_count": 15,
+  "matched_count": 347,
   "top_entities": [
     {
       "name": "ResearchGeneral",
-      "count": 3381
+      "count": 3417
     },
     {
       "name": "Research Areas",
-      "count": 282
+      "count": 287
     },
     {
       "name": "Tasks",
-      "count": 220
+      "count": 221
     },
     {
       "name": "Techniques",
@@ -23,7 +23,7 @@
     },
     {
       "name": "Institutions",
-      "count": 39
+      "count": 43
     },
     {
       "name": "Venues",
@@ -44,7 +44,8 @@
     "Hugging Face Blog": 30,
     "OpenAlex AI Citation Feed": 29,
     "Towards Data Science": 20,
+    "AI News": 12,
     "The Gradient": 15
   },
-  "generated_at": "2026-05-27T17:58:22.427664+09:00"
+  "generated_at": "2026-05-27T18:34:32.721889+09:00"
 }
