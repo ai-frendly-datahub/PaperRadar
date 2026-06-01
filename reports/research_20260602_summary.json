@@ -11,7 +11,7 @@
     },
     {
       "name": "Research Areas",
-      "count": 261
+      "count": 262
     },
     {
       "name": "Tasks",
@@ -19,11 +19,11 @@
     },
     {
       "name": "Techniques",
-      "count": 152
+      "count": 154
     },
     {
       "name": "Institutions",
-      "count": 44
+      "count": 45
     },
     {
       "name": "Venues",
@@ -46,5 +46,5 @@
     "Towards Data Science": 20,
     "The Gradient": 15
   },
-  "generated_at": "2026-06-02T02:24:23.804366+09:00"
+  "generated_at": "2026-06-02T06:24:22.161520+09:00"
 }
