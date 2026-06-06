@@ -3,15 +3,15 @@
   "category": "research",
   "article_count": 214,
   "source_count": 9,
-  "matched_count": 207,
+  "matched_count": 206,
   "top_entities": [
     {
       "name": "ResearchGeneral",
-      "count": 893
+      "count": 890
     },
     {
       "name": "Research Areas",
-      "count": 105
+      "count": 103
     },
     {
       "name": "Techniques",
@@ -19,7 +19,7 @@
     },
     {
       "name": "Tasks",
-      "count": 54
+      "count": 53
     },
     {
       "name": "Institutions",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Venues",
-      "count": 26
+      "count": 27
     }
   ],
   "sources": {
@@ -41,5 +41,5 @@
     "Towards Data Science": 20,
     "The Gradient": 15
   },
-  "generated_at": "2026-06-06T17:27:41.261919+09:00"
+  "generated_at": "2026-06-06T22:17:52.168056+09:00"
 }
