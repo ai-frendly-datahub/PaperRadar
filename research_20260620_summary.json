@@ -1,0 +1,49 @@
+{
+  "date": "2026-06-20",
+  "category": "research",
+  "article_count": 309,
+  "source_count": 13,
+  "matched_count": 305,
+  "top_entities": [
+    {
+      "name": "ResearchGeneral",
+      "count": 3229
+    },
+    {
+      "name": "Research Areas",
+      "count": 239
+    },
+    {
+      "name": "Tasks",
+      "count": 210
+    },
+    {
+      "name": "Techniques",
+      "count": 143
+    },
+    {
+      "name": "Venues",
+      "count": 40
+    },
+    {
+      "name": "Institutions",
+      "count": 40
+    }
+  ],
+  "sources": {
+    "arXiv CS.AI": 30,
+    "arXiv CS.CL": 30,
+    "arXiv CS.LG": 30,
+    "arXiv CS.CV": 30,
+    "arXiv CS.NE": 5,
+    "arXiv Stat.ML": 30,
+    "Google AI Blog": 20,
+    "OpenAI Blog": 30,
+    "DeepMind Blog": 30,
+    "Microsoft Research": 10,
+    "OpenAlex AI Citation Feed": 29,
+    "Towards Data Science": 20,
+    "The Gradient": 15
+  },
+  "generated_at": "2026-06-20T04:33:50.806297+09:00"
+}
