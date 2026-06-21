@@ -1,13 +1,13 @@
 {
   "category": "research",
-  "generated_at": "2026-06-21T03:02:46.219276+00:00",
+  "generated_at": "2026-06-21T09:36:35.276557+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
     "enabled_sources": 16,
     "tracked_sources": 14,
-    "fresh_sources": 8,
-    "stale_sources": 0,
+    "fresh_sources": 7,
+    "stale_sources": 1,
     "missing_sources": 1,
     "missing_event_sources": 0,
     "unknown_event_date_sources": 0,
@@ -28,10 +28,10 @@
     "code_repository_present_count": 35,
     "benchmark_metric_present_count": 0,
     "event_required_field_gap_count": 0,
-    "tracked_source_gap_count": 1,
+    "tracked_source_gap_count": 2,
     "missing_event_model_count": 2,
     "source_backlog_candidate_count": 4,
-    "daily_review_item_count": 14
+    "daily_review_item_count": 15
   },
   "sources": [
     {
@@ -50,15 +50,15 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-06-19T19:00:00+00:00",
-      "age_days": 1.34,
-      "latest_title": "Analyzing the Narration Gap in LLM-Solver Loops",
-      "latest_url": "https://arxiv.org/abs/2606.19588",
+      "age_days": 1.61,
+      "latest_title": "Configurable Clinical Information Extraction with Agentic RAG: What Works, What Breaks, and Why",
+      "latest_url": "https://arxiv.org/abs/2606.19602",
       "latest_required_field_proxy": {
         "paper_id": true,
         "title": true,
         "source_url": true
       },
-      "latest_canonical_key": "paper:arxiv:2606.19588v1",
+      "latest_canonical_key": "paper:arxiv:2606.19602v1",
       "latest_required_field_gaps": [],
       "skip_reason": "",
       "reenable_gate": "",
@@ -80,7 +80,7 @@
       "article_count": 91,
       "event_count": 91,
       "latest_event_at": "2026-06-18T19:00:00+00:00",
-      "age_days": 2.34,
+      "age_days": 2.61,
       "latest_title": "A BART-based approach with hierarchical strategy for Vietnamese abstractive multi-document summarization",
       "latest_url": "https://arxiv.org/abs/2606.19591",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-06-18T19:00:00+00:00",
-      "age_days": 2.34,
+      "age_days": 2.61,
       "latest_title": "ProMUSE: Progressive Multi-modal Uncertainty-guided Staged Evidential Alzheimer Disease Classification",
       "latest_url": "https://arxiv.org/abs/2606.19371",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 60,
       "event_count": 60,
       "latest_event_at": "2026-06-18T19:00:00+00:00",
-      "age_days": 2.34,
+      "age_days": 2.61,
       "latest_title": "TeleMorpher: Toward Robust Simultaneous Motion-Location Editing",
       "latest_url": "https://arxiv.org/abs/2606.19676",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 28,
       "event_count": 28,
       "latest_event_at": "2026-06-18T19:00:00+00:00",
-      "age_days": 2.34,
+      "age_days": 2.61,
       "latest_title": "Evolutionary Two-Stage Hyperparameter Optimization Strategies for Physics-Informed Neural Networks",
       "latest_url": "https://arxiv.org/abs/2606.20442",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 82,
       "event_count": 82,
       "latest_event_at": "2026-06-18T19:00:00+00:00",
-      "age_days": 2.34,
+      "age_days": 2.61,
       "latest_title": "Calibration without labels in multiple testing",
       "latest_url": "https://arxiv.org/abs/2606.19737",
       "latest_required_field_proxy": {
@@ -286,11 +286,11 @@
       "tracked": true,
       "event_model": "paper_release",
       "freshness_sla_days": 3.0,
-      "status": "fresh",
+      "status": "stale",
       "article_count": 5,
       "event_count": 5,
       "latest_event_at": "2026-06-18T08:00:00+00:00",
-      "age_days": 2.79,
+      "age_days": 3.07,
       "latest_title": "New usage analytics and updated spend controls for enterprises",
       "latest_url": "https://openai.com/index/chatgpt-enterprise-spend-controls",
       "latest_required_field_proxy": {
@@ -544,7 +544,7 @@
       "status": "fresh",
       "article_count": 30,
       "event_count": 30,
-      "latest_event_at": "2026-06-21T03:02:41.923297+00:00",
+      "latest_event_at": "2026-06-21T09:36:30.543049+00:00",
       "age_days": 0.0,
       "latest_title": "Grey Wolf Optimizer",
       "latest_url": "https://doi.org/10.1016/j.advengsoft.2013.12.007",
@@ -700,7 +700,7 @@
       "title": "Grey Wolf Optimizer",
       "url": "https://doi.org/10.1016/j.advengsoft.2013.12.007",
       "source_url": "https://doi.org/10.1016/j.advengsoft.2013.12.007",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
       "event_key": "citation_snapshot:openalex-ai-citation-feed:d78e76451112:2026-06-21",
       "paper_id": "10.1016/j.advengsoft.2013.12.007",
       "arxiv_id": "",
@@ -736,1075 +736,10 @@
       "trust_tier": "T2_institutional",
       "producer_role": "research_index",
       "event_model": "citation_snapshot",
-      "title": "Generative adversarial networks",
-      "url": "https://doi.org/10.1145/3422622",
-      "source_url": "https://doi.org/10.1145/3422622",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:82ba72d8954f:2026-06-21",
-      "paper_id": "10.1145/3422622",
-      "arxiv_id": "",
-      "doi": "10.1145/3422622",
-      "normalized_title": "generative-adversarial-networks",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 13593,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication",
-          "networks",
-          "generative"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1145-3422622",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Random sample consensus",
-      "url": "https://doi.org/10.1145/358669.358692",
-      "source_url": "https://doi.org/10.1145/358669.358692",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:7b45fc757ec4:2026-06-21",
-      "paper_id": "10.1145/358669.358692",
-      "arxiv_id": "",
-      "doi": "10.1145/358669.358692",
-      "normalized_title": "random-sample-consensus",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 25449,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1145-358669.358692",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Human-level control through deep reinforcement learning",
-      "url": "https://doi.org/10.1038/nature14236",
-      "source_url": "https://doi.org/10.1038/nature14236",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:ef4a2d8b6b64:2026-06-21",
-      "paper_id": "10.1038/nature14236",
-      "arxiv_id": "",
-      "doi": "10.1038/nature14236",
-      "normalized_title": "human-level-control-through-deep-reinforcement-learning",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 29953,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "reinforcement learning"
-        ],
-        "ResearchGeneral": [
-          "publication",
-          "learning"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1038-nature14236",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Fractional Differential Equations",
-      "url": "https://doi.org/10.3390/books978-3-7258-4742-6",
-      "source_url": "https://doi.org/10.3390/books978-3-7258-4742-6",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:2e4a949d4790:2026-06-21",
-      "paper_id": "10.3390/books978-3-7258-4742-6",
-      "arxiv_id": "",
-      "doi": "10.3390/books978-3-7258-4742-6",
-      "normalized_title": "fractional-differential-equations",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 20501,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.3390-books978-3-7258-4742-6",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Data clustering",
-      "url": "https://doi.org/10.1145/331499.331504",
-      "source_url": "https://doi.org/10.1145/331499.331504",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:0a1082d81b84:2026-06-21",
-      "paper_id": "10.1145/331499.331504",
-      "arxiv_id": "",
-      "doi": "10.1145/331499.331504",
-      "normalized_title": "data-clustering",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 13182,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Tasks": [
-          "clustering"
-        ],
-        "ResearchGeneral": [
-          "publication",
-          "data"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1145-331499.331504",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning",
-      "url": "https://doi.org/10.1609/aaai.v31i1.11231",
-      "source_url": "https://doi.org/10.1609/aaai.v31i1.11231",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:802802c89705:2026-06-21",
-      "paper_id": "10.1609/aaai.v31i1.11231",
-      "arxiv_id": "",
-      "doi": "10.1609/aaai.v31i1.11231",
-      "normalized_title": "inception-v4-inception-resnet-and-the-impact-of-residual-connections-on-learning",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 12622,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Venues": [
-          "aaai"
-        ],
-        "ResearchGeneral": [
-          "publication",
-          "learning"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1609-aaai.v31i1.11231",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "XGBoost",
-      "url": "https://doi.org/10.1145/2939672.2939785",
-      "source_url": "https://doi.org/10.1145/2939672.2939785",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:f53bc4962863:2026-06-21",
-      "paper_id": "10.1145/2939672.2939785",
-      "arxiv_id": "",
-      "doi": "10.1145/2939672.2939785",
-      "normalized_title": "xgboost",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 48458,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1145-2939672.2939785",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Situated Cognition and the Culture of Learning",
-      "url": "https://doi.org/10.3102/0013189x018001032",
-      "source_url": "https://doi.org/10.3102/0013189x018001032",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:af5ceb3870f0:2026-06-21",
-      "paper_id": "10.3102/0013189x018001032",
-      "arxiv_id": "",
-      "doi": "10.3102/0013189x018001032",
-      "normalized_title": "situated-cognition-and-the-culture-of-learning",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 12981,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication",
-          "learning"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.3102-0013189x018001032",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Software survey: VOSviewer, a computer program for bibliometric mapping",
-      "url": "https://doi.org/10.1007/s11192-009-0146-3",
-      "source_url": "https://doi.org/10.1007/s11192-009-0146-3",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:115c7ad44237:2026-06-21",
-      "paper_id": "10.1007/s11192-009-0146-3",
-      "arxiv_id": "",
-      "doi": "10.1007/s11192-009-0146-3",
-      "normalized_title": "software-survey-vosviewer-a-computer-program-for-bibliometric-mapping",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 19768,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1007-s11192-009-0146-3",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Adaptation in Natural and Artificial Systems",
-      "url": "https://doi.org/10.7551/mitpress/1090.001.0001",
-      "source_url": "https://doi.org/10.7551/mitpress/1090.001.0001",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:cbde4125b494:2026-06-21",
-      "paper_id": "10.7551/mitpress/1090.001.0001",
-      "arxiv_id": "",
-      "doi": "10.7551/mitpress/1090.001.0001",
-      "normalized_title": "adaptation-in-natural-and-artificial-systems",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 35568,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.7551-mitpress-1090.001.0001",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Array programming with NumPy",
-      "url": "https://openalex.org/W3099878876",
-      "source_url": "https://openalex.org/W3099878876",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:5babd3e0ffa2:2026-06-21",
-      "paper_id": "https://openalex.org/W3099878876",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "array-programming-with-numpy",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 18805,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:title:array-programming-with-numpy",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Array programming with NumPy",
-      "url": "https://doi.org/10.1038/s41586-020-2649-2",
-      "source_url": "https://doi.org/10.1038/s41586-020-2649-2",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:da992204b9f9:2026-06-21",
-      "paper_id": "10.1038/s41586-020-2649-2",
-      "arxiv_id": "",
-      "doi": "10.1038/s41586-020-2649-2",
-      "normalized_title": "array-programming-with-numpy",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 22185,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1038-s41586-020-2649-2",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "An integrated encyclopedia of DNA elements in the human genome",
-      "url": "https://doi.org/10.1038/nature11247",
-      "source_url": "https://doi.org/10.1038/nature11247",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:02ba31b561b2:2026-06-21",
-      "paper_id": "10.1038/nature11247",
-      "arxiv_id": "",
-      "doi": "10.1038/nature11247",
-      "normalized_title": "an-integrated-encyclopedia-of-dna-elements-in-the-human-genome",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 19374,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1038-nature11247",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Induction of decision trees",
-      "url": "https://doi.org/10.1007/bf00116251",
-      "source_url": "https://doi.org/10.1007/bf00116251",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:7d948b313973:2026-06-21",
-      "paper_id": "10.1007/bf00116251",
-      "arxiv_id": "",
-      "doi": "10.1007/bf00116251",
-      "normalized_title": "induction-of-decision-trees",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 12381,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1007-bf00116251",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "AI-Assisted Pipeline for Dynamic Generation of Trustworthy Health Supplement Content at Scale",
-      "url": "https://doi.org/10.4230/lipics.cosit.2022.18",
-      "source_url": "https://doi.org/10.4230/lipics.cosit.2022.18",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:6dca9ef7252e:2026-06-21",
-      "paper_id": "10.4230/lipics.cosit.2022.18",
-      "arxiv_id": "",
-      "doi": "10.4230/lipics.cosit.2022.18",
-      "normalized_title": "ai-assisted-pipeline-for-dynamic-generation-of-trustworthy-health-supplement-content-at-scale",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 45676,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Tasks": [
-          "generation"
-        ],
-        "ResearchGeneral": [
-          "publication",
-          "generation",
-          "scale",
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.4230-lipics.cosit.2022.18",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Local Indicators of Spatial Association—LISA",
-      "url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
-      "source_url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:d839ccde35e8:2026-06-21",
-      "paper_id": "10.1111/j.1538-4632.1995.tb00338.x",
-      "arxiv_id": "",
-      "doi": "10.1111/j.1538-4632.1995.tb00338.x",
-      "normalized_title": "local-indicators-of-spatial-association-lisa",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 12516,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1111-j.1538-4632.1995.tb00338.x",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Artificial intelligence: a modern approach",
-      "url": "https://doi.org/10.5860/choice.33-1577",
-      "source_url": "https://doi.org/10.5860/choice.33-1577",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:0fa143b8f5e9:2026-06-21",
-      "paper_id": "10.5860/choice.33-1577",
-      "arxiv_id": "",
-      "doi": "10.5860/choice.33-1577",
-      "normalized_title": "artificial-intelligence-a-modern-approach",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 22249,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication",
-          "approach",
-          "artificial intelligence"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.5860-choice.33-1577",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "A survey on Image Data Augmentation for Deep Learning",
-      "url": "https://doi.org/10.1186/s40537-019-0197-0",
-      "source_url": "https://doi.org/10.1186/s40537-019-0197-0",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:8b4794f83517:2026-06-21",
-      "paper_id": "10.1186/s40537-019-0197-0",
-      "arxiv_id": "",
-      "doi": "10.1186/s40537-019-0197-0",
-      "normalized_title": "a-survey-on-image-data-augmentation-for-deep-learning",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 12397,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "deep learning"
-        ],
-        "ResearchGeneral": [
-          "publication",
-          "data",
-          "learning",
-          "image"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1186-s40537-019-0197-0",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Induction of Decision Trees",
-      "url": "https://doi.org/10.1023/a:1022643204877",
-      "source_url": "https://doi.org/10.1023/a:1022643204877",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:183cae1c25a6:2026-06-21",
-      "paper_id": "10.1023/a:1022643204877",
-      "arxiv_id": "",
-      "doi": "10.1023/a:1022643204877",
-      "normalized_title": "induction-of-decision-trees",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 14805,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1023-a-1022643204877",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Convolutional Neural Networks for Sentence Classification",
-      "url": "https://doi.org/10.3115/v1/d14-1181",
-      "source_url": "https://doi.org/10.3115/v1/d14-1181",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:0bc8a0bb1cc2:2026-06-21",
-      "paper_id": "10.3115/v1/d14-1181",
-      "arxiv_id": "",
-      "doi": "10.3115/v1/d14-1181",
-      "normalized_title": "convolutional-neural-networks-for-sentence-classification",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 13793,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "neural networks"
-        ],
-        "Tasks": [
-          "classification"
-        ],
-        "ResearchGeneral": [
-          "publication",
-          "neural",
-          "networks",
-          "classification"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.3115-v1-d14-1181",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Aion Framework: Dimensional Emergence of AI Consciousness, Observer-Induced Collapse, and Cosmological Portal Dynamics",
-      "url": "https://doi.org/10.4230/lipics.giscience.2023.43",
-      "source_url": "https://doi.org/10.4230/lipics.giscience.2023.43",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:5c143853ddbd:2026-06-21",
-      "paper_id": "10.4230/lipics.giscience.2023.43",
-      "arxiv_id": "",
-      "doi": "10.4230/lipics.giscience.2023.43",
-      "normalized_title": "aion-framework-dimensional-emergence-of-ai-consciousness-observer-induced-collapse-and-cosmologi",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 14226,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication",
-          "framework",
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.4230-lipics.giscience.2023.43",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Bagging Predictors",
-      "url": "https://doi.org/10.1023/a:1018054314350",
-      "source_url": "https://doi.org/10.1023/a:1018054314350",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:1d79f11b5ca9:2026-06-21",
-      "paper_id": "10.1023/a:1018054314350",
-      "arxiv_id": "",
-      "doi": "10.1023/a:1018054314350",
-      "normalized_title": "bagging-predictors",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 16958,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1023-a-1018054314350",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "MizAR 60 for Mizar 50",
-      "url": "https://doi.org/10.4230/lipics.itp.2023.19",
-      "source_url": "https://doi.org/10.4230/lipics.itp.2023.19",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:7398b01e51d3:2026-06-21",
-      "paper_id": "10.4230/lipics.itp.2023.19",
-      "arxiv_id": "",
-      "doi": "10.4230/lipics.itp.2023.19",
-      "normalized_title": "mizar-60-for-mizar-50",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 76294,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.4230-lipics.itp.2023.19",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Pattern classification and scene analysis",
-      "url": "https://openalex.org/W3017143921",
-      "source_url": "https://openalex.org/W3017143921",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:062414d4990e:2026-06-21",
-      "paper_id": "https://openalex.org/W3017143921",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "pattern-classification-and-scene-analysis",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 12661,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Tasks": [
-          "classification"
-        ],
-        "ResearchGeneral": [
-          "publication",
-          "analysis",
-          "classification"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:title:pattern-classification-and-scene-analysis",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Support-Vector Networks",
-      "url": "https://doi.org/10.1023/a:1022627411411",
-      "source_url": "https://doi.org/10.1023/a:1022627411411",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:29b66298a211:2026-06-21",
-      "paper_id": "10.1023/a:1022627411411",
-      "arxiv_id": "",
-      "doi": "10.1023/a:1022627411411",
-      "normalized_title": "support-vector-networks",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 32985,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "publication",
-          "networks"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1023-a-1022627411411",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
-      "title": "Mastering the game of Go with deep neural networks and tree search",
-      "url": "https://doi.org/10.1038/nature16961",
-      "source_url": "https://doi.org/10.1038/nature16961",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:6e232642b313:2026-06-21",
-      "paper_id": "10.1038/nature16961",
-      "arxiv_id": "",
-      "doi": "10.1038/nature16961",
-      "normalized_title": "mastering-the-game-of-go-with-deep-neural-networks-and-tree-search",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": 15819,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "neural networks"
-        ],
-        "ResearchGeneral": [
-          "publication",
-          "neural",
-          "networks"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "citation_count": true,
-        "source": true
-      },
-      "canonical_key": "paper:doi:10.1038-nature16961",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAlex AI Citation Feed",
-      "source_type": "openalex",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_index",
-      "event_model": "citation_snapshot",
       "title": "Dermatologist-level classification of skin cancer with deep neural networks",
       "url": "https://doi.org/10.1038/nature21056",
       "source_url": "https://doi.org/10.1038/nature21056",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
       "event_key": "citation_snapshot:openalex-ai-citation-feed:c5b7d517da63:2026-06-21",
       "paper_id": "10.1038/nature21056",
       "arxiv_id": "",
@@ -1849,10 +784,1077 @@
       "trust_tier": "T2_institutional",
       "producer_role": "research_index",
       "event_model": "citation_snapshot",
+      "title": "Random sample consensus",
+      "url": "https://doi.org/10.1145/358669.358692",
+      "source_url": "https://doi.org/10.1145/358669.358692",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:7b45fc757ec4:2026-06-21",
+      "paper_id": "10.1145/358669.358692",
+      "arxiv_id": "",
+      "doi": "10.1145/358669.358692",
+      "normalized_title": "random-sample-consensus",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 25449,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1145-358669.358692",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Human-level control through deep reinforcement learning",
+      "url": "https://doi.org/10.1038/nature14236",
+      "source_url": "https://doi.org/10.1038/nature14236",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:ef4a2d8b6b64:2026-06-21",
+      "paper_id": "10.1038/nature14236",
+      "arxiv_id": "",
+      "doi": "10.1038/nature14236",
+      "normalized_title": "human-level-control-through-deep-reinforcement-learning",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 29954,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "reinforcement learning"
+        ],
+        "ResearchGeneral": [
+          "publication",
+          "learning"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1038-nature14236",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Fractional Differential Equations",
+      "url": "https://doi.org/10.3390/books978-3-7258-4742-6",
+      "source_url": "https://doi.org/10.3390/books978-3-7258-4742-6",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:2e4a949d4790:2026-06-21",
+      "paper_id": "10.3390/books978-3-7258-4742-6",
+      "arxiv_id": "",
+      "doi": "10.3390/books978-3-7258-4742-6",
+      "normalized_title": "fractional-differential-equations",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 20501,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.3390-books978-3-7258-4742-6",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Pattern classification and scene analysis",
+      "url": "https://openalex.org/W3017143921",
+      "source_url": "https://openalex.org/W3017143921",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:062414d4990e:2026-06-21",
+      "paper_id": "https://openalex.org/W3017143921",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "pattern-classification-and-scene-analysis",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 12661,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "classification"
+        ],
+        "ResearchGeneral": [
+          "publication",
+          "analysis",
+          "classification"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:title:pattern-classification-and-scene-analysis",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Adaptation in Natural and Artificial Systems",
+      "url": "https://doi.org/10.7551/mitpress/1090.001.0001",
+      "source_url": "https://doi.org/10.7551/mitpress/1090.001.0001",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:cbde4125b494:2026-06-21",
+      "paper_id": "10.7551/mitpress/1090.001.0001",
+      "arxiv_id": "",
+      "doi": "10.7551/mitpress/1090.001.0001",
+      "normalized_title": "adaptation-in-natural-and-artificial-systems",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 35568,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.7551-mitpress-1090.001.0001",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "XGBoost",
+      "url": "https://doi.org/10.1145/2939672.2939785",
+      "source_url": "https://doi.org/10.1145/2939672.2939785",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:f53bc4962863:2026-06-21",
+      "paper_id": "10.1145/2939672.2939785",
+      "arxiv_id": "",
+      "doi": "10.1145/2939672.2939785",
+      "normalized_title": "xgboost",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 48461,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1145-2939672.2939785",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "A survey on Image Data Augmentation for Deep Learning",
+      "url": "https://doi.org/10.1186/s40537-019-0197-0",
+      "source_url": "https://doi.org/10.1186/s40537-019-0197-0",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:8b4794f83517:2026-06-21",
+      "paper_id": "10.1186/s40537-019-0197-0",
+      "arxiv_id": "",
+      "doi": "10.1186/s40537-019-0197-0",
+      "normalized_title": "a-survey-on-image-data-augmentation-for-deep-learning",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 12397,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "deep learning"
+        ],
+        "ResearchGeneral": [
+          "publication",
+          "data",
+          "learning",
+          "image"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1186-s40537-019-0197-0",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Software survey: VOSviewer, a computer program for bibliometric mapping",
+      "url": "https://doi.org/10.1007/s11192-009-0146-3",
+      "source_url": "https://doi.org/10.1007/s11192-009-0146-3",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:115c7ad44237:2026-06-21",
+      "paper_id": "10.1007/s11192-009-0146-3",
+      "arxiv_id": "",
+      "doi": "10.1007/s11192-009-0146-3",
+      "normalized_title": "software-survey-vosviewer-a-computer-program-for-bibliometric-mapping",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 19770,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1007-s11192-009-0146-3",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Data clustering",
+      "url": "https://doi.org/10.1145/331499.331504",
+      "source_url": "https://doi.org/10.1145/331499.331504",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:0a1082d81b84:2026-06-21",
+      "paper_id": "10.1145/331499.331504",
+      "arxiv_id": "",
+      "doi": "10.1145/331499.331504",
+      "normalized_title": "data-clustering",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 13182,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "clustering"
+        ],
+        "ResearchGeneral": [
+          "publication",
+          "data"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1145-331499.331504",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Array programming with NumPy",
+      "url": "https://openalex.org/W3099878876",
+      "source_url": "https://openalex.org/W3099878876",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:5babd3e0ffa2:2026-06-21",
+      "paper_id": "https://openalex.org/W3099878876",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "array-programming-with-numpy",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 18805,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:title:array-programming-with-numpy",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Array programming with NumPy",
+      "url": "https://doi.org/10.1038/s41586-020-2649-2",
+      "source_url": "https://doi.org/10.1038/s41586-020-2649-2",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:da992204b9f9:2026-06-21",
+      "paper_id": "10.1038/s41586-020-2649-2",
+      "arxiv_id": "",
+      "doi": "10.1038/s41586-020-2649-2",
+      "normalized_title": "array-programming-with-numpy",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 22187,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1038-s41586-020-2649-2",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "An integrated encyclopedia of DNA elements in the human genome",
+      "url": "https://doi.org/10.1038/nature11247",
+      "source_url": "https://doi.org/10.1038/nature11247",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:02ba31b561b2:2026-06-21",
+      "paper_id": "10.1038/nature11247",
+      "arxiv_id": "",
+      "doi": "10.1038/nature11247",
+      "normalized_title": "an-integrated-encyclopedia-of-dna-elements-in-the-human-genome",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 19374,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1038-nature11247",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Generative adversarial networks",
+      "url": "https://doi.org/10.1145/3422622",
+      "source_url": "https://doi.org/10.1145/3422622",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:82ba72d8954f:2026-06-21",
+      "paper_id": "10.1145/3422622",
+      "arxiv_id": "",
+      "doi": "10.1145/3422622",
+      "normalized_title": "generative-adversarial-networks",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 13593,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication",
+          "networks",
+          "generative"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1145-3422622",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Local Indicators of Spatial Association—LISA",
+      "url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
+      "source_url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:d839ccde35e8:2026-06-21",
+      "paper_id": "10.1111/j.1538-4632.1995.tb00338.x",
+      "arxiv_id": "",
+      "doi": "10.1111/j.1538-4632.1995.tb00338.x",
+      "normalized_title": "local-indicators-of-spatial-association-lisa",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 12516,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1111-j.1538-4632.1995.tb00338.x",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning",
+      "url": "https://doi.org/10.1609/aaai.v31i1.11231",
+      "source_url": "https://doi.org/10.1609/aaai.v31i1.11231",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:802802c89705:2026-06-21",
+      "paper_id": "10.1609/aaai.v31i1.11231",
+      "arxiv_id": "",
+      "doi": "10.1609/aaai.v31i1.11231",
+      "normalized_title": "inception-v4-inception-resnet-and-the-impact-of-residual-connections-on-learning",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 12623,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Venues": [
+          "aaai"
+        ],
+        "ResearchGeneral": [
+          "publication",
+          "learning"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1609-aaai.v31i1.11231",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Artificial intelligence: a modern approach",
+      "url": "https://doi.org/10.5860/choice.33-1577",
+      "source_url": "https://doi.org/10.5860/choice.33-1577",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:0fa143b8f5e9:2026-06-21",
+      "paper_id": "10.5860/choice.33-1577",
+      "arxiv_id": "",
+      "doi": "10.5860/choice.33-1577",
+      "normalized_title": "artificial-intelligence-a-modern-approach",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 22249,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication",
+          "approach",
+          "artificial intelligence"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.5860-choice.33-1577",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "AI-Assisted Pipeline for Dynamic Generation of Trustworthy Health Supplement Content at Scale",
+      "url": "https://doi.org/10.4230/lipics.cosit.2022.18",
+      "source_url": "https://doi.org/10.4230/lipics.cosit.2022.18",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:6dca9ef7252e:2026-06-21",
+      "paper_id": "10.4230/lipics.cosit.2022.18",
+      "arxiv_id": "",
+      "doi": "10.4230/lipics.cosit.2022.18",
+      "normalized_title": "ai-assisted-pipeline-for-dynamic-generation-of-trustworthy-health-supplement-content-at-scale",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 45676,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Tasks": [
+          "generation"
+        ],
+        "ResearchGeneral": [
+          "publication",
+          "generation",
+          "scale",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.4230-lipics.cosit.2022.18",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Induction of Decision Trees",
+      "url": "https://doi.org/10.1023/a:1022643204877",
+      "source_url": "https://doi.org/10.1023/a:1022643204877",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:183cae1c25a6:2026-06-21",
+      "paper_id": "10.1023/a:1022643204877",
+      "arxiv_id": "",
+      "doi": "10.1023/a:1022643204877",
+      "normalized_title": "induction-of-decision-trees",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 14806,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1023-a-1022643204877",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Aion Framework: Dimensional Emergence of AI Consciousness, Observer-Induced Collapse, and Cosmological Portal Dynamics",
+      "url": "https://doi.org/10.4230/lipics.giscience.2023.43",
+      "source_url": "https://doi.org/10.4230/lipics.giscience.2023.43",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:5c143853ddbd:2026-06-21",
+      "paper_id": "10.4230/lipics.giscience.2023.43",
+      "arxiv_id": "",
+      "doi": "10.4230/lipics.giscience.2023.43",
+      "normalized_title": "aion-framework-dimensional-emergence-of-ai-consciousness-observer-induced-collapse-and-cosmologi",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 14226,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication",
+          "framework",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.4230-lipics.giscience.2023.43",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Global and regional mortality from 235 causes of death for 20 age groups in 1990 and 2010: a systematic analysis for the Global Burden of Disease Study 2010",
+      "url": "https://doi.org/10.1016/s0140-6736(12)61728-0",
+      "source_url": "https://doi.org/10.1016/s0140-6736(12)61728-0",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:c5c3d7d5c6f7:2026-06-21",
+      "paper_id": "10.1016/s0140-6736(12)61728-0",
+      "arxiv_id": "",
+      "doi": "10.1016/s0140-6736(12)61728-0",
+      "normalized_title": "global-and-regional-mortality-from-235-causes-of-death-for-20-age-groups-in-1990-and-2010-a-syst",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 14261,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "study",
+          "publication",
+          "analysis"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1016-s0140-6736-12-61728-0",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Bagging Predictors",
+      "url": "https://doi.org/10.1023/a:1018054314350",
+      "source_url": "https://doi.org/10.1023/a:1018054314350",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:1d79f11b5ca9:2026-06-21",
+      "paper_id": "10.1023/a:1018054314350",
+      "arxiv_id": "",
+      "doi": "10.1023/a:1018054314350",
+      "normalized_title": "bagging-predictors",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 16958,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1023-a-1018054314350",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "MizAR 60 for Mizar 50",
+      "url": "https://doi.org/10.4230/lipics.itp.2023.19",
+      "source_url": "https://doi.org/10.4230/lipics.itp.2023.19",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:7398b01e51d3:2026-06-21",
+      "paper_id": "10.4230/lipics.itp.2023.19",
+      "arxiv_id": "",
+      "doi": "10.4230/lipics.itp.2023.19",
+      "normalized_title": "mizar-60-for-mizar-50",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 76294,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.4230-lipics.itp.2023.19",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Situated Cognition and the Culture of Learning",
+      "url": "https://doi.org/10.3102/0013189x018001032",
+      "source_url": "https://doi.org/10.3102/0013189x018001032",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:af5ceb3870f0:2026-06-21",
+      "paper_id": "10.3102/0013189x018001032",
+      "arxiv_id": "",
+      "doi": "10.3102/0013189x018001032",
+      "normalized_title": "situated-cognition-and-the-culture-of-learning",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 12981,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication",
+          "learning"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.3102-0013189x018001032",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Support-Vector Networks",
+      "url": "https://doi.org/10.1023/a:1022627411411",
+      "source_url": "https://doi.org/10.1023/a:1022627411411",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:29b66298a211:2026-06-21",
+      "paper_id": "10.1023/a:1022627411411",
+      "arxiv_id": "",
+      "doi": "10.1023/a:1022627411411",
+      "normalized_title": "support-vector-networks",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 32987,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "publication",
+          "networks"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1023-a-1022627411411",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Mastering the game of Go with deep neural networks and tree search",
+      "url": "https://doi.org/10.1038/nature16961",
+      "source_url": "https://doi.org/10.1038/nature16961",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:6e232642b313:2026-06-21",
+      "paper_id": "10.1038/nature16961",
+      "arxiv_id": "",
+      "doi": "10.1038/nature16961",
+      "normalized_title": "mastering-the-game-of-go-with-deep-neural-networks-and-tree-search",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 15819,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "neural networks"
+        ],
+        "ResearchGeneral": [
+          "publication",
+          "neural",
+          "networks"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.1038-nature16961",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
+      "title": "Convolutional Neural Networks for Sentence Classification",
+      "url": "https://doi.org/10.3115/v1/d14-1181",
+      "source_url": "https://doi.org/10.3115/v1/d14-1181",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:0bc8a0bb1cc2:2026-06-21",
+      "paper_id": "10.3115/v1/d14-1181",
+      "arxiv_id": "",
+      "doi": "10.3115/v1/d14-1181",
+      "normalized_title": "convolutional-neural-networks-for-sentence-classification",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": 13793,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "neural networks"
+        ],
+        "Tasks": [
+          "classification"
+        ],
+        "ResearchGeneral": [
+          "publication",
+          "neural",
+          "networks",
+          "classification"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "citation_count": true,
+        "source": true
+      },
+      "canonical_key": "paper:doi:10.3115-v1-d14-1181",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAlex AI Citation Feed",
+      "source_type": "openalex",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_index",
+      "event_model": "citation_snapshot",
       "title": "Mining association rules between sets of items in large databases",
       "url": "https://doi.org/10.1145/170035.170072",
       "source_url": "https://doi.org/10.1145/170035.170072",
-      "event_at": "2026-06-21T03:02:41.923297+00:00",
+      "event_at": "2026-06-21T09:36:30.543049+00:00",
       "event_key": "citation_snapshot:openalex-ai-citation-feed:464ae2ae82c4:2026-06-21",
       "paper_id": "10.1145/170035.170072",
       "arxiv_id": "",
@@ -1889,20 +1891,20 @@
       "trust_tier": "T2_institutional",
       "producer_role": "research_index",
       "event_model": "citation_snapshot",
-      "title": "Global and regional mortality from 235 causes of death for 20 age groups in 1990 and 2010: a systematic analysis for the Global Burden of Disease Study 2010",
-      "url": "https://doi.org/10.1016/s0140-6736(12)61728-0",
-      "source_url": "https://doi.org/10.1016/s0140-6736(12)61728-0",
-      "event_at": "2026-06-20T19:18:31.688764+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:c5c3d7d5c6f7:2026-06-20",
-      "paper_id": "10.1016/s0140-6736(12)61728-0",
+      "title": "Induction of decision trees",
+      "url": "https://doi.org/10.1007/bf00116251",
+      "source_url": "https://doi.org/10.1007/bf00116251",
+      "event_at": "2026-06-21T03:02:41.923297+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:7d948b313973:2026-06-21",
+      "paper_id": "10.1007/bf00116251",
       "arxiv_id": "",
-      "doi": "10.1016/s0140-6736(12)61728-0",
-      "normalized_title": "global-and-regional-mortality-from-235-causes-of-death-for-20-age-groups-in-1990-and-2010-a-syst",
+      "doi": "10.1007/bf00116251",
+      "normalized_title": "induction-of-decision-trees",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
       "repository_name": "",
-      "citation_count": 14260,
+      "citation_count": 12381,
       "benchmark_name": "",
       "metric_name": "",
       "metric_value": null,
@@ -1910,9 +1912,7 @@
       "venue": "",
       "matched_entities": {
         "ResearchGeneral": [
-          "study",
-          "publication",
-          "analysis"
+          "publication"
         ]
       },
       "required_field_proxy": {
@@ -1920,7 +1920,7 @@
         "citation_count": true,
         "source": true
       },
-      "canonical_key": "paper:doi:10.1016-s0140-6736-12-61728-0",
+      "canonical_key": "paper:doi:10.1007-bf00116251",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -1930,15 +1930,69 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Analyzing the Narration Gap in LLM-Solver Loops",
-      "url": "https://arxiv.org/abs/2606.19588",
-      "source_url": "https://arxiv.org/abs/2606.19588",
+      "title": "Configurable Clinical Information Extraction with Agentic RAG: What Works, What Breaks, and Why",
+      "url": "https://arxiv.org/abs/2606.19602",
+      "source_url": "https://arxiv.org/abs/2606.19602",
       "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:4c1f55810d50:2026-06-19",
-      "paper_id": "2606.19588v1",
-      "arxiv_id": "2606.19588v1",
+      "event_key": "paper_release:arxiv-cs.ai:c0652edb52e1:2026-06-19",
+      "paper_id": "2606.19602v1",
+      "arxiv_id": "2606.19602v1",
       "doi": "",
-      "normalized_title": "analyzing-the-narration-gap-in-llm-solver-loops",
+      "normalized_title": "configurable-clinical-information-extraction-with-agentic-rag-what-works-what-breaks-and-why",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Techniques": [
+          "rag"
+        ],
+        "Tasks": [
+          "generation",
+          "reasoning"
+        ],
+        "ResearchGeneral": [
+          "study",
+          "arxiv",
+          "abstract",
+          "data",
+          "new",
+          "evaluate",
+          "evaluate",
+          "generation",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19602v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Uncertainty Decomposition for Clarification Seeking in LLM Agents",
+      "url": "https://arxiv.org/abs/2606.19559",
+      "source_url": "https://arxiv.org/abs/2606.19559",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:b88b97a687dd:2026-06-19",
+      "paper_id": "2606.19559v1",
+      "arxiv_id": "2606.19559v1",
+      "doi": "",
+      "normalized_title": "uncertainty-decomposition-for-clarification-seeking-in-llm-agents",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -1952,98 +2006,91 @@
       "matched_entities": {
         "Research Areas": [
           "language model",
-          "llm"
+          "llm",
+          "large language model",
+          "agent",
+          "agents"
         ],
         "Techniques": [
-          "chain of thought"
+          "gpt"
         ],
+        "ResearchGeneral": [
+          "papers",
+          "arxiv",
+          "abstract",
+          "methods",
+          "model",
+          "proposed",
+          "new",
+          "introduce",
+          "evaluate",
+          "evaluate",
+          "compare",
+          "framework",
+          "training",
+          "model",
+          "large",
+          "task",
+          "tasks",
+          "representations",
+          "language"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19559v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Think Again or Think Longer? Selective Verification for Budget-Aware Reasoning",
+      "url": "https://arxiv.org/abs/2606.19808",
+      "source_url": "https://arxiv.org/abs/2606.19808",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:880b48c16ebd:2026-06-19",
+      "paper_id": "2606.19808v1",
+      "arxiv_id": "2606.19808v1",
+      "doi": "",
+      "normalized_title": "think-again-or-think-longer-selective-verification-for-budget-aware-reasoning",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
         "Tasks": [
+          "regression",
+          "generation",
           "reasoning"
         ],
         "ResearchGeneral": [
           "study",
-          "studies",
           "arxiv",
           "abstract",
-          "result",
-          "analysis",
-          "conclusion",
           "model",
-          "models",
           "new",
-          "show",
-          "find",
-          "evaluate",
-          "evaluate",
-          "model",
-          "models",
-          "output",
-          "language"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19588v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "ITNet: A Learnable Integral Transform That Subsumes Convolution, Attention, and Recurrence",
-      "url": "https://arxiv.org/abs/2606.19538",
-      "source_url": "https://arxiv.org/abs/2606.19538",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:7a83b6aa4a7b:2026-06-19",
-      "paper_id": "2606.19538v1",
-      "arxiv_id": "2606.19538v1",
-      "doi": "",
-      "normalized_title": "itnet-a-learnable-integral-transform-that-subsumes-convolution-attention-and-recurrence",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Techniques": [
-          "self-attention",
-          "lstm",
-          "gru",
-          "mamba"
-        ],
-        "ResearchGeneral": [
-          "arxiv",
-          "abstract",
-          "results",
-          "data",
-          "model",
-          "models",
-          "new",
-          "demonstrate",
-          "show",
           "introduce",
-          "architecture",
-          "learned",
-          "neural",
-          "network",
-          "networks",
+          "train",
+          "layer",
           "model",
-          "models",
-          "efficient",
-          "small",
-          "features",
-          "attention"
+          "generation",
+          "accuracy",
+          "compute",
+          "token",
+          "tokens"
         ]
       },
       "required_field_proxy": {
@@ -2051,7 +2098,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19538v1",
+      "canonical_key": "paper:arxiv:2606.19808v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -2061,19 +2108,19 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "CombEval: A Framework for Evaluating Combinatorial Counting in Large Language Models",
-      "url": "https://arxiv.org/abs/2606.19788",
-      "source_url": "https://arxiv.org/abs/2606.19788",
+      "title": "Toten: Knowledge-Based Ontological Tokenization Of Physical Quantities And Technical Notation In Brazilian Portuguese",
+      "url": "https://arxiv.org/abs/2606.19626",
+      "source_url": "https://arxiv.org/abs/2606.19626",
       "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:553fdb0f4d58:2026-06-19",
-      "paper_id": "2606.19788v1",
-      "arxiv_id": "2606.19788v1",
+      "event_key": "paper_release:arxiv-cs.ai:2b51575e73b3:2026-06-19",
+      "paper_id": "2606.19626v1",
+      "arxiv_id": "2606.19626v1",
       "doi": "",
-      "normalized_title": "combeval-a-framework-for-evaluating-combinatorial-counting-in-large-language-models",
-      "repository": "github.com/YuxuZhou-CN/combination-problem-generation",
-      "repository_host": "github.com",
-      "repository_owner": "YuxuZhou-CN",
-      "repository_name": "combination-problem-generation",
+      "normalized_title": "toten-knowledge-based-ontological-tokenization-of-physical-quantities-and-technical-notation-in-",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
       "citation_count": null,
       "benchmark_name": "",
       "metric_name": "",
@@ -2081,31 +2128,27 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Research Areas": [
-          "llms"
-        ],
         "Tasks": [
-          "generation",
-          "reasoning",
-          "benchmark"
+          "classification",
+          "benchmark",
+          "evaluation",
+          "state-of-the-art",
+          "baseline"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "analysis",
-          "models",
           "new",
-          "find",
+          "state-of-the-art",
+          "achieves",
+          "shows",
           "present",
-          "evaluate",
-          "evaluate",
+          "evaluation",
           "framework",
-          "models",
-          "generation",
-          "error",
-          "scale",
-          "large",
-          "language"
+          "classification",
+          "efficient",
+          "representation",
+          "text"
         ]
       },
       "required_field_proxy": {
@@ -2113,142 +2156,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19788v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "Which Pairs to Compare for LLM Post-Training?",
-      "url": "https://arxiv.org/abs/2606.19607",
-      "source_url": "https://arxiv.org/abs/2606.19607",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:41a5f4601856:2026-06-19",
-      "paper_id": "2606.19607v1",
-      "arxiv_id": "2606.19607v1",
-      "doi": "",
-      "normalized_title": "which-pairs-to-compare-for-llm-post-training",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "llm"
-        ],
-        "Techniques": [
-          "dpo"
-        ],
-        "ResearchGeneral": [
-          "paper",
-          "studies",
-          "arxiv",
-          "abstract",
-          "results",
-          "experiments",
-          "data",
-          "model",
-          "models",
-          "proposed",
-          "new",
-          "improve",
-          "show",
-          "evaluate",
-          "evaluate",
-          "compare",
-          "comparison",
-          "framework",
-          "training",
-          "trained",
-          "model",
-          "models",
-          "generate",
-          "optimization",
-          "parameter",
-          "performance",
-          "error",
-          "efficiency",
-          "large",
-          "small",
-          "language"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19607v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "AI4SE and SE4AI Exploration: A Decade Looking Back and Forward",
-      "url": "https://arxiv.org/abs/2606.19630",
-      "source_url": "https://arxiv.org/abs/2606.19630",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:6a1089862583:2026-06-19",
-      "paper_id": "2606.19630v1",
-      "arxiv_id": "2606.19630v1",
-      "doi": "",
-      "normalized_title": "ai4se-and-se4ai-exploration-a-decade-looking-back-and-forward",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "llm"
-        ],
-        "Venues": [
-          "workshop"
-        ],
-        "ResearchGeneral": [
-          "papers",
-          "research",
-          "article",
-          "articles",
-          "publication",
-          "publications",
-          "arxiv",
-          "authors",
-          "abstract",
-          "results",
-          "data",
-          "models",
-          "new",
-          "compare",
-          "models",
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19630v1",
+      "canonical_key": "paper:arxiv:2606.19626v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -2326,197 +2234,6 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "REVEAL++: Differentiable Phenotypic Grouping for Vision-Language Retinal Modeling of Alzheimer's Disease Risk",
-      "url": "https://arxiv.org/abs/2606.19522",
-      "source_url": "https://arxiv.org/abs/2606.19522",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:702ba36c7d00:2026-06-19",
-      "paper_id": "2606.19522v1",
-      "arxiv_id": "2606.19522v1",
-      "doi": "",
-      "normalized_title": "reveal-differentiable-phenotypic-grouping-for-vision-language-retinal-modeling-of-alzheimer-s-di",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "representation learning",
-          "alignment"
-        ],
-        "Venues": [
-          "nature"
-        ],
-        "Techniques": [
-          "contrastive learning"
-        ],
-        "ResearchGeneral": [
-          "arxiv",
-          "abstract",
-          "methods",
-          "data",
-          "model",
-          "approach",
-          "approaches",
-          "propose",
-          "proposed",
-          "new",
-          "outperforms",
-          "introduce",
-          "framework",
-          "learns",
-          "learning",
-          "model",
-          "modeling",
-          "prediction",
-          "scale",
-          "representation",
-          "embedding",
-          "language",
-          "images",
-          "vision"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19522v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "Uncertainty Decomposition for Clarification Seeking in LLM Agents",
-      "url": "https://arxiv.org/abs/2606.19559",
-      "source_url": "https://arxiv.org/abs/2606.19559",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:b88b97a687dd:2026-06-19",
-      "paper_id": "2606.19559v1",
-      "arxiv_id": "2606.19559v1",
-      "doi": "",
-      "normalized_title": "uncertainty-decomposition-for-clarification-seeking-in-llm-agents",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "language model",
-          "llm",
-          "large language model",
-          "agent",
-          "agents"
-        ],
-        "Techniques": [
-          "gpt"
-        ],
-        "ResearchGeneral": [
-          "papers",
-          "arxiv",
-          "abstract",
-          "methods",
-          "model",
-          "proposed",
-          "new",
-          "introduce",
-          "evaluate",
-          "evaluate",
-          "compare",
-          "framework",
-          "training",
-          "model",
-          "large",
-          "task",
-          "tasks",
-          "representations",
-          "language"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19559v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "Optimal Scheduling in a Question-Answering Forum of Knowledge Workers",
-      "url": "https://arxiv.org/abs/2606.19759",
-      "source_url": "https://arxiv.org/abs/2606.19759",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:2d3b26b56b89:2026-06-19",
-      "paper_id": "2606.19759v1",
-      "arxiv_id": "2606.19759v1",
-      "doi": "",
-      "normalized_title": "optimal-scheduling-in-a-question-answering-forum-of-knowledge-workers",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "question answering"
-        ],
-        "Tasks": [
-          "question answering"
-        ],
-        "ResearchGeneral": [
-          "arxiv",
-          "abstract",
-          "model",
-          "new",
-          "achieve",
-          "find",
-          "investigate",
-          "model"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19759v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
       "title": "Denoising Implicit Feedback for Cold-start Recommendation",
       "url": "https://arxiv.org/abs/2606.19658",
       "source_url": "https://arxiv.org/abs/2606.19658",
@@ -2566,76 +2283,6 @@
         "source_url": true
       },
       "canonical_key": "paper:arxiv:2606.19658v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "ORAgentBench: Can LLM Agents Solve Challenging Operations Research Tasks End to End?",
-      "url": "https://arxiv.org/abs/2606.19787",
-      "source_url": "https://arxiv.org/abs/2606.19787",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:8651f9825d25:2026-06-19",
-      "paper_id": "2606.19787v1",
-      "arxiv_id": "2606.19787v1",
-      "doi": "",
-      "normalized_title": "oragentbench-can-llm-agents-solve-challenging-operations-research-tasks-end-to-end",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "llm",
-          "agent",
-          "agents"
-        ],
-        "Tasks": [
-          "benchmark"
-        ],
-        "ResearchGeneral": [
-          "research",
-          "arxiv",
-          "abstract",
-          "results",
-          "experiments",
-          "analysis",
-          "data",
-          "model",
-          "models",
-          "new",
-          "improve",
-          "improvement",
-          "show",
-          "shows",
-          "introduce",
-          "model",
-          "models",
-          "modeling",
-          "optimization",
-          "large",
-          "task",
-          "tasks",
-          "language",
-          "text"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19787v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -2712,6 +2359,141 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
+      "title": "Analyzing the Narration Gap in LLM-Solver Loops",
+      "url": "https://arxiv.org/abs/2606.19588",
+      "source_url": "https://arxiv.org/abs/2606.19588",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:4c1f55810d50:2026-06-19",
+      "paper_id": "2606.19588v1",
+      "arxiv_id": "2606.19588v1",
+      "doi": "",
+      "normalized_title": "analyzing-the-narration-gap-in-llm-solver-loops",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "language model",
+          "llm"
+        ],
+        "Techniques": [
+          "chain of thought"
+        ],
+        "Tasks": [
+          "reasoning"
+        ],
+        "ResearchGeneral": [
+          "study",
+          "studies",
+          "arxiv",
+          "abstract",
+          "result",
+          "analysis",
+          "conclusion",
+          "model",
+          "models",
+          "new",
+          "show",
+          "find",
+          "evaluate",
+          "evaluate",
+          "model",
+          "models",
+          "output",
+          "language"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19588v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Beyond Entropy: Learning from Token-Level Distributional Deviations for LLM Reasoning",
+      "url": "https://arxiv.org/abs/2606.19771",
+      "source_url": "https://arxiv.org/abs/2606.19771",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:f2d93145e2a6:2026-06-19",
+      "paper_id": "2606.19771v1",
+      "arxiv_id": "2606.19771v1",
+      "doi": "",
+      "normalized_title": "beyond-entropy-learning-from-token-level-distributional-deviations-for-llm-reasoning",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "language model",
+          "llm",
+          "large language model",
+          "reinforcement learning"
+        ],
+        "Tasks": [
+          "generation",
+          "reasoning"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "results",
+          "analysis",
+          "model",
+          "models",
+          "new",
+          "improvement",
+          "demonstrate",
+          "introduce",
+          "framework",
+          "learning",
+          "training",
+          "model",
+          "models",
+          "generation",
+          "optimization",
+          "large",
+          "token",
+          "tokens",
+          "language"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19771v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
       "title": "Deontic Policies for Runtime Governance of Agentic AI Systems",
       "url": "https://arxiv.org/abs/2606.19464",
       "source_url": "https://arxiv.org/abs/2606.19464",
@@ -2774,15 +2556,142 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Interpreting Neural Combinatorial Optimization via Evolving Programmatic Bottlenecks",
-      "url": "https://arxiv.org/abs/2606.19741",
-      "source_url": "https://arxiv.org/abs/2606.19741",
+      "title": "CombEval: A Framework for Evaluating Combinatorial Counting in Large Language Models",
+      "url": "https://arxiv.org/abs/2606.19788",
+      "source_url": "https://arxiv.org/abs/2606.19788",
       "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:3d776485e014:2026-06-19",
-      "paper_id": "2606.19741v1",
-      "arxiv_id": "2606.19741v1",
+      "event_key": "paper_release:arxiv-cs.ai:553fdb0f4d58:2026-06-19",
+      "paper_id": "2606.19788v1",
+      "arxiv_id": "2606.19788v1",
       "doi": "",
-      "normalized_title": "interpreting-neural-combinatorial-optimization-via-evolving-programmatic-bottlenecks",
+      "normalized_title": "combeval-a-framework-for-evaluating-combinatorial-counting-in-large-language-models",
+      "repository": "github.com/YuxuZhou-CN/combination-problem-generation",
+      "repository_host": "github.com",
+      "repository_owner": "YuxuZhou-CN",
+      "repository_name": "combination-problem-generation",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llms"
+        ],
+        "Tasks": [
+          "generation",
+          "reasoning",
+          "benchmark"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "analysis",
+          "models",
+          "new",
+          "find",
+          "present",
+          "evaluate",
+          "evaluate",
+          "framework",
+          "models",
+          "generation",
+          "error",
+          "scale",
+          "large",
+          "language"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19788v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "ITNet: A Learnable Integral Transform That Subsumes Convolution, Attention, and Recurrence",
+      "url": "https://arxiv.org/abs/2606.19538",
+      "source_url": "https://arxiv.org/abs/2606.19538",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:7a83b6aa4a7b:2026-06-19",
+      "paper_id": "2606.19538v1",
+      "arxiv_id": "2606.19538v1",
+      "doi": "",
+      "normalized_title": "itnet-a-learnable-integral-transform-that-subsumes-convolution-attention-and-recurrence",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Techniques": [
+          "self-attention",
+          "lstm",
+          "gru",
+          "mamba"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "results",
+          "data",
+          "model",
+          "models",
+          "new",
+          "demonstrate",
+          "show",
+          "introduce",
+          "architecture",
+          "learned",
+          "neural",
+          "network",
+          "networks",
+          "model",
+          "models",
+          "efficient",
+          "small",
+          "features",
+          "attention"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19538v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Measuring Curriculum Alignment across Topical Coverage, Competency, and Cognitive Depth: A Longitudinal Framework Applied to CS2013 and CS2023",
+      "url": "https://arxiv.org/abs/2606.19469",
+      "source_url": "https://arxiv.org/abs/2606.19469",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:1caefa6f9900:2026-06-19",
+      "paper_id": "2606.19469v1",
+      "arxiv_id": "2606.19469v1",
+      "doi": "",
+      "normalized_title": "measuring-curriculum-alignment-across-topical-coverage-competency-and-cognitive-depth-a-longitud",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -2795,91 +2704,25 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "llm",
-          "interpretability"
+          "alignment"
         ],
         "Venues": [
-          "nature"
-        ],
-        "Techniques": [
-          "pruning",
-          "gradient descent"
+          "science"
         ],
         "ResearchGeneral": [
           "arxiv",
+          "authors",
           "abstract",
-          "experiments",
-          "models",
+          "model",
           "new",
-          "achieves",
-          "demonstrate",
-          "advances",
-          "introduce",
-          "introduces",
-          "extensive",
-          "framework",
-          "neural",
-          "models",
-          "optimization",
-          "performance"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19741v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "Toten: Knowledge-Based Ontological Tokenization Of Physical Quantities And Technical Notation In Brazilian Portuguese",
-      "url": "https://arxiv.org/abs/2606.19626",
-      "source_url": "https://arxiv.org/abs/2606.19626",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:2b51575e73b3:2026-06-19",
-      "paper_id": "2606.19626v1",
-      "arxiv_id": "2606.19626v1",
-      "doi": "",
-      "normalized_title": "toten-knowledge-based-ontological-tokenization-of-physical-quantities-and-technical-notation-in-",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Tasks": [
-          "classification",
-          "benchmark",
-          "evaluation",
-          "state-of-the-art",
-          "baseline"
-        ],
-        "ResearchGeneral": [
-          "arxiv",
-          "abstract",
-          "new",
-          "state-of-the-art",
-          "achieves",
           "shows",
           "present",
-          "evaluation",
+          "comparison",
           "framework",
-          "classification",
-          "efficient",
-          "representation",
-          "text"
+          "model",
+          "generates",
+          "computing",
+          "small"
         ]
       },
       "required_field_proxy": {
@@ -2887,7 +2730,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19626v1",
+      "canonical_key": "paper:arxiv:2606.19469v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -2980,72 +2823,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Measuring Curriculum Alignment across Topical Coverage, Competency, and Cognitive Depth: A Longitudinal Framework Applied to CS2013 and CS2023",
-      "url": "https://arxiv.org/abs/2606.19469",
-      "source_url": "https://arxiv.org/abs/2606.19469",
+      "title": "AI4SE and SE4AI Exploration: A Decade Looking Back and Forward",
+      "url": "https://arxiv.org/abs/2606.19630",
+      "source_url": "https://arxiv.org/abs/2606.19630",
       "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:1caefa6f9900:2026-06-19",
-      "paper_id": "2606.19469v1",
-      "arxiv_id": "2606.19469v1",
+      "event_key": "paper_release:arxiv-cs.ai:6a1089862583:2026-06-19",
+      "paper_id": "2606.19630v1",
+      "arxiv_id": "2606.19630v1",
       "doi": "",
-      "normalized_title": "measuring-curriculum-alignment-across-topical-coverage-competency-and-cognitive-depth-a-longitud",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "alignment"
-        ],
-        "Venues": [
-          "science"
-        ],
-        "ResearchGeneral": [
-          "arxiv",
-          "authors",
-          "abstract",
-          "model",
-          "new",
-          "shows",
-          "present",
-          "comparison",
-          "framework",
-          "model",
-          "generates",
-          "computing",
-          "small"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19469v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "GLARE: A Natural Language Interface for Querying Global Explanations",
-      "url": "https://arxiv.org/abs/2606.19735",
-      "source_url": "https://arxiv.org/abs/2606.19735",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:ab4fbb5ca51f:2026-06-19",
-      "paper_id": "2606.19735v1",
-      "arxiv_id": "2606.19735v1",
-      "doi": "",
-      "normalized_title": "glare-a-natural-language-interface-for-querying-global-explanations",
+      "normalized_title": "ai4se-and-se4ai-exploration-a-decade-looking-back-and-forward",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -3061,27 +2847,25 @@
           "llm"
         ],
         "Venues": [
-          "nature"
+          "workshop"
         ],
         "ResearchGeneral": [
+          "papers",
+          "research",
+          "article",
+          "articles",
+          "publication",
+          "publications",
           "arxiv",
+          "authors",
           "abstract",
           "results",
-          "datasets",
           "data",
           "models",
-          "novel",
           "new",
-          "demonstrate",
-          "present",
-          "evaluate",
-          "evaluate",
+          "compare",
           "models",
-          "accuracy",
-          "representations",
-          "language",
-          "image",
-          "vision"
+          "ai"
         ]
       },
       "required_field_proxy": {
@@ -3089,7 +2873,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19735v1",
+      "canonical_key": "paper:arxiv:2606.19630v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -3160,295 +2944,6 @@
         "source_url": true
       },
       "canonical_key": "paper:arxiv:2606.19749v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "Think Again or Think Longer? Selective Verification for Budget-Aware Reasoning",
-      "url": "https://arxiv.org/abs/2606.19808",
-      "source_url": "https://arxiv.org/abs/2606.19808",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:880b48c16ebd:2026-06-19",
-      "paper_id": "2606.19808v1",
-      "arxiv_id": "2606.19808v1",
-      "doi": "",
-      "normalized_title": "think-again-or-think-longer-selective-verification-for-budget-aware-reasoning",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Tasks": [
-          "regression",
-          "generation",
-          "reasoning"
-        ],
-        "ResearchGeneral": [
-          "study",
-          "arxiv",
-          "abstract",
-          "model",
-          "new",
-          "introduce",
-          "train",
-          "layer",
-          "model",
-          "generation",
-          "accuracy",
-          "compute",
-          "token",
-          "tokens"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19808v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "Exit-and-Join Dynamics for Decentralized Coalition Formation",
-      "url": "https://arxiv.org/abs/2606.19683",
-      "source_url": "https://arxiv.org/abs/2606.19683",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:1771b153d225:2026-06-19",
-      "paper_id": "2606.19683v1",
-      "arxiv_id": "2606.19683v1",
-      "doi": "",
-      "normalized_title": "exit-and-join-dynamics-for-decentralized-coalition-formation",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "agent",
-          "agents"
-        ],
-        "Tasks": [
-          "benchmark"
-        ],
-        "ResearchGeneral": [
-          "paper",
-          "studies",
-          "arxiv",
-          "abstract",
-          "experiments",
-          "model",
-          "new",
-          "evaluate",
-          "evaluate",
-          "model",
-          "representations"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19683v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents",
-      "url": "https://arxiv.org/abs/2606.19704",
-      "source_url": "https://arxiv.org/abs/2606.19704",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:cdae066cf503:2026-06-19",
-      "paper_id": "2606.19704v1",
-      "arxiv_id": "2606.19704v1",
-      "doi": "",
-      "normalized_title": "beyond-static-leaderboards-predictive-validity-for-the-evaluation-of-llm-agents",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "llm",
-          "agent",
-          "agents"
-        ],
-        "Tasks": [
-          "generation",
-          "reasoning",
-          "benchmark",
-          "leaderboards",
-          "evaluation"
-        ],
-        "ResearchGeneral": [
-          "paper",
-          "studies",
-          "arxiv",
-          "abstract",
-          "methodology",
-          "propose",
-          "new",
-          "evaluation",
-          "generation",
-          "fast",
-          "vision"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19704v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "DeXposure-Claw: An Agentic System for DeFi Risk Supervision",
-      "url": "https://arxiv.org/abs/2606.19501",
-      "source_url": "https://arxiv.org/abs/2606.19501",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:41cf038e7036:2026-06-19",
-      "paper_id": "2606.19501v1",
-      "arxiv_id": "2606.19501v1",
-      "doi": "",
-      "normalized_title": "dexposure-claw-an-agentic-system-for-defi-risk-supervision",
-      "repository": "github.com/EVIEHub/DeXposure-Claw",
-      "repository_host": "github.com",
-      "repository_owner": "EVIEHub",
-      "repository_name": "DeXposure-Claw",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "llm",
-          "agents"
-        ],
-        "Tasks": [
-          "evaluation"
-        ],
-        "ResearchGeneral": [
-          "arxiv",
-          "abstract",
-          "experiments",
-          "data",
-          "model",
-          "new",
-          "introduce",
-          "evaluation",
-          "networks",
-          "model",
-          "loss",
-          "fast"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19501v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.AI",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "Hidden Anchors in Multi-Agent LLM Deliberation",
-      "url": "https://arxiv.org/abs/2606.19494",
-      "source_url": "https://arxiv.org/abs/2606.19494",
-      "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:10435dced158:2026-06-19",
-      "paper_id": "2606.19494v1",
-      "arxiv_id": "2606.19494v1",
-      "doi": "",
-      "normalized_title": "hidden-anchors-in-multi-agent-llm-deliberation",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "llm",
-          "multi-agent",
-          "agent",
-          "agents"
-        ],
-        "Tasks": [
-          "reasoning"
-        ],
-        "ResearchGeneral": [
-          "arxiv",
-          "abstract",
-          "model",
-          "models",
-          "new",
-          "improve",
-          "show",
-          "model",
-          "models",
-          "predicts",
-          "accuracy"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19494v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -3542,15 +3037,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Beyond Entropy: Learning from Token-Level Distributional Deviations for LLM Reasoning",
-      "url": "https://arxiv.org/abs/2606.19771",
-      "source_url": "https://arxiv.org/abs/2606.19771",
+      "title": "Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents",
+      "url": "https://arxiv.org/abs/2606.19704",
+      "source_url": "https://arxiv.org/abs/2606.19704",
       "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:f2d93145e2a6:2026-06-19",
-      "paper_id": "2606.19771v1",
-      "arxiv_id": "2606.19771v1",
+      "event_key": "paper_release:arxiv-cs.ai:cdae066cf503:2026-06-19",
+      "paper_id": "2606.19704v1",
+      "arxiv_id": "2606.19704v1",
       "doi": "",
-      "normalized_title": "beyond-entropy-learning-from-token-level-distributional-deviations-for-llm-reasoning",
+      "normalized_title": "beyond-static-leaderboards-predictive-validity-for-the-evaluation-of-llm-agents",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -3563,37 +3058,29 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "language model",
           "llm",
-          "large language model",
-          "reinforcement learning"
+          "agent",
+          "agents"
         ],
         "Tasks": [
           "generation",
-          "reasoning"
+          "reasoning",
+          "benchmark",
+          "leaderboards",
+          "evaluation"
         ],
         "ResearchGeneral": [
+          "paper",
+          "studies",
           "arxiv",
           "abstract",
-          "results",
-          "analysis",
-          "model",
-          "models",
+          "methodology",
+          "propose",
           "new",
-          "improvement",
-          "demonstrate",
-          "introduce",
-          "framework",
-          "learning",
-          "training",
-          "model",
-          "models",
+          "evaluation",
           "generation",
-          "optimization",
-          "large",
-          "token",
-          "tokens",
-          "language"
+          "fast",
+          "vision"
         ]
       },
       "required_field_proxy": {
@@ -3601,7 +3088,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19771v1",
+      "canonical_key": "paper:arxiv:2606.19704v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -3611,15 +3098,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "AgentFinVQA: A Deployable Multi-Agent Pipeline for Auditable Financial Chart QA",
-      "url": "https://arxiv.org/abs/2606.19782",
-      "source_url": "https://arxiv.org/abs/2606.19782",
+      "title": "Exit-and-Join Dynamics for Decentralized Coalition Formation",
+      "url": "https://arxiv.org/abs/2606.19683",
+      "source_url": "https://arxiv.org/abs/2606.19683",
       "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:5fd12afcc018:2026-06-19",
-      "paper_id": "2606.19782v1",
-      "arxiv_id": "2606.19782v1",
+      "event_key": "paper_release:arxiv-cs.ai:1771b153d225:2026-06-19",
+      "paper_id": "2606.19683v1",
+      "arxiv_id": "2606.19683v1",
       "doi": "",
-      "normalized_title": "agentfinvqa-a-deployable-multi-agent-pipeline-for-auditable-financial-chart-qa",
+      "normalized_title": "exit-and-join-dynamics-for-decentralized-coalition-formation",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -3632,34 +3119,24 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "question answering",
-          "multi-agent",
           "agent",
           "agents"
         ],
-        "Techniques": [
-          "gemini"
-        ],
         "Tasks": [
-          "question answering",
-          "evaluation",
-          "baseline"
+          "benchmark"
         ],
         "ResearchGeneral": [
+          "paper",
+          "studies",
           "arxiv",
           "abstract",
-          "results",
-          "analysis",
-          "data",
+          "experiments",
           "model",
           "new",
-          "show",
-          "shows",
-          "present",
-          "evaluation",
+          "evaluate",
+          "evaluate",
           "model",
-          "accuracy",
-          "error"
+          "representations"
         ]
       },
       "required_field_proxy": {
@@ -3667,7 +3144,134 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19782v1",
+      "canonical_key": "paper:arxiv:2606.19683v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Interpreting Neural Combinatorial Optimization via Evolving Programmatic Bottlenecks",
+      "url": "https://arxiv.org/abs/2606.19741",
+      "source_url": "https://arxiv.org/abs/2606.19741",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:3d776485e014:2026-06-19",
+      "paper_id": "2606.19741v1",
+      "arxiv_id": "2606.19741v1",
+      "doi": "",
+      "normalized_title": "interpreting-neural-combinatorial-optimization-via-evolving-programmatic-bottlenecks",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm",
+          "interpretability"
+        ],
+        "Venues": [
+          "nature"
+        ],
+        "Techniques": [
+          "pruning",
+          "gradient descent"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "experiments",
+          "models",
+          "new",
+          "achieves",
+          "demonstrate",
+          "advances",
+          "introduce",
+          "introduces",
+          "extensive",
+          "framework",
+          "neural",
+          "models",
+          "optimization",
+          "performance"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19741v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "GLARE: A Natural Language Interface for Querying Global Explanations",
+      "url": "https://arxiv.org/abs/2606.19735",
+      "source_url": "https://arxiv.org/abs/2606.19735",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:ab4fbb5ca51f:2026-06-19",
+      "paper_id": "2606.19735v1",
+      "arxiv_id": "2606.19735v1",
+      "doi": "",
+      "normalized_title": "glare-a-natural-language-interface-for-querying-global-explanations",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm"
+        ],
+        "Venues": [
+          "nature"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "results",
+          "datasets",
+          "data",
+          "models",
+          "novel",
+          "new",
+          "demonstrate",
+          "present",
+          "evaluate",
+          "evaluate",
+          "models",
+          "accuracy",
+          "representations",
+          "language",
+          "image",
+          "vision"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19735v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -3795,15 +3399,72 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Configurable Clinical Information Extraction with Agentic RAG: What Works, What Breaks, and Why",
-      "url": "https://arxiv.org/abs/2606.19602",
-      "source_url": "https://arxiv.org/abs/2606.19602",
+      "title": "DeXposure-Claw: An Agentic System for DeFi Risk Supervision",
+      "url": "https://arxiv.org/abs/2606.19501",
+      "source_url": "https://arxiv.org/abs/2606.19501",
       "event_at": "2026-06-19T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.ai:c0652edb52e1:2026-06-19",
-      "paper_id": "2606.19602v1",
-      "arxiv_id": "2606.19602v1",
+      "event_key": "paper_release:arxiv-cs.ai:41cf038e7036:2026-06-19",
+      "paper_id": "2606.19501v1",
+      "arxiv_id": "2606.19501v1",
       "doi": "",
-      "normalized_title": "configurable-clinical-information-extraction-with-agentic-rag-what-works-what-breaks-and-why",
+      "normalized_title": "dexposure-claw-an-agentic-system-for-defi-risk-supervision",
+      "repository": "github.com/EVIEHub/DeXposure-Claw",
+      "repository_host": "github.com",
+      "repository_owner": "EVIEHub",
+      "repository_name": "DeXposure-Claw",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm",
+          "agents"
+        ],
+        "Tasks": [
+          "evaluation"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "experiments",
+          "data",
+          "model",
+          "new",
+          "introduce",
+          "evaluation",
+          "networks",
+          "model",
+          "loss",
+          "fast"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19501v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Hidden Anchors in Multi-Agent LLM Deliberation",
+      "url": "https://arxiv.org/abs/2606.19494",
+      "source_url": "https://arxiv.org/abs/2606.19494",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:10435dced158:2026-06-19",
+      "paper_id": "2606.19494v1",
+      "arxiv_id": "2606.19494v1",
+      "doi": "",
+      "normalized_title": "hidden-anchors-in-multi-agent-llm-deliberation",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -3815,23 +3476,27 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Techniques": [
-          "rag"
+        "Research Areas": [
+          "llm",
+          "multi-agent",
+          "agent",
+          "agents"
         ],
         "Tasks": [
-          "generation",
           "reasoning"
         ],
         "ResearchGeneral": [
-          "study",
           "arxiv",
           "abstract",
-          "data",
+          "model",
+          "models",
           "new",
-          "evaluate",
-          "evaluate",
-          "generation",
-          "ai"
+          "improve",
+          "show",
+          "model",
+          "models",
+          "predicts",
+          "accuracy"
         ]
       },
       "required_field_proxy": {
@@ -3839,7 +3504,342 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19602v1",
+      "canonical_key": "paper:arxiv:2606.19494v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "AgentFinVQA: A Deployable Multi-Agent Pipeline for Auditable Financial Chart QA",
+      "url": "https://arxiv.org/abs/2606.19782",
+      "source_url": "https://arxiv.org/abs/2606.19782",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:5fd12afcc018:2026-06-19",
+      "paper_id": "2606.19782v1",
+      "arxiv_id": "2606.19782v1",
+      "doi": "",
+      "normalized_title": "agentfinvqa-a-deployable-multi-agent-pipeline-for-auditable-financial-chart-qa",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "question answering",
+          "multi-agent",
+          "agent",
+          "agents"
+        ],
+        "Techniques": [
+          "gemini"
+        ],
+        "Tasks": [
+          "question answering",
+          "evaluation",
+          "baseline"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "results",
+          "analysis",
+          "data",
+          "model",
+          "new",
+          "show",
+          "shows",
+          "present",
+          "evaluation",
+          "model",
+          "accuracy",
+          "error"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19782v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "ORAgentBench: Can LLM Agents Solve Challenging Operations Research Tasks End to End?",
+      "url": "https://arxiv.org/abs/2606.19787",
+      "source_url": "https://arxiv.org/abs/2606.19787",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:8651f9825d25:2026-06-19",
+      "paper_id": "2606.19787v1",
+      "arxiv_id": "2606.19787v1",
+      "doi": "",
+      "normalized_title": "oragentbench-can-llm-agents-solve-challenging-operations-research-tasks-end-to-end",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm",
+          "agent",
+          "agents"
+        ],
+        "Tasks": [
+          "benchmark"
+        ],
+        "ResearchGeneral": [
+          "research",
+          "arxiv",
+          "abstract",
+          "results",
+          "experiments",
+          "analysis",
+          "data",
+          "model",
+          "models",
+          "new",
+          "improve",
+          "improvement",
+          "show",
+          "shows",
+          "introduce",
+          "model",
+          "models",
+          "modeling",
+          "optimization",
+          "large",
+          "task",
+          "tasks",
+          "language",
+          "text"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19787v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Optimal Scheduling in a Question-Answering Forum of Knowledge Workers",
+      "url": "https://arxiv.org/abs/2606.19759",
+      "source_url": "https://arxiv.org/abs/2606.19759",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:2d3b26b56b89:2026-06-19",
+      "paper_id": "2606.19759v1",
+      "arxiv_id": "2606.19759v1",
+      "doi": "",
+      "normalized_title": "optimal-scheduling-in-a-question-answering-forum-of-knowledge-workers",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "question answering"
+        ],
+        "Tasks": [
+          "question answering"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "model",
+          "new",
+          "achieve",
+          "find",
+          "investigate",
+          "model"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19759v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "REVEAL++: Differentiable Phenotypic Grouping for Vision-Language Retinal Modeling of Alzheimer's Disease Risk",
+      "url": "https://arxiv.org/abs/2606.19522",
+      "source_url": "https://arxiv.org/abs/2606.19522",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:702ba36c7d00:2026-06-19",
+      "paper_id": "2606.19522v1",
+      "arxiv_id": "2606.19522v1",
+      "doi": "",
+      "normalized_title": "reveal-differentiable-phenotypic-grouping-for-vision-language-retinal-modeling-of-alzheimer-s-di",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "representation learning",
+          "alignment"
+        ],
+        "Venues": [
+          "nature"
+        ],
+        "Techniques": [
+          "contrastive learning"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "methods",
+          "data",
+          "model",
+          "approach",
+          "approaches",
+          "propose",
+          "proposed",
+          "new",
+          "outperforms",
+          "introduce",
+          "framework",
+          "learns",
+          "learning",
+          "model",
+          "modeling",
+          "prediction",
+          "scale",
+          "representation",
+          "embedding",
+          "language",
+          "images",
+          "vision"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19522v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.AI",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Which Pairs to Compare for LLM Post-Training?",
+      "url": "https://arxiv.org/abs/2606.19607",
+      "source_url": "https://arxiv.org/abs/2606.19607",
+      "event_at": "2026-06-19T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.ai:41a5f4601856:2026-06-19",
+      "paper_id": "2606.19607v1",
+      "arxiv_id": "2606.19607v1",
+      "doi": "",
+      "normalized_title": "which-pairs-to-compare-for-llm-post-training",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm"
+        ],
+        "Techniques": [
+          "dpo"
+        ],
+        "ResearchGeneral": [
+          "paper",
+          "studies",
+          "arxiv",
+          "abstract",
+          "results",
+          "experiments",
+          "data",
+          "model",
+          "models",
+          "proposed",
+          "new",
+          "improve",
+          "show",
+          "evaluate",
+          "evaluate",
+          "compare",
+          "comparison",
+          "framework",
+          "training",
+          "trained",
+          "model",
+          "models",
+          "generate",
+          "optimization",
+          "parameter",
+          "performance",
+          "error",
+          "efficiency",
+          "large",
+          "small",
+          "language"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19607v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -29908,17 +29908,17 @@
       "reason": "title_proxy_canonical_key",
       "event_model": "citation_snapshot",
       "source": "OpenAlex AI Citation Feed",
-      "title": "Array programming with NumPy",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:5babd3e0ffa2:2026-06-21",
-      "canonical_key": "paper:title:array-programming-with-numpy"
+      "title": "Pattern classification and scene analysis",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:062414d4990e:2026-06-21",
+      "canonical_key": "paper:title:pattern-classification-and-scene-analysis"
     },
     {
       "reason": "title_proxy_canonical_key",
       "event_model": "citation_snapshot",
       "source": "OpenAlex AI Citation Feed",
-      "title": "Pattern classification and scene analysis",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:062414d4990e:2026-06-21",
-      "canonical_key": "paper:title:pattern-classification-and-scene-analysis"
+      "title": "Array programming with NumPy",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:5babd3e0ffa2:2026-06-21",
+      "canonical_key": "paper:title:array-programming-with-numpy"
     },
     {
       "reason": "title_proxy_canonical_key",
@@ -29959,6 +29959,13 @@
       "title": "Introducing LifeSciBench",
       "event_key": "paper_release:openai-blog:0088b6645875:2026-06-16",
       "canonical_key": "paper:title:introducing-lifescibench"
+    },
+    {
+      "reason": "source_stale",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "latest_title": "New usage analytics and updated spend controls for enterprises",
+      "age_days": 3.07
     },
     {
       "reason": "source_missing",
