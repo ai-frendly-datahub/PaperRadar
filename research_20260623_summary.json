@@ -7,7 +7,7 @@
   "top_entities": [
     {
       "name": "ResearchGeneral",
-      "count": 412
+      "count": 409
     },
     {
       "name": "Research Areas",
@@ -15,11 +15,11 @@
     },
     {
       "name": "Techniques",
-      "count": 41
+      "count": 40
     },
     {
       "name": "Institutions",
-      "count": 38
+      "count": 39
     },
     {
       "name": "Venues",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Tasks",
-      "count": 19
+      "count": 18
     }
   ],
   "sources": {
@@ -39,5 +39,5 @@
     "Towards Data Science": 20,
     "The Gradient": 15
   },
-  "generated_at": "2026-06-23T11:40:46.324368+09:00"
+  "generated_at": "2026-06-23T17:58:43.875514+09:00"
 }
