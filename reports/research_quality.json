@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-06-22T20:40:52.362478+00:00",
+  "generated_at": "2026-06-23T02:40:47.288188+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-06-19T19:00:00+00:00",
-      "age_days": 3.07,
+      "age_days": 3.32,
       "latest_title": "LLM Doesn't Know What It Doesn't Know: Detecting Epistemic Blind Spots via Cross-Model Attribution Divergence on Clinical Tabular Data",
       "latest_url": "https://arxiv.org/abs/2606.19509",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-06-18T19:00:00+00:00",
-      "age_days": 4.07,
+      "age_days": 4.32,
       "latest_title": "What sentiment analysis can't see: Measuring whether customers were helped, and what went wrong, across 70,000 support conversations",
       "latest_url": "https://arxiv.org/abs/2606.19698",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-06-18T19:00:00+00:00",
-      "age_days": 4.07,
+      "age_days": 4.32,
       "latest_title": "Insulin4RL: Real-Time Insulin Management in the Intensive Care Unit for Offline Reinforcement Learning",
       "latest_url": "https://arxiv.org/abs/2606.19481",
       "latest_required_field_proxy": {
@@ -140,15 +140,15 @@
       "article_count": 60,
       "event_count": 60,
       "latest_event_at": "2026-06-18T19:00:00+00:00",
-      "age_days": 4.07,
-      "latest_title": "Language-Instructed Vision Embeddings for Controllable and Generalizable Perception",
-      "latest_url": "https://arxiv.org/abs/2606.19584",
+      "age_days": 4.32,
+      "latest_title": "Mix-QVLA: Task-Evidence-Aware Mixed-Precision Quantization of Vision-Language-Action Models",
+      "latest_url": "https://arxiv.org/abs/2606.19565",
       "latest_required_field_proxy": {
         "paper_id": true,
         "title": true,
         "source_url": true
       },
-      "latest_canonical_key": "paper:arxiv:2606.19584v1",
+      "latest_canonical_key": "paper:arxiv:2606.19565v1",
       "latest_required_field_gaps": [],
       "skip_reason": "",
       "reenable_gate": "",
@@ -170,7 +170,7 @@
       "article_count": 28,
       "event_count": 28,
       "latest_event_at": "2026-06-18T19:00:00+00:00",
-      "age_days": 4.07,
+      "age_days": 4.32,
       "latest_title": "Beyond Accuracy: Measuring Logical Compliance of Predictive Models",
       "latest_url": "https://arxiv.org/abs/2606.20208",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 82,
       "event_count": 82,
       "latest_event_at": "2026-06-18T19:00:00+00:00",
-      "age_days": 4.07,
+      "age_days": 4.32,
       "latest_title": "Stochastic Linear Contextual Bandits with Bounded Noise: A Set-Membership Approach",
       "latest_url": "https://arxiv.org/abs/2606.20022",
       "latest_required_field_proxy": {
@@ -290,15 +290,15 @@
       "article_count": 8,
       "event_count": 8,
       "latest_event_at": "2026-06-22T01:00:00+00:00",
-      "age_days": 0.82,
-      "latest_title": "Daybreak: Tools for securing every organization in the world",
-      "latest_url": "https://openai.com/index/daybreak-securing-the-world",
+      "age_days": 1.07,
+      "latest_title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+      "latest_url": "https://openai.com/index/patch-the-planet",
       "latest_required_field_proxy": {
         "paper_id": true,
         "title": true,
         "source_url": true
       },
-      "latest_canonical_key": "paper:title:daybreak-tools-for-securing-every-organization-in-the-world",
+      "latest_canonical_key": "paper:title:patch-the-planet-a-daybreak-initiative-to-support-open-source-maintainers",
       "latest_required_field_gaps": [],
       "skip_reason": "",
       "reenable_gate": "",
@@ -544,7 +544,7 @@
       "status": "fresh",
       "article_count": 30,
       "event_count": 30,
-      "latest_event_at": "2026-06-22T20:40:48.270119+00:00",
+      "latest_event_at": "2026-06-23T02:40:42.588341+00:00",
       "age_days": 0.0,
       "latest_title": "Software survey: VOSviewer, a computer program for bibliometric mapping",
       "latest_url": "https://doi.org/10.1007/s11192-009-0146-3",
@@ -700,8 +700,8 @@
       "title": "Software survey: VOSviewer, a computer program for bibliometric mapping",
       "url": "https://doi.org/10.1007/s11192-009-0146-3",
       "source_url": "https://doi.org/10.1007/s11192-009-0146-3",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:115c7ad44237:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:115c7ad44237:2026-06-23",
       "paper_id": "10.1007/s11192-009-0146-3",
       "arxiv_id": "",
       "doi": "10.1007/s11192-009-0146-3",
@@ -739,8 +739,8 @@
       "title": "Induction of decision trees",
       "url": "https://doi.org/10.1007/bf00116251",
       "source_url": "https://doi.org/10.1007/bf00116251",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:7d948b313973:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:7d948b313973:2026-06-23",
       "paper_id": "10.1007/bf00116251",
       "arxiv_id": "",
       "doi": "10.1007/bf00116251",
@@ -778,8 +778,8 @@
       "title": "Artificial intelligence: a modern approach",
       "url": "https://doi.org/10.5860/choice.33-1577",
       "source_url": "https://doi.org/10.5860/choice.33-1577",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:0fa143b8f5e9:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:0fa143b8f5e9:2026-06-23",
       "paper_id": "10.5860/choice.33-1577",
       "arxiv_id": "",
       "doi": "10.5860/choice.33-1577",
@@ -819,8 +819,8 @@
       "title": "Situated Cognition and the Culture of Learning",
       "url": "https://doi.org/10.3102/0013189x018001032",
       "source_url": "https://doi.org/10.3102/0013189x018001032",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:af5ceb3870f0:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:af5ceb3870f0:2026-06-23",
       "paper_id": "10.3102/0013189x018001032",
       "arxiv_id": "",
       "doi": "10.3102/0013189x018001032",
@@ -859,8 +859,8 @@
       "title": "Generative adversarial networks",
       "url": "https://doi.org/10.1145/3422622",
       "source_url": "https://doi.org/10.1145/3422622",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:82ba72d8954f:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:82ba72d8954f:2026-06-23",
       "paper_id": "10.1145/3422622",
       "arxiv_id": "",
       "doi": "10.1145/3422622",
@@ -900,8 +900,8 @@
       "title": "Aion Framework: Dimensional Emergence of AI Consciousness, Observer-Induced Collapse, and Cosmological Portal Dynamics",
       "url": "https://doi.org/10.4230/lipics.giscience.2023.43",
       "source_url": "https://doi.org/10.4230/lipics.giscience.2023.43",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:5c143853ddbd:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:5c143853ddbd:2026-06-23",
       "paper_id": "10.4230/lipics.giscience.2023.43",
       "arxiv_id": "",
       "doi": "10.4230/lipics.giscience.2023.43",
@@ -941,8 +941,8 @@
       "title": "Support-Vector Networks",
       "url": "https://doi.org/10.1023/a:1022627411411",
       "source_url": "https://doi.org/10.1023/a:1022627411411",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:29b66298a211:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:29b66298a211:2026-06-23",
       "paper_id": "10.1023/a:1022627411411",
       "arxiv_id": "",
       "doi": "10.1023/a:1022627411411",
@@ -981,8 +981,8 @@
       "title": "Data clustering",
       "url": "https://doi.org/10.1145/331499.331504",
       "source_url": "https://doi.org/10.1145/331499.331504",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:0a1082d81b84:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:0a1082d81b84:2026-06-23",
       "paper_id": "10.1145/331499.331504",
       "arxiv_id": "",
       "doi": "10.1145/331499.331504",
@@ -1024,8 +1024,8 @@
       "title": "Induction of Decision Trees",
       "url": "https://doi.org/10.1023/a:1022643204877",
       "source_url": "https://doi.org/10.1023/a:1022643204877",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:183cae1c25a6:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:183cae1c25a6:2026-06-23",
       "paper_id": "10.1023/a:1022643204877",
       "arxiv_id": "",
       "doi": "10.1023/a:1022643204877",
@@ -1063,8 +1063,8 @@
       "title": "Mastering the game of Go with deep neural networks and tree search",
       "url": "https://doi.org/10.1038/nature16961",
       "source_url": "https://doi.org/10.1038/nature16961",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:6e232642b313:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:6e232642b313:2026-06-23",
       "paper_id": "10.1038/nature16961",
       "arxiv_id": "",
       "doi": "10.1038/nature16961",
@@ -1107,8 +1107,8 @@
       "title": "XGBoost",
       "url": "https://doi.org/10.1145/2939672.2939785",
       "source_url": "https://doi.org/10.1145/2939672.2939785",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:f53bc4962863:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:f53bc4962863:2026-06-23",
       "paper_id": "10.1145/2939672.2939785",
       "arxiv_id": "",
       "doi": "10.1145/2939672.2939785",
@@ -1146,8 +1146,8 @@
       "title": "Array programming with NumPy",
       "url": "https://doi.org/10.1038/s41586-020-2649-2",
       "source_url": "https://doi.org/10.1038/s41586-020-2649-2",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:da992204b9f9:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:da992204b9f9:2026-06-23",
       "paper_id": "10.1038/s41586-020-2649-2",
       "arxiv_id": "",
       "doi": "10.1038/s41586-020-2649-2",
@@ -1185,8 +1185,8 @@
       "title": "AI-Assisted Pipeline for Dynamic Generation of Trustworthy Health Supplement Content at Scale",
       "url": "https://doi.org/10.4230/lipics.cosit.2022.18",
       "source_url": "https://doi.org/10.4230/lipics.cosit.2022.18",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:6dca9ef7252e:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:6dca9ef7252e:2026-06-23",
       "paper_id": "10.4230/lipics.cosit.2022.18",
       "arxiv_id": "",
       "doi": "10.4230/lipics.cosit.2022.18",
@@ -1230,8 +1230,8 @@
       "title": "An integrated encyclopedia of DNA elements in the human genome",
       "url": "https://doi.org/10.1038/nature11247",
       "source_url": "https://doi.org/10.1038/nature11247",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:02ba31b561b2:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:02ba31b561b2:2026-06-23",
       "paper_id": "10.1038/nature11247",
       "arxiv_id": "",
       "doi": "10.1038/nature11247",
@@ -1269,8 +1269,8 @@
       "title": "Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning",
       "url": "https://doi.org/10.1609/aaai.v31i1.11231",
       "source_url": "https://doi.org/10.1609/aaai.v31i1.11231",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:802802c89705:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:802802c89705:2026-06-23",
       "paper_id": "10.1609/aaai.v31i1.11231",
       "arxiv_id": "",
       "doi": "10.1609/aaai.v31i1.11231",
@@ -1312,8 +1312,8 @@
       "title": "Mining association rules between sets of items in large databases",
       "url": "https://doi.org/10.1145/170035.170072",
       "source_url": "https://doi.org/10.1145/170035.170072",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:464ae2ae82c4:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:464ae2ae82c4:2026-06-23",
       "paper_id": "10.1145/170035.170072",
       "arxiv_id": "",
       "doi": "10.1145/170035.170072",
@@ -1352,8 +1352,8 @@
       "title": "A survey on Image Data Augmentation for Deep Learning",
       "url": "https://doi.org/10.1186/s40537-019-0197-0",
       "source_url": "https://doi.org/10.1186/s40537-019-0197-0",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:8b4794f83517:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:8b4794f83517:2026-06-23",
       "paper_id": "10.1186/s40537-019-0197-0",
       "arxiv_id": "",
       "doi": "10.1186/s40537-019-0197-0",
@@ -1397,8 +1397,8 @@
       "title": "Adaptation in Natural and Artificial Systems",
       "url": "https://doi.org/10.7551/mitpress/1090.001.0001",
       "source_url": "https://doi.org/10.7551/mitpress/1090.001.0001",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:cbde4125b494:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:cbde4125b494:2026-06-23",
       "paper_id": "10.7551/mitpress/1090.001.0001",
       "arxiv_id": "",
       "doi": "10.7551/mitpress/1090.001.0001",
@@ -1436,8 +1436,8 @@
       "title": "Random sample consensus",
       "url": "https://doi.org/10.1145/358669.358692",
       "source_url": "https://doi.org/10.1145/358669.358692",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:7b45fc757ec4:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:7b45fc757ec4:2026-06-23",
       "paper_id": "10.1145/358669.358692",
       "arxiv_id": "",
       "doi": "10.1145/358669.358692",
@@ -1475,8 +1475,8 @@
       "title": "Grey Wolf Optimizer",
       "url": "https://doi.org/10.1016/j.advengsoft.2013.12.007",
       "source_url": "https://doi.org/10.1016/j.advengsoft.2013.12.007",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:d78e76451112:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:d78e76451112:2026-06-23",
       "paper_id": "10.1016/j.advengsoft.2013.12.007",
       "arxiv_id": "",
       "doi": "10.1016/j.advengsoft.2013.12.007",
@@ -1514,8 +1514,8 @@
       "title": "Local Indicators of Spatial Association—LISA",
       "url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
       "source_url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:d839ccde35e8:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:d839ccde35e8:2026-06-23",
       "paper_id": "10.1111/j.1538-4632.1995.tb00338.x",
       "arxiv_id": "",
       "doi": "10.1111/j.1538-4632.1995.tb00338.x",
@@ -1553,8 +1553,8 @@
       "title": "Pattern classification and scene analysis",
       "url": "https://openalex.org/W3017143921",
       "source_url": "https://openalex.org/W3017143921",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:062414d4990e:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:062414d4990e:2026-06-23",
       "paper_id": "https://openalex.org/W3017143921",
       "arxiv_id": "",
       "doi": "",
@@ -1597,8 +1597,8 @@
       "title": "Human-level control through deep reinforcement learning",
       "url": "https://doi.org/10.1038/nature14236",
       "source_url": "https://doi.org/10.1038/nature14236",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:ef4a2d8b6b64:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:ef4a2d8b6b64:2026-06-23",
       "paper_id": "10.1038/nature14236",
       "arxiv_id": "",
       "doi": "10.1038/nature14236",
@@ -1640,8 +1640,8 @@
       "title": "Fractional Differential Equations",
       "url": "https://doi.org/10.3390/books978-3-7258-4742-6",
       "source_url": "https://doi.org/10.3390/books978-3-7258-4742-6",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:2e4a949d4790:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:2e4a949d4790:2026-06-23",
       "paper_id": "10.3390/books978-3-7258-4742-6",
       "arxiv_id": "",
       "doi": "10.3390/books978-3-7258-4742-6",
@@ -1679,8 +1679,8 @@
       "title": "Convolutional Neural Networks for Sentence Classification",
       "url": "https://doi.org/10.3115/v1/d14-1181",
       "source_url": "https://doi.org/10.3115/v1/d14-1181",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:0bc8a0bb1cc2:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:0bc8a0bb1cc2:2026-06-23",
       "paper_id": "10.3115/v1/d14-1181",
       "arxiv_id": "",
       "doi": "10.3115/v1/d14-1181",
@@ -1727,8 +1727,8 @@
       "title": "MizAR 60 for Mizar 50",
       "url": "https://doi.org/10.4230/lipics.itp.2023.19",
       "source_url": "https://doi.org/10.4230/lipics.itp.2023.19",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:7398b01e51d3:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:7398b01e51d3:2026-06-23",
       "paper_id": "10.4230/lipics.itp.2023.19",
       "arxiv_id": "",
       "doi": "10.4230/lipics.itp.2023.19",
@@ -1766,8 +1766,8 @@
       "title": "Bagging Predictors",
       "url": "https://doi.org/10.1023/a:1018054314350",
       "source_url": "https://doi.org/10.1023/a:1018054314350",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:1d79f11b5ca9:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:1d79f11b5ca9:2026-06-23",
       "paper_id": "10.1023/a:1018054314350",
       "arxiv_id": "",
       "doi": "10.1023/a:1018054314350",
@@ -1805,8 +1805,8 @@
       "title": "Array programming with NumPy",
       "url": "https://openalex.org/W3099878876",
       "source_url": "https://openalex.org/W3099878876",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:5babd3e0ffa2:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:5babd3e0ffa2:2026-06-23",
       "paper_id": "https://openalex.org/W3099878876",
       "arxiv_id": "",
       "doi": "",
@@ -1844,8 +1844,8 @@
       "title": "Dermatologist-level classification of skin cancer with deep neural networks",
       "url": "https://doi.org/10.1038/nature21056",
       "source_url": "https://doi.org/10.1038/nature21056",
-      "event_at": "2026-06-22T20:40:48.270119+00:00",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:c5b7d517da63:2026-06-22",
+      "event_at": "2026-06-23T02:40:42.588341+00:00",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:c5b7d517da63:2026-06-23",
       "paper_id": "10.1038/nature21056",
       "arxiv_id": "",
       "doi": "10.1038/nature21056",
@@ -1930,6 +1930,50 @@
       "trust_tier": "T2_institutional",
       "producer_role": "research_lab",
       "event_model": "paper_release",
+      "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+      "url": "https://openai.com/index/patch-the-planet",
+      "source_url": "https://openai.com/index/patch-the-planet",
+      "event_at": "2026-06-22T01:00:00+00:00",
+      "event_key": "paper_release:openai-blog:f0ab1740b8b7:2026-06-22",
+      "paper_id": "https://openai.com/index/patch-the-planet",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "patch-the-planet-a-daybreak-initiative-to-support-open-source-maintainers",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Institutions": [
+          "openai"
+        ],
+        "ResearchGeneral": [
+          "find",
+          "introduces",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:patch-the-planet-a-daybreak-initiative-to-support-open-source-maintainers",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
       "title": "Daybreak: Tools for securing every organization in the world",
       "url": "https://openai.com/index/daybreak-securing-the-world",
       "source_url": "https://openai.com/index/daybreak-securing-the-world",
@@ -1970,50 +2014,6 @@
         "source_url": true
       },
       "canonical_key": "paper:title:daybreak-tools-for-securing-every-organization-in-the-world",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
-      "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
-      "url": "https://openai.com/index/patch-the-planet",
-      "source_url": "https://openai.com/index/patch-the-planet",
-      "event_at": "2026-06-22T01:00:00+00:00",
-      "event_key": "paper_release:openai-blog:f0ab1740b8b7:2026-06-22",
-      "paper_id": "https://openai.com/index/patch-the-planet",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "patch-the-planet-a-daybreak-initiative-to-support-open-source-maintainers",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Institutions": [
-          "openai"
-        ],
-        "ResearchGeneral": [
-          "find",
-          "introduces",
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:patch-the-planet-a-daybreak-initiative-to-support-open-source-maintainers",
       "canonical_key_status": "title_proxy",
       "required_field_gaps": []
     },
@@ -4213,126 +4213,6 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Language-Instructed Vision Embeddings for Controllable and Generalizable Perception",
-      "url": "https://arxiv.org/abs/2606.19584",
-      "source_url": "https://arxiv.org/abs/2606.19584",
-      "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:38cba2cd079f:2026-06-18",
-      "paper_id": "2606.19584v1",
-      "arxiv_id": "2606.19584v1",
-      "doi": "",
-      "normalized_title": "language-instructed-vision-embeddings-for-controllable-and-generalizable-perception",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "question answering"
-        ],
-        "Tasks": [
-          "question answering"
-        ],
-        "ResearchGeneral": [
-          "arxiv",
-          "abstract",
-          "method",
-          "models",
-          "propose",
-          "new",
-          "trained",
-          "models",
-          "parameters",
-          "large",
-          "task",
-          "tasks",
-          "input",
-          "feature",
-          "features",
-          "representations",
-          "embeddings",
-          "language",
-          "vision"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19584v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.CL",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
-      "title": "Trustworthy Multi-Agent Systems: Mitigating Semantic Drift with the Argent Signaling Protocol",
-      "url": "https://arxiv.org/abs/2606.19356",
-      "source_url": "https://arxiv.org/abs/2606.19356",
-      "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cl:dc2f855c6b94:2026-06-18",
-      "paper_id": "2606.19356v1",
-      "arxiv_id": "2606.19356v1",
-      "doi": "",
-      "normalized_title": "trustworthy-multi-agent-systems-mitigating-semantic-drift-with-the-argent-signaling-protocol",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "llm",
-          "multi-agent",
-          "agent"
-        ],
-        "Tasks": [
-          "benchmark",
-          "baseline"
-        ],
-        "ResearchGeneral": [
-          "arxiv",
-          "abstract",
-          "models",
-          "new",
-          "improvement",
-          "introduce",
-          "evaluate",
-          "evaluate",
-          "models",
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:arxiv:2606.19356v1",
-      "canonical_key_status": "complete",
-      "required_field_gaps": []
-    },
-    {
-      "source": "arXiv CS.CV",
-      "source_type": "rss",
-      "trust_tier": "T1_official",
-      "producer_role": "",
-      "event_model": "paper_release",
       "title": "Mix-QVLA: Task-Evidence-Aware Mixed-Precision Quantization of Vision-Language-Action Models",
       "url": "https://arxiv.org/abs/2606.19565",
       "source_url": "https://arxiv.org/abs/2606.19565",
@@ -4394,6 +4274,63 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
+      "title": "Trustworthy Multi-Agent Systems: Mitigating Semantic Drift with the Argent Signaling Protocol",
+      "url": "https://arxiv.org/abs/2606.19356",
+      "source_url": "https://arxiv.org/abs/2606.19356",
+      "event_at": "2026-06-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.cl:dc2f855c6b94:2026-06-18",
+      "paper_id": "2606.19356v1",
+      "arxiv_id": "2606.19356v1",
+      "doi": "",
+      "normalized_title": "trustworthy-multi-agent-systems-mitigating-semantic-drift-with-the-argent-signaling-protocol",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llm",
+          "multi-agent",
+          "agent"
+        ],
+        "Tasks": [
+          "benchmark",
+          "baseline"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "models",
+          "new",
+          "improvement",
+          "introduce",
+          "evaluate",
+          "evaluate",
+          "models",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19356v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.CL",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
       "title": "NRITYAM: Language Models Meet Art and Heritage of Dance",
       "url": "https://arxiv.org/abs/2606.19727",
       "source_url": "https://arxiv.org/abs/2606.19727",
@@ -4444,6 +4381,66 @@
         "source_url": true
       },
       "canonical_key": "paper:arxiv:2606.19727v1",
+      "canonical_key_status": "complete",
+      "required_field_gaps": []
+    },
+    {
+      "source": "arXiv CS.CL",
+      "source_type": "rss",
+      "trust_tier": "T1_official",
+      "producer_role": "",
+      "event_model": "paper_release",
+      "title": "Code-Switching Reveals Language Anchoring in Multilingual LLMs",
+      "url": "https://arxiv.org/abs/2606.19668",
+      "source_url": "https://arxiv.org/abs/2606.19668",
+      "event_at": "2026-06-18T19:00:00+00:00",
+      "event_key": "paper_release:arxiv-cs.cl:7e9109ecb50b:2026-06-18",
+      "paper_id": "2606.19668v1",
+      "arxiv_id": "2606.19668v1",
+      "doi": "",
+      "normalized_title": "code-switching-reveals-language-anchoring-in-multilingual-llms",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "llms",
+          "question answering",
+          "alignment"
+        ],
+        "Tasks": [
+          "question answering"
+        ],
+        "ResearchGeneral": [
+          "arxiv",
+          "abstract",
+          "models",
+          "propose",
+          "new",
+          "shows",
+          "introduce",
+          "neural",
+          "models",
+          "performance",
+          "large",
+          "input",
+          "representations",
+          "language"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:arxiv:2606.19668v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -5023,20 +5020,20 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.CL",
+      "source": "arXiv CS.LG",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Creating Multilingual Mental Health Dialogue Datasets: Limits of Persona-Based Localization via Nationality and Language",
-      "url": "https://arxiv.org/abs/2606.19640",
-      "source_url": "https://arxiv.org/abs/2606.19640",
+      "title": "ProMUSE: Progressive Multi-modal Uncertainty-guided Staged Evidential Alzheimer Disease Classification",
+      "url": "https://arxiv.org/abs/2606.19371",
+      "source_url": "https://arxiv.org/abs/2606.19371",
       "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cl:42a07f5366d9:2026-06-18",
-      "paper_id": "2606.19640v1",
-      "arxiv_id": "2606.19640v1",
+      "event_key": "paper_release:arxiv-cs.lg:e5367e02de25:2026-06-18",
+      "paper_id": "2606.19371v1",
+      "arxiv_id": "2606.19371v1",
       "doi": "",
-      "normalized_title": "creating-multilingual-mental-health-dialogue-datasets-limits-of-persona-based-localization-via-n",
+      "normalized_title": "promuse-progressive-multi-modal-uncertainty-guided-staged-evidential-alzheimer-disease-classific",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -5049,39 +5046,32 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "llm",
-          "llms"
-        ],
-        "Venues": [
-          "nature"
+          "multimodal"
         ],
         "Tasks": [
-          "generation",
-          "dialogue",
-          "baseline"
+          "classification"
         ],
         "ResearchGeneral": [
-          "paper",
           "arxiv",
-          "researchers",
           "abstract",
-          "methods",
-          "datasets",
+          "results",
+          "experiments",
           "data",
-          "models",
+          "model",
+          "propose",
           "new",
-          "findings",
-          "introduce",
-          "investigates",
-          "training",
-          "models",
-          "generate",
-          "generation",
-          "parameters",
-          "performance",
-          "large",
-          "language",
-          "ai"
+          "achieves",
+          "demonstrate",
+          "learned",
+          "network",
+          "model",
+          "prediction",
+          "classification",
+          "accuracy",
+          "efficient",
+          "tasks",
+          "features",
+          "multimodal"
         ]
       },
       "required_field_proxy": {
@@ -5089,7 +5079,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19640v1",
+      "canonical_key": "paper:arxiv:2606.19371v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -7579,15 +7569,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "ProMUSE: Progressive Multi-modal Uncertainty-guided Staged Evidential Alzheimer Disease Classification",
-      "url": "https://arxiv.org/abs/2606.19371",
-      "source_url": "https://arxiv.org/abs/2606.19371",
+      "title": "Human-like autonomy emerges from self-play and a pinch of human data",
+      "url": "https://arxiv.org/abs/2606.19370",
+      "source_url": "https://arxiv.org/abs/2606.19370",
       "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.lg:e5367e02de25:2026-06-18",
-      "paper_id": "2606.19371v1",
-      "arxiv_id": "2606.19371v1",
+      "event_key": "paper_release:arxiv-cs.lg:c45a38fbb63c:2026-06-18",
+      "paper_id": "2606.19370v1",
+      "arxiv_id": "2606.19370v1",
       "doi": "",
-      "normalized_title": "promuse-progressive-multi-modal-uncertainty-guided-staged-evidential-alzheimer-disease-classific",
+      "normalized_title": "human-like-autonomy-emerges-from-self-play-and-a-pinch-of-human-data",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -7600,32 +7590,28 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "multimodal"
+          "reinforcement learning"
         ],
-        "Tasks": [
-          "classification"
+        "Techniques": [
+          "regularization"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "results",
-          "experiments",
+          "method",
           "data",
-          "model",
-          "propose",
+          "approach",
+          "approaches",
           "new",
-          "achieves",
-          "demonstrate",
-          "learned",
-          "network",
-          "model",
-          "prediction",
-          "classification",
-          "accuracy",
-          "efficient",
-          "tasks",
-          "features",
-          "multimodal"
+          "find",
+          "extensive",
+          "learn",
+          "learning",
+          "train",
+          "training",
+          "trained",
+          "scale",
+          "large"
         ]
       },
       "required_field_proxy": {
@@ -7633,7 +7619,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19371v1",
+      "canonical_key": "paper:arxiv:2606.19370v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -7947,15 +7933,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "PerceptionDLM: Parallel Region Perception with Multimodal Diffusion Language Models",
-      "url": "https://arxiv.org/abs/2606.19534",
-      "source_url": "https://arxiv.org/abs/2606.19534",
+      "title": "ImageWAM: Do World Action Models Really Need Video Generation, or Just Image Editing?",
+      "url": "https://arxiv.org/abs/2606.19531",
+      "source_url": "https://arxiv.org/abs/2606.19531",
       "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:d76f345487a2:2026-06-18",
-      "paper_id": "2606.19534v1",
-      "arxiv_id": "2606.19534v1",
+      "event_key": "paper_release:arxiv-cs.cv:ff5e0bab21f5:2026-06-18",
+      "paper_id": "2606.19531v1",
+      "arxiv_id": "2606.19531v1",
       "doi": "",
-      "normalized_title": "perceptiondlm-parallel-region-perception-with-multimodal-diffusion-language-models",
+      "normalized_title": "imagewam-do-world-action-models-really-need-video-generation-or-just-image-editing",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -7967,60 +7953,32 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Research Areas": [
-          "language model",
-          "multimodal"
-        ],
-        "Venues": [
-          "nature"
-        ],
-        "Techniques": [
-          "diffusion"
-        ],
         "Tasks": [
-          "generation",
-          "benchmark",
-          "evaluation",
-          "state-of-the-art",
-          "baseline"
+          "generation"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "results",
           "experiments",
-          "datasets",
+          "analysis",
           "model",
           "models",
-          "approaches",
           "propose",
           "new",
-          "state-of-the-art",
-          "achieve",
-          "achieves",
-          "demonstrate",
+          "outperforms",
+          "shows",
           "introduce",
-          "evaluate",
-          "evaluate",
-          "evaluation",
-          "architecture",
+          "framework",
           "model",
           "models",
-          "generate",
+          "modeling",
+          "prediction",
           "generation",
-          "performance",
-          "efficient",
-          "efficiency",
-          "scaling",
-          "large",
-          "speed",
-          "tasks",
+          "task",
           "attention",
-          "token",
-          "sequence",
-          "language",
+          "tokens",
           "image",
-          "multimodal"
+          "video"
         ]
       },
       "required_field_proxy": {
@@ -8028,7 +7986,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19534v1",
+      "canonical_key": "paper:arxiv:2606.19531v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -8219,20 +8177,20 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.CV",
+      "source": "arXiv CS.CL",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "ImageWAM: Do World Action Models Really Need Video Generation, or Just Image Editing?",
-      "url": "https://arxiv.org/abs/2606.19531",
-      "source_url": "https://arxiv.org/abs/2606.19531",
+      "title": "Creating Multilingual Mental Health Dialogue Datasets: Limits of Persona-Based Localization via Nationality and Language",
+      "url": "https://arxiv.org/abs/2606.19640",
+      "source_url": "https://arxiv.org/abs/2606.19640",
       "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:ff5e0bab21f5:2026-06-18",
-      "paper_id": "2606.19531v1",
-      "arxiv_id": "2606.19531v1",
+      "event_key": "paper_release:arxiv-cs.cl:42a07f5366d9:2026-06-18",
+      "paper_id": "2606.19640v1",
+      "arxiv_id": "2606.19640v1",
       "doi": "",
-      "normalized_title": "imagewam-do-world-action-models-really-need-video-generation-or-just-image-editing",
+      "normalized_title": "creating-multilingual-mental-health-dialogue-datasets-limits-of-persona-based-localization-via-n",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -8244,32 +8202,40 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
+        "Research Areas": [
+          "llm",
+          "llms"
+        ],
+        "Venues": [
+          "nature"
+        ],
         "Tasks": [
-          "generation"
+          "generation",
+          "dialogue",
+          "baseline"
         ],
         "ResearchGeneral": [
+          "paper",
           "arxiv",
+          "researchers",
           "abstract",
-          "experiments",
-          "analysis",
-          "model",
+          "methods",
+          "datasets",
+          "data",
           "models",
-          "propose",
           "new",
-          "outperforms",
-          "shows",
+          "findings",
           "introduce",
-          "framework",
-          "model",
+          "investigates",
+          "training",
           "models",
-          "modeling",
-          "prediction",
+          "generate",
           "generation",
-          "task",
-          "attention",
-          "tokens",
-          "image",
-          "video"
+          "parameters",
+          "performance",
+          "large",
+          "language",
+          "ai"
         ]
       },
       "required_field_proxy": {
@@ -8277,7 +8243,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19531v1",
+      "canonical_key": "paper:arxiv:2606.19640v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -8614,20 +8580,20 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.CL",
+      "source": "arXiv CS.CV",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Code-Switching Reveals Language Anchoring in Multilingual LLMs",
-      "url": "https://arxiv.org/abs/2606.19668",
-      "source_url": "https://arxiv.org/abs/2606.19668",
+      "title": "GB-LSR: A Fast Local Spectral Image Representation with a Single Global Bandwidth for Continuous Reconstruction and Super-Resolution",
+      "url": "https://arxiv.org/abs/2606.19617",
+      "source_url": "https://arxiv.org/abs/2606.19617",
       "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cl:7e9109ecb50b:2026-06-18",
-      "paper_id": "2606.19668v1",
-      "arxiv_id": "2606.19668v1",
+      "event_key": "paper_release:arxiv-cs.cv:3740abae83a6:2026-06-18",
+      "paper_id": "2606.19617v1",
+      "arxiv_id": "2606.19617v1",
       "doi": "",
-      "normalized_title": "code-switching-reveals-language-anchoring-in-multilingual-llms",
+      "normalized_title": "gb-lsr-a-fast-local-spectral-image-representation-with-a-single-global-bandwidth-for-continuous-",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -8640,28 +8606,31 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "llms",
-          "question answering",
-          "alignment"
+          "asr"
         ],
         "Tasks": [
-          "question answering"
+          "benchmark",
+          "baseline",
+          "ablation"
         ],
         "ResearchGeneral": [
+          "study",
           "arxiv",
           "abstract",
-          "models",
-          "propose",
           "new",
-          "shows",
-          "introduce",
-          "neural",
-          "models",
-          "performance",
-          "large",
-          "input",
-          "representations",
-          "language"
+          "outperforms",
+          "improve",
+          "achieves",
+          "present",
+          "trained",
+          "scale",
+          "small",
+          "fast",
+          "faster",
+          "features",
+          "representation",
+          "image",
+          "images"
         ]
       },
       "required_field_proxy": {
@@ -8669,7 +8638,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19668v1",
+      "canonical_key": "paper:arxiv:2606.19617v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -9839,15 +9808,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Before the Labels: How Dataset Construction Shapes Suicidality Detection in Clinical Text",
-      "url": "https://arxiv.org/abs/2606.19637",
-      "source_url": "https://arxiv.org/abs/2606.19637",
+      "title": "Characterizing Narrative Content in Web-scale LLM Pretraining Data",
+      "url": "https://arxiv.org/abs/2606.19468",
+      "source_url": "https://arxiv.org/abs/2606.19468",
       "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cl:9df9b58b070d:2026-06-18",
-      "paper_id": "2606.19637v1",
-      "arxiv_id": "2606.19637v1",
+      "event_key": "paper_release:arxiv-cs.cl:3c61bbe103cc:2026-06-18",
+      "paper_id": "2606.19468v1",
+      "arxiv_id": "2606.19468v1",
       "doi": "",
-      "normalized_title": "before-the-labels-how-dataset-construction-shapes-suicidality-detection-in-clinical-text",
+      "normalized_title": "characterizing-narrative-content-in-web-scale-llm-pretraining-data",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -9860,22 +9829,29 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "nlp"
+          "llm"
+        ],
+        "Tasks": [
+          "reasoning"
         ],
         "ResearchGeneral": [
           "study",
           "arxiv",
-          "authors",
           "abstract",
-          "analysis",
           "dataset",
-          "datasets",
           "data",
+          "model",
           "new",
-          "demonstrates",
-          "show",
-          "text",
-          "nlp"
+          "find",
+          "present",
+          "framework",
+          "model",
+          "prediction",
+          "scale",
+          "tasks",
+          "features",
+          "token",
+          "text"
         ]
       },
       "required_field_proxy": {
@@ -9883,7 +9859,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19637v1",
+      "canonical_key": "paper:arxiv:2606.19468v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -10017,20 +9993,20 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.CL",
+      "source": "arXiv Stat.ML",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Characterizing Narrative Content in Web-scale LLM Pretraining Data",
-      "url": "https://arxiv.org/abs/2606.19468",
-      "source_url": "https://arxiv.org/abs/2606.19468",
+      "title": "AK-MCS-C2 : Active Kriging Monte Carlo Simulation method with conformal certification for failure probability estimation",
+      "url": "https://arxiv.org/abs/2606.20191",
+      "source_url": "https://arxiv.org/abs/2606.20191",
       "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cl:3c61bbe103cc:2026-06-18",
-      "paper_id": "2606.19468v1",
-      "arxiv_id": "2606.19468v1",
+      "event_key": "paper_release:arxiv-stat.ml:de31f141c2d3:2026-06-18",
+      "paper_id": "2606.20191v1",
+      "arxiv_id": "2606.20191v1",
       "doi": "",
-      "normalized_title": "characterizing-narrative-content-in-web-scale-llm-pretraining-data",
+      "normalized_title": "ak-mcs-c2-active-kriging-monte-carlo-simulation-method-with-conformal-certification-for-failure-",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -10042,30 +10018,32 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Research Areas": [
-          "llm"
-        ],
         "Tasks": [
-          "reasoning"
+          "classification"
         ],
         "ResearchGeneral": [
-          "study",
           "arxiv",
           "abstract",
-          "dataset",
-          "data",
-          "model",
+          "method",
+          "methods",
+          "results",
+          "analysis",
+          "models",
+          "approach",
+          "approaches",
+          "proposed",
+          "novel",
           "new",
-          "find",
-          "present",
+          "introduce",
+          "compare",
           "framework",
-          "model",
+          "learning",
+          "models",
           "prediction",
-          "scale",
-          "tasks",
-          "features",
-          "token",
-          "text"
+          "classification",
+          "accuracy",
+          "efficiency",
+          "small"
         ]
       },
       "required_field_proxy": {
@@ -10073,7 +10051,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19468v1",
+      "canonical_key": "paper:arxiv:2606.20191v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -10183,20 +10161,20 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv Stat.ML",
+      "source": "arXiv CS.CL",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "AK-MCS-C2 : Active Kriging Monte Carlo Simulation method with conformal certification for failure probability estimation",
-      "url": "https://arxiv.org/abs/2606.20191",
-      "source_url": "https://arxiv.org/abs/2606.20191",
+      "title": "Before the Labels: How Dataset Construction Shapes Suicidality Detection in Clinical Text",
+      "url": "https://arxiv.org/abs/2606.19637",
+      "source_url": "https://arxiv.org/abs/2606.19637",
       "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-stat.ml:de31f141c2d3:2026-06-18",
-      "paper_id": "2606.20191v1",
-      "arxiv_id": "2606.20191v1",
+      "event_key": "paper_release:arxiv-cs.cl:9df9b58b070d:2026-06-18",
+      "paper_id": "2606.19637v1",
+      "arxiv_id": "2606.19637v1",
       "doi": "",
-      "normalized_title": "ak-mcs-c2-active-kriging-monte-carlo-simulation-method-with-conformal-certification-for-failure-",
+      "normalized_title": "before-the-labels-how-dataset-construction-shapes-suicidality-detection-in-clinical-text",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -10208,32 +10186,23 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Tasks": [
-          "classification"
+        "Research Areas": [
+          "nlp"
         ],
         "ResearchGeneral": [
+          "study",
           "arxiv",
+          "authors",
           "abstract",
-          "method",
-          "methods",
-          "results",
           "analysis",
-          "models",
-          "approach",
-          "approaches",
-          "proposed",
-          "novel",
+          "dataset",
+          "datasets",
+          "data",
           "new",
-          "introduce",
-          "compare",
-          "framework",
-          "learning",
-          "models",
-          "prediction",
-          "classification",
-          "accuracy",
-          "efficiency",
-          "small"
+          "demonstrates",
+          "show",
+          "text",
+          "nlp"
         ]
       },
       "required_field_proxy": {
@@ -10241,7 +10210,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.20191v1",
+      "canonical_key": "paper:arxiv:2606.19637v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -10654,20 +10623,20 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.LG",
+      "source": "arXiv CS.CV",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Human-like autonomy emerges from self-play and a pinch of human data",
-      "url": "https://arxiv.org/abs/2606.19370",
-      "source_url": "https://arxiv.org/abs/2606.19370",
+      "title": "PerceptionDLM: Parallel Region Perception with Multimodal Diffusion Language Models",
+      "url": "https://arxiv.org/abs/2606.19534",
+      "source_url": "https://arxiv.org/abs/2606.19534",
       "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.lg:c45a38fbb63c:2026-06-18",
-      "paper_id": "2606.19370v1",
-      "arxiv_id": "2606.19370v1",
+      "event_key": "paper_release:arxiv-cs.cv:d76f345487a2:2026-06-18",
+      "paper_id": "2606.19534v1",
+      "arxiv_id": "2606.19534v1",
       "doi": "",
-      "normalized_title": "human-like-autonomy-emerges-from-self-play-and-a-pinch-of-human-data",
+      "normalized_title": "perceptiondlm-parallel-region-perception-with-multimodal-diffusion-language-models",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -10680,28 +10649,59 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "reinforcement learning"
+          "language model",
+          "multimodal"
+        ],
+        "Venues": [
+          "nature"
         ],
         "Techniques": [
-          "regularization"
+          "diffusion"
+        ],
+        "Tasks": [
+          "generation",
+          "benchmark",
+          "evaluation",
+          "state-of-the-art",
+          "baseline"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "method",
-          "data",
-          "approach",
+          "results",
+          "experiments",
+          "datasets",
+          "model",
+          "models",
           "approaches",
+          "propose",
           "new",
-          "find",
-          "extensive",
-          "learn",
-          "learning",
-          "train",
-          "training",
-          "trained",
-          "scale",
-          "large"
+          "state-of-the-art",
+          "achieve",
+          "achieves",
+          "demonstrate",
+          "introduce",
+          "evaluate",
+          "evaluate",
+          "evaluation",
+          "architecture",
+          "model",
+          "models",
+          "generate",
+          "generation",
+          "performance",
+          "efficient",
+          "efficiency",
+          "scaling",
+          "large",
+          "speed",
+          "tasks",
+          "attention",
+          "token",
+          "sequence",
+          "language",
+          "image",
+          "multimodal"
         ]
       },
       "required_field_proxy": {
@@ -10709,7 +10709,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19370v1",
+      "canonical_key": "paper:arxiv:2606.19534v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -11132,15 +11132,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "GB-LSR: A Fast Local Spectral Image Representation with a Single Global Bandwidth for Continuous Reconstruction and Super-Resolution",
-      "url": "https://arxiv.org/abs/2606.19617",
-      "source_url": "https://arxiv.org/abs/2606.19617",
+      "title": "Language-Instructed Vision Embeddings for Controllable and Generalizable Perception",
+      "url": "https://arxiv.org/abs/2606.19584",
+      "source_url": "https://arxiv.org/abs/2606.19584",
       "event_at": "2026-06-18T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:3740abae83a6:2026-06-18",
-      "paper_id": "2606.19617v1",
-      "arxiv_id": "2606.19617v1",
+      "event_key": "paper_release:arxiv-cs.cv:38cba2cd079f:2026-06-18",
+      "paper_id": "2606.19584v1",
+      "arxiv_id": "2606.19584v1",
       "doi": "",
-      "normalized_title": "gb-lsr-a-fast-local-spectral-image-representation-with-a-single-global-bandwidth-for-continuous-",
+      "normalized_title": "language-instructed-vision-embeddings-for-controllable-and-generalizable-perception",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -11153,31 +11153,31 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "asr"
+          "question answering"
         ],
         "Tasks": [
-          "benchmark",
-          "baseline",
-          "ablation"
+          "question answering"
         ],
         "ResearchGeneral": [
-          "study",
           "arxiv",
           "abstract",
+          "method",
+          "models",
+          "propose",
           "new",
-          "outperforms",
-          "improve",
-          "achieves",
-          "present",
           "trained",
-          "scale",
-          "small",
-          "fast",
-          "faster",
+          "models",
+          "parameters",
+          "large",
+          "task",
+          "tasks",
+          "input",
+          "feature",
           "features",
-          "representation",
-          "image",
-          "images"
+          "representations",
+          "embeddings",
+          "language",
+          "vision"
         ]
       },
       "required_field_proxy": {
@@ -11185,7 +11185,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.19617v1",
+      "canonical_key": "paper:arxiv:2606.19584v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -12431,15 +12431,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Training LLMs with Reinforcement Learning over Digital Twin Representations for Reasoning-Intensive Surgical VideoQA",
-      "url": "https://arxiv.org/abs/2606.17279",
-      "source_url": "https://arxiv.org/abs/2606.17279",
+      "title": "Pulling The REINS: Training-Free Safety Alignment of Video Diffusion Models via Representation Steering",
+      "url": "https://arxiv.org/abs/2606.17257",
+      "source_url": "https://arxiv.org/abs/2606.17257",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:d90c543e241e:2026-06-17",
-      "paper_id": "2606.17279v1",
-      "arxiv_id": "2606.17279v1",
+      "event_key": "paper_release:arxiv-cs.cv:fd9084bdf049:2026-06-17",
+      "paper_id": "2606.17257v1",
+      "arxiv_id": "2606.17257v1",
       "doi": "",
-      "normalized_title": "training-llms-with-reinforcement-learning-over-digital-twin-representations-for-reasoning-intens",
+      "normalized_title": "pulling-the-reins-training-free-safety-alignment-of-video-diffusion-models-via-representation-st",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -12452,45 +12452,42 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "llms",
-          "question answering",
-          "reinforcement learning",
-          "rl"
+          "alignment"
+        ],
+        "Techniques": [
+          "transformer",
+          "diffusion",
+          "fine-tuning"
         ],
         "Tasks": [
-          "question answering",
-          "reasoning",
-          "benchmark",
-          "evaluation",
-          "state-of-the-art"
+          "generation",
+          "evaluation"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "methods",
+          "method",
+          "analysis",
           "models",
-          "approach",
-          "propose",
-          "novel",
           "new",
-          "state-of-the-art",
-          "achieve",
-          "demonstrate",
-          "introduce",
+          "present",
+          "evaluate",
+          "evaluate",
           "evaluation",
-          "framework",
-          "learning",
-          "trains",
           "training",
+          "layer",
+          "layers",
           "models",
-          "performance",
-          "accuracy",
-          "large",
+          "generate",
+          "generation",
+          "parameter",
+          "computational",
+          "scales",
+          "representation",
           "representations",
-          "token",
-          "language",
-          "video",
-          "rl"
+          "text",
+          "image",
+          "video"
         ]
       },
       "required_field_proxy": {
@@ -12498,7 +12495,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17279v1",
+      "canonical_key": "paper:arxiv:2606.17257v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -12947,20 +12944,20 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv Stat.ML",
+      "source": "arXiv CS.CV",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Strategic Feature Selection",
-      "url": "https://arxiv.org/abs/2606.18867",
-      "source_url": "https://arxiv.org/abs/2606.18867",
+      "title": "Geometry-Consistent Endoscopic Representations for Image-Guided Navigation via Structured Foundation Model Adaptation",
+      "url": "https://arxiv.org/abs/2606.17340",
+      "source_url": "https://arxiv.org/abs/2606.17340",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-stat.ml:c7aee02fa0b3:2026-06-17",
-      "paper_id": "2606.18867v1",
-      "arxiv_id": "2606.18867v1",
+      "event_key": "paper_release:arxiv-cs.cv:16540ef5a9a7:2026-06-17",
+      "paper_id": "2606.17340v1",
+      "arxiv_id": "2606.17340v1",
       "doi": "",
-      "normalized_title": "strategic-feature-selection",
+      "normalized_title": "geometry-consistent-endoscopic-representations-for-image-guided-navigation-via-structured-founda",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -12972,27 +12969,45 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Techniques": [
-          "regularization"
+        "Research Areas": [
+          "representation learning",
+          "alignment"
         ],
-        "Tasks": [
-          "classification",
-          "benchmark"
+        "Techniques": [
+          "transformer",
+          "lora"
         ],
         "ResearchGeneral": [
-          "study",
           "arxiv",
           "abstract",
           "results",
+          "experiments",
+          "datasets",
+          "data",
+          "model",
+          "models",
+          "approach",
+          "propose",
           "new",
+          "show",
+          "shows",
           "framework",
-          "algorithm",
+          "learning",
+          "learned",
+          "training",
+          "layer",
+          "model",
+          "models",
           "prediction",
-          "classification",
           "performance",
-          "input",
+          "scaling",
+          "tasks",
           "feature",
-          "features"
+          "features",
+          "representation",
+          "representations",
+          "image",
+          "vision"
         ]
       },
       "required_field_proxy": {
@@ -13000,7 +13015,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.18867v1",
+      "canonical_key": "paper:arxiv:2606.17340v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -13358,15 +13373,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Learning a Maximum Entropy Model for Visual Textures using Diffusion",
-      "url": "https://arxiv.org/abs/2606.17342",
-      "source_url": "https://arxiv.org/abs/2606.17342",
+      "title": "Bayesian Magnetic Resonance Joint Image Reconstruction and Uncertainty Quantification using Sparsity Prior Models and Markov Chain Monte Carlo Sampling",
+      "url": "https://arxiv.org/abs/2606.17343",
+      "source_url": "https://arxiv.org/abs/2606.17343",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:1aeb0cddf1ac:2026-06-17",
-      "paper_id": "2606.17342v1",
-      "arxiv_id": "2606.17342v1",
+      "event_key": "paper_release:arxiv-cs.cv:fb03c64d428e:2026-06-17",
+      "paper_id": "2606.17343v1",
+      "arxiv_id": "2606.17343v1",
       "doi": "",
-      "normalized_title": "learning-a-maximum-entropy-model-for-visual-textures-using-diffusion",
+      "normalized_title": "bayesian-magnetic-resonance-joint-image-reconstruction-and-uncertainty-quantification-using-spar",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -13379,37 +13394,31 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "unsupervised learning"
-        ],
-        "Techniques": [
-          "diffusion"
-        ],
-        "Tasks": [
-          "state-of-the-art"
+          "deep learning"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
           "method",
           "methods",
+          "results",
+          "datasets",
           "model",
           "models",
+          "approach",
+          "propose",
+          "proposed",
+          "novel",
           "new",
-          "state-of-the-art",
-          "show",
-          "compare",
-          "comparison",
+          "demonstrate",
+          "framework",
+          "algorithms",
           "learning",
-          "training",
-          "trained",
-          "network",
           "model",
           "models",
-          "generate",
-          "generates",
-          "generative",
-          "features",
-          "representation",
+          "parameters",
+          "performance",
+          "error",
           "image",
           "images"
         ]
@@ -13419,7 +13428,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17342v1",
+      "canonical_key": "paper:arxiv:2606.17343v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -13541,24 +13550,24 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.CL",
+      "source": "arXiv CS.CV",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "VISUALSKILL: Multimodal Skills for Computer-Use Agents",
-      "url": "https://arxiv.org/abs/2606.18448",
-      "source_url": "https://arxiv.org/abs/2606.18448",
+      "title": "SierpinskiCam: Camera-Controlled Video Retaking with Sierpinski Triangle Pattern Cues",
+      "url": "https://arxiv.org/abs/2606.17310",
+      "source_url": "https://arxiv.org/abs/2606.17310",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cl:b9eed45a32c8:2026-06-17",
-      "paper_id": "2606.18448v1",
-      "arxiv_id": "2606.18448v1",
+      "event_key": "paper_release:arxiv-cs.cv:7cb664a9613b:2026-06-17",
+      "paper_id": "2606.17310v1",
+      "arxiv_id": "2606.17310v1",
       "doi": "",
-      "normalized_title": "visualskill-multimodal-skills-for-computer-use-agents",
-      "repository": "github.com/XMHZZ2018/VisualSkills",
-      "repository_host": "github.com",
-      "repository_owner": "XMHZZ2018",
-      "repository_name": "VisualSkills",
+      "normalized_title": "sierpinskicam-camera-controlled-video-retaking-with-sierpinski-triangle-pattern-cues",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
       "citation_count": null,
       "benchmark_name": "",
       "metric_name": "",
@@ -13566,30 +13575,30 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Research Areas": [
-          "agent",
-          "agents",
-          "multimodal"
-        ],
-        "Venues": [
-          "nature"
-        ],
         "Techniques": [
-          "claude"
-        ],
-        "Tasks": [
-          "baseline"
+          "diffusion"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "approach",
+          "experiments",
+          "models",
+          "approaches",
           "propose",
+          "novel",
           "new",
-          "performance",
-          "tasks",
-          "text",
-          "multimodal"
+          "achieves",
+          "show",
+          "introduce",
+          "extensive",
+          "models",
+          "large",
+          "features",
+          "representation",
+          "token",
+          "tokens",
+          "sequence",
+          "video"
         ]
       },
       "required_field_proxy": {
@@ -13597,7 +13606,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.18448v1",
+      "canonical_key": "paper:arxiv:2606.17310v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -13672,57 +13681,66 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.CL",
+      "source": "arXiv CS.CV",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Possible or Definite? A Benchmark for Evaluating Diagnostic Uncertainty Preservation in Clinical Text",
-      "url": "https://arxiv.org/abs/2606.18471",
-      "source_url": "https://arxiv.org/abs/2606.18471",
+      "title": "Pareto LoRA: Mitigating Modality Imbalance in Unified Multimodal Models via Pareto-Optimal Gradient Integration",
+      "url": "https://arxiv.org/abs/2606.17296",
+      "source_url": "https://arxiv.org/abs/2606.17296",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cl:c518e87c5300:2026-06-17",
-      "paper_id": "2606.18471v1",
-      "arxiv_id": "2606.18471v1",
+      "event_key": "paper_release:arxiv-cs.cv:cd18d76e2eef:2026-06-17",
+      "paper_id": "2606.17296v1",
+      "arxiv_id": "2606.17296v1",
       "doi": "",
-      "normalized_title": "possible-or-definite-a-benchmark-for-evaluating-diagnostic-uncertainty-preservation-in-clinical-",
+      "normalized_title": "pareto-lora-mitigating-modality-imbalance-in-unified-multimodal-models-via-pareto-optimal-gradie",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
       "repository_name": "",
       "citation_count": null,
-      "benchmark_name": "Possible or Definite? A Benchmark for Evaluating Diagnostic Uncertainty Preservation in Clinical Text",
+      "benchmark_name": "",
       "metric_name": "",
       "metric_value": null,
       "dataset": "",
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "llm",
-          "llms"
+          "image generation",
+          "multimodal"
+        ],
+        "Techniques": [
+          "transformer",
+          "fine-tuning",
+          "lora"
         ],
         "Tasks": [
-          "summarization",
-          "benchmark",
-          "evaluation"
+          "generation",
+          "benchmark"
         ],
         "ResearchGeneral": [
-          "paper",
-          "studies",
           "arxiv",
           "abstract",
-          "results",
+          "experiments",
           "models",
+          "propose",
           "new",
+          "demonstrate",
           "show",
-          "evaluate",
-          "evaluate",
-          "evaluation",
+          "layers",
           "models",
-          "large",
+          "generation",
+          "optimization",
+          "parameter",
+          "performance",
+          "efficient",
           "tasks",
           "language",
-          "text"
+          "text",
+          "image",
+          "vision",
+          "multimodal"
         ]
       },
       "required_field_proxy": {
@@ -13730,7 +13748,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.18471v1",
+      "canonical_key": "paper:arxiv:2606.17296v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -15793,15 +15811,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "SierpinskiCam: Camera-Controlled Video Retaking with Sierpinski Triangle Pattern Cues",
-      "url": "https://arxiv.org/abs/2606.17310",
-      "source_url": "https://arxiv.org/abs/2606.17310",
+      "title": "FATE: Pillar Encoding and Frequency-Aware Training for Event-Based Object Detection",
+      "url": "https://arxiv.org/abs/2606.17334",
+      "source_url": "https://arxiv.org/abs/2606.17334",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:7cb664a9613b:2026-06-17",
-      "paper_id": "2606.17310v1",
-      "arxiv_id": "2606.17310v1",
+      "event_key": "paper_release:arxiv-cs.cv:33581ac0e79b:2026-06-17",
+      "paper_id": "2606.17334v1",
+      "arxiv_id": "2606.17334v1",
       "doi": "",
-      "normalized_title": "sierpinskicam-camera-controlled-video-retaking-with-sierpinski-triangle-pattern-cues",
+      "normalized_title": "fate-pillar-encoding-and-frequency-aware-training-for-event-based-object-detection",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -15813,8 +15831,12 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Techniques": [
-          "diffusion"
+        "Research Areas": [
+          "deep learning",
+          "object detection"
+        ],
+        "Venues": [
+          "nature"
         ],
         "ResearchGeneral": [
           "arxiv",
@@ -15825,18 +15847,20 @@
           "propose",
           "novel",
           "new",
-          "achieves",
-          "show",
+          "outperforms",
+          "demonstrate",
           "introduce",
           "extensive",
+          "framework",
+          "learning",
+          "training",
           "models",
-          "large",
-          "features",
+          "generates",
+          "parameter",
+          "loss",
+          "speed",
           "representation",
-          "token",
-          "tokens",
-          "sequence",
-          "video"
+          "image"
         ]
       },
       "required_field_proxy": {
@@ -15844,7 +15868,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17310v1",
+      "canonical_key": "paper:arxiv:2606.17334v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -16304,15 +16328,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Geometry-Consistent Endoscopic Representations for Image-Guided Navigation via Structured Foundation Model Adaptation",
-      "url": "https://arxiv.org/abs/2606.17340",
-      "source_url": "https://arxiv.org/abs/2606.17340",
+      "title": "Learning a Maximum Entropy Model for Visual Textures using Diffusion",
+      "url": "https://arxiv.org/abs/2606.17342",
+      "source_url": "https://arxiv.org/abs/2606.17342",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:16540ef5a9a7:2026-06-17",
-      "paper_id": "2606.17340v1",
-      "arxiv_id": "2606.17340v1",
+      "event_key": "paper_release:arxiv-cs.cv:1aeb0cddf1ac:2026-06-17",
+      "paper_id": "2606.17342v1",
+      "arxiv_id": "2606.17342v1",
       "doi": "",
-      "normalized_title": "geometry-consistent-endoscopic-representations-for-image-guided-navigation-via-structured-founda",
+      "normalized_title": "learning-a-maximum-entropy-model-for-visual-textures-using-diffusion",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -16325,44 +16349,39 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "representation learning",
-          "alignment"
+          "unsupervised learning"
         ],
         "Techniques": [
-          "transformer",
-          "lora"
+          "diffusion"
+        ],
+        "Tasks": [
+          "state-of-the-art"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "results",
-          "experiments",
-          "datasets",
-          "data",
+          "method",
+          "methods",
           "model",
           "models",
-          "approach",
-          "propose",
           "new",
+          "state-of-the-art",
           "show",
-          "shows",
-          "framework",
+          "compare",
+          "comparison",
           "learning",
-          "learned",
           "training",
-          "layer",
+          "trained",
+          "network",
           "model",
           "models",
-          "prediction",
-          "performance",
-          "scaling",
-          "tasks",
-          "feature",
+          "generate",
+          "generates",
+          "generative",
           "features",
           "representation",
-          "representations",
           "image",
-          "vision"
+          "images"
         ]
       },
       "required_field_proxy": {
@@ -16370,7 +16389,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17340v1",
+      "canonical_key": "paper:arxiv:2606.17342v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -17236,15 +17255,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Bayesian Magnetic Resonance Joint Image Reconstruction and Uncertainty Quantification using Sparsity Prior Models and Markov Chain Monte Carlo Sampling",
-      "url": "https://arxiv.org/abs/2606.17343",
-      "source_url": "https://arxiv.org/abs/2606.17343",
+      "title": "Complex Layout Classification in the Wild: A Low-Resource Approach with Layout-Preserving Augmentations",
+      "url": "https://arxiv.org/abs/2606.17355",
+      "source_url": "https://arxiv.org/abs/2606.17355",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:fb03c64d428e:2026-06-17",
-      "paper_id": "2606.17343v1",
-      "arxiv_id": "2606.17343v1",
+      "event_key": "paper_release:arxiv-cs.cv:0c1b98cb71d0:2026-06-17",
+      "paper_id": "2606.17355v1",
+      "arxiv_id": "2606.17355v1",
       "doi": "",
-      "normalized_title": "bayesian-magnetic-resonance-joint-image-reconstruction-and-uncertainty-quantification-using-spar",
+      "normalized_title": "complex-layout-classification-in-the-wild-a-low-resource-approach-with-layout-preserving-augment",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -17256,34 +17275,33 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Research Areas": [
-          "deep learning"
+        "Techniques": [
+          "cnn"
+        ],
+        "Tasks": [
+          "classification"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "method",
-          "methods",
           "results",
-          "datasets",
+          "dataset",
+          "data",
           "model",
           "models",
           "approach",
           "propose",
-          "proposed",
           "novel",
           "new",
+          "improve",
           "demonstrate",
-          "framework",
-          "algorithms",
-          "learning",
+          "learn",
+          "training",
           "model",
           "models",
-          "parameters",
-          "performance",
-          "error",
-          "image",
-          "images"
+          "classification",
+          "scale",
+          "large"
         ]
       },
       "required_field_proxy": {
@@ -17291,7 +17309,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17343v1",
+      "canonical_key": "paper:arxiv:2606.17355v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -17434,15 +17452,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Pareto LoRA: Mitigating Modality Imbalance in Unified Multimodal Models via Pareto-Optimal Gradient Integration",
-      "url": "https://arxiv.org/abs/2606.17296",
-      "source_url": "https://arxiv.org/abs/2606.17296",
+      "title": "Reasoning Text-to-Video Retrieval for Operating Room Clips via Action-Driven Digital Twins",
+      "url": "https://arxiv.org/abs/2606.17298",
+      "source_url": "https://arxiv.org/abs/2606.17298",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:cd18d76e2eef:2026-06-17",
-      "paper_id": "2606.17296v1",
-      "arxiv_id": "2606.17296v1",
+      "event_key": "paper_release:arxiv-cs.cv:5051c7b200a9:2026-06-17",
+      "paper_id": "2606.17298v1",
+      "arxiv_id": "2606.17298v1",
       "doi": "",
-      "normalized_title": "pareto-lora-mitigating-modality-imbalance-in-unified-multimodal-models-via-pareto-optimal-gradie",
+      "normalized_title": "reasoning-text-to-video-retrieval-for-operating-room-clips-via-action-driven-digital-twins",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -17455,40 +17473,28 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "image generation",
-          "multimodal"
-        ],
-        "Techniques": [
-          "transformer",
-          "fine-tuning",
-          "lora"
+          "llm"
         ],
         "Tasks": [
-          "generation",
-          "benchmark"
+          "reasoning",
+          "benchmark",
+          "baseline"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "experiments",
-          "models",
+          "method",
+          "methods",
+          "results",
           "propose",
           "new",
+          "achieves",
           "demonstrate",
-          "show",
-          "layers",
-          "models",
-          "generation",
-          "optimization",
-          "parameter",
-          "performance",
-          "efficient",
-          "tasks",
-          "language",
+          "trained",
+          "generates",
+          "embeddings",
           "text",
-          "image",
-          "vision",
-          "multimodal"
+          "video"
         ]
       },
       "required_field_proxy": {
@@ -17496,7 +17502,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17296v1",
+      "canonical_key": "paper:arxiv:2606.17298v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -17677,15 +17683,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "DriveJudge: Rethinking Autonomous Driving Evaluation with Vision-Language Models",
-      "url": "https://arxiv.org/abs/2606.17362",
-      "source_url": "https://arxiv.org/abs/2606.17362",
+      "title": "Improving and Evaluating Hand-Object Interaction Detection",
+      "url": "https://arxiv.org/abs/2606.17384",
+      "source_url": "https://arxiv.org/abs/2606.17384",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:07c966cdd671:2026-06-17",
-      "paper_id": "2606.17362v1",
-      "arxiv_id": "2606.17362v1",
+      "event_key": "paper_release:arxiv-cs.cv:8b1cb7db29a8:2026-06-17",
+      "paper_id": "2606.17384v1",
+      "arxiv_id": "2606.17384v1",
       "doi": "",
-      "normalized_title": "drivejudge-rethinking-autonomous-driving-evaluation-with-vision-language-models",
+      "normalized_title": "improving-and-evaluating-hand-object-interaction-detection",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -17698,37 +17704,34 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "language model",
-          "agent"
+          "robotics"
         ],
         "Tasks": [
-          "classification",
-          "reasoning",
           "benchmark",
-          "evaluation"
+          "evaluation",
+          "state-of-the-art"
         ],
         "ResearchGeneral": [
+          "paper",
           "arxiv",
           "abstract",
+          "method",
           "dataset",
+          "datasets",
           "model",
-          "models",
           "new",
-          "outperforms",
-          "introduce",
-          "evaluate",
-          "evaluate",
+          "state-of-the-art",
+          "improve",
+          "contributions",
+          "introduces",
           "evaluation",
-          "learning",
-          "train",
+          "comprehensive",
+          "framework",
+          "architecture",
+          "trained",
           "model",
-          "models",
-          "classification",
-          "scale",
-          "large",
           "tasks",
-          "language",
-          "vision"
+          "video"
         ]
       },
       "required_field_proxy": {
@@ -17736,7 +17739,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17362v1",
+      "canonical_key": "paper:arxiv:2606.17384v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -18634,15 +18637,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Reasoning Text-to-Video Retrieval for Operating Room Clips via Action-Driven Digital Twins",
-      "url": "https://arxiv.org/abs/2606.17298",
-      "source_url": "https://arxiv.org/abs/2606.17298",
+      "title": "Training LLMs with Reinforcement Learning over Digital Twin Representations for Reasoning-Intensive Surgical VideoQA",
+      "url": "https://arxiv.org/abs/2606.17279",
+      "source_url": "https://arxiv.org/abs/2606.17279",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:5051c7b200a9:2026-06-17",
-      "paper_id": "2606.17298v1",
-      "arxiv_id": "2606.17298v1",
+      "event_key": "paper_release:arxiv-cs.cv:d90c543e241e:2026-06-17",
+      "paper_id": "2606.17279v1",
+      "arxiv_id": "2606.17279v1",
       "doi": "",
-      "normalized_title": "reasoning-text-to-video-retrieval-for-operating-room-clips-via-action-driven-digital-twins",
+      "normalized_title": "training-llms-with-reinforcement-learning-over-digital-twin-representations-for-reasoning-intens",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -18655,28 +18658,45 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "llm"
+          "llms",
+          "question answering",
+          "reinforcement learning",
+          "rl"
         ],
         "Tasks": [
+          "question answering",
           "reasoning",
           "benchmark",
-          "baseline"
+          "evaluation",
+          "state-of-the-art"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "method",
           "methods",
-          "results",
+          "models",
+          "approach",
           "propose",
+          "novel",
           "new",
-          "achieves",
+          "state-of-the-art",
+          "achieve",
           "demonstrate",
-          "trained",
-          "generates",
-          "embeddings",
-          "text",
-          "video"
+          "introduce",
+          "evaluation",
+          "framework",
+          "learning",
+          "trains",
+          "training",
+          "models",
+          "performance",
+          "accuracy",
+          "large",
+          "representations",
+          "token",
+          "language",
+          "video",
+          "rl"
         ]
       },
       "required_field_proxy": {
@@ -18684,7 +18704,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17298v1",
+      "canonical_key": "paper:arxiv:2606.17279v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -21178,20 +21198,20 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.CV",
+      "source": "arXiv Stat.ML",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Improving and Evaluating Hand-Object Interaction Detection",
-      "url": "https://arxiv.org/abs/2606.17384",
-      "source_url": "https://arxiv.org/abs/2606.17384",
+      "title": "Strategic Feature Selection",
+      "url": "https://arxiv.org/abs/2606.18867",
+      "source_url": "https://arxiv.org/abs/2606.18867",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:8b1cb7db29a8:2026-06-17",
-      "paper_id": "2606.17384v1",
-      "arxiv_id": "2606.17384v1",
+      "event_key": "paper_release:arxiv-stat.ml:c7aee02fa0b3:2026-06-17",
+      "paper_id": "2606.18867v1",
+      "arxiv_id": "2606.18867v1",
       "doi": "",
-      "normalized_title": "improving-and-evaluating-hand-object-interaction-detection",
+      "normalized_title": "strategic-feature-selection",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -21203,35 +21223,27 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Research Areas": [
-          "robotics"
+        "Techniques": [
+          "regularization"
         ],
         "Tasks": [
-          "benchmark",
-          "evaluation",
-          "state-of-the-art"
+          "classification",
+          "benchmark"
         ],
         "ResearchGeneral": [
-          "paper",
+          "study",
           "arxiv",
           "abstract",
-          "method",
-          "dataset",
-          "datasets",
-          "model",
+          "results",
           "new",
-          "state-of-the-art",
-          "improve",
-          "contributions",
-          "introduces",
-          "evaluation",
-          "comprehensive",
           "framework",
-          "architecture",
-          "trained",
-          "model",
-          "tasks",
-          "video"
+          "algorithm",
+          "prediction",
+          "classification",
+          "performance",
+          "input",
+          "feature",
+          "features"
         ]
       },
       "required_field_proxy": {
@@ -21239,7 +21251,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17384v1",
+      "canonical_key": "paper:arxiv:2606.18867v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -21303,24 +21315,24 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.CV",
+      "source": "arXiv CS.CL",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "FATE: Pillar Encoding and Frequency-Aware Training for Event-Based Object Detection",
-      "url": "https://arxiv.org/abs/2606.17334",
-      "source_url": "https://arxiv.org/abs/2606.17334",
+      "title": "VISUALSKILL: Multimodal Skills for Computer-Use Agents",
+      "url": "https://arxiv.org/abs/2606.18448",
+      "source_url": "https://arxiv.org/abs/2606.18448",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:33581ac0e79b:2026-06-17",
-      "paper_id": "2606.17334v1",
-      "arxiv_id": "2606.17334v1",
+      "event_key": "paper_release:arxiv-cs.cl:b9eed45a32c8:2026-06-17",
+      "paper_id": "2606.18448v1",
+      "arxiv_id": "2606.18448v1",
       "doi": "",
-      "normalized_title": "fate-pillar-encoding-and-frequency-aware-training-for-event-based-object-detection",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
+      "normalized_title": "visualskill-multimodal-skills-for-computer-use-agents",
+      "repository": "github.com/XMHZZ2018/VisualSkills",
+      "repository_host": "github.com",
+      "repository_owner": "XMHZZ2018",
+      "repository_name": "VisualSkills",
       "citation_count": null,
       "benchmark_name": "",
       "metric_name": "",
@@ -21329,35 +21341,29 @@
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "deep learning",
-          "object detection"
+          "agent",
+          "agents",
+          "multimodal"
         ],
         "Venues": [
           "nature"
         ],
+        "Techniques": [
+          "claude"
+        ],
+        "Tasks": [
+          "baseline"
+        ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "experiments",
-          "models",
-          "approaches",
+          "approach",
           "propose",
-          "novel",
           "new",
-          "outperforms",
-          "demonstrate",
-          "introduce",
-          "extensive",
-          "framework",
-          "learning",
-          "training",
-          "models",
-          "generates",
-          "parameter",
-          "loss",
-          "speed",
-          "representation",
-          "image"
+          "performance",
+          "tasks",
+          "text",
+          "multimodal"
         ]
       },
       "required_field_proxy": {
@@ -21365,7 +21371,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17334v1",
+      "canonical_key": "paper:arxiv:2606.18448v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -21439,68 +21445,57 @@
       "required_field_gaps": []
     },
     {
-      "source": "arXiv CS.CV",
+      "source": "arXiv CS.CL",
       "source_type": "rss",
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Pulling The REINS: Training-Free Safety Alignment of Video Diffusion Models via Representation Steering",
-      "url": "https://arxiv.org/abs/2606.17257",
-      "source_url": "https://arxiv.org/abs/2606.17257",
+      "title": "Possible or Definite? A Benchmark for Evaluating Diagnostic Uncertainty Preservation in Clinical Text",
+      "url": "https://arxiv.org/abs/2606.18471",
+      "source_url": "https://arxiv.org/abs/2606.18471",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:fd9084bdf049:2026-06-17",
-      "paper_id": "2606.17257v1",
-      "arxiv_id": "2606.17257v1",
+      "event_key": "paper_release:arxiv-cs.cl:c518e87c5300:2026-06-17",
+      "paper_id": "2606.18471v1",
+      "arxiv_id": "2606.18471v1",
       "doi": "",
-      "normalized_title": "pulling-the-reins-training-free-safety-alignment-of-video-diffusion-models-via-representation-st",
+      "normalized_title": "possible-or-definite-a-benchmark-for-evaluating-diagnostic-uncertainty-preservation-in-clinical-",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
       "repository_name": "",
       "citation_count": null,
-      "benchmark_name": "",
+      "benchmark_name": "Possible or Definite? A Benchmark for Evaluating Diagnostic Uncertainty Preservation in Clinical Text",
       "metric_name": "",
       "metric_value": null,
       "dataset": "",
       "venue": "",
       "matched_entities": {
         "Research Areas": [
-          "alignment"
-        ],
-        "Techniques": [
-          "transformer",
-          "diffusion",
-          "fine-tuning"
+          "llm",
+          "llms"
         ],
         "Tasks": [
-          "generation",
+          "summarization",
+          "benchmark",
           "evaluation"
         ],
         "ResearchGeneral": [
+          "paper",
+          "studies",
           "arxiv",
           "abstract",
-          "method",
-          "analysis",
+          "results",
           "models",
           "new",
-          "present",
+          "show",
           "evaluate",
           "evaluate",
           "evaluation",
-          "training",
-          "layer",
-          "layers",
           "models",
-          "generate",
-          "generation",
-          "parameter",
-          "computational",
-          "scales",
-          "representation",
-          "representations",
-          "text",
-          "image",
-          "video"
+          "large",
+          "tasks",
+          "language",
+          "text"
         ]
       },
       "required_field_proxy": {
@@ -21508,7 +21503,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17257v1",
+      "canonical_key": "paper:arxiv:2606.18471v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -21701,15 +21696,15 @@
       "trust_tier": "T1_official",
       "producer_role": "",
       "event_model": "paper_release",
-      "title": "Complex Layout Classification in the Wild: A Low-Resource Approach with Layout-Preserving Augmentations",
-      "url": "https://arxiv.org/abs/2606.17355",
-      "source_url": "https://arxiv.org/abs/2606.17355",
+      "title": "DriveJudge: Rethinking Autonomous Driving Evaluation with Vision-Language Models",
+      "url": "https://arxiv.org/abs/2606.17362",
+      "source_url": "https://arxiv.org/abs/2606.17362",
       "event_at": "2026-06-17T19:00:00+00:00",
-      "event_key": "paper_release:arxiv-cs.cv:0c1b98cb71d0:2026-06-17",
-      "paper_id": "2606.17355v1",
-      "arxiv_id": "2606.17355v1",
+      "event_key": "paper_release:arxiv-cs.cv:07c966cdd671:2026-06-17",
+      "paper_id": "2606.17362v1",
+      "arxiv_id": "2606.17362v1",
       "doi": "",
-      "normalized_title": "complex-layout-classification-in-the-wild-a-low-resource-approach-with-layout-preserving-augment",
+      "normalized_title": "drivejudge-rethinking-autonomous-driving-evaluation-with-vision-language-models",
       "repository": "",
       "repository_host": "",
       "repository_owner": "",
@@ -21721,33 +21716,38 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
-        "Techniques": [
-          "cnn"
+        "Research Areas": [
+          "language model",
+          "agent"
         ],
         "Tasks": [
-          "classification"
+          "classification",
+          "reasoning",
+          "benchmark",
+          "evaluation"
         ],
         "ResearchGeneral": [
           "arxiv",
           "abstract",
-          "results",
           "dataset",
-          "data",
           "model",
           "models",
-          "approach",
-          "propose",
-          "novel",
           "new",
-          "improve",
-          "demonstrate",
-          "learn",
-          "training",
+          "outperforms",
+          "introduce",
+          "evaluate",
+          "evaluate",
+          "evaluation",
+          "learning",
+          "train",
           "model",
           "models",
           "classification",
           "scale",
-          "large"
+          "large",
+          "tasks",
+          "language",
+          "vision"
         ]
       },
       "required_field_proxy": {
@@ -21755,7 +21755,7 @@
         "title": true,
         "source_url": true
       },
-      "canonical_key": "paper:arxiv:2606.17355v1",
+      "canonical_key": "paper:arxiv:2606.17362v1",
       "canonical_key_status": "complete",
       "required_field_gaps": []
     },
@@ -29805,7 +29805,7 @@
       "event_model": "citation_snapshot",
       "source": "OpenAlex AI Citation Feed",
       "title": "Pattern classification and scene analysis",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:062414d4990e:2026-06-22",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:062414d4990e:2026-06-23",
       "canonical_key": "paper:title:pattern-classification-and-scene-analysis"
     },
     {
@@ -29813,16 +29813,8 @@
       "event_model": "citation_snapshot",
       "source": "OpenAlex AI Citation Feed",
       "title": "Array programming with NumPy",
-      "event_key": "citation_snapshot:openalex-ai-citation-feed:5babd3e0ffa2:2026-06-22",
+      "event_key": "citation_snapshot:openalex-ai-citation-feed:5babd3e0ffa2:2026-06-23",
       "canonical_key": "paper:title:array-programming-with-numpy"
-    },
-    {
-      "reason": "title_proxy_canonical_key",
-      "event_model": "paper_release",
-      "source": "OpenAI Blog",
-      "title": "Daybreak: Tools for securing every organization in the world",
-      "event_key": "paper_release:openai-blog:f7e9d38ae732:2026-06-22",
-      "canonical_key": "paper:title:daybreak-tools-for-securing-every-organization-in-the-world"
     },
     {
       "reason": "title_proxy_canonical_key",
@@ -29831,6 +29823,14 @@
       "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
       "event_key": "paper_release:openai-blog:f0ab1740b8b7:2026-06-22",
       "canonical_key": "paper:title:patch-the-planet-a-daybreak-initiative-to-support-open-source-maintainers"
+    },
+    {
+      "reason": "title_proxy_canonical_key",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "title": "Daybreak: Tools for securing every organization in the world",
+      "event_key": "paper_release:openai-blog:f7e9d38ae732:2026-06-22",
+      "canonical_key": "paper:title:daybreak-tools-for-securing-every-organization-in-the-world"
     },
     {
       "reason": "title_proxy_canonical_key",
@@ -29885,42 +29885,42 @@
       "event_model": "paper_release",
       "source": "arXiv CS.AI",
       "latest_title": "LLM Doesn't Know What It Doesn't Know: Detecting Epistemic Blind Spots via Cross-Model Attribution Divergence on Clinical Tabular Data",
-      "age_days": 3.07
+      "age_days": 3.32
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CL",
       "latest_title": "What sentiment analysis can't see: Measuring whether customers were helped, and what went wrong, across 70,000 support conversations",
-      "age_days": 4.07
+      "age_days": 4.32
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.LG",
       "latest_title": "Insulin4RL: Real-Time Insulin Management in the Intensive Care Unit for Offline Reinforcement Learning",
-      "age_days": 4.07
+      "age_days": 4.32
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CV",
-      "latest_title": "Language-Instructed Vision Embeddings for Controllable and Generalizable Perception",
-      "age_days": 4.07
+      "latest_title": "Mix-QVLA: Task-Evidence-Aware Mixed-Precision Quantization of Vision-Language-Action Models",
+      "age_days": 4.32
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.NE",
       "latest_title": "Beyond Accuracy: Measuring Logical Compliance of Predictive Models",
-      "age_days": 4.07
+      "age_days": 4.32
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv Stat.ML",
       "latest_title": "Stochastic Linear Contextual Bandits with Bounded Noise: A Set-Membership Approach",
-      "age_days": 4.07
+      "age_days": 4.32
     },
     {
       "reason": "source_missing",
