@@ -19,11 +19,11 @@
     },
     {
       "name": "Techniques",
-      "count": 128
+      "count": 126
     },
     {
       "name": "Institutions",
-      "count": 44
+      "count": 45
     },
     {
       "name": "Venues",
@@ -45,5 +45,5 @@
     "Towards Data Science": 20,
     "The Gradient": 15
   },
-  "generated_at": "2026-06-24T17:55:41.910903+09:00"
+  "generated_at": "2026-06-24T23:18:35.529260+09:00"
 }
