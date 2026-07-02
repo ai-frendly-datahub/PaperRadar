@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-01T19:47:45.116714+00:00",
+  "generated_at": "2026-07-02T02:41:46.417613+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-06-30T19:00:00+00:00",
-      "age_days": 1.03,
+      "age_days": 1.32,
       "latest_title": "Towards Inclusive Mobility Modeling: Characterizing and Evaluating Elderly Trajectory Patterns in Urban Systems",
       "latest_url": "https://arxiv.org/abs/2606.31207",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 86,
       "event_count": 86,
       "latest_event_at": "2026-06-30T19:00:00+00:00",
-      "age_days": 1.03,
+      "age_days": 1.32,
       "latest_title": "Multilingual Polarization Detection Using Transformer-Based Models with Class Weighting and Threshold Tuning",
       "latest_url": "https://arxiv.org/abs/2606.30857",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 84,
       "event_count": 84,
       "latest_event_at": "2026-06-30T19:00:00+00:00",
-      "age_days": 1.03,
+      "age_days": 1.32,
       "latest_title": "Fora: From Weight-Space to Function-Space Protection in Capability-Preserving Fine-Tuning",
       "latest_url": "https://arxiv.org/abs/2606.31092",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 58,
       "event_count": 58,
       "latest_event_at": "2026-06-30T19:00:00+00:00",
-      "age_days": 1.03,
+      "age_days": 1.32,
       "latest_title": "MammoFlow: Multiview Mammogram Synthesis with Anatomically Consistent Flow Matching",
       "latest_url": "https://arxiv.org/abs/2606.28537",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 47,
       "event_count": 47,
       "latest_event_at": "2026-06-30T19:00:00+00:00",
-      "age_days": 1.03,
+      "age_days": 1.32,
       "latest_title": "Robustness of neural networks to random noise perturbations of their inputs",
       "latest_url": "https://arxiv.org/abs/2606.31581",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 80,
       "event_count": 80,
       "latest_event_at": "2026-06-30T19:00:00+00:00",
-      "age_days": 1.03,
+      "age_days": 1.32,
       "latest_title": "Multiple Testing of Linear Forms for Noisy Matrix Completion",
       "latest_url": "https://arxiv.org/abs/2312.00305",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 5,
       "event_count": 5,
       "latest_event_at": "2026-06-30T00:00:00+00:00",
-      "age_days": 1.82,
+      "age_days": 2.11,
       "latest_title": "How ChatGPT adoption has expanded",
       "latest_url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
       "latest_required_field_proxy": {
@@ -545,7 +545,7 @@
       "article_count": 31,
       "event_count": 31,
       "latest_event_at": "2026-06-30T19:49:32.761918+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "Array programming with NumPy",
       "latest_url": "https://doi.org/10.1038/s41586-020-2649-2",
       "latest_required_field_proxy": {
