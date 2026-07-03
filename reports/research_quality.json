@@ -1,13 +1,13 @@
 {
   "category": "research",
-  "generated_at": "2026-07-02T19:19:04.658298+00:00",
+  "generated_at": "2026-07-03T02:17:48.174299+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
     "enabled_sources": 16,
     "tracked_sources": 14,
-    "fresh_sources": 8,
-    "stale_sources": 0,
+    "fresh_sources": 7,
+    "stale_sources": 1,
     "missing_sources": 1,
     "missing_event_sources": 0,
     "unknown_event_date_sources": 0,
@@ -28,10 +28,10 @@
     "code_repository_present_count": 36,
     "benchmark_metric_present_count": 0,
     "event_required_field_gap_count": 0,
-    "tracked_source_gap_count": 1,
+    "tracked_source_gap_count": 2,
     "missing_event_model_count": 2,
     "source_backlog_candidate_count": 4,
-    "daily_review_item_count": 11
+    "daily_review_item_count": 12
   },
   "sources": [
     {
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-01T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Constructive Alignment: Governing Preference Dynamics in Human-AI Interaction",
       "latest_url": "https://arxiv.org/abs/2607.00001",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-01T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "A Mechanistic View of Authority Hierarchy in LLM Sycophancy",
       "latest_url": "https://arxiv.org/abs/2607.00415",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 91,
       "event_count": 91,
       "latest_event_at": "2026-07-01T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "GRPO, Dr. GRPO, and DAPO Are Three Operations on One Number: The Group-Standard-Deviation Identity",
       "latest_url": "https://arxiv.org/abs/2607.00152",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 60,
       "event_count": 60,
       "latest_event_at": "2026-07-01T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "AEGIS: A Multi-Task Joint-Embedding Predictive Architecture for Mammography",
       "latest_url": "https://arxiv.org/abs/2607.00277",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 43,
       "event_count": 43,
       "latest_event_at": "2026-07-01T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Geometric and dynamical analysis of attractor boundaries and storage limits in kernel Hopfield networks",
       "latest_url": "https://arxiv.org/abs/2605.00366",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 77,
       "event_count": 77,
       "latest_event_at": "2026-07-01T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "From Spectral Methods to Sample Complexity Bounds for Fourier Neural Operators",
       "latest_url": "https://arxiv.org/abs/2607.00320",
       "latest_required_field_proxy": {
@@ -286,11 +286,11 @@
       "tracked": true,
       "event_model": "paper_release",
       "freshness_sla_days": 3.0,
-      "status": "fresh",
+      "status": "stale",
       "article_count": 2,
       "event_count": 2,
       "latest_event_at": "2026-06-30T00:00:00+00:00",
-      "age_days": 2.8,
+      "age_days": 3.1,
       "latest_title": "How ChatGPT adoption has expanded",
       "latest_url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
       "latest_required_field_proxy": {
@@ -545,7 +545,7 @@
       "article_count": 30,
       "event_count": 30,
       "latest_event_at": "2026-06-30T19:49:32.761918+00:00",
-      "age_days": 1.98,
+      "age_days": 2.27,
       "latest_title": "Local Indicators of Spatial Association—LISA",
       "latest_url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
       "latest_required_field_proxy": {
@@ -29974,6 +29974,13 @@
       "title": "Core dump epidemiology: fixing an 18-year-old bug",
       "event_key": "paper_release:openai-blog:4c4d91d3ce63:2026-06-29",
       "canonical_key": "paper:title:core-dump-epidemiology-fixing-an-18-year-old-bug"
+    },
+    {
+      "reason": "source_stale",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "latest_title": "How ChatGPT adoption has expanded",
+      "age_days": 3.1
     },
     {
       "reason": "source_missing",
