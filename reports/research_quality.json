@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-03T08:49:58.250770+00:00",
+  "generated_at": "2026-07-03T08:57:43.560077+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -541,7 +541,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-06-30T19:49:32.761918+00:00",
-      "age_days": 2.54,
+      "age_days": 2.55,
       "latest_title": "Mining association rules between sets of items in large databases",
       "latest_url": "https://doi.org/10.1145/170035.170072",
       "latest_required_field_proxy": {
