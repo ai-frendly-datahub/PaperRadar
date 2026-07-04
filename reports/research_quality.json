@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-04T08:24:01.940056+00:00",
+  "generated_at": "2026-07-04T08:32:38.055417+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -541,7 +541,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-06-30T19:49:32.761918+00:00",
-      "age_days": 3.52,
+      "age_days": 3.53,
       "latest_title": "Situated Cognition and the Culture of Learning",
       "latest_url": "https://doi.org/10.3102/0013189x018001032",
       "latest_required_field_proxy": {
