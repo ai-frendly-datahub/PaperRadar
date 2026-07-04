@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-03T19:12:53.002557+00:00",
+  "generated_at": "2026-07-04T02:16:24.872431+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Scaling Trends for Lie Detector Oversight in Preference Learning",
       "latest_url": "https://arxiv.org/abs/2607.01567",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 83,
       "event_count": 83,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Breaking Safety at the Token Boundary: How BPE Tokenization Creates Exploitable Gaps in LLM Alignment",
       "latest_url": "https://arxiv.org/abs/2607.01239",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "X-LogSMask: Expand Transformer for Graph-Structured Data",
       "latest_url": "https://arxiv.org/abs/2607.01553",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "AnchorSplat: Fast and Structure Consistent Detail Synthesis for Gaussian Splatting",
       "latest_url": "https://arxiv.org/abs/2607.01290",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Stable Self-Modulating Quantum Fast-Weight Programmers with Bounded Memory Gates",
       "latest_url": "https://arxiv.org/abs/2607.02363",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 77,
       "event_count": 77,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Online Safety Monitoring for LLMs",
       "latest_url": "https://arxiv.org/abs/2607.02510",
       "latest_required_field_proxy": {
@@ -541,7 +541,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-06-30T19:49:32.761918+00:00",
-      "age_days": 2.97,
+      "age_days": 3.27,
       "latest_title": "Artificial intelligence: a modern approach",
       "latest_url": "https://doi.org/10.5860/choice.33-1577",
       "latest_required_field_proxy": {
