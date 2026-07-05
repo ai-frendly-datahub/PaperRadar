@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-04T19:04:39.929877+00:00",
+  "generated_at": "2026-07-05T02:31:57.398539+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.0,
+      "age_days": 2.31,
       "latest_title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models",
       "latest_url": "https://arxiv.org/abs/2607.01480",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 80,
       "event_count": 80,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.0,
+      "age_days": 2.31,
       "latest_title": "RuleChef: Grounding LLM Task Knowledge in Human-Editable Rules",
       "latest_url": "https://arxiv.org/abs/2607.01293",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.0,
+      "age_days": 2.31,
       "latest_title": "IonSense-QKG: A Quantum-Readiness Metadata Framework for Lithium-Ion Battery Dataset Discovery",
       "latest_url": "https://arxiv.org/abs/2607.01286",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.0,
+      "age_days": 2.31,
       "latest_title": "MapDreamer: Aerial Imagery Conditioned Latent Diffusion for Lane-Level Map Generation",
       "latest_url": "https://arxiv.org/abs/2607.01370",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.0,
+      "age_days": 2.31,
       "latest_title": "Electronic Bursting Neuron: design, equations and hardware implementation",
       "latest_url": "https://arxiv.org/abs/2607.02122",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 77,
       "event_count": 77,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.0,
+      "age_days": 2.31,
       "latest_title": "Learning Consumer Preferences from Bundle Sales Data",
       "latest_url": "https://arxiv.org/abs/2209.04942",
       "latest_required_field_proxy": {
@@ -541,7 +541,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-06-30T19:49:32.761918+00:00",
-      "age_days": 3.97,
+      "age_days": 4.28,
       "latest_title": "The concept of a linguistic variable and its application to approximate reasoning—I",
       "latest_url": "https://doi.org/10.1016/0020-0255(75)90036-5",
       "latest_required_field_proxy": {
