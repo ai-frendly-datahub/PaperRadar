@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-05T08:41:30.303398+00:00",
+  "generated_at": "2026-07-05T08:48:39.650059+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.57,
+      "age_days": 2.58,
       "latest_title": "Separating Expert Retention from Autonomous Source Inference in Raw-ECG-Replay-Free Continual ECG Deployment",
       "latest_url": "https://arxiv.org/abs/2607.01674",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 81,
       "event_count": 81,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.57,
+      "age_days": 2.58,
       "latest_title": "Office Comprehension Benchmark",
       "latest_url": "https://arxiv.org/abs/2607.01245",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.57,
+      "age_days": 2.58,
       "latest_title": "Multi-modal Rail Crossing Safety Analysis",
       "latest_url": "https://arxiv.org/abs/2607.01365",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.57,
+      "age_days": 2.58,
       "latest_title": "AnchorSplat: Fast and Structure Consistent Detail Synthesis for Gaussian Splatting",
       "latest_url": "https://arxiv.org/abs/2607.01290",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.57,
+      "age_days": 2.58,
       "latest_title": "Stable Self-Modulating Quantum Fast-Weight Programmers with Bounded Memory Gates",
       "latest_url": "https://arxiv.org/abs/2607.02363",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 77,
       "event_count": 77,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 2.57,
+      "age_days": 2.58,
       "latest_title": "High-Dimensional Change Point Detection via Graph Spanning Ratio",
       "latest_url": "https://arxiv.org/abs/2512.07541",
       "latest_required_field_proxy": {
