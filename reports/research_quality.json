@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-05T19:10:47.593146+00:00",
+  "generated_at": "2026-07-06T02:36:33.837384+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.01,
+      "age_days": 3.32,
       "latest_title": "Revisiting Chain-of-Thought Reasoning under Limited Supervision: Semi-supervised Chain-of-Thought Learning",
       "latest_url": "https://arxiv.org/abs/2607.01511",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 80,
       "event_count": 80,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.01,
+      "age_days": 3.32,
       "latest_title": "Office Comprehension Benchmark",
       "latest_url": "https://arxiv.org/abs/2607.01245",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.01,
+      "age_days": 3.32,
       "latest_title": "Geometry-Aware R-Structured Kolmogorov-Arnold Networks",
       "latest_url": "https://arxiv.org/abs/2607.01449",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.01,
+      "age_days": 3.32,
       "latest_title": "CPG-PAD: Concept-Informed Prompts Guided Presentation Attack Detection",
       "latest_url": "https://arxiv.org/abs/2607.01303",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.01,
+      "age_days": 3.32,
       "latest_title": "From Consistency to Collaborative Discovery: MFEA-CoD for Multitask Novelty Search",
       "latest_url": "https://arxiv.org/abs/2607.00761",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 77,
       "event_count": 77,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.01,
+      "age_days": 3.32,
       "latest_title": "Role-Aware Neural Convex Divergence Heads for Asymmetric Representation Learning",
       "latest_url": "https://arxiv.org/abs/2607.01762",
       "latest_required_field_proxy": {
@@ -541,7 +541,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-06-30T19:49:32.761918+00:00",
-      "age_days": 4.97,
+      "age_days": 5.28,
       "latest_title": "Data clustering",
       "latest_url": "https://doi.org/10.1145/331499.331504",
       "latest_required_field_proxy": {
@@ -30049,42 +30049,42 @@
       "event_model": "paper_release",
       "source": "arXiv CS.AI",
       "latest_title": "Revisiting Chain-of-Thought Reasoning under Limited Supervision: Semi-supervised Chain-of-Thought Learning",
-      "age_days": 3.01
+      "age_days": 3.32
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CL",
       "latest_title": "Office Comprehension Benchmark",
-      "age_days": 3.01
+      "age_days": 3.32
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.LG",
       "latest_title": "Geometry-Aware R-Structured Kolmogorov-Arnold Networks",
-      "age_days": 3.01
+      "age_days": 3.32
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CV",
       "latest_title": "CPG-PAD: Concept-Informed Prompts Guided Presentation Attack Detection",
-      "age_days": 3.01
+      "age_days": 3.32
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.NE",
       "latest_title": "From Consistency to Collaborative Discovery: MFEA-CoD for Multitask Novelty Search",
-      "age_days": 3.01
+      "age_days": 3.32
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv Stat.ML",
       "latest_title": "Role-Aware Neural Convex Divergence Heads for Asymmetric Representation Learning",
-      "age_days": 3.01
+      "age_days": 3.32
     },
     {
       "reason": "source_missing",
