@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-06T09:56:27.373379+00:00",
+  "generated_at": "2026-07-06T10:07:33.618405+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.62,
+      "age_days": 3.63,
       "latest_title": "OPINE-World: Programmatic World Modeling with Ontology-error-Prioritized Interactive Exploration",
       "latest_url": "https://arxiv.org/abs/2607.01531",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 80,
       "event_count": 80,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.62,
+      "age_days": 3.63,
       "latest_title": "Rethinking Speech-LLM Integration for ASR: Effective Joint Speech-Text Training by Interleaving",
       "latest_url": "https://arxiv.org/abs/2607.01733",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.62,
+      "age_days": 3.63,
       "latest_title": "Wind-Aware Reinforcement Learning Control of a Small Quadrotor Using Learned Onboard Wind Estimation in Simulated Atmospheric Turbulence",
       "latest_url": "https://arxiv.org/abs/2607.01528",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.62,
+      "age_days": 3.63,
       "latest_title": "Domain Generalization via Text-Anchored Information Bottleneck",
       "latest_url": "https://arxiv.org/abs/2607.01657",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.62,
+      "age_days": 3.63,
       "latest_title": "Stable Self-Modulating Quantum Fast-Weight Programmers with Bounded Memory Gates",
       "latest_url": "https://arxiv.org/abs/2607.02363",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 77,
       "event_count": 77,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.62,
+      "age_days": 3.63,
       "latest_title": "Cross-Audit Projection for Model Risk Prediction",
       "latest_url": "https://arxiv.org/abs/2607.02328",
       "latest_required_field_proxy": {
@@ -541,7 +541,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-06-30T19:49:32.761918+00:00",
-      "age_days": 5.59,
+      "age_days": 5.6,
       "latest_title": "Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning",
       "latest_url": "https://doi.org/10.1609/aaai.v31i1.11231",
       "latest_required_field_proxy": {
@@ -30005,42 +30005,42 @@
       "event_model": "paper_release",
       "source": "arXiv CS.AI",
       "latest_title": "OPINE-World: Programmatic World Modeling with Ontology-error-Prioritized Interactive Exploration",
-      "age_days": 3.62
+      "age_days": 3.63
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CL",
       "latest_title": "Rethinking Speech-LLM Integration for ASR: Effective Joint Speech-Text Training by Interleaving",
-      "age_days": 3.62
+      "age_days": 3.63
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.LG",
       "latest_title": "Wind-Aware Reinforcement Learning Control of a Small Quadrotor Using Learned Onboard Wind Estimation in Simulated Atmospheric Turbulence",
-      "age_days": 3.62
+      "age_days": 3.63
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CV",
       "latest_title": "Domain Generalization via Text-Anchored Information Bottleneck",
-      "age_days": 3.62
+      "age_days": 3.63
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.NE",
       "latest_title": "Stable Self-Modulating Quantum Fast-Weight Programmers with Bounded Memory Gates",
-      "age_days": 3.62
+      "age_days": 3.63
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv Stat.ML",
       "latest_title": "Cross-Audit Projection for Model Risk Prediction",
-      "age_days": 3.62
+      "age_days": 3.63
     },
     {
       "reason": "source_missing",
