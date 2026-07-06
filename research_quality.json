@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-06T15:22:51.530443+00:00",
+  "generated_at": "2026-07-06T19:51:49.281270+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.85,
+      "age_days": 4.04,
       "latest_title": "Safe and Adaptive Cloud Healing: Verifying LLM-Generated Recovery Plans with a Neural-Symbolic World Model",
       "latest_url": "https://arxiv.org/abs/2607.01595",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 77,
       "event_count": 77,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.85,
+      "age_days": 4.04,
       "latest_title": "Parameter Golf: What Really Works?",
       "latest_url": "https://arxiv.org/abs/2607.01517",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.85,
+      "age_days": 4.04,
       "latest_title": "Black-Box Inference of LLM Architectural Properties with Restrictive API Access",
       "latest_url": "https://arxiv.org/abs/2607.01313",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.85,
+      "age_days": 4.04,
       "latest_title": "KathaTrace: Diagnosing Semantic Trajectory Collapse in Generated Visual Narratives",
       "latest_url": "https://arxiv.org/abs/2607.01312",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.85,
+      "age_days": 4.04,
       "latest_title": "Mechanism and Stability Analysis of Metabolic Closed-Loop Metaheuristics",
       "latest_url": "https://arxiv.org/abs/2607.01551",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 77,
       "event_count": 77,
       "latest_event_at": "2026-07-02T19:00:00+00:00",
-      "age_days": 3.85,
+      "age_days": 4.04,
       "latest_title": "Role-Aware Neural Convex Divergence Heads for Asymmetric Representation Learning",
       "latest_url": "https://arxiv.org/abs/2607.01762",
       "latest_required_field_proxy": {
@@ -541,7 +541,7 @@
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-06-30T19:49:32.761918+00:00",
-      "age_days": 5.81,
+      "age_days": 6.0,
       "latest_title": "Local Indicators of Spatial Association—LISA",
       "latest_url": "https://doi.org/10.1111/j.1538-4632.1995.tb00338.x",
       "latest_required_field_proxy": {
@@ -29819,42 +29819,42 @@
       "event_model": "paper_release",
       "source": "arXiv CS.AI",
       "latest_title": "Safe and Adaptive Cloud Healing: Verifying LLM-Generated Recovery Plans with a Neural-Symbolic World Model",
-      "age_days": 3.85
+      "age_days": 4.04
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CL",
       "latest_title": "Parameter Golf: What Really Works?",
-      "age_days": 3.85
+      "age_days": 4.04
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.LG",
       "latest_title": "Black-Box Inference of LLM Architectural Properties with Restrictive API Access",
-      "age_days": 3.85
+      "age_days": 4.04
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CV",
       "latest_title": "KathaTrace: Diagnosing Semantic Trajectory Collapse in Generated Visual Narratives",
-      "age_days": 3.85
+      "age_days": 4.04
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.NE",
       "latest_title": "Mechanism and Stability Analysis of Metabolic Closed-Loop Metaheuristics",
-      "age_days": 3.85
+      "age_days": 4.04
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv Stat.ML",
       "latest_title": "Role-Aware Neural Convex Divergence Heads for Asymmetric Representation Learning",
-      "age_days": 3.85
+      "age_days": 4.04
     },
     {
       "reason": "source_missing",
