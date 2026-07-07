@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-07T09:24:49.119682+00:00",
+  "generated_at": "2026-07-07T09:34:00.913842+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-06T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "VERITAS: Towards a General-Purpose Replication Tool for Scientific Research",
       "latest_url": "https://arxiv.org/abs/2607.02931",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-06T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "Jointly Improving Dialect Identification and ASR in Indian Languages using Multimodal Feature Fusion",
       "latest_url": "https://arxiv.org/abs/2607.02862",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-06T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "Auditing the Audit: Five Failure Modes in Benchmark-Validity Audits",
       "latest_url": "https://arxiv.org/abs/2607.02586",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-06T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "Additive Causal Construction for Transferable and Reconfigurable Cross-System Learning in Multi-Source Image Fusion",
       "latest_url": "https://arxiv.org/abs/2607.02572",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 34,
       "event_count": 34,
       "latest_event_at": "2026-07-06T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "ParEVO: Synthesizing Code for Irregular Data: High-Performance Parallelism through Agentic Evolution",
       "latest_url": "https://arxiv.org/abs/2603.02510",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 81,
       "event_count": 81,
       "latest_event_at": "2026-07-06T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "Denoised Conformal Alignment for Reliable Selection of Conditional Average Treatment Effect Predictions",
       "latest_url": "https://arxiv.org/abs/2607.03161",
       "latest_required_field_proxy": {
