@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-08T08:09:29.779675+00:00",
+  "generated_at": "2026-07-08T08:18:41.466261+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -290,7 +290,7 @@
       "article_count": 2,
       "event_count": 2,
       "latest_event_at": "2026-07-06T15:00:00+00:00",
-      "age_days": 1.71,
+      "age_days": 1.72,
       "latest_title": "MUFG aims to become AI-native with OpenAI",
       "latest_url": "https://openai.com/index/mufg",
       "latest_required_field_proxy": {
