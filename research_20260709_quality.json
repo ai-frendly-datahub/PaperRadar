@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-09T09:05:26.766873+00:00",
+  "generated_at": "2026-07-09T09:36:17.201885+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-08T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.61,
       "latest_title": "LLM-powered reasoning in agent-based modeling",
       "latest_url": "https://arxiv.org/abs/2607.06757",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-08T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.61,
       "latest_title": "Evaluation of Multilingual Ability to Use Spatial Deictic Expressions in Vision-Language Models",
       "latest_url": "https://arxiv.org/abs/2607.07251",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-08T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.61,
       "latest_title": "The Rank-One Corner: How Much Value Equivalence Does a Task Need from a World Model?",
       "latest_url": "https://arxiv.org/abs/2607.06640",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-08T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.61,
       "latest_title": "Do Counterfactually Fair Image Classifiers Satisfy Group Fairness? -- A Theoretical and Empirical Study",
       "latest_url": "https://arxiv.org/abs/2607.06603",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 35,
       "event_count": 35,
       "latest_event_at": "2026-07-08T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.61,
       "latest_title": "MEGO: Learning Mixture-of-Experts for General-Purpose Binary Optimization",
       "latest_url": "https://arxiv.org/abs/2405.18884",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 85,
       "event_count": 85,
       "latest_event_at": "2026-07-08T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.61,
       "latest_title": "Network Dynamics-Based Framework for Understanding Deep Neural Networks",
       "latest_url": "https://arxiv.org/abs/2501.02436",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 6,
       "event_count": 6,
       "latest_event_at": "2026-07-08T04:30:00+00:00",
-      "age_days": 1.19,
+      "age_days": 1.21,
       "latest_title": "Our approach to government and national security partnerships",
       "latest_url": "https://openai.com/index/government-national-security-partnerships",
       "latest_required_field_proxy": {
