@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-10T09:02:29.319165+00:00",
+  "generated_at": "2026-07-10T09:27:54.348118+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.6,
       "latest_title": "Adversarial Social Epistemology for Assemblies of Humans and Large Language Models",
       "latest_url": "https://arxiv.org/abs/2607.07760",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.6,
       "latest_title": "Hallucination Self-Play: Bootstrapping Reinforced Detector via Evolved Generator",
       "latest_url": "https://arxiv.org/abs/2607.07993",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.6,
       "latest_title": "Omni-Sleep: A Sleep Foundation Model via Hierarchical Contrastive Learning of CNS--ANS Dynamic",
       "latest_url": "https://arxiv.org/abs/2607.07720",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.6,
       "latest_title": "Leveraging Color Naming for Image Enhancement",
       "latest_url": "https://arxiv.org/abs/2607.08185",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 20,
       "event_count": 20,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.6,
       "latest_title": "LLM for the development of FCM",
       "latest_url": "https://arxiv.org/abs/2607.04983",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 94,
       "event_count": 94,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 0.59,
+      "age_days": 0.6,
       "latest_title": "AutoAnchor: Stable Diffusion Unlearning Using Cross-Attention as a Manifold Surrogate",
       "latest_url": "https://arxiv.org/abs/2607.08337",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 9,
       "event_count": 9,
       "latest_event_at": "2026-07-09T22:00:00+00:00",
-      "age_days": 0.46,
+      "age_days": 0.48,
       "latest_title": "How Deutsche Telekom is rewiring telecommunications with AI",
       "latest_url": "https://openai.com/index/deutsche-telekom",
       "latest_required_field_proxy": {
