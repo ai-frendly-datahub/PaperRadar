@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-10T19:24:47.187703+00:00",
+  "generated_at": "2026-07-11T02:04:01.858519+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Agentic Neural Architecture Search",
       "latest_url": "https://arxiv.org/abs/2607.07984",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "TypeProbe: Recovering Type Representations from Hidden States of Pre-trained Code Models",
       "latest_url": "https://arxiv.org/abs/2607.08339",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE",
       "latest_url": "https://arxiv.org/abs/2607.07740",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Continual Test-Time Adaptation in Computer Vision: Methods, Benchmarks, and Future Directions",
       "latest_url": "https://arxiv.org/abs/2607.08164",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 20,
       "event_count": 20,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Does Dimensionality Reduction via Random Projections Preserve Landscape Features?",
       "latest_url": "https://arxiv.org/abs/2604.13230",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-09T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Conformal Predictive Programming for Chance Constrained Optimization",
       "latest_url": "https://arxiv.org/abs/2402.07407",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 9,
       "event_count": 9,
       "latest_event_at": "2026-07-09T22:00:00+00:00",
-      "age_days": 0.89,
+      "age_days": 1.17,
       "latest_title": "How Deutsche Telekom is rewiring telecommunications with AI",
       "latest_url": "https://openai.com/index/deutsche-telekom",
       "latest_required_field_proxy": {
