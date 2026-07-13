@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-13T08:48:24.532683+00:00",
+  "generated_at": "2026-07-13T09:00:09.980132+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -290,7 +290,7 @@
       "article_count": 8,
       "event_count": 8,
       "latest_event_at": "2026-07-09T22:00:00+00:00",
-      "age_days": 3.45,
+      "age_days": 3.46,
       "latest_title": "How Deutsche Telekom is rewiring telecommunications with AI",
       "latest_url": "https://openai.com/index/deutsche-telekom",
       "latest_required_field_proxy": {
@@ -30811,7 +30811,7 @@
       "event_model": "paper_release",
       "source": "OpenAI Blog",
       "latest_title": "How Deutsche Telekom is rewiring telecommunications with AI",
-      "age_days": 3.45
+      "age_days": 3.46
     },
     {
       "reason": "source_missing",
