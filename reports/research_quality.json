@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-13T19:21:50.406308+00:00",
+  "generated_at": "2026-07-14T01:55:47.480928+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 101,
       "event_count": 101,
       "latest_event_at": "2026-07-12T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading",
       "latest_url": "https://arxiv.org/abs/2607.08964",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 87,
       "event_count": 87,
       "latest_event_at": "2026-07-12T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Test-Time Scaling for Small VLMs on Multilingual Visual MCQ",
       "latest_url": "https://arxiv.org/abs/2607.09438",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 85,
       "event_count": 85,
       "latest_event_at": "2026-07-12T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Prompt-Driven Exploration",
       "latest_url": "https://arxiv.org/abs/2607.08837",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-12T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Probing Diffusion Denoising Dynamics for Contrastive Representation Learning",
       "latest_url": "https://arxiv.org/abs/2607.09067",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 20,
       "event_count": 20,
       "latest_event_at": "2026-07-12T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "An Introduction and Tutorial for the Beagle Framework",
       "latest_url": "https://arxiv.org/abs/2607.06731",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 87,
       "event_count": 87,
       "latest_event_at": "2026-07-12T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Achieving Almost Exact Recovery in Almost Quadratic Time: Rank-Based Graph Matching via Local Tree Correlation Tests",
       "latest_url": "https://arxiv.org/abs/2607.09087",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 9,
       "event_count": 9,
       "latest_event_at": "2026-07-09T22:00:00+00:00",
-      "age_days": 3.89,
+      "age_days": 4.16,
       "latest_title": "How Deutsche Telekom is rewiring telecommunications with AI",
       "latest_url": "https://openai.com/index/deutsche-telekom",
       "latest_required_field_proxy": {
@@ -30499,7 +30499,7 @@
       "event_model": "paper_release",
       "source": "OpenAI Blog",
       "latest_title": "How Deutsche Telekom is rewiring telecommunications with AI",
-      "age_days": 3.89
+      "age_days": 4.16
     },
     {
       "reason": "source_missing",
