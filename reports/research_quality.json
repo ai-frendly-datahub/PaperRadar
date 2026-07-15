@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-14T19:12:59.703361+00:00",
+  "generated_at": "2026-07-15T01:52:37.998317+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 91,
       "event_count": 91,
       "latest_event_at": "2026-07-13T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "How Much Does Correctness Cost? Budgeted Placement of Strong Correctors in a Weak Multi-Agent Swarm",
       "latest_url": "https://arxiv.org/abs/2607.09765",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-13T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "Index SLM Technical Report",
       "latest_url": "https://arxiv.org/abs/2607.09885",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 86,
       "event_count": 86,
       "latest_event_at": "2026-07-13T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "Gauge dependence and structured-output corruption in sign-branched repetition penalties: measurements across models, inference stacks, and alternative repetition controls",
       "latest_url": "https://arxiv.org/abs/2607.09791",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-13T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "Detangled: A Framework for Creating, Editing, and Inferencing Feature Rich Hair Strands",
       "latest_url": "https://arxiv.org/abs/2607.09811",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 30,
       "event_count": 30,
       "latest_event_at": "2026-07-13T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "Life as Plasmas: Autonomy and Interactivism in-materio",
       "latest_url": "https://arxiv.org/abs/2607.09747",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 83,
       "event_count": 83,
       "latest_event_at": "2026-07-13T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "Fast Whole-Brain, Geometry-Aware Functional Alignment for Cross-Subject Decoding",
       "latest_url": "https://arxiv.org/abs/2607.10931",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 9,
       "event_count": 9,
       "latest_event_at": "2026-07-14T01:00:00+00:00",
-      "age_days": 0.76,
+      "age_days": 1.04,
       "latest_title": "How to manage AI investments in the agentic era",
       "latest_url": "https://openai.com/index/managing-ai-investments-in-agentic-era",
       "latest_required_field_proxy": {
@@ -10821,6 +10821,41 @@
       "trust_tier": "T2_institutional",
       "producer_role": "research_lab",
       "event_model": "paper_release",
+      "title": "How sales teams use ChatGPT Work",
+      "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+      "source_url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+      "event_at": "2026-07-13T15:00:00+00:00",
+      "event_key": "paper_release:openai-blog:248b5ff06999:2026-07-13",
+      "paper_id": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "how-sales-teams-use-chatgpt-work",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {},
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:how-sales-teams-use-chatgpt-work",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
       "title": "How data science teams use ChatGPT Work",
       "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
       "source_url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
@@ -10854,41 +10889,6 @@
         "source_url": true
       },
       "canonical_key": "paper:title:how-data-science-teams-use-chatgpt-work",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
-      "title": "How sales teams use ChatGPT Work",
-      "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-      "source_url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-      "event_at": "2026-07-13T15:00:00+00:00",
-      "event_key": "paper_release:openai-blog:248b5ff06999:2026-07-13",
-      "paper_id": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "how-sales-teams-use-chatgpt-work",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {},
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:how-sales-teams-use-chatgpt-work",
       "canonical_key_status": "title_proxy",
       "required_field_gaps": []
     },
@@ -29979,6 +29979,45 @@
       "trust_tier": "T2_institutional",
       "producer_role": "research_lab",
       "event_model": "paper_release",
+      "title": "ChatGPT is now a partner for your most ambitious work",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+      "source_url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+      "event_at": "2026-07-09T01:00:00+00:00",
+      "event_key": "paper_release:openai-blog:5941cef110c0:2026-07-09",
+      "paper_id": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "chatgpt-is-now-a-partner-for-your-most-ambitious-work",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "agent"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:chatgpt-is-now-a-partner-for-your-most-ambitious-work",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
       "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
       "url": "https://openai.com/index/gpt-5-6",
       "source_url": "https://openai.com/index/gpt-5-6",
@@ -30056,45 +30095,6 @@
         "source_url": true
       },
       "canonical_key": "paper:title:gpt-5.5-bio-bug-bounty",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
-      "title": "ChatGPT is now a partner for your most ambitious work",
-      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
-      "source_url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
-      "event_at": "2026-07-09T01:00:00+00:00",
-      "event_key": "paper_release:openai-blog:5941cef110c0:2026-07-09",
-      "paper_id": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "chatgpt-is-now-a-partner-for-your-most-ambitious-work",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "agent"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:chatgpt-is-now-a-partner-for-your-most-ambitious-work",
       "canonical_key_status": "title_proxy",
       "required_field_gaps": []
     },
@@ -30181,17 +30181,17 @@
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
-      "title": "How data science teams use ChatGPT Work",
-      "event_key": "paper_release:openai-blog:cca00ce68781:2026-07-13",
-      "canonical_key": "paper:title:how-data-science-teams-use-chatgpt-work"
+      "title": "How sales teams use ChatGPT Work",
+      "event_key": "paper_release:openai-blog:248b5ff06999:2026-07-13",
+      "canonical_key": "paper:title:how-sales-teams-use-chatgpt-work"
     },
     {
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
-      "title": "How sales teams use ChatGPT Work",
-      "event_key": "paper_release:openai-blog:248b5ff06999:2026-07-13",
-      "canonical_key": "paper:title:how-sales-teams-use-chatgpt-work"
+      "title": "How data science teams use ChatGPT Work",
+      "event_key": "paper_release:openai-blog:cca00ce68781:2026-07-13",
+      "canonical_key": "paper:title:how-data-science-teams-use-chatgpt-work"
     },
     {
       "reason": "title_proxy_canonical_key",
@@ -30221,6 +30221,14 @@
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
+      "title": "ChatGPT is now a partner for your most ambitious work",
+      "event_key": "paper_release:openai-blog:5941cef110c0:2026-07-09",
+      "canonical_key": "paper:title:chatgpt-is-now-a-partner-for-your-most-ambitious-work"
+    },
+    {
+      "reason": "title_proxy_canonical_key",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
       "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
       "event_key": "paper_release:openai-blog:54ee76ae9206:2026-07-09",
       "canonical_key": "paper:title:gpt-5.6-frontier-intelligence-that-scales-with-your-ambition"
@@ -30232,14 +30240,6 @@
       "title": "GPT-5.5 Bio Bug Bounty",
       "event_key": "paper_release:openai-blog:8fd74bd3f519:2026-07-09",
       "canonical_key": "paper:title:gpt-5.5-bio-bug-bounty"
-    },
-    {
-      "reason": "title_proxy_canonical_key",
-      "event_model": "paper_release",
-      "source": "OpenAI Blog",
-      "title": "ChatGPT is now a partner for your most ambitious work",
-      "event_key": "paper_release:openai-blog:5941cef110c0:2026-07-09",
-      "canonical_key": "paper:title:chatgpt-is-now-a-partner-for-your-most-ambitious-work"
     },
     {
       "reason": "source_missing",
