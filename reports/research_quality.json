@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-15T19:05:28.324407+00:00",
+  "generated_at": "2026-07-16T02:02:44.111408+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-14T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models",
       "latest_url": "https://arxiv.org/abs/2607.12463",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-14T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "Graph-Based Detection of Disinformation Narrative Diffusion between Russian and Ukrainian Telegram Channels",
       "latest_url": "https://arxiv.org/abs/2607.11894",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 86,
       "event_count": 86,
       "latest_event_at": "2026-07-14T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "Exact and Certified Data Shapley for Weighted k-Nearest-Neighbor Regression and Soft-Label Prediction",
       "latest_url": "https://arxiv.org/abs/2607.11956",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-14T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "Semantic-Edge Response Decoding of SAM3 for Zero-Shot Crack Segmentation",
       "latest_url": "https://arxiv.org/abs/2607.12292",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 38,
       "event_count": 38,
       "latest_event_at": "2026-07-14T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "QDEvo: A Multi-Objective Quality-Diversity Framework for Automated Heuristic Design",
       "latest_url": "https://arxiv.org/abs/2607.11916",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 84,
       "event_count": 84,
       "latest_event_at": "2026-07-14T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "Did We Actually Fix It? An Independent Adversarial Stress-Test of Post-Point-Adjustment Evaluation Metrics for Time-Series Anomaly Detection",
       "latest_url": "https://arxiv.org/abs/2607.11969",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 5,
       "event_count": 5,
       "latest_event_at": "2026-07-15T03:00:00+00:00",
-      "age_days": 0.67,
+      "age_days": 0.96,
       "latest_title": "The US is advancing AI safety through state and federal action",
       "latest_url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
       "latest_required_field_proxy": {
@@ -21001,6 +21001,41 @@
       "trust_tier": "T2_institutional",
       "producer_role": "research_lab",
       "event_model": "paper_release",
+      "title": "How sales teams use ChatGPT Work",
+      "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+      "source_url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+      "event_at": "2026-07-13T15:00:00+00:00",
+      "event_key": "paper_release:openai-blog:248b5ff06999:2026-07-13",
+      "paper_id": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "how-sales-teams-use-chatgpt-work",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {},
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:how-sales-teams-use-chatgpt-work",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
       "title": "How data science teams use ChatGPT Work",
       "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
       "source_url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
@@ -21034,41 +21069,6 @@
         "source_url": true
       },
       "canonical_key": "paper:title:how-data-science-teams-use-chatgpt-work",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
-      "title": "How sales teams use ChatGPT Work",
-      "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-      "source_url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-      "event_at": "2026-07-13T15:00:00+00:00",
-      "event_key": "paper_release:openai-blog:248b5ff06999:2026-07-13",
-      "paper_id": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "how-sales-teams-use-chatgpt-work",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {},
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:how-sales-teams-use-chatgpt-work",
       "canonical_key_status": "title_proxy",
       "required_field_gaps": []
     },
@@ -30470,17 +30470,17 @@
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
-      "title": "How data science teams use ChatGPT Work",
-      "event_key": "paper_release:openai-blog:cca00ce68781:2026-07-13",
-      "canonical_key": "paper:title:how-data-science-teams-use-chatgpt-work"
+      "title": "How sales teams use ChatGPT Work",
+      "event_key": "paper_release:openai-blog:248b5ff06999:2026-07-13",
+      "canonical_key": "paper:title:how-sales-teams-use-chatgpt-work"
     },
     {
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
-      "title": "How sales teams use ChatGPT Work",
-      "event_key": "paper_release:openai-blog:248b5ff06999:2026-07-13",
-      "canonical_key": "paper:title:how-sales-teams-use-chatgpt-work"
+      "title": "How data science teams use ChatGPT Work",
+      "event_key": "paper_release:openai-blog:cca00ce68781:2026-07-13",
+      "canonical_key": "paper:title:how-data-science-teams-use-chatgpt-work"
     },
     {
       "reason": "source_missing",
