@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-16T07:58:08.662877+00:00",
+  "generated_at": "2026-07-16T08:05:35.428822+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 118,
       "event_count": 118,
       "latest_event_at": "2026-07-15T19:00:00+00:00",
-      "age_days": 0.54,
+      "age_days": 0.55,
       "latest_title": "AI-Native Insurance for Agentic AI: Pricing, Underwriting, and End-to-End Automation",
       "latest_url": "https://arxiv.org/abs/2607.13230",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 61,
       "event_count": 61,
       "latest_event_at": "2026-07-15T19:00:00+00:00",
-      "age_days": 0.54,
+      "age_days": 0.55,
       "latest_title": "CityBehavEx: A Scalable and Empirically Validated LLM-Assisted Urban Simulation Platform",
       "latest_url": "https://arxiv.org/abs/2607.12086",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-15T19:00:00+00:00",
-      "age_days": 0.54,
+      "age_days": 0.55,
       "latest_title": "Disentangling Knowledge States with Ability and Proficiency Modeling for Knowledge Tracing",
       "latest_url": "https://arxiv.org/abs/2607.13103",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-15T19:00:00+00:00",
-      "age_days": 0.54,
+      "age_days": 0.55,
       "latest_title": "A Masked Autoencoder Approach to Unsupervised Steel Surface Defect Recognition",
       "latest_url": "https://arxiv.org/abs/2607.13178",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 38,
       "event_count": 38,
       "latest_event_at": "2026-07-15T19:00:00+00:00",
-      "age_days": 0.54,
+      "age_days": 0.55,
       "latest_title": "SPECS: Speciated Evolutionary Circuit Synthesis",
       "latest_url": "https://arxiv.org/abs/2607.14027",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 83,
       "event_count": 83,
       "latest_event_at": "2026-07-15T19:00:00+00:00",
-      "age_days": 0.54,
+      "age_days": 0.55,
       "latest_title": "Avoiding unsafe sets when training with Langevin Dynamics",
       "latest_url": "https://arxiv.org/abs/2607.07538",
       "latest_required_field_proxy": {
