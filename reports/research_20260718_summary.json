@@ -23,7 +23,7 @@
     },
     {
       "name": "Institutions",
-      "count": 45
+      "count": 46
     },
     {
       "name": "Venues",
@@ -44,5 +44,5 @@
     "Towards Data Science": 20,
     "The Gradient": 15
   },
-  "generated_at": "2026-07-18T04:02:24.326811+09:00"
+  "generated_at": "2026-07-18T10:55:02.554051+09:00"
 }

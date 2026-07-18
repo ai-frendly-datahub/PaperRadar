@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-17T19:02:25.318228+00:00",
+  "generated_at": "2026-07-18T01:55:03.539965+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 108,
       "event_count": 108,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "CatalogAgent: A Supervisor-mediated Self-Learning System Enabling Context Engineering for GenAI Models",
       "latest_url": "https://arxiv.org/abs/2607.14396",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 70,
       "event_count": 70,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "ReportMedSAM: Guiding Segmentation Through Radiology Reports",
       "latest_url": "https://arxiv.org/abs/2607.14116",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "A Temporal Machine Learning-Based Time-to-Event Model for Predicting ALS Progression and Healthcare Utilization",
       "latest_url": "https://arxiv.org/abs/2607.14190",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "Hough-SIFT: Robust Image Registration for Linear Structures via Hough Space",
       "latest_url": "https://arxiv.org/abs/2607.14598",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 30,
       "event_count": 30,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "SMC-ES: Automated synthesis of formally verified control policies",
       "latest_url": "https://arxiv.org/abs/2607.15003",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 85,
       "event_count": 85,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 1.0,
+      "age_days": 1.29,
       "latest_title": "Gibbs randomness-compression proposition",
       "latest_url": "https://arxiv.org/abs/2505.23869",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 6,
       "event_count": 6,
       "latest_event_at": "2026-07-17T01:00:00+00:00",
-      "age_days": 0.75,
+      "age_days": 1.04,
       "latest_title": "A scorecard for the AI age",
       "latest_url": "https://openai.com/index/a-scorecard-for-the-ai-age",
       "latest_required_field_proxy": {
@@ -713,6 +713,9 @@
       "dataset": "",
       "venue": "",
       "matched_entities": {
+        "Institutions": [
+          "openai"
+        ],
         "ResearchGeneral": [
           "introduces",
           "compute",
