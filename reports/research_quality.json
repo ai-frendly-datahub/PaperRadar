@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-18T07:28:22.000901+00:00",
+  "generated_at": "2026-07-18T07:42:52.683657+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 108,
       "event_count": 108,
       "latest_event_at": "2026-07-17T19:00:00+00:00",
-      "age_days": 0.52,
+      "age_days": 0.53,
       "latest_title": "CausalGraphX: A Counterfactual Graph Neural Network Framework for Explainable Systemic Risk Assessment",
       "latest_url": "https://arxiv.org/abs/2607.14416",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 70,
       "event_count": 70,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 1.52,
+      "age_days": 1.53,
       "latest_title": "DS@GT ARC at LongEval: Citation Integrity and Factual Grounding in Scientific QA",
       "latest_url": "https://arxiv.org/abs/2607.14400",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-17T19:00:00+00:00",
-      "age_days": 0.52,
+      "age_days": 0.53,
       "latest_title": "RENEW: Towards Learning World Models and Repairing Model Exploitation from Preferences",
       "latest_url": "https://arxiv.org/abs/2607.14180",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 1.52,
+      "age_days": 1.53,
       "latest_title": "Cotton-SF YOLO: Learning Structural and Frequency Cues for Early Cotton Square Detection in Complex Field Environments",
       "latest_url": "https://arxiv.org/abs/2607.14445",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 30,
       "event_count": 30,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 1.52,
+      "age_days": 1.53,
       "latest_title": "Confidence-based Ranking with Adaptive Sampling for Noisy Black-Box Optimisation",
       "latest_url": "https://arxiv.org/abs/2607.14936",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 85,
       "event_count": 85,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 1.52,
+      "age_days": 1.53,
       "latest_title": "What's in a Smoothness Constant? Tighter Rates for Local SGD with Bounded Second-order Heterogeneity",
       "latest_url": "https://arxiv.org/abs/2607.14731",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 6,
       "event_count": 6,
       "latest_event_at": "2026-07-17T01:00:00+00:00",
-      "age_days": 1.27,
+      "age_days": 1.28,
       "latest_title": "A scorecard for the AI age",
       "latest_url": "https://openai.com/index/a-scorecard-for-the-ai-age",
       "latest_required_field_proxy": {
