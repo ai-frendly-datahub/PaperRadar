@@ -1,0 +1,42 @@
+{
+  "date": "2026-07-20",
+  "category": "research",
+  "article_count": 125,
+  "source_count": 6,
+  "matched_count": 118,
+  "top_entities": [
+    {
+      "name": "ResearchGeneral",
+      "count": 345
+    },
+    {
+      "name": "Research Areas",
+      "count": 46
+    },
+    {
+      "name": "Institutions",
+      "count": 38
+    },
+    {
+      "name": "Techniques",
+      "count": 37
+    },
+    {
+      "name": "Venues",
+      "count": 26
+    },
+    {
+      "name": "Tasks",
+      "count": 17
+    }
+  ],
+  "sources": {
+    "Google AI Blog": 20,
+    "OpenAI Blog": 30,
+    "DeepMind Blog": 30,
+    "Microsoft Research": 10,
+    "Towards Data Science": 20,
+    "The Gradient": 15
+  },
+  "generated_at": "2026-07-20T04:00:21.590072+09:00"
+}
