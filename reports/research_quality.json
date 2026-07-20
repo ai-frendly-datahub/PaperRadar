@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-20T08:39:17.182463+00:00",
+  "generated_at": "2026-07-20T08:50:19.999961+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 100,
       "event_count": 100,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 0.57,
+      "age_days": 0.58,
       "latest_title": "Do Coding Agents Need Executable World Models, Simplification, and Verification to Solve ARC-AGI-3?",
       "latest_url": "https://arxiv.org/abs/2607.15439",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 0.57,
+      "age_days": 0.58,
       "latest_title": "How Much Human Label Variation Does Formal Semantic Structure Explain?: Group-Level Effects and Item-Level Ceilings in NLI",
       "latest_url": "https://arxiv.org/abs/2607.15870",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 0.57,
+      "age_days": 0.58,
       "latest_title": "Do Generative Models Keep Time? A Time-Aware Evaluation of Synthetic Sequential Tabular Data",
       "latest_url": "https://arxiv.org/abs/2607.15606",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 0.57,
+      "age_days": 0.58,
       "latest_title": "Partial Information Decomposition as a Multi-Contrast 3D MRI Selection Strategy for Resource-Constrained Deep Neural Network Training in Brain Tumor Segmentation",
       "latest_url": "https://arxiv.org/abs/2607.15396",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 24,
       "event_count": 24,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 0.57,
+      "age_days": 0.58,
       "latest_title": "TEFormer: Structured Bidirectional Temporal Enhancement Modeling in Spiking Transformers",
       "latest_url": "https://arxiv.org/abs/2601.18274",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 82,
       "event_count": 82,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 0.57,
+      "age_days": 0.58,
       "latest_title": "Aggregation of Statistical Evidence under Exchangeability",
       "latest_url": "https://arxiv.org/abs/2607.15823",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 5,
       "event_count": 5,
       "latest_event_at": "2026-07-17T01:00:00+00:00",
-      "age_days": 3.32,
+      "age_days": 3.33,
       "latest_title": "A scorecard for the AI age",
       "latest_url": "https://openai.com/index/a-scorecard-for-the-ai-age",
       "latest_required_field_proxy": {
@@ -30852,7 +30852,7 @@
       "event_model": "paper_release",
       "source": "OpenAI Blog",
       "latest_title": "A scorecard for the AI age",
-      "age_days": 3.32
+      "age_days": 3.33
     },
     {
       "reason": "source_missing",
