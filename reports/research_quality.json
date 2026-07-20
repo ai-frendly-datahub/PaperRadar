@@ -1,13 +1,13 @@
 {
   "category": "research",
-  "generated_at": "2026-07-19T19:00:22.566031+00:00",
+  "generated_at": "2026-07-20T02:26:37.822215+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
     "enabled_sources": 16,
     "tracked_sources": 14,
-    "fresh_sources": 3,
-    "stale_sources": 4,
+    "fresh_sources": 2,
+    "stale_sources": 5,
     "missing_sources": 2,
     "missing_event_sources": 0,
     "unknown_event_date_sources": 0,
@@ -28,10 +28,10 @@
     "code_repository_present_count": 32,
     "benchmark_metric_present_count": 0,
     "event_required_field_gap_count": 0,
-    "tracked_source_gap_count": 6,
+    "tracked_source_gap_count": 7,
     "missing_event_model_count": 3,
     "source_backlog_candidate_count": 4,
-    "daily_review_item_count": 19
+    "daily_review_item_count": 20
   },
   "sources": [
     {
@@ -50,7 +50,7 @@
       "article_count": 102,
       "event_count": 102,
       "latest_event_at": "2026-07-17T19:00:00+00:00",
-      "age_days": 2.0,
+      "age_days": 2.31,
       "latest_title": "ToolAnchor: Anchoring Counterfactual Context to Boost Agentic Tool-use Capability",
       "latest_url": "https://arxiv.org/abs/2607.14145",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 70,
       "event_count": 70,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 3.0,
+      "age_days": 3.31,
       "latest_title": "Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel",
       "latest_url": "https://arxiv.org/abs/2607.14431",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-17T19:00:00+00:00",
-      "age_days": 2.0,
+      "age_days": 2.31,
       "latest_title": "RENEW: Towards Learning World Models and Repairing Model Exploitation from Preferences",
       "latest_url": "https://arxiv.org/abs/2607.14180",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 3.0,
+      "age_days": 3.31,
       "latest_title": "Advanced Image Generation: Negative Prompt Optimization and Latent Classifier Guidance",
       "latest_url": "https://arxiv.org/abs/2607.14580",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 30,
       "event_count": 30,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 3.0,
+      "age_days": 3.31,
       "latest_title": "NORACL: Neurogenesis for Oracle-free Resource-Adaptive Continual Learning",
       "latest_url": "https://arxiv.org/abs/2604.27031",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 85,
       "event_count": 85,
       "latest_event_at": "2026-07-16T19:00:00+00:00",
-      "age_days": 3.0,
+      "age_days": 3.31,
       "latest_title": "NeuralChaos: Optimal Adapted Approximation of Square Integrable Predictable Processes",
       "latest_url": "https://arxiv.org/abs/2607.14361",
       "latest_required_field_proxy": {
@@ -286,11 +286,11 @@
       "tracked": true,
       "event_model": "paper_release",
       "freshness_sla_days": 3.0,
-      "status": "fresh",
+      "status": "stale",
       "article_count": 6,
       "event_count": 6,
       "latest_event_at": "2026-07-17T01:00:00+00:00",
-      "age_days": 2.75,
+      "age_days": 3.06,
       "latest_title": "A scorecard for the AI age",
       "latest_url": "https://openai.com/index/a-scorecard-for-the-ai-age",
       "latest_required_field_proxy": {
@@ -30367,28 +30367,35 @@
       "event_model": "paper_release",
       "source": "arXiv CS.CL",
       "latest_title": "Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel",
-      "age_days": 3.0
+      "age_days": 3.31
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CV",
       "latest_title": "Advanced Image Generation: Negative Prompt Optimization and Latent Classifier Guidance",
-      "age_days": 3.0
+      "age_days": 3.31
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.NE",
       "latest_title": "NORACL: Neurogenesis for Oracle-free Resource-Adaptive Continual Learning",
-      "age_days": 3.0
+      "age_days": 3.31
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv Stat.ML",
       "latest_title": "NeuralChaos: Optimal Adapted Approximation of Square Integrable Predictable Processes",
-      "age_days": 3.0
+      "age_days": 3.31
+    },
+    {
+      "reason": "source_stale",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "latest_title": "A scorecard for the AI age",
+      "age_days": 3.06
     },
     {
       "reason": "source_missing",
