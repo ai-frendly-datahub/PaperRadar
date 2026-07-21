@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-20T19:34:34.791631+00:00",
+  "generated_at": "2026-07-21T02:04:44.608514+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 95,
       "event_count": 95,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "SeerGuard: A Safety Framework for Mobile GUI Agents via World Model Prediction",
       "latest_url": "https://arxiv.org/abs/2607.15550",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "EpiNarrate: Agentic Generation of Grounded Narratives from Epidemiological Scenario Projections",
       "latest_url": "https://arxiv.org/abs/2607.15544",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Do Generative Models Keep Time? A Time-Aware Evaluation of Synthetic Sequential Tabular Data",
       "latest_url": "https://arxiv.org/abs/2607.15606",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Unsupervised Keypoints for Real-Time Fall Detection: Comparative Analysis Under Real-world Conditions with Predictive Bandwidth Reduction",
       "latest_url": "https://arxiv.org/abs/2607.15400",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 24,
       "event_count": 24,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Transient State Reorganization and Cell Differentiation in the Developmental Dynamics of Growing Neural Cellular Automata",
       "latest_url": "https://arxiv.org/abs/2607.15726",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 82,
       "event_count": 82,
       "latest_event_at": "2026-07-19T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Manifold Dimension Estimation via Local Graph Structure",
       "latest_url": "https://arxiv.org/abs/2510.15141",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 6,
       "event_count": 6,
       "latest_event_at": "2026-07-20T01:00:00+00:00",
-      "age_days": 0.77,
+      "age_days": 1.04,
       "latest_title": "Safety and alignment in an era of long-horizon models",
       "latest_url": "https://openai.com/index/safety-alignment-long-horizon-models",
       "latest_required_field_proxy": {
