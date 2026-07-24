@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-24T08:09:03.007804+00:00",
+  "generated_at": "2026-07-24T08:18:23.935346+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -290,7 +290,7 @@
       "article_count": 8,
       "event_count": 8,
       "latest_event_at": "2026-07-22T15:00:00+00:00",
-      "age_days": 1.71,
+      "age_days": 1.72,
       "latest_title": "Launching Health in ChatGPT",
       "latest_url": "https://openai.com/index/health-in-chatgpt",
       "latest_required_field_proxy": {
