@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-23T19:09:18.400567+00:00",
+  "generated_at": "2026-07-24T02:06:36.825489+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-22T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Rethinking Uncertainty Evaluation in Large Language Models",
       "latest_url": "https://arxiv.org/abs/2607.19367",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 88,
       "event_count": 88,
       "latest_event_at": "2026-07-22T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Language-Specific versus Cross-Lingual Knowledge Graphs for Implicit Aspect Identification in Arabic: A Comparative Study of Reasoning and Adaptation Strategies",
       "latest_url": "https://arxiv.org/abs/2607.20056",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-22T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Neural Operator Surrogates for Two-Dimensional Neutron Flux Estimation",
       "latest_url": "https://arxiv.org/abs/2607.19388",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 89,
       "event_count": 89,
       "latest_event_at": "2026-07-22T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "DRGBT-1K: A Large-scale High-quality Benchmark for Dynamic RGBT Tracking",
       "latest_url": "https://arxiv.org/abs/2607.19772",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 37,
       "event_count": 37,
       "latest_event_at": "2026-07-22T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Local search for valued constraint satisfaction parameterized by treedepth",
       "latest_url": "https://arxiv.org/abs/2405.12410",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 84,
       "event_count": 84,
       "latest_event_at": "2026-07-22T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.3,
       "latest_title": "Any-Time Regret-Guaranteed Algorithm for Control of Linear Quadratic Systems",
       "latest_url": "https://arxiv.org/abs/2406.07746",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 8,
       "event_count": 8,
       "latest_event_at": "2026-07-22T15:00:00+00:00",
-      "age_days": 1.17,
+      "age_days": 1.46,
       "latest_title": "Launching Health in ChatGPT",
       "latest_url": "https://openai.com/index/health-in-chatgpt",
       "latest_required_field_proxy": {
