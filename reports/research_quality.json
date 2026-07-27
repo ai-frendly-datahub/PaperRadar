@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-27T09:28:22.676164+00:00",
+  "generated_at": "2026-07-27T09:42:07.985709+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 83,
       "event_count": 83,
       "latest_event_at": "2026-07-23T19:00:00+00:00",
-      "age_days": 3.6,
+      "age_days": 3.61,
       "latest_title": "The Devil is in the Spectrum: Mitigating Representation Collapse in LLMs via Topologically Regularized Side-Path",
       "latest_url": "https://arxiv.org/abs/2607.20484",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 91,
       "event_count": 91,
       "latest_event_at": "2026-07-26T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "From Obligation to Specification: A Survey on Validating EU AI Act Requirements in RE",
       "latest_url": "https://arxiv.org/abs/2607.21608",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-26T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "Physiological Signals as a Forensic Modality for Talking-Face Deepfake Detection",
       "latest_url": "https://arxiv.org/abs/2607.21776",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 93,
       "event_count": 93,
       "latest_event_at": "2026-07-26T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "GLI-AL: A Multi-Modal Glioma MRI Label Resource with Unified Anatomy-Lesion Labels",
       "latest_url": "https://arxiv.org/abs/2607.22135",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 21,
       "event_count": 21,
       "latest_event_at": "2026-07-26T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "On the Runtime Analysis of Reinforcement Learning Hyper-Heuristics",
       "latest_url": "https://arxiv.org/abs/2607.22036",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 99,
       "event_count": 99,
       "latest_event_at": "2026-07-26T19:00:00+00:00",
-      "age_days": 0.6,
+      "age_days": 0.61,
       "latest_title": "General Value Functions for Remaining Useful Life and Failure-Mode Prediction",
       "latest_url": "https://arxiv.org/abs/2607.22268",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 5,
       "event_count": 5,
       "latest_event_at": "2026-07-22T15:00:00+00:00",
-      "age_days": 4.77,
+      "age_days": 4.78,
       "latest_title": "Launching Health in ChatGPT",
       "latest_url": "https://openai.com/index/health-in-chatgpt",
       "latest_required_field_proxy": {
@@ -30700,14 +30700,14 @@
       "event_model": "paper_release",
       "source": "arXiv CS.AI",
       "latest_title": "The Devil is in the Spectrum: Mitigating Representation Collapse in LLMs via Topologically Regularized Side-Path",
-      "age_days": 3.6
+      "age_days": 3.61
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
       "latest_title": "Launching Health in ChatGPT",
-      "age_days": 4.77
+      "age_days": 4.78
     },
     {
       "reason": "source_missing",
