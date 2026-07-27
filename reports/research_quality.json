@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-26T19:06:05.500832+00:00",
+  "generated_at": "2026-07-27T02:18:09.140718+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-23T19:00:00+00:00",
-      "age_days": 3.0,
+      "age_days": 3.3,
       "latest_title": "DC-Leap: Training-Free Acceleration of dLLMs via Draft-Guided Contiguous Leaping Decoding",
       "latest_url": "https://arxiv.org/abs/2607.20467",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-23T19:00:00+00:00",
-      "age_days": 3.0,
+      "age_days": 3.3,
       "latest_title": "Naver-News-KO: A Korean News Summarization Dataset for Open-Source Fine-Tuning of Summarization Models",
       "latest_url": "https://arxiv.org/abs/2607.20442",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-23T19:00:00+00:00",
-      "age_days": 3.0,
+      "age_days": 3.3,
       "latest_title": "Scaling Closed-Loop Feature Channel Configuration with LLMs",
       "latest_url": "https://arxiv.org/abs/2607.20516",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-23T19:00:00+00:00",
-      "age_days": 3.0,
+      "age_days": 3.3,
       "latest_title": "WhereEdit: Mask-aware Local Latent Editing for One-Step Image Editing",
       "latest_url": "https://arxiv.org/abs/2607.20883",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 25,
       "event_count": 25,
       "latest_event_at": "2026-07-23T19:00:00+00:00",
-      "age_days": 3.0,
+      "age_days": 3.3,
       "latest_title": "Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization",
       "latest_url": "https://arxiv.org/abs/2508.20458",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 85,
       "event_count": 85,
       "latest_event_at": "2026-07-23T19:00:00+00:00",
-      "age_days": 3.0,
+      "age_days": 3.3,
       "latest_title": "Boltzmann generators for amorphous particle systems",
       "latest_url": "https://arxiv.org/abs/2512.16607",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 7,
       "event_count": 7,
       "latest_event_at": "2026-07-22T15:00:00+00:00",
-      "age_days": 4.17,
+      "age_days": 4.47,
       "latest_title": "Launching Health in ChatGPT",
       "latest_url": "https://openai.com/index/health-in-chatgpt",
       "latest_required_field_proxy": {
@@ -30552,49 +30552,49 @@
       "event_model": "paper_release",
       "source": "arXiv CS.AI",
       "latest_title": "DC-Leap: Training-Free Acceleration of dLLMs via Draft-Guided Contiguous Leaping Decoding",
-      "age_days": 3.0
+      "age_days": 3.3
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CL",
       "latest_title": "Naver-News-KO: A Korean News Summarization Dataset for Open-Source Fine-Tuning of Summarization Models",
-      "age_days": 3.0
+      "age_days": 3.3
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.LG",
       "latest_title": "Scaling Closed-Loop Feature Channel Configuration with LLMs",
-      "age_days": 3.0
+      "age_days": 3.3
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.CV",
       "latest_title": "WhereEdit: Mask-aware Local Latent Editing for One-Step Image Editing",
-      "age_days": 3.0
+      "age_days": 3.3
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv CS.NE",
       "latest_title": "Ecological Cycle Optimizer: A novel nature-inspired metaheuristic algorithm for non-convex global optimization",
-      "age_days": 3.0
+      "age_days": 3.3
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "arXiv Stat.ML",
       "latest_title": "Boltzmann generators for amorphous particle systems",
-      "age_days": 3.0
+      "age_days": 3.3
     },
     {
       "reason": "source_stale",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
       "latest_title": "Launching Health in ChatGPT",
-      "age_days": 4.17
+      "age_days": 4.47
     },
     {
       "reason": "source_missing",
