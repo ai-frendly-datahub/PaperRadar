@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-27T19:22:21.568126+00:00",
+  "generated_at": "2026-07-28T01:58:42.314730+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 79,
       "event_count": 79,
       "latest_event_at": "2026-07-23T19:00:00+00:00",
-      "age_days": 4.02,
+      "age_days": 4.29,
       "latest_title": "AINTMA: Agentic AI Architecture for Autonomous Test Management with Generative Intelligence, Secure Cloud Communication and Adaptive Quality Analytics",
       "latest_url": "https://arxiv.org/abs/2607.20452",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-26T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Scaling Native Multimodal Pre-Training From Scratch",
       "latest_url": "https://arxiv.org/abs/2607.22043",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-26T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Scaling Laws for Classical Machine Learning on Tabular Data: A Benchmark Study",
       "latest_url": "https://arxiv.org/abs/2607.21866",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 112,
       "event_count": 112,
       "latest_event_at": "2026-07-26T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Spectral Prior for Reducing Exposure Bias in Diffusion Models",
       "latest_url": "https://arxiv.org/abs/2607.22091",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 20,
       "event_count": 20,
       "latest_event_at": "2026-07-26T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "Local Synaptic Rules Can Implement a SIGReg Gradient Without Backpropagation",
       "latest_url": "https://arxiv.org/abs/2607.21622",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 81,
       "event_count": 81,
       "latest_event_at": "2026-07-26T19:00:00+00:00",
-      "age_days": 1.02,
+      "age_days": 1.29,
       "latest_title": "The V-fold jackknife for semiparametric inference: variance estimation, confidence intervals, and simultaneous confidence bands",
       "latest_url": "https://arxiv.org/abs/2607.22493",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 6,
       "event_count": 6,
       "latest_event_at": "2026-07-26T18:30:00+00:00",
-      "age_days": 1.04,
+      "age_days": 1.31,
       "latest_title": "How AI is expanding what people do at work",
       "latest_url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work",
       "latest_required_field_proxy": {
@@ -30608,7 +30608,7 @@
       "event_model": "paper_release",
       "source": "arXiv CS.AI",
       "latest_title": "AINTMA: Agentic AI Architecture for Autonomous Test Management with Generative Intelligence, Secure Cloud Communication and Adaptive Quality Analytics",
-      "age_days": 4.02
+      "age_days": 4.29
     },
     {
       "reason": "source_missing",
