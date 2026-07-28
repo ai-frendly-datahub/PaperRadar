@@ -1,40 +1,41 @@
 {
   "date": "2026-07-28",
   "category": "research",
-  "article_count": 252,
-  "source_count": 11,
-  "matched_count": 246,
+  "article_count": 289,
+  "source_count": 12,
+  "matched_count": 283,
   "top_entities": [
     {
       "name": "ResearchGeneral",
-      "count": 2631
+      "count": 3396
     },
     {
       "name": "Research Areas",
-      "count": 198
+      "count": 238
     },
     {
       "name": "Tasks",
-      "count": 159
+      "count": 214
     },
     {
       "name": "Techniques",
-      "count": 103
+      "count": 148
     },
     {
       "name": "Institutions",
-      "count": 45
+      "count": 50
     },
     {
       "name": "Venues",
-      "count": 39
+      "count": 31
     }
   ],
   "sources": {
+    "arXiv CS.AI": 30,
     "arXiv CS.CL": 30,
     "arXiv CS.LG": 30,
     "arXiv CS.CV": 30,
-    "arXiv CS.NE": 7,
+    "arXiv CS.NE": 14,
     "arXiv Stat.ML": 30,
     "Google AI Blog": 20,
     "OpenAI Blog": 30,
@@ -43,5 +44,5 @@
     "Towards Data Science": 20,
     "The Gradient": 15
   },
-  "generated_at": "2026-07-28T10:58:41.277673+09:00"
+  "generated_at": "2026-07-28T17:17:04.385493+09:00"
 }
