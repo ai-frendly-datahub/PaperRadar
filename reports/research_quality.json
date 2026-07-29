@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-28T19:18:22.773644+00:00",
+  "generated_at": "2026-07-29T02:02:30.532582+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 79,
       "event_count": 79,
       "latest_event_at": "2026-07-27T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "MM-ShiftKV: Decode-Aware Prefill-Stage KV Selection for Multimodal Large Language Models",
       "latest_url": "https://arxiv.org/abs/2607.22586",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 91,
       "event_count": 91,
       "latest_event_at": "2026-07-27T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "Evaluating the Impact of Reviewer Guideline Design on LLM-Based Automated Peer Review",
       "latest_url": "https://arxiv.org/abs/2607.22553",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 92,
       "event_count": 92,
       "latest_event_at": "2026-07-27T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "CausalGate: Causal Importance Distillation for Transformer Module Pruning",
       "latest_url": "https://arxiv.org/abs/2607.22720",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-27T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "TOM-GS: Editable Video Representation via Temporal Opacity Modulation of Static 3D Gaussians",
       "latest_url": "https://arxiv.org/abs/2607.22717",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 26,
       "event_count": 26,
       "latest_event_at": "2026-07-27T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "Constraint-Bound Agnostic Bayesian Optimization: One Model for All Thresholds",
       "latest_url": "https://arxiv.org/abs/2607.23448",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 97,
       "event_count": 97,
       "latest_event_at": "2026-07-27T19:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.29,
       "latest_title": "Adaptive Multi-Scale Forecasting and Gate-Localized Conformal Prediction for Multivariate Nonstationary Time Series",
       "latest_url": "https://arxiv.org/abs/2607.23165",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 2,
       "event_count": 2,
       "latest_event_at": "2026-07-28T08:00:00+00:00",
-      "age_days": 0.47,
+      "age_days": 0.75,
       "latest_title": "Scientific computing in the age of agentic AI",
       "latest_url": "https://openai.com/index/scientific-computing-agentic-ai",
       "latest_required_field_proxy": {
