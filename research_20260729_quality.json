@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-07-29T08:20:56.698159+00:00",
+  "generated_at": "2026-07-29T08:32:04.669627+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -290,7 +290,7 @@
       "article_count": 2,
       "event_count": 2,
       "latest_event_at": "2026-07-28T08:00:00+00:00",
-      "age_days": 1.01,
+      "age_days": 1.02,
       "latest_title": "Scientific computing in the age of agentic AI",
       "latest_url": "https://openai.com/index/scientific-computing-agentic-ai",
       "latest_required_field_proxy": {
