@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-08-01T08:04:16.834571+00:00",
+  "generated_at": "2026-08-01T08:13:20.124972+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 63,
       "event_count": 63,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 1.54,
+      "age_days": 1.55,
       "latest_title": "Evidence-Ledger Adjudication for Claim-Evidence Traceability",
       "latest_url": "https://arxiv.org/abs/2607.26512",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 120,
       "event_count": 120,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 1.54,
+      "age_days": 1.55,
       "latest_title": "Sympathetic Framing: Evaluating AI Alignment across Sociodemographic Groups",
       "latest_url": "https://arxiv.org/abs/2607.27232",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 1.54,
+      "age_days": 1.55,
       "latest_title": "SE(3)-MeanFlow: Few-Step Protein Backbone Generation on Lie Groups",
       "latest_url": "https://arxiv.org/abs/2607.27431",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 94,
       "event_count": 94,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 1.54,
+      "age_days": 1.55,
       "latest_title": "Theatre Chapbooks At Scale: A Statistical Comparative Analysis of Typography",
       "latest_url": "https://arxiv.org/abs/2607.27266",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 14,
       "event_count": 14,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 1.54,
+      "age_days": 1.55,
       "latest_title": "EvoPINN: Agentic Discovery of Executable Algorithms for Physics-Informed Neural Networks",
       "latest_url": "https://arxiv.org/abs/2607.26490",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 83,
       "event_count": 83,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 1.54,
+      "age_days": 1.55,
       "latest_title": "Doubly Robust Functional Representation Learning for Longitudinal Causal Inference with Irregular Histories",
       "latest_url": "https://arxiv.org/abs/2607.28567",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 11,
       "event_count": 11,
       "latest_event_at": "2026-07-31T15:00:00+00:00",
-      "age_days": 0.71,
+      "age_days": 0.72,
       "latest_title": "Ten advances in mathematics and theoretical computer science",
       "latest_url": "https://openai.com/index/ten-advances-in-mathematics",
       "latest_required_field_proxy": {
