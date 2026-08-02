@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-08-02T08:06:27.939582+00:00",
+  "generated_at": "2026-08-02T08:15:17.710184+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -290,7 +290,7 @@
       "article_count": 11,
       "event_count": 11,
       "latest_event_at": "2026-07-31T15:00:00+00:00",
-      "age_days": 1.71,
+      "age_days": 1.72,
       "latest_title": "Ten advances in mathematics and theoretical computer science",
       "latest_url": "https://openai.com/index/ten-advances-in-mathematics",
       "latest_required_field_proxy": {
