@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-08-02T02:09:17.159547+00:00",
+  "generated_at": "2026-08-02T08:15:17.710184+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -50,7 +50,7 @@
       "article_count": 61,
       "event_count": 61,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 2.3,
+      "age_days": 2.55,
       "latest_title": "Fewer Clarifications, Better Code: Benchmarking Cross-Session Personalized Ambiguity Adaptation in Coding Assistants",
       "latest_url": "https://arxiv.org/abs/2607.26611",
       "latest_required_field_proxy": {
@@ -80,7 +80,7 @@
       "article_count": 120,
       "event_count": 120,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 2.3,
+      "age_days": 2.55,
       "latest_title": "Gradient-free Task-Conditioned Retrieval for On-Device In-Context Learning",
       "latest_url": "https://arxiv.org/abs/2607.27766",
       "latest_required_field_proxy": {
@@ -110,7 +110,7 @@
       "article_count": 90,
       "event_count": 90,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 2.3,
+      "age_days": 2.55,
       "latest_title": "Beyond KV Reconstruction: Functional Reconstruction for MLA Draft Models in Speculative Decoding",
       "latest_url": "https://arxiv.org/abs/2607.27269",
       "latest_required_field_proxy": {
@@ -140,7 +140,7 @@
       "article_count": 94,
       "event_count": 94,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 2.3,
+      "age_days": 2.55,
       "latest_title": "Bunraku: Turning a Single Illustration into an Editable Live2D Character",
       "latest_url": "https://arxiv.org/abs/2607.27348",
       "latest_required_field_proxy": {
@@ -170,7 +170,7 @@
       "article_count": 14,
       "event_count": 14,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 2.3,
+      "age_days": 2.55,
       "latest_title": "Hash Chemistry: Minimal Models for Evolutionary Growth of Complexity",
       "latest_url": "https://arxiv.org/abs/2607.28219",
       "latest_required_field_proxy": {
@@ -200,7 +200,7 @@
       "article_count": 83,
       "event_count": 83,
       "latest_event_at": "2026-07-30T19:00:00+00:00",
-      "age_days": 2.3,
+      "age_days": 2.55,
       "latest_title": "On-Policy and Off-Policy Learning for Large Action Spaces",
       "latest_url": "https://arxiv.org/abs/2607.28408",
       "latest_required_field_proxy": {
@@ -290,7 +290,7 @@
       "article_count": 11,
       "event_count": 11,
       "latest_event_at": "2026-07-31T15:00:00+00:00",
-      "age_days": 1.46,
+      "age_days": 1.72,
       "latest_title": "Ten advances in mathematics and theoretical computer science",
       "latest_url": "https://openai.com/index/ten-advances-in-mathematics",
       "latest_required_field_proxy": {
