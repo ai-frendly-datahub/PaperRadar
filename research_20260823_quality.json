@@ -1,13 +1,13 @@
 {
   "category": "research",
-  "generated_at": "2026-08-22T06:24:41.457816+00:00",
+  "generated_at": "2026-08-23T06:26:12.646728+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
     "enabled_sources": 16,
     "tracked_sources": 14,
-    "fresh_sources": 1,
-    "stale_sources": 0,
+    "fresh_sources": 0,
+    "stale_sources": 1,
     "missing_sources": 8,
     "missing_event_sources": 0,
     "unknown_event_date_sources": 0,
@@ -28,10 +28,10 @@
     "code_repository_present_count": 0,
     "benchmark_metric_present_count": 0,
     "event_required_field_gap_count": 0,
-    "tracked_source_gap_count": 8,
+    "tracked_source_gap_count": 9,
     "missing_event_model_count": 3,
     "source_backlog_candidate_count": 4,
-    "daily_review_item_count": 44
+    "daily_review_item_count": 45
   },
   "sources": [
     {
@@ -262,11 +262,11 @@
       "tracked": true,
       "event_model": "paper_release",
       "freshness_sla_days": 3.0,
-      "status": "fresh",
+      "status": "stale",
       "article_count": 29,
       "event_count": 29,
       "latest_event_at": "2026-08-19T22:00:00+00:00",
-      "age_days": 2.35,
+      "age_days": 3.35,
       "latest_title": "Introducing AI Futures",
       "latest_url": "https://openai.com/index/introducing-ai-futures",
       "latest_required_field_proxy": {
@@ -2188,6 +2188,13 @@
       "source": "arXiv Stat.ML",
       "latest_title": "",
       "age_days": null
+    },
+    {
+      "reason": "source_stale",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "latest_title": "Introducing AI Futures",
+      "age_days": 3.35
     },
     {
       "reason": "source_missing",
