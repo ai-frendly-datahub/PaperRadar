@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-09-08T10:17:49.103296+00:00",
+  "generated_at": "2026-09-09T10:21:46.538042+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -14,15 +14,15 @@
     "not_tracked_sources": 7,
     "skipped_disabled_sources": 7,
     "collection_error_count": 0,
-    "paper_release_events": 24,
+    "paper_release_events": 27,
     "citation_snapshot_events": 0,
     "code_repository_events": 0,
     "benchmark_result_events": 0,
-    "research_signal_event_count": 24,
-    "paper_canonical_key_present_count": 24,
+    "research_signal_event_count": 27,
+    "paper_canonical_key_present_count": 27,
     "repository_canonical_key_present_count": 0,
     "benchmark_canonical_key_present_count": 0,
-    "title_proxy_key_count": 24,
+    "title_proxy_key_count": 27,
     "missing_canonical_key_count": 0,
     "citation_count_present_count": 0,
     "code_repository_present_count": 0,
@@ -31,7 +31,7 @@
     "tracked_source_gap_count": 8,
     "missing_event_model_count": 3,
     "source_backlog_candidate_count": 4,
-    "daily_review_item_count": 39
+    "daily_review_item_count": 42
   },
   "sources": [
     {
@@ -263,18 +263,18 @@
       "event_model": "paper_release",
       "freshness_sla_days": 3.0,
       "status": "fresh",
-      "article_count": 24,
-      "event_count": 24,
-      "latest_event_at": "2026-09-06T15:00:00+00:00",
-      "age_days": 1.8,
-      "latest_title": "Supporting independent journalism in Ukraine",
-      "latest_url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+      "article_count": 27,
+      "event_count": 27,
+      "latest_event_at": "2026-09-08T08:00:00+00:00",
+      "age_days": 1.1,
+      "latest_title": "How GPT-5.6 Sol helps run quantum computing experiments",
+      "latest_url": "https://openai.com/index/codex-quantum-computing-experiments",
       "latest_required_field_proxy": {
         "paper_id": true,
         "title": true,
         "source_url": true
       },
-      "latest_canonical_key": "paper:title:supporting-independent-journalism-in-ukraine",
+      "latest_canonical_key": "paper:title:how-gpt-5.6-sol-helps-run-quantum-computing-experiments",
       "latest_required_field_gaps": [],
       "skip_reason": "",
       "reenable_gate": "",
@@ -663,6 +663,303 @@
     }
   ],
   "events": [
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
+      "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+      "url": "https://openai.com/index/codex-quantum-computing-experiments",
+      "source_url": "https://openai.com/index/codex-quantum-computing-experiments",
+      "event_at": "2026-09-08T08:00:00+00:00",
+      "event_key": "paper_release:openai-blog:167bce5d47e7:2026-09-08",
+      "paper_id": "https://openai.com/index/codex-quantum-computing-experiments",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "how-gpt-5.6-sol-helps-run-quantum-computing-experiments",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Institutions": [
+          "mit"
+        ],
+        "Techniques": [
+          "gpt",
+          "codex"
+        ],
+        "ResearchGeneral": [
+          "researcher",
+          "results",
+          "experiments",
+          "computing"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:how-gpt-5.6-sol-helps-run-quantum-computing-experiments",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
+      "title": "The Work Now Within Reach",
+      "url": "https://openai.com/index/the-work-now-within-reach",
+      "source_url": "https://openai.com/index/the-work-now-within-reach",
+      "event_at": "2026-09-08T04:00:00+00:00",
+      "event_key": "paper_release:openai-blog:aaada63e998e:2026-09-08",
+      "paper_id": "https://openai.com/index/the-work-now-within-reach",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "the-work-now-within-reach",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "explore",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:the-work-now-within-reach",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
+      "title": "Introducing ChatGPT Images 2.5",
+      "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+      "source_url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+      "event_at": "2026-09-08T02:30:00+00:00",
+      "event_key": "paper_release:openai-blog:305f03a4aa6a:2026-09-08",
+      "paper_id": "https://openai.com/index/introducing-chatgpt-images-2-5",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "introducing-chatgpt-images-2.5",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "images"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:introducing-chatgpt-images-2.5",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
+      "title": "On the Navier–Stokes Millennium Prize Problem",
+      "url": "https://openai.com/index/navier-stokes-solution",
+      "source_url": "https://openai.com/index/navier-stokes-solution",
+      "event_at": "2026-09-08T01:00:00+00:00",
+      "event_key": "paper_release:openai-blog:fbb79928f7d9:2026-09-08",
+      "paper_id": "https://openai.com/index/navier-stokes-solution",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "on-the-navier-stokes-millennium-prize-problem",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "ResearchGeneral": [
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:on-the-navier-stokes-millennium-prize-problem",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
+      "title": "Funding grants for new research into AI and teen development",
+      "url": "https://openai.com/index/teen-development-research-grants",
+      "source_url": "https://openai.com/index/teen-development-research-grants",
+      "event_at": "2026-09-08T00:00:00+00:00",
+      "event_key": "paper_release:openai-blog:99c22bc85dd5:2026-09-08",
+      "paper_id": "https://openai.com/index/teen-development-research-grants",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "funding-grants-for-new-research-into-ai-and-teen-development",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Institutions": [
+          "openai"
+        ],
+        "ResearchGeneral": [
+          "research",
+          "new",
+          "generative",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:funding-grants-for-new-research-into-ai-and-teen-development",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
+      "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+      "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+      "source_url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+      "event_at": "2026-09-07T15:00:00+00:00",
+      "event_key": "paper_release:openai-blog:671a9fed35e2:2026-09-07",
+      "paper_id": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "openai-expands-initiatives-to-support-journalism-from-classrooms-to-newsrooms",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Institutions": [
+          "openai"
+        ],
+        "ResearchGeneral": [
+          "training"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:openai-expands-initiatives-to-support-journalism-from-classrooms-to-newsrooms",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
+      "title": "1Password increases engineering productivity 21% with Codex",
+      "url": "https://openai.com/index/1password",
+      "source_url": "https://openai.com/index/1password",
+      "event_at": "2026-09-07T15:00:00+00:00",
+      "event_key": "paper_release:openai-blog:9816f5beea82:2026-09-07",
+      "paper_id": "https://openai.com/index/1password",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "1password-increases-engineering-productivity-21-with-codex",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Techniques": [
+          "codex"
+        ],
+        "ResearchGeneral": [
+          "new",
+          "features"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:1password-increases-engineering-productivity-21-with-codex",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
     {
       "source": "OpenAI Blog",
       "source_type": "rss",
@@ -1243,6 +1540,54 @@
       "trust_tier": "T2_institutional",
       "producer_role": "research_lab",
       "event_model": "paper_release",
+      "title": "OpenAI supports California’s bill to advance youth AI safety",
+      "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
+      "source_url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
+      "event_at": "2026-08-30T22:00:00+00:00",
+      "event_key": "paper_release:openai-blog:0703988e3a33:2026-08-30",
+      "paper_id": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "openai-supports-california-s-bill-to-advance-youth-ai-safety",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Research Areas": [
+          "ai safety"
+        ],
+        "Institutions": [
+          "openai"
+        ],
+        "ResearchGeneral": [
+          "advance",
+          "explore",
+          "learn",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:openai-supports-california-s-bill-to-advance-youth-ai-safety",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
       "title": "Polimill builds Japan's next-generation public AI infrastructure",
       "url": "https://openai.com/index/polimill",
       "source_url": "https://openai.com/index/polimill",
@@ -1286,54 +1631,6 @@
         "source_url": true
       },
       "canonical_key": "paper:title:polimill-builds-japan-s-next-generation-public-ai-infrastructure",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
-      "title": "OpenAI supports California’s bill to advance youth AI safety",
-      "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
-      "source_url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
-      "event_at": "2026-08-30T22:00:00+00:00",
-      "event_key": "paper_release:openai-blog:0703988e3a33:2026-08-30",
-      "paper_id": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "openai-supports-california-s-bill-to-advance-youth-ai-safety",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "ai safety"
-        ],
-        "Institutions": [
-          "openai"
-        ],
-        "ResearchGeneral": [
-          "advance",
-          "explore",
-          "learn",
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:openai-supports-california-s-bill-to-advance-youth-ai-safety",
       "canonical_key_status": "title_proxy",
       "required_field_gaps": []
     },
@@ -1547,189 +1844,65 @@
       "canonical_key": "paper:title:expanding-openai-s-presence-in-brazil",
       "canonical_key_status": "title_proxy",
       "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
-      "title": "Learning never stops: How AI makes learning continuous",
-      "url": "https://openai.com/index/learning-never-stops",
-      "source_url": "https://openai.com/index/learning-never-stops",
-      "event_at": "2026-08-26T01:00:00+00:00",
-      "event_key": "paper_release:openai-blog:cdfc10030b4b:2026-08-26",
-      "paper_id": "https://openai.com/index/learning-never-stops",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "learning-never-stops-how-ai-makes-learning-continuous",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Institutions": [
-          "openai"
-        ],
-        "ResearchGeneral": [
-          "new",
-          "explores",
-          "learning",
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:learning-never-stops-how-ai-makes-learning-continuous",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
-      "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
-      "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
-      "source_url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
-      "event_at": "2026-08-26T01:00:00+00:00",
-      "event_key": "paper_release:openai-blog:d6bb1031e66b:2026-08-26",
-      "paper_id": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "bringing-chatgpt-for-teachers-to-more-u.s.-school-districts",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "ResearchGeneral": [
-          "training",
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:bringing-chatgpt-for-teachers-to-more-u.s.-school-districts",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
-      "title": "The Hugging Face incident and the road ahead",
-      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-      "source_url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-      "event_at": "2026-08-25T15:00:00+00:00",
-      "event_key": "paper_release:openai-blog:504dd1ec9508:2026-08-25",
-      "paper_id": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "the-hugging-face-incident-and-the-road-ahead",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Research Areas": [
-          "alignment"
-        ],
-        "Institutions": [
-          "openai",
-          "hugging face"
-        ],
-        "ResearchGeneral": [
-          "model",
-          "findings",
-          "model",
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:the-hugging-face-incident-and-the-road-ahead",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
-      "title": "How loveholidays is making everyone a builder with Codex",
-      "url": "https://openai.com/index/loveholidays",
-      "source_url": "https://openai.com/index/loveholidays",
-      "event_at": "2026-08-25T15:00:00+00:00",
-      "event_key": "paper_release:openai-blog:d34e82eae2f2:2026-08-25",
-      "paper_id": "https://openai.com/index/loveholidays",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "how-loveholidays-is-making-everyone-a-builder-with-codex",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Institutions": [
-          "openai"
-        ],
-        "Techniques": [
-          "codex"
-        ],
-        "ResearchGeneral": [
-          "discover",
-          "faster"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:how-loveholidays-is-making-everyone-a-builder-with-codex",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
     }
   ],
   "daily_review_items": [
+    {
+      "reason": "title_proxy_canonical_key",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+      "event_key": "paper_release:openai-blog:167bce5d47e7:2026-09-08",
+      "canonical_key": "paper:title:how-gpt-5.6-sol-helps-run-quantum-computing-experiments"
+    },
+    {
+      "reason": "title_proxy_canonical_key",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "title": "The Work Now Within Reach",
+      "event_key": "paper_release:openai-blog:aaada63e998e:2026-09-08",
+      "canonical_key": "paper:title:the-work-now-within-reach"
+    },
+    {
+      "reason": "title_proxy_canonical_key",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "title": "Introducing ChatGPT Images 2.5",
+      "event_key": "paper_release:openai-blog:305f03a4aa6a:2026-09-08",
+      "canonical_key": "paper:title:introducing-chatgpt-images-2.5"
+    },
+    {
+      "reason": "title_proxy_canonical_key",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "title": "On the Navier–Stokes Millennium Prize Problem",
+      "event_key": "paper_release:openai-blog:fbb79928f7d9:2026-09-08",
+      "canonical_key": "paper:title:on-the-navier-stokes-millennium-prize-problem"
+    },
+    {
+      "reason": "title_proxy_canonical_key",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "title": "Funding grants for new research into AI and teen development",
+      "event_key": "paper_release:openai-blog:99c22bc85dd5:2026-09-08",
+      "canonical_key": "paper:title:funding-grants-for-new-research-into-ai-and-teen-development"
+    },
+    {
+      "reason": "title_proxy_canonical_key",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+      "event_key": "paper_release:openai-blog:671a9fed35e2:2026-09-07",
+      "canonical_key": "paper:title:openai-expands-initiatives-to-support-journalism-from-classrooms-to-newsrooms"
+    },
+    {
+      "reason": "title_proxy_canonical_key",
+      "event_model": "paper_release",
+      "source": "OpenAI Blog",
+      "title": "1Password increases engineering productivity 21% with Codex",
+      "event_key": "paper_release:openai-blog:9816f5beea82:2026-09-07",
+      "canonical_key": "paper:title:1password-increases-engineering-productivity-21-with-codex"
+    },
     {
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
@@ -1838,17 +2011,17 @@
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
-      "title": "Polimill builds Japan's next-generation public AI infrastructure",
-      "event_key": "paper_release:openai-blog:7bc341571432:2026-08-30",
-      "canonical_key": "paper:title:polimill-builds-japan-s-next-generation-public-ai-infrastructure"
+      "title": "OpenAI supports California’s bill to advance youth AI safety",
+      "event_key": "paper_release:openai-blog:0703988e3a33:2026-08-30",
+      "canonical_key": "paper:title:openai-supports-california-s-bill-to-advance-youth-ai-safety"
     },
     {
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
-      "title": "OpenAI supports California’s bill to advance youth AI safety",
-      "event_key": "paper_release:openai-blog:0703988e3a33:2026-08-30",
-      "canonical_key": "paper:title:openai-supports-california-s-bill-to-advance-youth-ai-safety"
+      "title": "Polimill builds Japan's next-generation public AI infrastructure",
+      "event_key": "paper_release:openai-blog:7bc341571432:2026-08-30",
+      "canonical_key": "paper:title:polimill-builds-japan-s-next-generation-public-ai-infrastructure"
     },
     {
       "reason": "title_proxy_canonical_key",
@@ -1889,38 +2062,6 @@
       "title": "Expanding OpenAI’s presence in Brazil",
       "event_key": "paper_release:openai-blog:57e276283c19:2026-08-26",
       "canonical_key": "paper:title:expanding-openai-s-presence-in-brazil"
-    },
-    {
-      "reason": "title_proxy_canonical_key",
-      "event_model": "paper_release",
-      "source": "OpenAI Blog",
-      "title": "Learning never stops: How AI makes learning continuous",
-      "event_key": "paper_release:openai-blog:cdfc10030b4b:2026-08-26",
-      "canonical_key": "paper:title:learning-never-stops-how-ai-makes-learning-continuous"
-    },
-    {
-      "reason": "title_proxy_canonical_key",
-      "event_model": "paper_release",
-      "source": "OpenAI Blog",
-      "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
-      "event_key": "paper_release:openai-blog:d6bb1031e66b:2026-08-26",
-      "canonical_key": "paper:title:bringing-chatgpt-for-teachers-to-more-u.s.-school-districts"
-    },
-    {
-      "reason": "title_proxy_canonical_key",
-      "event_model": "paper_release",
-      "source": "OpenAI Blog",
-      "title": "The Hugging Face incident and the road ahead",
-      "event_key": "paper_release:openai-blog:504dd1ec9508:2026-08-25",
-      "canonical_key": "paper:title:the-hugging-face-incident-and-the-road-ahead"
-    },
-    {
-      "reason": "title_proxy_canonical_key",
-      "event_model": "paper_release",
-      "source": "OpenAI Blog",
-      "title": "How loveholidays is making everyone a builder with Codex",
-      "event_key": "paper_release:openai-blog:d34e82eae2f2:2026-08-25",
-      "canonical_key": "paper:title:how-loveholidays-is-making-everyone-a-builder-with-codex"
     },
     {
       "reason": "source_missing",
