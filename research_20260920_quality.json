@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-09-19T09:55:42.782967+00:00",
+  "generated_at": "2026-09-20T10:18:04.746544+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -266,7 +266,7 @@
       "article_count": 30,
       "event_count": 30,
       "latest_event_at": "2026-09-18T03:00:00+00:00",
-      "age_days": 1.29,
+      "age_days": 2.3,
       "latest_title": "Introducing the Australian Youth Safety Blueprint",
       "latest_url": "https://openai.com/index/australian-youth-safety-blueprint",
       "latest_required_field_proxy": {
@@ -1319,48 +1319,6 @@
       "trust_tier": "T2_institutional",
       "producer_role": "research_lab",
       "event_model": "paper_release",
-      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
-      "url": "https://openai.com/index/expanding-ai-access-us-government",
-      "source_url": "https://openai.com/index/expanding-ai-access-us-government",
-      "event_at": "2026-09-09T22:00:00+00:00",
-      "event_key": "paper_release:openai-blog:1ef5285e671d:2026-09-09",
-      "paper_id": "https://openai.com/index/expanding-ai-access-us-government",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "expanding-ai-access-and-cyber-defense-for-federal-state-local-and-tribal-governments",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Institutions": [
-          "openai"
-        ],
-        "ResearchGeneral": [
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:expanding-ai-access-and-cyber-defense-for-federal-state-local-and-tribal-governments",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
       "title": "Introducing ChatGPT for Financial Services",
       "url": "https://openai.com/index/introducing-chatgpt-financial-services",
       "source_url": "https://openai.com/index/introducing-chatgpt-financial-services",
@@ -1396,6 +1354,48 @@
         "source_url": true
       },
       "canonical_key": "paper:title:introducing-chatgpt-for-financial-services",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
+      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+      "url": "https://openai.com/index/expanding-ai-access-us-government",
+      "source_url": "https://openai.com/index/expanding-ai-access-us-government",
+      "event_at": "2026-09-09T22:00:00+00:00",
+      "event_key": "paper_release:openai-blog:1ef5285e671d:2026-09-09",
+      "paper_id": "https://openai.com/index/expanding-ai-access-us-government",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "expanding-ai-access-and-cyber-defense-for-federal-state-local-and-tribal-governments",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Institutions": [
+          "openai"
+        ],
+        "ResearchGeneral": [
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:expanding-ai-access-and-cyber-defense-for-federal-state-local-and-tribal-governments",
       "canonical_key_status": "title_proxy",
       "required_field_gaps": []
     },
@@ -2080,17 +2080,17 @@
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
-      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
-      "event_key": "paper_release:openai-blog:1ef5285e671d:2026-09-09",
-      "canonical_key": "paper:title:expanding-ai-access-and-cyber-defense-for-federal-state-local-and-tribal-governments"
+      "title": "Introducing ChatGPT for Financial Services",
+      "event_key": "paper_release:openai-blog:016c3ec9b775:2026-09-09",
+      "canonical_key": "paper:title:introducing-chatgpt-for-financial-services"
     },
     {
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
-      "title": "Introducing ChatGPT for Financial Services",
-      "event_key": "paper_release:openai-blog:016c3ec9b775:2026-09-09",
-      "canonical_key": "paper:title:introducing-chatgpt-for-financial-services"
+      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+      "event_key": "paper_release:openai-blog:1ef5285e671d:2026-09-09",
+      "canonical_key": "paper:title:expanding-ai-access-and-cyber-defense-for-federal-state-local-and-tribal-governments"
     },
     {
       "reason": "title_proxy_canonical_key",
