@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-09-27",
   "category": "research",
   "article_count": 125,
   "source_count": 6,
@@ -7,15 +7,15 @@
   "top_entities": [
     {
       "name": "ResearchGeneral",
-      "count": 349
+      "count": 351
     },
     {
       "name": "Techniques",
-      "count": 42
+      "count": 43
     },
     {
       "name": "Research Areas",
-      "count": 35
+      "count": 36
     },
     {
       "name": "Institutions",
@@ -42,5 +42,5 @@
     "Towards Data Science": 20,
     "The Gradient": 15
   },
-  "generated_at": "2026-09-26T19:30:17.454417+09:00"
+  "generated_at": "2026-09-27T20:02:24.134615+09:00"
 }
