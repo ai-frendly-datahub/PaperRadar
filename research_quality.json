@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-10-10T11:34:25.611378+00:00",
+  "generated_at": "2026-10-11T11:47:37.570766+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -266,7 +266,7 @@
       "article_count": 30,
       "event_count": 30,
       "latest_event_at": "2026-10-08T22:00:00+00:00",
-      "age_days": 1.57,
+      "age_days": 2.57,
       "latest_title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
       "latest_url": "https://openai.com/index/asana-browser-agent",
       "latest_required_field_proxy": {
@@ -1107,6 +1107,51 @@
       "trust_tier": "T2_institutional",
       "producer_role": "research_lab",
       "event_model": "paper_release",
+      "title": "How Jump Trading is scaling quant research with ChatGPT",
+      "url": "https://openai.com/index/jump-trading",
+      "source_url": "https://openai.com/index/jump-trading",
+      "event_at": "2026-10-06T03:00:00+00:00",
+      "event_key": "paper_release:openai-blog:342677ae7ead:2026-10-06",
+      "paper_id": "https://openai.com/index/jump-trading",
+      "arxiv_id": "",
+      "doi": "",
+      "normalized_title": "how-jump-trading-is-scaling-quant-research-with-chatgpt",
+      "repository": "",
+      "repository_host": "",
+      "repository_owner": "",
+      "repository_name": "",
+      "citation_count": null,
+      "benchmark_name": "",
+      "metric_name": "",
+      "metric_value": null,
+      "dataset": "",
+      "venue": "",
+      "matched_entities": {
+        "Institutions": [
+          "openai"
+        ],
+        "ResearchGeneral": [
+          "research",
+          "data",
+          "scaling",
+          "ai"
+        ]
+      },
+      "required_field_proxy": {
+        "paper_id": true,
+        "title": true,
+        "source_url": true
+      },
+      "canonical_key": "paper:title:how-jump-trading-is-scaling-quant-research-with-chatgpt",
+      "canonical_key_status": "title_proxy",
+      "required_field_gaps": []
+    },
+    {
+      "source": "OpenAI Blog",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "producer_role": "research_lab",
+      "event_model": "paper_release",
       "title": "Sharing AI progress in mathematics",
       "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
       "source_url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
@@ -1145,51 +1190,6 @@
         "source_url": true
       },
       "canonical_key": "paper:title:sharing-ai-progress-in-mathematics",
-      "canonical_key_status": "title_proxy",
-      "required_field_gaps": []
-    },
-    {
-      "source": "OpenAI Blog",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "producer_role": "research_lab",
-      "event_model": "paper_release",
-      "title": "How Jump Trading is scaling quant research with ChatGPT",
-      "url": "https://openai.com/index/jump-trading",
-      "source_url": "https://openai.com/index/jump-trading",
-      "event_at": "2026-10-06T03:00:00+00:00",
-      "event_key": "paper_release:openai-blog:342677ae7ead:2026-10-06",
-      "paper_id": "https://openai.com/index/jump-trading",
-      "arxiv_id": "",
-      "doi": "",
-      "normalized_title": "how-jump-trading-is-scaling-quant-research-with-chatgpt",
-      "repository": "",
-      "repository_host": "",
-      "repository_owner": "",
-      "repository_name": "",
-      "citation_count": null,
-      "benchmark_name": "",
-      "metric_name": "",
-      "metric_value": null,
-      "dataset": "",
-      "venue": "",
-      "matched_entities": {
-        "Institutions": [
-          "openai"
-        ],
-        "ResearchGeneral": [
-          "research",
-          "data",
-          "scaling",
-          "ai"
-        ]
-      },
-      "required_field_proxy": {
-        "paper_id": true,
-        "title": true,
-        "source_url": true
-      },
-      "canonical_key": "paper:title:how-jump-trading-is-scaling-quant-research-with-chatgpt",
       "canonical_key_status": "title_proxy",
       "required_field_gaps": []
     },
@@ -2070,17 +2070,17 @@
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
-      "title": "Sharing AI progress in mathematics",
-      "event_key": "paper_release:openai-blog:47b9255d8fa0:2026-10-06",
-      "canonical_key": "paper:title:sharing-ai-progress-in-mathematics"
+      "title": "How Jump Trading is scaling quant research with ChatGPT",
+      "event_key": "paper_release:openai-blog:342677ae7ead:2026-10-06",
+      "canonical_key": "paper:title:how-jump-trading-is-scaling-quant-research-with-chatgpt"
     },
     {
       "reason": "title_proxy_canonical_key",
       "event_model": "paper_release",
       "source": "OpenAI Blog",
-      "title": "How Jump Trading is scaling quant research with ChatGPT",
-      "event_key": "paper_release:openai-blog:342677ae7ead:2026-10-06",
-      "canonical_key": "paper:title:how-jump-trading-is-scaling-quant-research-with-chatgpt"
+      "title": "Sharing AI progress in mathematics",
+      "event_key": "paper_release:openai-blog:47b9255d8fa0:2026-10-06",
+      "canonical_key": "paper:title:sharing-ai-progress-in-mathematics"
     },
     {
       "reason": "title_proxy_canonical_key",
