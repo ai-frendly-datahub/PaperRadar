@@ -1,6 +1,6 @@
 {
   "category": "research",
-  "generated_at": "2026-10-13T13:09:33.414337+00:00",
+  "generated_at": "2026-10-13T13:18:19.734668+00:00",
   "scope_note": "AI/ML Research Papers quality report is generated from repo-local category data_quality metadata and recent stored articles. Operational backlog sources remain separate until dedicated source-level fields are collected.",
   "summary": {
     "total_sources": 23,
@@ -274,7 +274,7 @@
       "article_count": 22,
       "event_count": 22,
       "latest_event_at": "2026-10-08T22:00:00+00:00",
-      "age_days": 4.63,
+      "age_days": 4.64,
       "latest_title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
       "latest_url": "https://openai.com/index/sophos",
       "latest_required_field_proxy": {
@@ -5710,7 +5710,7 @@
       "event_model": "paper_release",
       "source": "OpenAI Blog",
       "latest_title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-      "age_days": 4.63
+      "age_days": 4.64
     },
     {
       "reason": "source_missing",
