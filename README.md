@@ -13,7 +13,7 @@ Academic paper and research-signal collection platform. Current configuration mi
 - **DuckDB Storage**: Efficient paper database with retention policies
 - **HTML Reports**: Beautiful, responsive academic paper reports
 - **GitHub Pages**: Automatic deployment of reports
-- **Scheduled Collection**: Every 6 hours via GitHub Actions
+- **Scheduled Collection**: Daily at 06:00 UTC via GitHub Actions
 
 ## Quick Start
 
@@ -152,12 +152,25 @@ mypy paperradar main.py
 
 ## GitHub Actions
 
-Automatically runs every 6 hours:
+One scheduled collector, `.github/workflows/radar-crawler.yml`, runs daily at 06:00 UTC:
 1. Collects papers from all sources
-2. Extracts entities and stores in DuckDB
-3. Generates HTML report
-4. Deploys to GitHub Pages
-5. Backs up database as artifact
+2. Compacts DuckDB before the snapshot and git add
+3. Extracts entities and stores in DuckDB
+4. Generates HTML report
+5. Pushes data, then deploys to GitHub Pages only if that push succeeds
+6. Backs up database as artifact
+
+The previous every-6-hours Paper Crawler workflow was removed. It pushed `data/papers.duckdb` past GitHub's 100 MiB limit and failed the data push.
+
+## Operations contract
+
+1. **radar-core pin.** `requirements.txt` and `pyproject.toml` install `radar-core @ git+https://github.com/ai-frendly-datahub/radar-core.git@main` (0.4.1 budget compaction).
+2. **Compact before snapshot.** `compact_database_for_commit()` calls `radar_core.db_compact.compact_duckdb_file` before the daily copy and git add. Compaction failure leaves the existing file and still snapshots it. The default budget is 90 MiB.
+3. **Feed client.** User-Agent is `PaperRadar/0.1`. RSS timeout default is 45 seconds. TLS verification stays on. Cloudflare, "Just a moment", cookie-wall, and 403/404 titles are dropped before storage. This client does not bypass Cloudflare.
+4. **Missing secrets.** Each skipped source emits one GitHub `::warning`. `data/raw/<date>/<source>.skip.json` stores environment variable names only.
+5. **Fail closed.** Zero items from enabled sources exits 1. A 0-byte output or a DuckDB file at or above 100 MiB fails the workflow. The data push has no `continue-on-error`.
+6. **Pages after a successful push.** `gh-pages` deploys only when the auto-commit step outcome is success.
+7. **Tests.** Date assertions use `tests/reference_dates.py` (2026-03-13 12:00 UTC). Coverage uses `relative_files`.
 
 ## API Keys (Optional)
 
@@ -195,7 +208,7 @@ For issues, questions, or suggestions, please open a GitHub issue.
 <!-- DATAHUB-OPS-AUDIT:START -->
 ## DataHub Operations
 
-- CI/CD workflows: `paper-crawler.yml`, `pr-checks.yml`, `radar-crawler.yml`.
+- CI/CD workflows: `pr-checks.yml`, `radar-crawler.yml`, `release.yml`.
 - GitHub Pages visualization: `reports/index.html` (valid HTML); https://ai-frendly-datahub.github.io/PaperRadar/.
 - Latest remote Pages check: HTTP 200, HTML.
 - Local workspace audit: 55 Python files parsed, 0 syntax errors.

@@ -1,10 +1,13 @@
 from __future__ import annotations
 
+import logging
 import shutil
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 import duckdb
+
+logger = logging.getLogger(__name__)
 
 
 def snapshot_database(
@@ -86,9 +89,7 @@ def latest_snapshot_path(db_path: Path, *, snapshot_root: Path | None = None) ->
     return max(snapshots, key=lambda item: item[0])[1]
 
 
-def resolve_read_database_path(
-    db_path: Path, *, snapshot_root: Path | None = None
-) -> Path:
+def resolve_read_database_path(db_path: Path, *, snapshot_root: Path | None = None) -> Path:
     if _has_record_rows(db_path):
         return db_path
 
@@ -153,3 +154,47 @@ def cleanup_dated_reports(report_dir: Path, *, keep_days: int, today: date | Non
             continue
 
     return removed
+
+
+def compact_database_for_commit(database_path: Path) -> dict[str, object]:
+    """Shrink ``database_path`` before a snapshot copy or git add.
+
+    ``radar_core.db_compact.compact_duckdb_file`` reads ``RADAR_DUCKDB_MAX_BYTES``
+    and ``RADAR_DUCKDB_COMPACT`` (default budget 90 MiB). A compaction failure
+    leaves the file already on disk in place.
+    """
+    bytes_now = database_path.stat().st_size if database_path.exists() else 0
+    fallback: dict[str, object] = {
+        "compacted": False,
+        "reason": "missing" if not database_path.exists() else "skipped",
+        "bytes": bytes_now,
+        "bytes_before": bytes_now,
+        "rows_deleted": 0,
+    }
+    if not database_path.exists():
+        return fallback
+    try:
+        from radar_core.db_compact import compact_duckdb_file
+    except ImportError as exc:
+        logger.warning("duckdb_compact_unavailable path=%s error=%s", database_path, exc)
+        fallback["reason"] = "unavailable"
+        return fallback
+    try:
+        result = compact_duckdb_file(database_path)
+    except Exception as exc:
+        logger.warning("duckdb_compact_failed path=%s error=%s", database_path, exc)
+        fallback["reason"] = "failed"
+        fallback["bytes"] = database_path.stat().st_size if database_path.exists() else 0
+        return fallback
+    if isinstance(result, dict):
+        logger.info(
+            "duckdb_compact path=%s reason=%s bytes_before=%s bytes=%s rows_deleted=%s",
+            database_path,
+            result.get("reason"),
+            result.get("bytes_before"),
+            result.get("bytes"),
+            result.get("rows_deleted"),
+        )
+        return result
+    fallback["reason"] = "invalid_result"
+    return fallback

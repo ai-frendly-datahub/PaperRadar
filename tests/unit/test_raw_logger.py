@@ -5,8 +5,19 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import cast
 
+import pytest
+
 from paperradar.models import Article
 from paperradar.raw_logger import RawLogger
+from tests.reference_dates import REFERENCE_DATE, REFERENCE_NOW
+
+
+class _FrozenDateTime(datetime):
+    @classmethod
+    def now(cls, tz: object = None) -> datetime:
+        if tz is None:
+            return REFERENCE_NOW.replace(tzinfo=None)
+        return REFERENCE_NOW
 
 
 def _make_article(*, title: str = "Sample title", summary: str = "요약") -> Article:
@@ -21,13 +32,16 @@ def _make_article(*, title: str = "Sample title", summary: str = "요약") -> Ar
     )
 
 
-def test_log_creates_yyyy_mm_dd_directory_and_jsonl_file(tmp_path: Path) -> None:
+def test_log_creates_yyyy_mm_dd_directory_and_jsonl_file(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setattr("paperradar.raw_logger.datetime", _FrozenDateTime)
     logger = RawLogger(tmp_path)
     article = _make_article()
 
     output_path = logger.log([article], source_name="MySource")
 
-    assert output_path.parent.name == datetime.now(UTC).date().isoformat()
+    assert output_path.parent.name == REFERENCE_DATE.isoformat()
     assert output_path.name == "MySource.jsonl"
     assert output_path.exists()
 

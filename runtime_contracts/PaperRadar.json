@@ -1,0 +1,37 @@
+{
+  "repo": "PaperRadar",
+  "category": "research",
+  "ontology_version": "0.1.0",
+  "event_model_mappings": {
+    "paper_release": "paper.paper_release",
+    "editorial_coverage": "paper.editorial_coverage",
+    "code_repository": "paper.code_repository",
+    "citation_snapshot": "paper.citation_snapshot",
+    "benchmark_result": "paper.benchmark_result"
+  },
+  "event_model_field_specs": {
+    "paper_release": {
+      "required_fields": ["title", "source_url"],
+      "optional_fields": ["arxiv_id", "doi", "published", "authors"],
+      "field_enums": {}
+    }
+  },
+  "entity_type_hints": [
+    "research.area",
+    "research.venue",
+    "research.technique"
+  ],
+  "source_role_mappings": {
+    "arXiv CS.AI": "primary_evidence",
+    "arXiv CS.CL": "primary_evidence",
+    "arXiv CS.LG": "primary_evidence",
+    "arXiv CS.CV": "primary_evidence",
+    "arXiv CS.NE": "primary_evidence",
+    "arXiv Stat.ML": "primary_evidence"
+  },
+  "evidence_policy_ids": [
+    "traceable_url_required",
+    "cross_reference_required",
+    "non_authoritative_context_only"
+  ]
+}
