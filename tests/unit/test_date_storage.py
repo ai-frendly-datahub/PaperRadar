@@ -4,14 +4,24 @@ from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 import duckdb
+import pytest
+
+from tests.reference_dates import REFERENCE_DATE, REFERENCE_NOW
+
+
+class _FrozenDateTime(datetime):
+    @classmethod
+    def now(cls, tz: object = None) -> datetime:
+        if tz is None:
+            return REFERENCE_NOW.replace(tzinfo=None)
+        return REFERENCE_NOW
 
 
 def _init_articles_db(db_path: Path, *, rows: int) -> None:
     db_path.parent.mkdir(parents=True, exist_ok=True)
     conn = duckdb.connect(str(db_path))
     try:
-        conn.execute(
-            """
+        conn.execute("""
             CREATE TABLE articles (
                 id BIGINT PRIMARY KEY,
                 category TEXT NOT NULL,
@@ -23,8 +33,7 @@ def _init_articles_db(db_path: Path, *, rows: int) -> None:
                 collected_at TIMESTAMP NOT NULL,
                 entities_json TEXT
             )
-            """
-        )
+            """)
         for idx in range(rows):
             conn.execute(
                 """
@@ -51,9 +60,10 @@ def _init_empty_health_db(db_path: Path) -> None:
         conn.close()
 
 
-def test_snapshot_database_creates_file(tmp_path: Path) -> None:
+def test_snapshot_database_creates_file(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     from paperradar.date_storage import snapshot_database
 
+    monkeypatch.setattr("paperradar.date_storage.datetime", _FrozenDateTime)
     db_file = tmp_path / "radar_data.duckdb"
     db_file.write_text("fake-db-content")
 
@@ -61,8 +71,7 @@ def test_snapshot_database_creates_file(tmp_path: Path) -> None:
 
     assert result is not None
     assert result.exists()
-    today_iso = datetime.now(UTC).date().isoformat()
-    assert result.name == f"{today_iso}.duckdb"
+    assert result.name == f"{REFERENCE_DATE.isoformat()}.duckdb"
     assert result.parent == tmp_path / "daily"
     assert result.read_text() == "fake-db-content"
 
@@ -241,9 +250,10 @@ def test_cleanup_dated_reports_missing_dir(tmp_path: Path) -> None:
     assert removed == 0
 
 
-def test_storage_create_daily_snapshot(tmp_path: Path) -> None:
+def test_storage_create_daily_snapshot(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     from paperradar.storage import RadarStorage
 
+    monkeypatch.setattr("paperradar.date_storage.datetime", _FrozenDateTime)
     db_path = tmp_path / "data" / "radar_data.duckdb"
     storage = RadarStorage(db_path)
     try:
@@ -251,8 +261,7 @@ def test_storage_create_daily_snapshot(tmp_path: Path) -> None:
 
         assert result is not None
         assert result.exists()
-        today_iso = datetime.now(UTC).date().isoformat()
-        assert result.name == f"{today_iso}.duckdb"
+        assert result.name == f"{REFERENCE_DATE.isoformat()}.duckdb"
         assert result.parent == db_path.parent / "daily"
     finally:
         storage.close()

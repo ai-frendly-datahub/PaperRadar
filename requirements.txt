@@ -9,5 +9,5 @@ networkx>=3.0
 plotly>=5.14.0
 pybreaker>=1.0.0
 numpy>=1.24.0
-radar-core>=0.2.0
+radar-core @ git+https://github.com/ai-frendly-datahub/radar-core.git@main
 playwright>=1.40.0

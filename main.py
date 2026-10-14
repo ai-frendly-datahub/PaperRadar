@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from datetime import UTC
 from pathlib import Path
 
@@ -9,6 +10,8 @@ from radar_core.date_storage import apply_date_storage_policy
 
 from paperradar.analyzer import apply_entity_rules
 from paperradar.collector import collect_sources
+from paperradar.date_storage import compact_database_for_commit
+from paperradar.exceptions import EmptyCollectionError
 from paperradar.common.validators import validate_article
 from paperradar.config_loader import (
     load_category_config,
@@ -86,7 +89,7 @@ def run(
     categories_dir: Path | None = None,
     per_source_limit: int = 30,
     recent_days: int = 7,
-    timeout: int = 15,
+    timeout: int = 45,
     keep_days: int = 90,
     keep_raw_days: int = 180,
     keep_report_days: int = 90,
@@ -105,14 +108,18 @@ def run(
         exclude_sources=tuple(exclude_sources or ()),
     )
 
+    enabled_sources = [source for source in effective_sources if source.enabled]
     print(
-        f"[PaperRadar] Collecting '{category_cfg.display_name}' from {len(effective_sources)} sources..."
+        f"[PaperRadar] Collecting '{category_cfg.display_name}' "
+        f"from {len(enabled_sources)} sources..."
     )
+    raw_logger = RawLogger(settings.raw_data_dir)
     collected, errors = collect_sources(
         effective_sources,
         category=category_cfg.category_name,
         limit_per_source=per_source_limit,
         timeout=timeout,
+        raw_logger=raw_logger,
     )
 
     collected = annotate_articles_with_ontology(
@@ -124,7 +131,6 @@ def run(
         attach_event_model_payload=True,
     )
 
-    raw_logger = RawLogger(settings.raw_data_dir)
     for source in effective_sources:
         source_papers = [p for p in collected if p.source == source.name]
         if source_papers:
@@ -150,9 +156,9 @@ def run(
     with SearchIndex(settings.search_db_path) as search_idx:
         for paper in validated_articles:
             # Article 객체의 속성 사용 (Paper가 아닌 Article)
-            paper_id = getattr(paper, 'doi', None) or getattr(paper, 'arxiv_id', None) or paper.link
-            abstract = getattr(paper, 'abstract', None) or getattr(paper, 'summary', '') or ''
-            authors = " ".join(getattr(paper, 'authors', [])) if hasattr(paper, 'authors') else ''
+            paper_id = getattr(paper, "doi", None) or getattr(paper, "arxiv_id", None) or paper.link
+            abstract = getattr(paper, "abstract", None) or getattr(paper, "summary", "") or ""
+            authors = " ".join(getattr(paper, "authors", [])) if hasattr(paper, "authors") else ""
             search_idx.upsert(
                 paper_id,
                 paper.title,
@@ -204,6 +210,14 @@ def run(
     print(f"[PaperRadar] Quality report generated at {quality_paths['latest']}")
 
     raw_data_dir = getattr(settings, "raw_data_dir", settings.database_path.parent / "raw")
+    compact = compact_database_for_commit(settings.database_path)
+    print(
+        "[PaperRadar] DuckDB compact "
+        f"reason={compact.get('reason')} "
+        f"before={compact.get('bytes_before')} "
+        f"after={compact.get('bytes')} "
+        f"rows_deleted={compact.get('rows_deleted')}"
+    )
     date_storage = apply_date_storage_policy(
         database_path=settings.database_path,
         raw_data_dir=raw_data_dir,
@@ -219,6 +233,11 @@ def run(
     if errors:
         print(f"[PaperRadar] {len(errors)} source(s) had issues. See report for details.")
 
+    ensure_collection_not_empty(
+        collected_count=len(collected),
+        enabled_source_count=len(enabled_sources),
+    )
+
     _send_notifications(
         category_name=category_cfg.category_name,
         sources_count=len(effective_sources),
@@ -229,6 +248,19 @@ def run(
     )
 
     return output_path
+
+
+def ensure_collection_not_empty(*, collected_count: int, enabled_source_count: int) -> None:
+    """Fail the run when enabled sources produced nothing.
+
+    A dated snapshot of an old database is not evidence that this run collected data.
+    """
+    if enabled_source_count > 0 and collected_count <= 0:
+        print(
+            "::error title=PaperRadar empty collection::Collection produced no articles",
+            flush=True,
+        )
+        raise EmptyCollectionError("Collection produced no articles from enabled sources")
 
 
 def parse_args() -> argparse.Namespace:
@@ -242,7 +274,7 @@ def parse_args() -> argparse.Namespace:
         "--per-source-limit", type=int, default=30, help="Max papers per source"
     )
     _ = parser.add_argument("--recent-days", type=int, default=7, help="Report window (days)")
-    _ = parser.add_argument("--timeout", type=int, default=15, help="HTTP timeout (seconds)")
+    _ = parser.add_argument("--timeout", type=int, default=45, help="HTTP timeout (seconds)")
     _ = parser.add_argument("--keep-days", type=int, default=90, help="Retention window (days)")
     _ = parser.add_argument(
         "--keep-raw-days", type=int, default=180, help="Retention window for raw JSONL directories"
@@ -274,17 +306,21 @@ def parse_args() -> argparse.Namespace:
 
 if __name__ == "__main__":
     args = parse_args()
-    run(
-        category=args.category,
-        config_path=args.config,
-        categories_dir=args.categories_dir,
-        per_source_limit=args.per_source_limit,
-        recent_days=args.recent_days,
-        timeout=args.timeout,
-        keep_days=args.keep_days,
-        keep_raw_days=args.keep_raw_days,
-        keep_report_days=args.keep_report_days,
-        snapshot_db=args.snapshot_db,
-        max_sources=args.max_sources,
-        exclude_sources=args.exclude_source,
-    )
+    try:
+        run(
+            category=args.category,
+            config_path=args.config,
+            categories_dir=args.categories_dir,
+            per_source_limit=args.per_source_limit,
+            recent_days=args.recent_days,
+            timeout=args.timeout,
+            keep_days=args.keep_days,
+            keep_raw_days=args.keep_raw_days,
+            keep_report_days=args.keep_report_days,
+            snapshot_db=args.snapshot_db,
+            max_sources=args.max_sources,
+            exclude_sources=args.exclude_source,
+        )
+    except EmptyCollectionError as exc:
+        print(f"[PaperRadar] {exc}", file=sys.stderr)
+        raise SystemExit(1) from exc
