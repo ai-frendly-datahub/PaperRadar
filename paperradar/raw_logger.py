@@ -3,10 +3,17 @@ from __future__ import annotations
 import json
 import re
 from collections.abc import Iterable, Sequence
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 from .models import Article
+
+
+def _json_default(value: object) -> str:
+    """Serialize datetime/date values (e.g. nested in ontology) as ISO 8601 strings."""
+    if isinstance(value, (datetime, date)):
+        return value.isoformat()
+    raise TypeError(f"Object of type {value.__class__.__name__} is not JSON serializable")
 
 
 class RawLogger:
@@ -60,7 +67,7 @@ class RawLogger:
                 ontology = getattr(article, "ontology", None)
                 if ontology:
                     record["ontology"] = ontology
-                _ = handle.write(json.dumps(record, ensure_ascii=False))
+                _ = handle.write(json.dumps(record, ensure_ascii=False, default=_json_default))
                 _ = handle.write("\n")
                 if run_id is not None:
                     existing_links.add(article.link)

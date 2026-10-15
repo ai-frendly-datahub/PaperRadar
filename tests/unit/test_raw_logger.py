@@ -152,3 +152,14 @@ def test_log_without_run_id_appends_to_same_file(tmp_path: Path) -> None:
     assert output_path1 == output_path2
     lines = output_path1.read_text(encoding="utf-8").splitlines()
     assert len(lines) == 2
+
+
+def test_log_serializes_datetime_in_ontology(tmp_path: Path) -> None:
+    logger = RawLogger(tmp_path)
+    article = _make_article()
+    article.ontology = {"observed_at": datetime(2026, 10, 14, 1, 2, 3, tzinfo=UTC)}
+
+    output_path = logger.log([article], source_name="source")
+
+    record = json.loads(output_path.read_text(encoding="utf-8").splitlines()[0])
+    assert record["ontology"]["observed_at"] == "2026-10-14T01:02:03+00:00"
