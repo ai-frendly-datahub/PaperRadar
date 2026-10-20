@@ -1,0 +1,294 @@
+{
+  "date": "2026-10-20",
+  "category": "research",
+  "article_count": 125,
+  "source_count": 6,
+  "matched_count": 118,
+  "top_entities": [
+    {
+      "name": "ResearchGeneral",
+      "count": 361
+    },
+    {
+      "name": "Techniques",
+      "count": 43
+    },
+    {
+      "name": "Research Areas",
+      "count": 34
+    },
+    {
+      "name": "Institutions",
+      "count": 30
+    },
+    {
+      "name": "Venues",
+      "count": 25
+    },
+    {
+      "name": "Tasks",
+      "count": 4
+    }
+  ],
+  "sources": {
+    "Google AI Blog": 20,
+    "OpenAI Blog": 30,
+    "DeepMind Blog": 30,
+    "Microsoft Research": 10,
+    "Towards Data Science": 20,
+    "The Gradient": 15
+  },
+  "generated_at": "2026-10-20T19:32:33.617913+09:00",
+  "articles": [
+    {
+      "event_model_payload": {
+        "title": "Advancing coding in low‑resource programming languages",
+        "source_url": "https://openai.com/index/low-resource-programming-languages",
+        "published": "2026-10-19T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Itaú is building generative AI for its entire customer base",
+        "source_url": "https://openai.com/index/itau-generative-ai",
+        "published": "2026-10-16T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Benefit Street Partners answers questions faster with Codex",
+        "source_url": "https://openai.com/index/benefit-street-partners",
+        "published": "2026-10-15T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "source_url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+        "published": "2026-10-15T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Bringing GPT-Rosalind to academic research labs",
+        "source_url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+        "published": "2026-10-15T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Teaching students to think and learn through questions",
+        "source_url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+        "published": "2026-10-15T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+        "source_url": "https://openai.com/index/sullivan-cromwell",
+        "published": "2026-10-14T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Amp puts AI agents to work beyond code with OpenAI models",
+        "source_url": "https://openai.com/index/amp-beyond-coding",
+        "published": "2026-10-14T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SentinelOne cuts malware analysis from weeks to hours",
+        "source_url": "https://openai.com/index/sentinelone",
+        "published": "2026-10-14T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+        "source_url": "https://openai.com/index/third-moment-research",
+        "published": "2026-10-13T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Block is building AI-powered security with OpenAI technology",
+        "source_url": "https://openai.com/index/block-ai-powered-security",
+        "published": "2026-10-13T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The EU’s next chapter in AI is agentic",
+        "source_url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+        "published": "2026-10-13T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Higgsfield takes AI video from 1 minute to over 10",
+        "source_url": "https://openai.com/index/higgsfield-longer-videos-voice",
+        "published": "2026-10-13T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+        "source_url": "https://openai.com/index/sophos",
+        "published": "2026-10-08T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+        "source_url": "https://openai.com/index/asana-browser-agent",
+        "published": "2026-10-08T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+        "source_url": "https://openai.com/index/oracle",
+        "published": "2026-10-08T07:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+        "source_url": "https://openai.com/index/pollo-ai",
+        "published": "2026-10-08T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "LegalOn halves Codex costs while maintaining development speed",
+        "source_url": "https://openai.com/index/legalon-halves-codex-costs",
+        "published": "2026-10-08T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Disrupting AI-enabled “false front” operations",
+        "source_url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+        "published": "2026-10-07T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Helping teens learn, plan, and shape the future of AI",
+        "source_url": "https://openai.com/index/teens-learn-and-plan",
+        "published": "2026-10-07T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
+        "source_url": "https://openai.com/index/radisson",
+        "published": "2026-10-06T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "GPT-6 and Intelligent UI for everyone",
+        "source_url": "https://openai.com/index/gpt-6-for-everyone",
+        "published": "2026-10-06T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Jump Trading is scaling quant research with ChatGPT",
+        "source_url": "https://openai.com/index/jump-trading",
+        "published": "2026-10-06T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Sharing AI progress in mathematics",
+        "source_url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+        "published": "2026-10-06T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Advancing computer use with Ironclad",
+        "source_url": "https://openai.com/index/advancing-computer-use-with-ironclad",
+        "published": "2026-10-06T01:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+        "source_url": "https://openai.com/index/atlassian-partnership",
+        "published": "2026-10-06T07:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Our approach to EU text provenance rules",
+        "source_url": "https://openai.com/index/eu-text-provenance",
+        "published": "2026-10-05T06:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Building advertising for the way people use AI",
+        "source_url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+        "published": "2026-10-05T01:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "A model guide for the GPT-6 family",
+        "source_url": "https://openai.com/index/practical-guide-building-gpt-6",
+        "published": "2026-10-02T07:15:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Chatham scales its capital markets expertise with OpenAI",
+        "source_url": "https://openai.com/index/chatham-financial",
+        "published": "2026-10-01T15:00:00+00:00"
+      }
+    }
+  ],
+  "ontology": {
+    "repo": "PaperRadar",
+    "category": "research",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "paper.benchmark_result",
+      "paper.citation_snapshot",
+      "paper.code_repository",
+      "paper.editorial_coverage",
+      "paper.paper_release"
+    ],
+    "event_model_mappings": {
+      "paper_release": "paper.paper_release",
+      "editorial_coverage": "paper.editorial_coverage",
+      "code_repository": "paper.code_repository",
+      "citation_snapshot": "paper.citation_snapshot",
+      "benchmark_result": "paper.benchmark_result"
+    },
+    "entity_type_hints": [
+      "research.area",
+      "research.venue",
+      "research.technique"
+    ],
+    "source_role_ids": [
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "arXiv CS.AI": "primary_evidence",
+      "arXiv CS.CL": "primary_evidence",
+      "arXiv CS.LG": "primary_evidence",
+      "arXiv CS.CV": "primary_evidence",
+      "arXiv CS.NE": "primary_evidence",
+      "arXiv Stat.ML": "primary_evidence"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
+}
