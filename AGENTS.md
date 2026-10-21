@@ -187,7 +187,7 @@ display_name: AI/ML Research Papers
 sources:
   - name: arXiv CS.AI
     type: rss
-    url: "http://export.arxiv.org/rss/cs.AI"
+    url: "https://rss.arxiv.org/rss/cs.AI"
   - name: arXiv API Recent AI
     type: arxiv
     url: "http://export.arxiv.org/api/query?search_query=cat:cs.AI..."
