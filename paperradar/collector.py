@@ -26,7 +26,6 @@ from .models import Article, Paper, Source
 from .raw_logger import RawLogger
 from .resilience import get_circuit_breaker_manager
 
-
 logger = structlog.get_logger(__name__)
 
 # Identifying client name. Public feeds may reject the default python-requests
@@ -127,9 +126,9 @@ def _create_session() -> requests.Session:
 class _CooldownProbeSession(requests.Session):
     """One transport attempt, with no adapter retries or redirect followups."""
 
-    def get(self, url: str, **kwargs: Any) -> requests.Response:
+    def get(self, url: str | bytes, params: Any = None, **kwargs: Any) -> requests.Response:
         kwargs["allow_redirects"] = False
-        return super().get(url, **kwargs)
+        return super().get(url, params=params, **kwargs)
 
 
 def _fetch_url_with_retry(
@@ -200,18 +199,20 @@ def _fetch_url_with_retry(
                     delay = throttler.get_current_delay(source_name)
                     health_store.record_failure(source_name, str(exc), delay)
                     if is_probe and isinstance(exc, requests.exceptions.HTTPError):
-                        response = exc.response
-                        if response is not None:
-                            value = response.headers.get("Retry-After")
-                            if value:
+                        probe_response = exc.response
+                        if probe_response is not None:
+                            retry_header = probe_response.headers.get("Retry-After")
+                            if retry_header:
                                 try:
                                     retry_at = (
-                                        datetime.now(UTC) + timedelta(seconds=int(value))
-                                        if value.strip().isdigit()
-                                        else parsedate_to_datetime(value)
+                                        datetime.now(UTC) + timedelta(seconds=int(retry_header))
+                                        if retry_header.strip().isdigit()
+                                        else parsedate_to_datetime(retry_header)
                                     )
                                     if retry_at.tzinfo is not None:
-                                        health_store.postpone_retry(source_name, retry_at)
+                                        getattr(health_store, "postpone_retry")(
+                                            source_name, retry_at
+                                        )
                                 except (ValueError, TypeError, OverflowError):
                                     pass
 
@@ -344,6 +345,8 @@ def collect_sources(
             if (
                 source.config.get("retry_after_cooldown") is not True
                 or not callable(claim_retry)
+                or not callable(getattr(health_store, "finish_retry", None))
+                or not callable(getattr(health_store, "postpone_retry", None))
                 or not claim_retry(source.name)
             ):
                 return [], [f"{source.name}: Source disabled (crawl health threshold reached)"]
@@ -369,7 +372,7 @@ def collect_sources(
                     return [], [
                         f"{source.name}: Cooldown probe returned no valid items; still disabled"
                     ]
-                health_store.finish_retry(source.name)
+                getattr(health_store, "finish_retry")(source.name)
             return result, []
         except CircuitBreakerError:
             return [], [f"{source.name}: Circuit breaker open (source unavailable)"]
