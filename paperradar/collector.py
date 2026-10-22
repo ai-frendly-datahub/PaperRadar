@@ -7,7 +7,7 @@ import threading
 import time
 from collections.abc import Mapping, Sequence
 from concurrent.futures import Future, ThreadPoolExecutor
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from email.utils import parsedate_to_datetime
 from typing import Any
 from urllib.parse import urlparse
@@ -25,6 +25,7 @@ from .exceptions import NetworkError, ParseError, SourceError
 from .models import Article, Paper, Source
 from .raw_logger import RawLogger
 from .resilience import get_circuit_breaker_manager
+
 
 logger = structlog.get_logger(__name__)
 
@@ -123,6 +124,14 @@ def _create_session() -> requests.Session:
     return session
 
 
+class _CooldownProbeSession(requests.Session):
+    """One transport attempt, with no adapter retries or redirect followups."""
+
+    def get(self, url: str, **kwargs: Any) -> requests.Response:
+        kwargs["allow_redirects"] = False
+        return super().get(url, **kwargs)
+
+
 def _fetch_url_with_retry(
     url: str,
     timeout: int,
@@ -152,6 +161,10 @@ def _fetch_url_with_retry(
         requests.exceptions.HTTPError,
     )
 
+    is_probe = isinstance(session, _CooldownProbeSession)
+    if is_probe:
+        max_attempts = 1
+
     for attempt in range(max_attempts):
         if source_name is not None and throttler is not None:
             throttler.acquire(source_name)
@@ -162,6 +175,10 @@ def _fetch_url_with_retry(
             else:
                 response = requests.get(url, timeout=timeout, headers=merged, verify=True)
             response.raise_for_status()
+            if is_probe and not 200 <= response.status_code < 300:
+                raise requests.HTTPError(
+                    "Cooldown probe requires a 2xx response", response=response
+                )
 
             if source_name is not None and throttler is not None:
                 throttler.record_success(source_name)
@@ -182,6 +199,21 @@ def _fetch_url_with_retry(
                 if health_store is not None:
                     delay = throttler.get_current_delay(source_name)
                     health_store.record_failure(source_name, str(exc), delay)
+                    if is_probe and isinstance(exc, requests.exceptions.HTTPError):
+                        response = exc.response
+                        if response is not None:
+                            value = response.headers.get("Retry-After")
+                            if value:
+                                try:
+                                    retry_at = (
+                                        datetime.now(UTC) + timedelta(seconds=int(value))
+                                        if value.strip().isdigit()
+                                        else parsedate_to_datetime(value)
+                                    )
+                                    if retry_at.tzinfo is not None:
+                                        health_store.postpone_retry(source_name, retry_at)
+                                except (ValueError, TypeError, OverflowError):
+                                    pass
 
             if attempt == max_attempts - 1:
                 raise
@@ -306,11 +338,20 @@ def collect_sources(
         secret_errors = _missing_secret_errors(source, raw_logger=raw_logger)
         if secret_errors is not None:
             return [], secret_errors
+        probe = False
         if health_store.is_disabled(source.name):
-            return [], [f"{source.name}: Source disabled (crawl health threshold reached)"]
+            claim_retry = getattr(health_store, "claim_retry", None)
+            if (
+                source.config.get("retry_after_cooldown") is not True
+                or not callable(claim_retry)
+                or not claim_retry(source.name)
+            ):
+                return [], [f"{source.name}: Source disabled (crawl health threshold reached)"]
+            probe = True
 
         host = source_hosts[source.name]
 
+        probe_session = _CooldownProbeSession() if probe else None
         try:
             with host_locks[host]:
                 rate_limiters[host].acquire()
@@ -319,10 +360,16 @@ def collect_sources(
                     _collect_single,
                     source,
                     category=category,
-                    limit=limit_per_source,
+                    limit=min(limit_per_source, 5) if probe else limit_per_source,
                     timeout=timeout,
-                    session=session,
+                    session=probe_session if probe_session is not None else session,
                 )
+            if probe:
+                if not result:
+                    return [], [
+                        f"{source.name}: Cooldown probe returned no valid items; still disabled"
+                    ]
+                health_store.finish_retry(source.name)
             return result, []
         except CircuitBreakerError:
             return [], [f"{source.name}: Circuit breaker open (source unavailable)"]
@@ -332,6 +379,9 @@ def collect_sources(
             return [], [f"{source.name}: {exc}"]
         except Exception as exc:
             return [], [f"{source.name}: Unexpected error - {type(exc).__name__}: {exc}"]
+        finally:
+            if probe_session is not None:
+                probe_session.close()
 
     try:
         if workers == 1:

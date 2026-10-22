@@ -258,6 +258,7 @@ sources:
   - library_update
   notes: Implementation guides, model release notes, and library update signals.
   config:
+    retry_after_cooldown: true
     event_model: code_repository
 - name: Distill.pub
   type: rss
@@ -328,6 +329,7 @@ sources:
   - literature_scan
   notes: OpenAlex API feed emphasizing citation and impact signals for recent AI research.
   config:
+    retry_after_cooldown: true
     event_model: citation_snapshot
 - name: Towards Data Science
   type: rss
