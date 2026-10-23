@@ -87,9 +87,10 @@ source_backlog:
     activation_gate: repository evidence extraction, star/fork timestamp policy, and
       paper mapping
 sources:
+# Canonical RSS host. export.arxiv.org/rss returns HTTP 200 with an empty channel.
 - name: arXiv CS.AI
   type: rss
-  url: http://export.arxiv.org/rss/cs.AI
+  url: https://rss.arxiv.org/rss/cs.AI
   language: en
   country: US
   trust_tier: T1_official
@@ -99,7 +100,7 @@ sources:
     event_model: paper_release
 - name: arXiv CS.CL
   type: rss
-  url: http://export.arxiv.org/rss/cs.CL
+  url: https://rss.arxiv.org/rss/cs.CL
   language: en
   country: US
   trust_tier: T1_official
@@ -109,7 +110,7 @@ sources:
     event_model: paper_release
 - name: arXiv CS.LG
   type: rss
-  url: http://export.arxiv.org/rss/cs.LG
+  url: https://rss.arxiv.org/rss/cs.LG
   language: en
   country: US
   trust_tier: T1_official
@@ -119,7 +120,7 @@ sources:
     event_model: paper_release
 - name: arXiv CS.CV
   type: rss
-  url: http://export.arxiv.org/rss/cs.CV
+  url: https://rss.arxiv.org/rss/cs.CV
   language: en
   country: US
   trust_tier: T1_official
@@ -129,7 +130,7 @@ sources:
     event_model: paper_release
 - name: arXiv CS.NE
   type: rss
-  url: http://export.arxiv.org/rss/cs.NE
+  url: https://rss.arxiv.org/rss/cs.NE
   language: en
   country: US
   trust_tier: T1_official
@@ -139,7 +140,7 @@ sources:
     event_model: paper_release
 - name: arXiv Stat.ML
   type: rss
-  url: http://export.arxiv.org/rss/stat.ML
+  url: https://rss.arxiv.org/rss/stat.ML
   language: en
   country: US
   trust_tier: T1_official

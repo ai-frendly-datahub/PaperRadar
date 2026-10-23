@@ -41,6 +41,11 @@ _DEFAULT_HEADERS: dict[str, str] = {
 }
 _DEFAULT_HEALTH_DB_PATH = "data/radar_data.duckdb"
 _ARXIV_MIN_INTERVAL_SECONDS = 3.0
+# export.arxiv.org/rss and arxiv.org/rss are not the canonical feed. The export
+# host's robots.txt disallows every path, and its /rss/* responses are HTTP 200
+# channels with zero <item> elements. rss.arxiv.org is the documented RSS host.
+_LEGACY_ARXIV_RSS_HOSTS = frozenset({"export.arxiv.org", "arxiv.org", "www.arxiv.org"})
+_ARXIV_RSS_PATH = re.compile(r"^/(?:rss|atom)/[A-Za-z][A-Za-z0-9.+_-]*$")
 _COLLECTION_CONTROL_LOCK = threading.Lock()
 _ACTIVE_THROTTLER: AdaptiveThrottler | None = None
 _ACTIVE_HEALTH_STORE: CrawlHealthStore | None = None
@@ -476,6 +481,62 @@ def _collect_single(
     raise SourceError(source.name, f"Unsupported source type '{source.type}'")
 
 
+def _rewrite_arxiv_rss_url(url: str) -> str:
+    """Point legacy arXiv RSS URLs at the canonical rss.arxiv.org feed.
+
+    ``export.arxiv.org/rss/<category>`` returns HTTP 200 with an empty channel,
+    so feedparser reports zero entries and the source looks successful.
+    """
+    parsed = urlparse(url.strip())
+    host = parsed.netloc.lower()
+    if host not in _LEGACY_ARXIV_RSS_HOSTS:
+        return url
+    if parsed.username or parsed.password or parsed.query or parsed.fragment:
+        return url
+    path = parsed.path.rstrip("/")
+    if _ARXIV_RSS_PATH.fullmatch(path) is None:
+        return url
+    return f"https://rss.arxiv.org{path}"
+
+
+def _canonical_arxiv_feed_url(feed: Any, fetched_url: str) -> str | None:
+    """Return a different official arXiv feed URL declared by an empty channel."""
+    channel = getattr(feed, "feed", None)
+    if not isinstance(channel, Mapping):
+        return None
+
+    candidates: list[str] = []
+    links = channel.get("links")
+    if isinstance(links, list):
+        for item in links:
+            if not isinstance(item, Mapping) or item.get("rel") != "self":
+                continue
+            href = item.get("href")
+            if isinstance(href, str) and href.strip():
+                candidates.append(href.strip())
+    link = channel.get("link")
+    if isinstance(link, str) and link.strip():
+        candidates.append(link.strip())
+
+    fetched = urlparse(fetched_url)
+    fetched_host = fetched.netloc.lower()
+    fetched_path = fetched.path.rstrip("/")
+    for raw in candidates:
+        parsed = urlparse(raw)
+        host = parsed.netloc.lower()
+        if parsed.scheme not in {"http", "https"} or host != "rss.arxiv.org":
+            continue
+        if parsed.username or parsed.password or parsed.query or parsed.fragment:
+            continue
+        path = parsed.path.rstrip("/")
+        if _ARXIV_RSS_PATH.fullmatch(path) is None:
+            continue
+        if host == fetched_host and path == fetched_path:
+            continue
+        return f"https://rss.arxiv.org{path}"
+    return None
+
+
 def _collect_rss(
     source: Source,
     *,
@@ -483,11 +544,14 @@ def _collect_rss(
     limit: int,
     timeout: int,
     session: requests.Session | None = None,
+    feed_url: str | None = None,
+    allow_canonical_follow: bool = True,
 ) -> list[Article]:
     """Collect articles from RSS feeds."""
+    request_url = feed_url or _rewrite_arxiv_rss_url(source.url)
     try:
         response = _fetch_url_with_retry(
-            source.url,
+            request_url,
             timeout,
             session=session,
             source_name=source.name,
@@ -544,6 +608,25 @@ def _collect_rss(
             raise ParseError(
                 f"Feed from {source.name} was a challenge, Cloudflare, or cookie-wall page"
             )
+        if allow_canonical_follow and not feed.entries:
+            canonical = _canonical_arxiv_feed_url(feed, request_url)
+            if canonical is not None:
+                logger.info(
+                    "arxiv_rss_empty_channel",
+                    source=source.name,
+                    fetched_url=request_url,
+                    canonical_url=canonical,
+                )
+                time.sleep(_ARXIV_MIN_INTERVAL_SECONDS)
+                return _collect_rss(
+                    source,
+                    category=category,
+                    limit=limit,
+                    timeout=timeout,
+                    session=session,
+                    feed_url=canonical,
+                    allow_canonical_follow=False,
+                )
         return items
     except ParseError:
         raise
