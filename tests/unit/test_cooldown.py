@@ -159,3 +159,51 @@ def test_openalex_probe_limits_parsed_items_to_five() -> None:
     assert not errors
     request.assert_called_once()
     store.finish_retry.assert_called_once_with(source.name)
+
+
+@pytest.mark.parametrize("outcome", ["valid", "empty", "limited"])
+def test_cooldown_with_real_core_database(tmp_path, outcome: str) -> None:
+    """Exercise persisted claim/finish/retry behavior without external requests."""
+    from datetime import UTC, datetime, timedelta
+
+    from radar_core.crawl_health import CrawlHealthStore
+
+    db_path = str(tmp_path / "real-core-health.duckdb")
+    source = _source()
+    with CrawlHealthStore(db_path, failure_threshold=1) as store:
+        store.record_failure(source.name, "503 Server Error: unavailable", 0.0)
+        store.flush()
+        store.conn.execute(
+            "UPDATE crawl_health SET updated_at = ? WHERE source_name = ?",
+            [datetime.now(UTC).replace(tzinfo=None) - timedelta(days=2), source.name],
+        )
+
+    response = _response()
+    if outcome == "empty":
+        response = _response(body=b"<rss><channel><title>Empty</title></channel></rss>")
+    elif outcome == "limited":
+        response = _response(429, b"Limited")
+        response.headers["Retry-After"] = "604800"
+    with (
+        patch("paperradar.collector.get_circuit_breaker_manager", return_value=_manager()),
+        patch("requests.Session.request", return_value=response) as request,
+    ):
+        items, errors = collect_sources(
+            [source], category="research", max_workers=1, health_db_path=db_path,
+        )
+    request.assert_called_once()
+    with CrawlHealthStore(db_path) as store:
+        record = store.get_health(source.name)
+        assert record is not None
+        assert record.failure_count >= 1
+        assert record.disabled is (outcome != "valid")
+        if outcome == "valid":
+            assert len(items) == 1
+            assert not errors
+            assert record.success_count == 1
+        else:
+            assert not items
+            assert errors
+            assert not store.claim_retry(source.name)
+        if outcome == "limited":
+            assert record.updated_at > datetime.now(UTC).replace(tzinfo=None) + timedelta(days=6)
