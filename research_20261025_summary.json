@@ -1,0 +1,296 @@
+{
+  "date": "2026-10-25",
+  "category": "research",
+  "article_count": 185,
+  "source_count": 8,
+  "matched_count": 173,
+  "top_entities": [
+    {
+      "name": "ResearchGeneral",
+      "count": 431
+    },
+    {
+      "name": "Research Areas",
+      "count": 62
+    },
+    {
+      "name": "Techniques",
+      "count": 42
+    },
+    {
+      "name": "Institutions",
+      "count": 35
+    },
+    {
+      "name": "Venues",
+      "count": 29
+    },
+    {
+      "name": "Tasks",
+      "count": 9
+    }
+  ],
+  "sources": {
+    "Google AI Blog": 20,
+    "OpenAI Blog": 30,
+    "DeepMind Blog": 30,
+    "Microsoft Research": 10,
+    "Hugging Face Blog": 30,
+    "OpenAlex AI Citation Feed": 30,
+    "Towards Data Science": 20,
+    "The Gradient": 15
+  },
+  "generated_at": "2026-10-25T19:17:45.976784+09:00",
+  "articles": [
+    {
+      "event_model_payload": {
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+        "source_url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+        "published": "2026-10-23T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Securing our frontier model training environment",
+        "source_url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+        "published": "2026-10-23T01:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
+        "source_url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+        "published": "2026-10-22T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Build more responsive apps with the Decisions API",
+        "source_url": "https://openai.com/index/decisions-api",
+        "published": "2026-10-22T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "What FDE means at OpenAI",
+        "source_url": "https://openai.com/index/forward-deployed-engineering-means",
+        "published": "2026-10-21T21:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Uber brings ChatGPT Work to all employees with OpenAI",
+        "source_url": "https://openai.com/index/uber-chatgpt-work-rollout",
+        "published": "2026-10-21T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How AT&T is rethinking in-house legal work with OpenAI",
+        "source_url": "https://openai.com/index/att-legal",
+        "published": "2026-10-21T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Broad access through consistent standards",
+        "source_url": "https://openai.com/index/broad-access-through-consistent-standards",
+        "published": "2026-10-21T12:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI models are coming to Google Cloud",
+        "source_url": "https://openai.com/index/openai-models-google-cloud",
+        "published": "2026-10-21T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+        "source_url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+        "published": "2026-10-20T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+        "source_url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+        "published": "2026-10-21T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Using thousands of AI agents to uncover new leads in biological data",
+        "source_url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+        "published": "2026-10-20T19:50:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Cloudflare links vulnerability discovery to defense with OpenAI",
+        "source_url": "https://openai.com/index/cloudflare-cyber",
+        "published": "2026-10-20T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How we built ChatGPT’s novel ad stack for user trust and relevance",
+        "source_url": "https://openai.com/index/building-chatgpt-ad-stack",
+        "published": "2026-10-20T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Democratic governance of frontier AI, part II: Empowering cyber defenders",
+        "source_url": "https://openai.com/index/empowering-cyber-defenders",
+        "published": "2026-10-20T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+        "source_url": "https://openai.com/index/ted-taylor-restaurant",
+        "published": "2026-10-20T01:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
+        "source_url": "https://openai.com/index/terminal-x",
+        "published": "2026-10-19T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI acquires Orchestra Bio",
+        "source_url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+        "published": "2026-10-19T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Advancing coding in low‑resource programming languages",
+        "source_url": "https://openai.com/index/low-resource-programming-languages",
+        "published": "2026-10-19T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Itaú is building generative AI for its entire customer base",
+        "source_url": "https://openai.com/index/itau-generative-ai",
+        "published": "2026-10-16T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+        "source_url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+        "published": "2026-10-15T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Benefit Street Partners answers questions faster with Codex",
+        "source_url": "https://openai.com/index/benefit-street-partners",
+        "published": "2026-10-15T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Bringing GPT-Rosalind to academic research labs",
+        "source_url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+        "published": "2026-10-15T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Teaching students to think and learn through questions",
+        "source_url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+        "published": "2026-10-15T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+        "source_url": "https://openai.com/index/sullivan-cromwell",
+        "published": "2026-10-14T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Amp puts AI agents to work beyond code with OpenAI models",
+        "source_url": "https://openai.com/index/amp-beyond-coding",
+        "published": "2026-10-14T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SentinelOne cuts malware analysis from weeks to hours",
+        "source_url": "https://openai.com/index/sentinelone",
+        "published": "2026-10-14T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+        "source_url": "https://openai.com/index/third-moment-research",
+        "published": "2026-10-13T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Block is building AI-powered security with OpenAI technology",
+        "source_url": "https://openai.com/index/block-ai-powered-security",
+        "published": "2026-10-13T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The EU’s next chapter in AI is agentic",
+        "source_url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+        "published": "2026-10-13T15:00:00+00:00"
+      }
+    }
+  ],
+  "ontology": {
+    "repo": "PaperRadar",
+    "category": "research",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "paper.benchmark_result",
+      "paper.citation_snapshot",
+      "paper.code_repository",
+      "paper.editorial_coverage",
+      "paper.paper_release"
+    ],
+    "event_model_mappings": {
+      "paper_release": "paper.paper_release",
+      "editorial_coverage": "paper.editorial_coverage",
+      "code_repository": "paper.code_repository",
+      "citation_snapshot": "paper.citation_snapshot",
+      "benchmark_result": "paper.benchmark_result"
+    },
+    "entity_type_hints": [
+      "research.area",
+      "research.venue",
+      "research.technique"
+    ],
+    "source_role_ids": [
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "arXiv CS.AI": "primary_evidence",
+      "arXiv CS.CL": "primary_evidence",
+      "arXiv CS.LG": "primary_evidence",
+      "arXiv CS.CV": "primary_evidence",
+      "arXiv CS.NE": "primary_evidence",
+      "arXiv Stat.ML": "primary_evidence"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
+}
