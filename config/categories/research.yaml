@@ -350,6 +350,9 @@ sources:
   trust_tier: T3_professional
   collection_tier: C1_rss
   content_type: news
+  notes: '2026-10-29 확인: 피드와 robots.txt 모두 사이트의 sgcaptcha 봇 확인 페이지(HTTP
+    202, meta refresh)로 응답한다. 우회하지 않으므로 cooldown probe를 켜지 않고 비활성 유지.
+    사이트 운영자의 허용 또는 공식 대체 피드가 확인되면 그때 opt-in.'
   config:
     event_model: editorial_coverage
 - name: The Gradient
@@ -370,8 +373,15 @@ sources:
   trust_tier: T3_professional
   collection_tier: C1_rss
   content_type: newsletter
+  notes: '건강 DB 기준 403만 12회, 성공 0회로 2026-05-14에 비활성. 2026-10-29 로컬 확인에서는 같은
+    URL이 유효한 RSS(200)를 반환하고 robots.txt가 /feed를 허용한다. 일시 차단 가능성이 있어 7일 간격
+    1회 probe(robots.txt 확인 후)를 opt-in한다.'
   config:
     event_model: editorial_coverage
+    retry_after_cooldown: true
+    retry_after_cooldown_statuses:
+    - 403
+    retry_after_cooldown_seconds: 604800
 - name: The Batch (DeepLearning.AI)
   type: rss
   url: https://www.deeplearning.ai/the-batch/feed/
