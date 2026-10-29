@@ -34,6 +34,7 @@ class Paper:
     keywords: list[str] = field(default_factory=list)
     matched_entities: dict[str, list[str]] = field(default_factory=dict)
     ontology: dict[str, object] | None = None
+    published_raw: str | None = None
 
     @property
     def summary(self) -> str:

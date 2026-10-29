@@ -6,6 +6,7 @@ from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 import duckdb
+from radar_core.dates import daily_partition_date
 
 logger = logging.getLogger(__name__)
 
@@ -20,7 +21,7 @@ def snapshot_database(
         return None
 
     if snapshot_date is None:
-        snapshot_date = datetime.now(UTC).date()
+        snapshot_date = daily_partition_date(datetime.now(UTC))
 
     if snapshot_root is None:
         snapshot_root = db_path.parent / "daily"
@@ -106,7 +107,7 @@ def resolve_read_database_path(db_path: Path, *, snapshot_root: Path | None = No
 
 def cleanup_date_directories(base_dir: Path, *, keep_days: int, today: date | None = None) -> int:
     if today is None:
-        today = datetime.now(UTC).date()
+        today = daily_partition_date(datetime.now(UTC))
 
     cutoff = today - timedelta(days=keep_days)
     removed = 0
@@ -134,7 +135,7 @@ def cleanup_date_directories(base_dir: Path, *, keep_days: int, today: date | No
 
 def cleanup_dated_reports(report_dir: Path, *, keep_days: int, today: date | None = None) -> int:
     if today is None:
-        today = datetime.now(UTC).date()
+        today = daily_partition_date(datetime.now(UTC))
 
     cutoff = today - timedelta(days=keep_days)
     removed = 0

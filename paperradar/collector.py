@@ -17,6 +17,7 @@ import requests
 import structlog
 from pybreaker import CircuitBreakerError
 from radar_core import AdaptiveThrottler, CrawlHealthStore
+from radar_core.dates import parse_feed_entry, resolve_default_timezone
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -567,7 +568,7 @@ def _collect_rss(
         dropped_challenge = 0
 
         for entry in feed.entries[:limit]:
-            published = _extract_datetime(entry)
+            published, published_raw = _extract_published(entry, source)
             summary = _entry_text(entry, "summary") or _entry_text(entry, "description")
             if not summary:
                 _content = entry.get("content", [])
@@ -599,6 +600,7 @@ def _collect_rss(
                     published=published,
                     source=source.name,
                     category=category,
+                    published_raw=published_raw,
                 )
             )
 
@@ -673,7 +675,7 @@ def _collect_arxiv(
             if not summary and isinstance(content, list) and content:
                 summary = html.unescape(str(content[0].get("value", "")).strip()) if content else ""
 
-            published = _extract_datetime(entry)
+            published, published_raw = _extract_published(entry, source)
             arxiv_id = _extract_arxiv_id(raw_id or link)
             authors = _extract_authors(entry)
 
@@ -688,6 +690,7 @@ def _collect_arxiv(
                     category=category,
                     arxiv_id=arxiv_id,
                     pdf_url=f"https://arxiv.org/pdf/{arxiv_id}.pdf" if arxiv_id else None,
+                    published_raw=published_raw,
                 )
             )
 
@@ -805,7 +808,7 @@ def _collect_pubmed(
             summary = html.unescape(
                 (_entry_text(entry, "summary") or _entry_text(entry, "description")).strip()
             )
-            published = _extract_datetime(entry)
+            published, published_raw = _extract_published(entry, source)
 
             items.append(
                 Article(
@@ -815,6 +818,7 @@ def _collect_pubmed(
                     published=published,
                     source=source.name,
                     category=category,
+                    published_raw=published_raw,
                 )
             )
 
@@ -1060,27 +1064,30 @@ def _collect_crossref(
         raise ParseError(f"Failed to parse CrossRef data: {exc}") from exc
 
 
-def _extract_datetime(entry: Mapping[str, Any]) -> datetime | None:
+def _extract_datetime(entry: Mapping[str, Any], source: Source | None = None) -> datetime | None:
     """Parse a feed entry date into a timezone-aware datetime."""
-    published_parsed = entry.get("published_parsed")
-    if isinstance(published_parsed, time.struct_time):
-        return datetime.fromtimestamp(time.mktime(published_parsed), tz=UTC)
+    return _extract_published(entry, source)[0]
 
-    updated_parsed = entry.get("updated_parsed")
-    if isinstance(updated_parsed, time.struct_time):
-        return datetime.fromtimestamp(time.mktime(updated_parsed), tz=UTC)
 
-    for key in ("published", "updated", "date"):
-        raw = entry.get(key)
-        if raw:
-            try:
-                dt = parsedate_to_datetime(str(raw))
-                if dt and dt.tzinfo is None:
-                    dt = dt.replace(tzinfo=UTC)
-                return dt
-            except Exception:
-                continue
-    return None
+def _extract_published(
+    entry: Mapping[str, Any], source: Source | None = None
+) -> tuple[datetime | None, str | None]:
+    """Parse a feed entry, keeping offsets and treating ``*_parsed`` as UTC.
+
+    radar-core ``parse_feed_entry`` uses ``calendar.timegm`` for feedparser
+    structs. ``time.mktime`` would read that UTC clock as local time and, with
+    ``TZ=Asia/Seoul``, store the instant nine hours early. Strings that already
+    have an offset keep it. Zone-less strings use the source ``default_timezone``,
+    otherwise a ``.kr`` host uses Asia/Seoul and every other host uses UTC.
+    """
+    default_timezone = "UTC"
+    if source is not None:
+        default_timezone = resolve_default_timezone(
+            source_url=source.url,
+            default_timezone=source.default_timezone,
+            config=source.config,
+        )
+    return parse_feed_entry(entry, default_timezone=default_timezone)
 
 
 def _extract_arxiv_id(value: str) -> str | None:
