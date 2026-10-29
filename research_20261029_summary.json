@@ -1,0 +1,507 @@
+{
+  "date": "2026-10-29",
+  "category": "research",
+  "article_count": 215,
+  "source_count": 9,
+  "matched_count": 203,
+  "top_entities": [
+    {
+      "name": "ResearchGeneral",
+      "count": 907
+    },
+    {
+      "name": "Research Areas",
+      "count": 121
+    },
+    {
+      "name": "Techniques",
+      "count": 61
+    },
+    {
+      "name": "Tasks",
+      "count": 47
+    },
+    {
+      "name": "Institutions",
+      "count": 42
+    },
+    {
+      "name": "Venues",
+      "count": 31
+    }
+  ],
+  "sources": {
+    "arXiv CS.AI": 30,
+    "Google AI Blog": 20,
+    "OpenAI Blog": 30,
+    "DeepMind Blog": 30,
+    "Microsoft Research": 10,
+    "Hugging Face Blog": 30,
+    "OpenAlex AI Citation Feed": 30,
+    "Towards Data Science": 20,
+    "The Gradient": 15
+  },
+  "generated_at": "2026-10-29T11:53:36.741748+00:00",
+  "articles": [
+    {
+      "event_model_payload": {
+        "title": "Counting the Bandages: On measuring the time that AI saves",
+        "source_url": "https://arxiv.org/abs/2610.35942",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Enhancing Deep Learning Model Performance through Data Generation Strategies: Classification of Olive Tree Diseases",
+        "source_url": "https://arxiv.org/abs/2610.35984",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+        "source_url": "https://arxiv.org/abs/2610.36077",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "CohortFlow: A Steerable Clinical Cohort Curation Agent with Localized Semantic Correction",
+        "source_url": "https://arxiv.org/abs/2610.36100",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Why and How to Do Science When AI Is Better at It: A Framework Grounded in Human Understanding and Direction",
+        "source_url": "https://arxiv.org/abs/2610.36116",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "From Structural Feedback to Prompt Policies: Learning Faithful Text-to-Image Prompt Editors",
+        "source_url": "https://arxiv.org/abs/2610.36146",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Don't Pick a Winner: Knowledge Conflicts Need a Prior, Not a Rule",
+        "source_url": "https://arxiv.org/abs/2610.36169",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Learning Human Sports Motion Feasibility via Quantile Regression on Tracking Data",
+        "source_url": "https://arxiv.org/abs/2610.36183",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Skill Dreaming: Evolving Repository Skills through Pull Request Streams",
+        "source_url": "https://arxiv.org/abs/2610.36188",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "MARQ: A Modular, LLM-Agnostic Requirement Quality Assessor Infused with Systems Engineering Knowledge",
+        "source_url": "https://arxiv.org/abs/2610.36234",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "BehaveRec: When Does Long-Term Behavioral History Help Sequential Recommendation? A Study with Session, History, and Community Signals",
+        "source_url": "https://arxiv.org/abs/2610.36239",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "A Smart Instant Book Filter Model based on Dual-Objective Optimization",
+        "source_url": "https://arxiv.org/abs/2610.36287",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Spiking Neural Networks Are Harder to Steal: A Benchmark Study of Model Stealing Attacks",
+        "source_url": "https://arxiv.org/abs/2610.36298",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "When Retrieval Is Not Enough: Obsolete Facts in Agent Memory",
+        "source_url": "https://arxiv.org/abs/2610.36308",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Ontology-guided multi-agent reasoning for explainable differential diagnosis",
+        "source_url": "https://arxiv.org/abs/2610.36325",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Stable Are LLM-Generated Proofs Under Program Refactoring? A Stress Test for Verifiable Code Generation",
+        "source_url": "https://arxiv.org/abs/2610.36328",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Plenty of Room in the Middle: Revealing Opportunities on a GPU Cluster via Fine-Grained Monitoring",
+        "source_url": "https://arxiv.org/abs/2610.36329",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OA-RAG: Ontology-based Agentic RAG for Faithful LLM Reasoning",
+        "source_url": "https://arxiv.org/abs/2610.36335",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Executable Archaeology of Programs That Model Programming: Reanimating the Heuristic Compiler (1961) and KBEmacs (1984)",
+        "source_url": "https://arxiv.org/abs/2610.36341",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "WAKMan: Workload Aware KVCache Manager",
+        "source_url": "https://arxiv.org/abs/2610.36355",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "LoRA on a Budget: Function-Aware Post-Hoc Compression for Adapter Fleets",
+        "source_url": "https://arxiv.org/abs/2610.36386",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "MAREval: A Multi-Agent Framework for Evaluating Natural Language Recommendation Explanations",
+        "source_url": "https://arxiv.org/abs/2610.36389",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "kw-bench: Breaking Frontier Harnesses on Real-World Tasks",
+        "source_url": "https://arxiv.org/abs/2610.36405",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Verifiable Efficiency Limits of Innate LLM Planning in Sliding Puzzles",
+        "source_url": "https://arxiv.org/abs/2610.36415",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "LM-DSB: A Lightweight Multi-agent System for Automated Daily Safety Bulletin Generation in Construction",
+        "source_url": "https://arxiv.org/abs/2610.36433",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Your Agent Acts Differently When You're Around: How User Presence Changes Agent Behavior in Negotiation",
+        "source_url": "https://arxiv.org/abs/2610.36435",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "RouteDRAG: Learning to Route and Control Agentic Execution for Multimodal Document RAG",
+        "source_url": "https://arxiv.org/abs/2610.36444",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "From Solver Trajectories to Teaching Trajectories: Cognition-Aligned Reasoning Distillation",
+        "source_url": "https://arxiv.org/abs/2610.36445",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "A Heart Means Recursion: Exploring Visual Meaning and Communication in VLMs",
+        "source_url": "https://arxiv.org/abs/2610.36449",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Correction or Manipulation? Measuring Epistemic Vigilance in LLM Agents Under User Pressure",
+        "source_url": "https://arxiv.org/abs/2610.36453",
+        "published": "2026-10-28T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+        "source_url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+        "published": "2026-10-28T04:15:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The future of the firm",
+        "source_url": "https://openai.com/index/the-future-of-the-firm",
+        "published": "2026-10-28T01:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Legora is building the agentic operating system for legal work",
+        "source_url": "https://openai.com/index/legora",
+        "published": "2026-10-28T00:30:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Retell uses OpenAI models to help power 100M monthly calls",
+        "source_url": "https://openai.com/index/retell-ai",
+        "published": "2026-10-27T06:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+        "source_url": "https://openai.com/index/oracle-apps-in-chatgpt",
+        "published": "2026-10-26T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Check Point accelerates vulnerability research with Daybreak",
+        "source_url": "https://openai.com/index/check-point-daybreak",
+        "published": "2026-10-26T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+        "source_url": "https://openai.com/index/greptile-code-review-codex-astra",
+        "published": "2026-10-26T13:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Working with academic communities to build scientific understanding",
+        "source_url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+        "published": "2026-10-26T05:30:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+        "source_url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+        "published": "2026-10-26T04:45:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "ChatGPT’s expanding world of work",
+        "source_url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+        "published": "2026-10-26T01:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Fanatics and OpenAI streamline the fan experience",
+        "source_url": "https://openai.com/index/fanatics-streamline-fan-experience",
+        "published": "2026-10-25T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+        "source_url": "https://openai.com/index/openai-cut-incident-investigation",
+        "published": "2026-10-25T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Introducing GPT-6.1 Terra",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-terra",
+        "published": "2026-10-25T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+        "source_url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+        "published": "2026-10-23T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Securing our frontier model training environment",
+        "source_url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+        "published": "2026-10-23T01:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Anima helps clinics cut call waits by 75% with GPT-6 and GPT-Live",
+        "source_url": "https://openai.com/index/anima",
+        "published": "2026-10-22T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
+        "source_url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+        "published": "2026-10-22T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Build more responsive apps with the Decisions API",
+        "source_url": "https://openai.com/index/decisions-api",
+        "published": "2026-10-22T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "What FDE means at OpenAI",
+        "source_url": "https://openai.com/index/forward-deployed-engineering-means",
+        "published": "2026-10-21T21:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Uber brings ChatGPT Work to all employees with OpenAI",
+        "source_url": "https://openai.com/index/uber-chatgpt-work-rollout",
+        "published": "2026-10-21T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How AT&T is rethinking in-house legal work with OpenAI",
+        "source_url": "https://openai.com/index/att-legal",
+        "published": "2026-10-21T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Broad access through consistent standards",
+        "source_url": "https://openai.com/index/broad-access-through-consistent-standards",
+        "published": "2026-10-21T12:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI models are coming to Google Cloud",
+        "source_url": "https://openai.com/index/openai-models-google-cloud",
+        "published": "2026-10-21T03:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+        "source_url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+        "published": "2026-10-20T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+        "source_url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+        "published": "2026-10-21T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Using thousands of AI agents to uncover new leads in biological data",
+        "source_url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+        "published": "2026-10-20T19:50:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Cloudflare links vulnerability discovery to defense with OpenAI",
+        "source_url": "https://openai.com/index/cloudflare-cyber",
+        "published": "2026-10-20T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How we built ChatGPT’s novel ad stack for user trust and relevance",
+        "source_url": "https://openai.com/index/building-chatgpt-ad-stack",
+        "published": "2026-10-20T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Democratic governance of frontier AI, part II: Empowering cyber defenders",
+        "source_url": "https://openai.com/index/empowering-cyber-defenders",
+        "published": "2026-10-20T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+        "source_url": "https://openai.com/index/ted-taylor-restaurant",
+        "published": "2026-10-20T01:00:00+00:00"
+      }
+    }
+  ],
+  "ontology": {
+    "repo": "PaperRadar",
+    "category": "research",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "paper.benchmark_result",
+      "paper.citation_snapshot",
+      "paper.code_repository",
+      "paper.editorial_coverage",
+      "paper.paper_release"
+    ],
+    "event_model_mappings": {
+      "paper_release": "paper.paper_release",
+      "editorial_coverage": "paper.editorial_coverage",
+      "code_repository": "paper.code_repository",
+      "citation_snapshot": "paper.citation_snapshot",
+      "benchmark_result": "paper.benchmark_result"
+    },
+    "entity_type_hints": [
+      "research.area",
+      "research.venue",
+      "research.technique"
+    ],
+    "source_role_ids": [
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "arXiv CS.AI": "primary_evidence",
+      "arXiv CS.CL": "primary_evidence",
+      "arXiv CS.LG": "primary_evidence",
+      "arXiv CS.CV": "primary_evidence",
+      "arXiv CS.NE": "primary_evidence",
+      "arXiv Stat.ML": "primary_evidence"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
+}
