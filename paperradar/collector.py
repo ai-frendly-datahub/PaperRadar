@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import html
+import inspect
 import os
 import re
 import threading
@@ -10,6 +11,7 @@ from concurrent.futures import Future, ThreadPoolExecutor
 from datetime import UTC, datetime, timedelta
 from email.utils import parsedate_to_datetime
 from typing import Any
+from urllib import robotparser
 from urllib.parse import urlparse
 
 import feedparser
@@ -49,6 +51,79 @@ _ARXIV_RSS_PATH = re.compile(r"^/(?:rss|atom)/[A-Za-z][A-Za-z0-9.+_-]*$")
 _COLLECTION_CONTROL_LOCK = threading.Lock()
 _ACTIVE_THROTTLER: AdaptiveThrottler | None = None
 _ACTIVE_HEALTH_STORE: CrawlHealthStore | None = None
+
+
+# Bounded cooldown policy for access-block (403) sources. Opt-in per source via
+# ``retry_after_cooldown_statuses: [403]``. 403 may be a temporary bot/IP block,
+# so a disabled source is probed at most once per week, and only when
+# robots.txt can be read and allows the feed. Permanent errors stay disabled.
+_ACCESS_BLOCK_COOLDOWN_SECONDS = 7 * 86400
+_ROBOTS_TIMEOUT_SECONDS = 10
+_ALLOWED_EXTRA_RETRY_STATUSES = frozenset({403})
+
+
+def _cooldown_policy(source: Source) -> tuple[frozenset[int], float | None] | None:
+    """Return ``(extra_statuses, cooldown_seconds)`` or None when config is invalid."""
+    raw_statuses = source.config.get("retry_after_cooldown_statuses") or []
+    raw_seconds = source.config.get("retry_after_cooldown_seconds")
+    try:
+        statuses = frozenset(int(item) for item in raw_statuses)
+        seconds = float(raw_seconds) if raw_seconds is not None else None
+    except (TypeError, ValueError):
+        return None
+    if not statuses <= _ALLOWED_EXTRA_RETRY_STATUSES:
+        return None
+    if seconds is not None and seconds != seconds:  # NaN
+        return None
+    if statuses:
+        seconds = max(seconds or 0.0, float(_ACCESS_BLOCK_COOLDOWN_SECONDS))
+    return statuses, seconds
+
+
+def _core_supports_status_opt_in(claim_retry: Any) -> bool:
+    try:
+        params = inspect.signature(claim_retry).parameters
+    except (TypeError, ValueError):
+        return False
+    return "retry_statuses" in params or any(
+        param.kind is inspect.Parameter.VAR_KEYWORD for param in params.values()
+    )
+
+
+def _robots_allows(feed_url: str) -> bool:
+    """True only when a real robots.txt was read and allows ``feed_url``.
+
+    A missing robots.txt (404/410) allows. Anything we cannot read as plain
+    robots rules (bot-challenge page, 5xx, redirect, network error) is treated
+    as "cannot verify" and blocks the probe. TLS is always verified.
+    """
+    parsed = urlparse(feed_url)
+    if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+        return False
+    robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt"
+    try:
+        response = requests.get(
+            robots_url,
+            timeout=_ROBOTS_TIMEOUT_SECONDS,
+            headers={"User-Agent": PAPER_RADAR_USER_AGENT},
+            allow_redirects=False,
+            verify=True,
+        )
+    except requests.RequestException:
+        return False
+    if response.status_code in {404, 410}:
+        return True
+    content_type = response.headers.get("Content-Type", "")
+    text = response.text if response.status_code == 200 else ""
+    if (
+        response.status_code != 200
+        or not content_type.lower().startswith("text/plain")
+        or "<html" in text[:512].lower()
+    ):
+        return False
+    parser = robotparser.RobotFileParser()
+    parser.parse(text.splitlines())
+    return parser.can_fetch("PaperRadar", feed_url)
 
 
 def _set_collection_controls(throttler: AdaptiveThrottler, health_store: CrawlHealthStore) -> None:
@@ -347,14 +422,30 @@ def collect_sources(
         probe = False
         if health_store.is_disabled(source.name):
             claim_retry = getattr(health_store, "claim_retry", None)
+            policy = _cooldown_policy(source)
             if (
                 source.config.get("retry_after_cooldown") is not True
+                or policy is None
                 or not callable(claim_retry)
                 or not callable(getattr(health_store, "finish_retry", None))
                 or not callable(getattr(health_store, "postpone_retry", None))
-                or not claim_retry(source.name)
             ):
                 return [], [f"{source.name}: Source disabled (crawl health threshold reached)"]
+            extra_statuses, cooldown_seconds = policy
+            if extra_statuses and not _core_supports_status_opt_in(claim_retry):
+                return [], [f"{source.name}: Source disabled (crawl health threshold reached)"]
+            claim_kwargs: dict[str, Any] = {}
+            if extra_statuses:
+                claim_kwargs["retry_statuses"] = sorted(extra_statuses)
+            if cooldown_seconds is not None:
+                claim_kwargs["cooldown_seconds"] = cooldown_seconds
+            if not claim_retry(source.name, **claim_kwargs):
+                return [], [f"{source.name}: Source disabled (crawl health threshold reached)"]
+            if extra_statuses and not _robots_allows(source.url):
+                return [], [
+                    f"{source.name}: Cooldown probe skipped; robots.txt disallows or "
+                    "could not be verified; still disabled"
+                ]
             probe = True
 
         host = source_hosts[source.name]
