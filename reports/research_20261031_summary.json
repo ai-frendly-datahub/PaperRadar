@@ -1,0 +1,507 @@
+{
+  "date": "2026-10-31",
+  "category": "research",
+  "article_count": 215,
+  "source_count": 9,
+  "matched_count": 203,
+  "top_entities": [
+    {
+      "name": "ResearchGeneral",
+      "count": 914
+    },
+    {
+      "name": "Research Areas",
+      "count": 115
+    },
+    {
+      "name": "Techniques",
+      "count": 53
+    },
+    {
+      "name": "Tasks",
+      "count": 50
+    },
+    {
+      "name": "Institutions",
+      "count": 41
+    },
+    {
+      "name": "Venues",
+      "count": 29
+    }
+  ],
+  "sources": {
+    "arXiv CS.AI": 30,
+    "Google AI Blog": 20,
+    "OpenAI Blog": 30,
+    "DeepMind Blog": 30,
+    "Microsoft Research": 10,
+    "Hugging Face Blog": 30,
+    "OpenAlex AI Citation Feed": 30,
+    "Towards Data Science": 20,
+    "The Gradient": 15
+  },
+  "generated_at": "2026-10-31T11:20:20.092602+00:00",
+  "articles": [
+    {
+      "event_model_payload": {
+        "title": "LRMoE: Demand-Side Load Re-Calibration for Efficient MoE Training on Memory-Constrained Nodes",
+        "source_url": "https://arxiv.org/abs/2610.37720",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Amortized Localized Posterior Inference for Model Calibration with Application to an Ocean Turbulence Closure",
+        "source_url": "https://arxiv.org/abs/2610.37731",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "ThinkJev: One Thought, Every Budget for Calibrated Typed Decisions",
+        "source_url": "https://arxiv.org/abs/2610.37732",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenFrontiers: A Collection of Open Research Problems and a Benchmark for Scientific Rediscovery",
+        "source_url": "https://arxiv.org/abs/2610.37739",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "WebAnything: From the Wild Web to Scalable Agent Environments",
+        "source_url": "https://arxiv.org/abs/2610.37786",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "What Does an Ontology Catch? Curated, LLM-Generated and Data-Derived Ontologies as Checkers of LLM Agents over Knowledge Graphs",
+        "source_url": "https://arxiv.org/abs/2610.37809",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Measuring Where Intent Gets Lost in Agentic Smart Contract Synthesis",
+        "source_url": "https://arxiv.org/abs/2610.37830",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Detecting Covert Collusion between AI Agents through Partner-Outsider Positive Listening",
+        "source_url": "https://arxiv.org/abs/2610.37849",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Evaluating and improving AI agents for sequencing protocol understanding",
+        "source_url": "https://arxiv.org/abs/2610.37851",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Seq@K: Evaluating Language Models Under Sequential Feedback",
+        "source_url": "https://arxiv.org/abs/2610.37859",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "What Constitutes Food Similarity? Visual Representations and Retrieval in Indian Cuisine",
+        "source_url": "https://arxiv.org/abs/2610.37867",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Verification Learning Theory: A Process Model of Checking and Retention in AI-Assisted Judgment",
+        "source_url": "https://arxiv.org/abs/2610.37875",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The Anatomy of Socio-Demographics in Pluralistic Offensiveness Modeling: When and Where It Helps, and the Role of Reasoning",
+        "source_url": "https://arxiv.org/abs/2610.37896",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "FilingLoop: Evaluating and Evolving LLM Agents for Corporate Disclosure Review and Revision",
+        "source_url": "https://arxiv.org/abs/2610.37905",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Beyond Low-Pass Dynamics: Frequency-Selective Spiking Reservoirs with Resonant Neurons",
+        "source_url": "https://arxiv.org/abs/2610.37906",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SciGame: Let Agents Play the Scientific Discovery Games in the Real and Counterfactual World",
+        "source_url": "https://arxiv.org/abs/2610.37919",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "VerifiedLab: Harnessing Knowns for Unknowns",
+        "source_url": "https://arxiv.org/abs/2610.37923",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "GARDEN: Generalist Autonomous Reward Design Through Evidence Navigation for Cooperative Multi-Agent Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2610.37926",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Understanding Large Language Models as Numerical Optimizers",
+        "source_url": "https://arxiv.org/abs/2610.37932",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SkillMem: Compact External Skill Memory for Latent Multi-Agent Reasoning",
+        "source_url": "https://arxiv.org/abs/2610.37935",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "GAUSS: A Workload-Aware Analytical and Monte-Carlo Simulator for LLM Inference Serving",
+        "source_url": "https://arxiv.org/abs/2610.37989",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Algorithmic Bias from the Perspectives of Healthcare Professionals",
+        "source_url": "https://arxiv.org/abs/2610.38006",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Assessing Language Models for Scientific Applications: Inertial Confinement Fusion as a Use Case",
+        "source_url": "https://arxiv.org/abs/2610.38024",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "PromptSense: Sentiment-Aware Mental Health Chatbot with Dynamic Prompting",
+        "source_url": "https://arxiv.org/abs/2610.38044",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Evaluating Causal Reasoning in LLMs: A Case Study in the Challenges of Procedural Generation",
+        "source_url": "https://arxiv.org/abs/2610.38100",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "AI-Driven Digital Twin Framework for Warehouse Logistics Automation Optimization",
+        "source_url": "https://arxiv.org/abs/2610.38101",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Too Hard, Too Easy, Just Right: Performance-Driven Challenge Adaptation in Virtual Reality Firefighter Training",
+        "source_url": "https://arxiv.org/abs/2610.38117",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Post-Training Large Language Models with LLMON",
+        "source_url": "https://arxiv.org/abs/2610.38120",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Decompose, Don't Expand: Capability-Independent AI Systems by Construction",
+        "source_url": "https://arxiv.org/abs/2610.38144",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SkillCT: A Multidimensional Benchmark and Execution-Free Baseline for Agent Skill Assessment",
+        "source_url": "https://arxiv.org/abs/2610.38147",
+        "published": "2026-10-31T04:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Making it easier for websites to express AI training preferences",
+        "source_url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+        "published": "2026-10-30T09:30:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Community safety report and new protections for teens",
+        "source_url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+        "published": "2026-10-30T09:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Fair use benefits everyone",
+        "source_url": "https://openai.com/index/fair-use-benefits-everyone",
+        "published": "2026-10-30T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "An updated Model Spec for more capable and beneficial AI",
+        "source_url": "https://openai.com/index/updated-model-spec",
+        "published": "2026-10-29T17:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How we detect frontier model misalignment",
+        "source_url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+        "published": "2026-10-29T09:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Ropes & Gray is developing AI for transactional diligence",
+        "source_url": "https://openai.com/index/ropes-gray-ai-diligence",
+        "published": "2026-10-29T07:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot",
+        "source_url": "https://openai.com/index/credit-saison",
+        "published": "2026-10-29T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+        "source_url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+        "published": "2026-10-28T13:15:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The future of the firm",
+        "source_url": "https://openai.com/index/the-future-of-the-firm",
+        "published": "2026-10-28T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Legora is building the agentic operating system for legal work",
+        "source_url": "https://openai.com/index/legora",
+        "published": "2026-10-28T09:30:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Retell uses OpenAI models to help power 100M monthly calls",
+        "source_url": "https://openai.com/index/retell-ai",
+        "published": "2026-10-27T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+        "source_url": "https://openai.com/index/oracle-apps-in-chatgpt",
+        "published": "2026-10-27T07:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Check Point accelerates vulnerability research with Daybreak",
+        "source_url": "https://openai.com/index/check-point-daybreak",
+        "published": "2026-10-27T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+        "source_url": "https://openai.com/index/greptile-code-review-codex-astra",
+        "published": "2026-10-26T22:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Working with academic communities to build scientific understanding",
+        "source_url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+        "published": "2026-10-26T14:30:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+        "source_url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+        "published": "2026-10-26T13:45:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "ChatGPT’s expanding world of work",
+        "source_url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+        "published": "2026-10-26T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Fanatics and OpenAI streamline the fan experience",
+        "source_url": "https://openai.com/index/fanatics-streamline-fan-experience",
+        "published": "2026-10-26T07:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+        "source_url": "https://openai.com/index/openai-cut-incident-investigation",
+        "published": "2026-10-26T07:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Introducing GPT-6.1 Terra",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-terra",
+        "published": "2026-10-26T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+        "source_url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+        "published": "2026-10-23T17:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Securing our frontier model training environment",
+        "source_url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+        "published": "2026-10-23T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Anima helps clinics cut call waits by 75% with GPT-6 and GPT-Live",
+        "source_url": "https://openai.com/index/anima",
+        "published": "2026-10-23T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
+        "source_url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+        "published": "2026-10-23T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Build more responsive apps with the Decisions API",
+        "source_url": "https://openai.com/index/decisions-api",
+        "published": "2026-10-22T19:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "What FDE means at OpenAI",
+        "source_url": "https://openai.com/index/forward-deployed-engineering-means",
+        "published": "2026-10-22T06:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Uber brings ChatGPT Work to all employees with OpenAI",
+        "source_url": "https://openai.com/index/uber-chatgpt-work-rollout",
+        "published": "2026-10-22T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How AT&T is rethinking in-house legal work with OpenAI",
+        "source_url": "https://openai.com/index/att-legal",
+        "published": "2026-10-21T17:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Broad access through consistent standards",
+        "source_url": "https://openai.com/index/broad-access-through-consistent-standards",
+        "published": "2026-10-21T21:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI models are coming to Google Cloud",
+        "source_url": "https://openai.com/index/openai-models-google-cloud",
+        "published": "2026-10-21T12:00:00+00:00"
+      }
+    }
+  ],
+  "ontology": {
+    "repo": "PaperRadar",
+    "category": "research",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "paper.benchmark_result",
+      "paper.citation_snapshot",
+      "paper.code_repository",
+      "paper.editorial_coverage",
+      "paper.paper_release"
+    ],
+    "event_model_mappings": {
+      "paper_release": "paper.paper_release",
+      "editorial_coverage": "paper.editorial_coverage",
+      "code_repository": "paper.code_repository",
+      "citation_snapshot": "paper.citation_snapshot",
+      "benchmark_result": "paper.benchmark_result"
+    },
+    "entity_type_hints": [
+      "research.area",
+      "research.venue",
+      "research.technique"
+    ],
+    "source_role_ids": [
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "arXiv CS.AI": "primary_evidence",
+      "arXiv CS.CL": "primary_evidence",
+      "arXiv CS.LG": "primary_evidence",
+      "arXiv CS.CV": "primary_evidence",
+      "arXiv CS.NE": "primary_evidence",
+      "arXiv Stat.ML": "primary_evidence"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
+}
