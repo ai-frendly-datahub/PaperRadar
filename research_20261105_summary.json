@@ -1,0 +1,1443 @@
+{
+  "date": "2026-11-05",
+  "category": "research",
+  "article_count": 348,
+  "source_count": 14,
+  "matched_count": 335,
+  "top_entities": [
+    {
+      "name": "ResearchGeneral",
+      "count": 3132
+    },
+    {
+      "name": "Research Areas",
+      "count": 193
+    },
+    {
+      "name": "Tasks",
+      "count": 168
+    },
+    {
+      "name": "Techniques",
+      "count": 136
+    },
+    {
+      "name": "Institutions",
+      "count": 44
+    },
+    {
+      "name": "Venues",
+      "count": 31
+    }
+  ],
+  "sources": {
+    "arXiv CS.AI": 30,
+    "arXiv CS.CL": 30,
+    "arXiv CS.LG": 30,
+    "arXiv CS.CV": 30,
+    "arXiv CS.NE": 13,
+    "arXiv Stat.ML": 30,
+    "Google AI Blog": 20,
+    "OpenAI Blog": 30,
+    "DeepMind Blog": 30,
+    "Microsoft Research": 10,
+    "Hugging Face Blog": 30,
+    "OpenAlex AI Citation Feed": 30,
+    "Towards Data Science": 20,
+    "The Gradient": 15
+  },
+  "generated_at": "2026-11-05T13:39:07.572343+00:00",
+  "articles": [
+    {
+      "event_model_payload": {
+        "title": "Who May Overrule the Agent? Evidence-Gated Authority in LLM Review Institutions",
+        "source_url": "https://arxiv.org/abs/2611.05390",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Agent Harness Awareness: Turning Verified Telemetry into Operational Control for Tool-Using Agents",
+        "source_url": "https://arxiv.org/abs/2611.05391",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Uncertainty-Aware Resource Orchestration for Agentic AI Systems",
+        "source_url": "https://arxiv.org/abs/2611.05392",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Challenge-Aware Knowledge Recruitment with Meta-Agent Supervision for Medical Multi-Agent Reasoning",
+        "source_url": "https://arxiv.org/abs/2611.05393",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "A Feasibility Condition for Confidence-Gated Tiered LLM Inference",
+        "source_url": "https://arxiv.org/abs/2611.05394",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Towards Robust Long-Lived Agents: Benchmarking Experience Lifecycles in Evolving Environments",
+        "source_url": "https://arxiv.org/abs/2611.05450",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Can Large Language Models Review the Scientific Literature? A Test Against a 102-Article Benchmark",
+        "source_url": "https://arxiv.org/abs/2611.05459",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SlackBench: Benchmarking Agents on Collaborative Projects Grounded in Real Code Repositories",
+        "source_url": "https://arxiv.org/abs/2611.05512",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "MA-SafeDiffuser: Safe Multi-Agent Planning with Diffusion Probabilistic Models",
+        "source_url": "https://arxiv.org/abs/2611.05524",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Towards Efficient Whole Page Ranking with One-Pass Inference",
+        "source_url": "https://arxiv.org/abs/2611.05542",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Iterated creation, grading, and revision of data science projects by language models",
+        "source_url": "https://arxiv.org/abs/2611.05548",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Whose Transparency is it Anyway? Understanding Generative AI Transparency Needs and Gaps Across Stakeholders",
+        "source_url": "https://arxiv.org/abs/2611.05549",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "VirtualTrialHarness: Coordinating Agentic Operationalization of Virtual Trial Protocols Across Complex Clinical Schemas",
+        "source_url": "https://arxiv.org/abs/2611.05551",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "AGORA: Reliability-Aware Aggregation of LLM Judges via Item-Response Theory",
+        "source_url": "https://arxiv.org/abs/2611.05556",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "BrainBind: Bridging Synchronized EEG and fMRI through Long-Form Naturalistic Video Representations",
+        "source_url": "https://arxiv.org/abs/2611.05581",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Anduin: A sybil-resistant agentic marketplace reputation system",
+        "source_url": "https://arxiv.org/abs/2611.05586",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Verified but Vacuous: Three Failure Surfaces of LLM-Driven Verified Code Generation",
+        "source_url": "https://arxiv.org/abs/2611.05590",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter",
+        "source_url": "https://arxiv.org/abs/2611.05611",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "ViBench 2.0: A Benchmark for Long-Horizon Software Building",
+        "source_url": "https://arxiv.org/abs/2611.05620",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Assurance-Conditioned Continuous Authorization for Autonomous AI Agents",
+        "source_url": "https://arxiv.org/abs/2611.05632",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Route to Remember: Adaptive Memory Selection for LLM Agents",
+        "source_url": "https://arxiv.org/abs/2611.05636",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Attributing Agent Failures to Their History Needs an Executed Counterfactual: Toward a Reporting Standard",
+        "source_url": "https://arxiv.org/abs/2611.05650",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Quantifying Trait-State Hierarchy in EEG Foundation Model and Signal Processing Embeddings",
+        "source_url": "https://arxiv.org/abs/2611.05652",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Grounded but Not Immune: Confirmation Bias in Agent-as-a-judge",
+        "source_url": "https://arxiv.org/abs/2611.05662",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Combining Relevant Expert Knowledge Using Mixtures of Feedback Fuzzy Cognitive Maps",
+        "source_url": "https://arxiv.org/abs/2611.05664",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Do Artificial Agents Make Decisions in Light of Visual Data?",
+        "source_url": "https://arxiv.org/abs/2611.05671",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "From Type to Token: Petri Nets, Individual Token Philosophy, and Individualized Causal Effects",
+        "source_url": "https://arxiv.org/abs/2611.05703",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Agents, Think Only When it Helps",
+        "source_url": "https://arxiv.org/abs/2611.05709",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Self-Supervised Pretraining for Label-Efficient Facial Expression Recognition using Smart Glasses",
+        "source_url": "https://arxiv.org/abs/2611.05711",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "PersonaCodeBench: Evaluating Coding Agents in Persona-driven Human-Interactive Sessions",
+        "source_url": "https://arxiv.org/abs/2611.05739",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Discourse Analysis of Legislative Bill Discussions",
+        "source_url": "https://arxiv.org/abs/2611.05381",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "DS@GT ARC at CheckThat! 2026: A Verdict-Anchored Pipeline for Generating Fact-Checking Articles",
+        "source_url": "https://arxiv.org/abs/2611.05382",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "CCDWIKI: Decoupling Case Formulation from Response Generation in Longitudinal CBT Dialogue",
+        "source_url": "https://arxiv.org/abs/2611.05383",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Human-like cross-language generalisation in deep neural speaker embeddings and its acoustic foundations",
+        "source_url": "https://arxiv.org/abs/2611.05384",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Same Origin, Different Verdicts: Text Production Conditions Confound Machine-Generated Text Detection in Russian",
+        "source_url": "https://arxiv.org/abs/2611.05385",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SRRM: A Retrieval-Reconstruction Benchmark for Evaluating Long-Context Memory in Small Language Models",
+        "source_url": "https://arxiv.org/abs/2611.05386",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "AI-Driven SaaS Platform Integration: AI Express for Unified Generative AI Services with Pay-As-You-Go Credit Systems and Scalable Microservice Architecture",
+        "source_url": "https://arxiv.org/abs/2611.05389",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "When to Ask, When to Answer: Strategic Clarification for Ambiguous Reference Resolution in Dialogue",
+        "source_url": "https://arxiv.org/abs/2611.05517",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Rewrite, Then Veto: Rewriter-Agnostic Edit Gating for LLM-Based Post-OCR Correction",
+        "source_url": "https://arxiv.org/abs/2611.05539",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "RAGCompass: Generalizable Retriever Routing via Reranking",
+        "source_url": "https://arxiv.org/abs/2611.05596",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Contextual Pictograms for Repairing Multilingual ASR Errors",
+        "source_url": "https://arxiv.org/abs/2611.05637",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Cognitive Bias Signatures in Search-Equipped LLM Agents: A Stage-Resolved Analysis",
+        "source_url": "https://arxiv.org/abs/2611.05720",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Prospective Memory for Proactive LLM Agents",
+        "source_url": "https://arxiv.org/abs/2611.05731",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Well Can Large Language Models Impersonate Individual Authors? A Comparative Evaluation",
+        "source_url": "https://arxiv.org/abs/2611.05771",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Phonological Knowledge of Chinese Characters in Language Models",
+        "source_url": "https://arxiv.org/abs/2611.05803",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Matching the Training-Time Weight Rule in Inference-Time Expert Deactivation",
+        "source_url": "https://arxiv.org/abs/2611.05804",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Learning When Human Decisions Matter: Executor-Relative Consultation Value for LLM Agents",
+        "source_url": "https://arxiv.org/abs/2611.05814",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "TandemBench: Benchmarking Decision Models for Multi-Agent Collaboration",
+        "source_url": "https://arxiv.org/abs/2611.05827",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "CARTBench: Rubric-Based Evaluation of Shopping Advice for Complex and Ambiguous Requests with Timelines",
+        "source_url": "https://arxiv.org/abs/2611.05862",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "When Does Better Confidence Improve a Knowledge-Graph Audit?",
+        "source_url": "https://arxiv.org/abs/2611.05877",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Information-Matched Auditing of Conversational Emotion-Shift Forecasting: A Leakage-Safe Evaluation Protocol",
+        "source_url": "https://arxiv.org/abs/2611.05895",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Selective, Risk-Controlled Emotion Forecasting in Conversation: From a Persistence Barrier to Departure Detection with Conformal Guarantees",
+        "source_url": "https://arxiv.org/abs/2611.05896",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Familiar letters, not related languages, let unseen languages into a shared space of meaning",
+        "source_url": "https://arxiv.org/abs/2611.06006",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Holistic Parallel Supervision for Expressive Speech to Speech Translation",
+        "source_url": "https://arxiv.org/abs/2611.06010",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "When Every Choice Is Correct: A Causal Study of Numerical Preference in Language Models",
+        "source_url": "https://arxiv.org/abs/2611.06025",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
+        "source_url": "https://arxiv.org/abs/2611.06043",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Adapting Qwen3 to Tajik from 0.6B to 8B: Lower Text Loss Did Not Mean Better Understanding",
+        "source_url": "https://arxiv.org/abs/2611.06062",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "ProcessPrefBench: Evaluating Cross-Task Transfer of Individual Process Preferences from Naturalistic Human-AI Interaction",
+        "source_url": "https://arxiv.org/abs/2611.06065",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Overview of the NTCIR-19 SciClaimEval Task: Cross-modal Claim Verification in Scientific Papers",
+        "source_url": "https://arxiv.org/abs/2611.06090",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The Harness Is the Model: Agent Scaffolding Changes a Fixed LLM's Compliance with Banking Conduct Rules, Unevenly Across Models",
+        "source_url": "https://arxiv.org/abs/2611.06116",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Latent Cluster Separation as a Regularizer for Lifelong Anomaly Detection",
+        "source_url": "https://arxiv.org/abs/2611.03652",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Four Extensions of the Universal Law of Robustness: Log-Concave Covariates, Heterogeneous Mixtures, Vector-Valued Predictors, and Markovian Data",
+        "source_url": "https://arxiv.org/abs/2611.03653",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Towards Automatic Heart Murmur Characterization from Multi-spot Phonocardiograms",
+        "source_url": "https://arxiv.org/abs/2611.03654",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Mixture of Wide Experts: Sparse Routing for Interpretable Native Coordinates",
+        "source_url": "https://arxiv.org/abs/2611.03655",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Stress-Testing the Robustness of LLM-Based Causal Inference",
+        "source_url": "https://arxiv.org/abs/2611.03656",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Learning Directional Randers Geometry for Latent-Space Exploration",
+        "source_url": "https://arxiv.org/abs/2611.03675",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Does the Trust Boundary Hold over Time? A Long-Horizon Benchmark for Receiver-Directed Federated Learning",
+        "source_url": "https://arxiv.org/abs/2611.03724",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Auditing a Model-Hub Benchmark: Data Quality, Training Budgets, and Side Information in HuggingBench",
+        "source_url": "https://arxiv.org/abs/2611.03727",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Minimal Superior Penalties: Characterising and Calibrating Decision-Aware Proper Scoring Rules",
+        "source_url": "https://arxiv.org/abs/2611.03734",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SSPE: Robust Sequential Staypoint Extraction in Degraded Trajectory Data",
+        "source_url": "https://arxiv.org/abs/2611.03737",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "RATSIFT: Resolution-Adaptive Transformer for Solar Irradiance Forecasting and Temporal Downscaling",
+        "source_url": "https://arxiv.org/abs/2611.03738",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "CaRe-KT: Continuity-Aware Retrieval-Augmented Reasoning for Knowledge Tracing",
+        "source_url": "https://arxiv.org/abs/2611.03744",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Honest Small Decision Models for Finance: Scale, Specialization Collapse, and Mixed-Corpus Remediation",
+        "source_url": "https://arxiv.org/abs/2611.03755",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Language Models Can Benefit from Domain-Specific Inductive Biases",
+        "source_url": "https://arxiv.org/abs/2611.03756",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The role of injected noise in diffusion model generalization",
+        "source_url": "https://arxiv.org/abs/2611.03764",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Quantifying out-of-distribution data severity with Wasserstein distances: benchmarking large language models for alloy property prediction",
+        "source_url": "https://arxiv.org/abs/2611.03767",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Multi-layer Indexer: Overlapping Selection and Attention in DeepSeek Sparse Attention",
+        "source_url": "https://arxiv.org/abs/2611.03768",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Probabilistic Steering of Generative Priors for Lab-in-the-Loop Antibody Optimization",
+        "source_url": "https://arxiv.org/abs/2611.03844",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Dr. No: Feature Steering for Abstention in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2611.03862",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "ExaTune: Exhaustive Hyperparameter Landscape Exploration at Scale",
+        "source_url": "https://arxiv.org/abs/2611.03867",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Embedding Semantic Entropy: NLI-Free Semantic Uncertainty Estimation with Geometry-Aware Clustering",
+        "source_url": "https://arxiv.org/abs/2611.03876",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The Information Limits of Neural Controlled Differential Equations Under Sparse Observations",
+        "source_url": "https://arxiv.org/abs/2611.03887",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "When Latent Dynamics Meet Data Assimilation: A Benchmark of Koopman-Type Representations",
+        "source_url": "https://arxiv.org/abs/2611.03916",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Sequential auditing of connected forecast errors under partial observations",
+        "source_url": "https://arxiv.org/abs/2611.03928",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Accelerating FastDEC Clustering Algorithm with GPUs",
+        "source_url": "https://arxiv.org/abs/2611.03934",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "P$^2$-MOPD: Accelerating Multi-Teacher On-Policy Distillation via Parameter Priors",
+        "source_url": "https://arxiv.org/abs/2611.03953",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Forget What Comes Next: LLM Unlearning via Statistical Independence",
+        "source_url": "https://arxiv.org/abs/2611.03955",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Sampling Interventional Distributions with Orthogonal MMD Flow",
+        "source_url": "https://arxiv.org/abs/2611.03962",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Ermakov--Based embeddings as a parameter-free layer for physics-informed neural networks",
+        "source_url": "https://arxiv.org/abs/2611.03964",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Stacking-Based Weighting for Large Language Bayes in M-Open Settings",
+        "source_url": "https://arxiv.org/abs/2611.03966",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "VAR-Q: Tuning-free KV Cache Quantization for Visual Autoregressive Image and Video Generation",
+        "source_url": "https://arxiv.org/abs/2611.05380",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Visual Forensic Detection of Fabricated Bangla News Photocards using Deep Learning",
+        "source_url": "https://arxiv.org/abs/2611.05403",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "mmHand: Toward Pixel-Level-Accuracy Hand Localization Using a Single Commodity mmWave Device",
+        "source_url": "https://arxiv.org/abs/2611.05404",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "When Does Sharing Work? Scaling a Shared SigLIP2 Across Image, Video, Audio, and Audio-Visual Representations",
+        "source_url": "https://arxiv.org/abs/2611.05406",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "PEEK: One-Step-Look-Ahead Exposure Bias Correction for Diffusion Sampling",
+        "source_url": "https://arxiv.org/abs/2611.05407",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Augmentation with Reinforcement Transformation for Low-textured Scientific Sketch Image Retrieval",
+        "source_url": "https://arxiv.org/abs/2611.05408",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "PointNDF: Cascaded Neural Displacement Fields for Point Cloud Denoising",
+        "source_url": "https://arxiv.org/abs/2611.05411",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SurgTransfer: Multi-Step Latent Action Modeling for Action Transfer in Surgical World Model",
+        "source_url": "https://arxiv.org/abs/2611.05443",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SO(3)-Equivariant Learning on CAD Boundary Representations",
+        "source_url": "https://arxiv.org/abs/2611.05449",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "From Tokens to Trajectories: Parameter-Efficient Continuous Adaptation of Unified Multimodal Models",
+        "source_url": "https://arxiv.org/abs/2611.05451",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "From Activation to Intervention: Interpreting Sparse Visual Features through Reconstruction",
+        "source_url": "https://arxiv.org/abs/2611.05522",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Finely Can Vision-Language Models See Biology? Bio-VQA: A Benchmark for Taxonomic, Morphological, Spatial and Individual Reasoning",
+        "source_url": "https://arxiv.org/abs/2611.05559",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Lesion Overlap Ranks PET Segmentation Models but Does Not Certify Patient-Level Tumor Burden",
+        "source_url": "https://arxiv.org/abs/2611.05564",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Discarded or Unreachable? Diagnosing and Repairing Spatial Relation Failure in Vision--Language Similarity",
+        "source_url": "https://arxiv.org/abs/2611.05565",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Role-based Effectiveness of an Epistemic Uncertainty Estimate in Training Models for Semantic Segmentation of 3D LiDAR Point Clouds",
+        "source_url": "https://arxiv.org/abs/2611.05569",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "ChangeJEPA: Predict Before You Compare for Remote Sensing Change Detection",
+        "source_url": "https://arxiv.org/abs/2611.05570",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Whose Values Are Generated? Measuring Visual Value Leakage in Multilingual Text-to-Image Generation",
+        "source_url": "https://arxiv.org/abs/2611.05578",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Multimodal Fusion Methods for Whole-Slide Images and Clinical Data in Inflammatory Bowel Disease",
+        "source_url": "https://arxiv.org/abs/2611.05579",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "GaussianRenderFormer: Transformer-based Rendering of 3D Gaussian Splats",
+        "source_url": "https://arxiv.org/abs/2611.05593",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "CAPTOR: text-encoder-free grounding by counting caption co-occurrence over the visual words of a frozen encoder",
+        "source_url": "https://arxiv.org/abs/2611.05599",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Spatio-Temporal Multi-Order Interaction for Video Recognition",
+        "source_url": "https://arxiv.org/abs/2611.05633",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "ARIDA - Active railway infrastructure dataset annotation using neural network predictions",
+        "source_url": "https://arxiv.org/abs/2611.05646",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "NitroFusion2: Bringing Adversarial Loss to the Text Stream of Multimodal Diffusion Transformers",
+        "source_url": "https://arxiv.org/abs/2611.05648",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Toward an Optimal Configuration for Tree Species Classification from Bark Images: A Leakage-Safe Ablation Study",
+        "source_url": "https://arxiv.org/abs/2611.05680",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "TRUST-Stereo: Teacher-Assisted Robust Uncertainty-Guided Search and Transfer for Fast Stereo Matching",
+        "source_url": "https://arxiv.org/abs/2611.05689",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Anchored Slice Propagation with Boundary Transport for 3D CT Segmentation from Three Orthogonal Annotated Slices",
+        "source_url": "https://arxiv.org/abs/2611.05693",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "GeoDIVE: Geospatial Descent Informed by Value Estimation",
+        "source_url": "https://arxiv.org/abs/2611.05697",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Mitigating Spurious Invariance in Contrastive Learning: A Probabilistic Self-Supervised Learning Framework for Medical Image Analysis",
+        "source_url": "https://arxiv.org/abs/2611.05734",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "C-WFDM: A ControlNet-Guided Wavelet-Fusion Diffusion Model for Multimodal Brain MRI Completion",
+        "source_url": "https://arxiv.org/abs/2611.05737",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Learning Hierarchical Patch Splitting Policies for Faster Vision Transformers",
+        "source_url": "https://arxiv.org/abs/2611.05742",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Neural networks and games",
+        "source_url": "https://arxiv.org/abs/2611.05706",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Mobility-Aware Mobile Edge Computing for Energy-Balanced Data Collection in IoT-Enabled Underwater Sensor Networks",
+        "source_url": "https://arxiv.org/abs/2611.06186",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "From Admission to Retention: Predicting Durable Offspring in Quality-Diversity Search",
+        "source_url": "https://arxiv.org/abs/2611.06522",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Hallucination Is Linearly Decodable from Mid-Layer Hidden States in Quantized LLMs",
+        "source_url": "https://arxiv.org/abs/2606.02628",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Explainable Anomaly Detection in 5G Networks through Continuous Time Graphs",
+        "source_url": "https://arxiv.org/abs/2611.06225",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Multi-Resident Data Association in Smart Homes via MDP Modeling and Behavior Cloning",
+        "source_url": "https://arxiv.org/abs/2611.06296",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SpikePose: Lightweight Video Human Pose Estimation",
+        "source_url": "https://arxiv.org/abs/2611.06594",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Adaptive Multi Mode: Budget-Aware Routing of Optimizers By Online Landscape Probes",
+        "source_url": "https://arxiv.org/abs/2611.06879",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Learning Time-Varying Connectomes for Stable Behavior Across Development",
+        "source_url": "https://arxiv.org/abs/2611.06895",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Darwin Family: MRI-Trust-Weighted Evolutionary Merging for Training-Free Scaling of Language-Model Reasoning",
+        "source_url": "https://arxiv.org/abs/2605.14386",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Questioning Representational Optimism in Deep Learning: The Fractured Entangled Representation Hypothesis",
+        "source_url": "https://arxiv.org/abs/2505.11581",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "From Heuristic Selection to Automated Algorithm Design: LLMs Benefit from Strong Priors",
+        "source_url": "https://arxiv.org/abs/2603.02792",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "DTA-GT: Direction- and Topology-Aware Graph Transformer for Neural Network Representation Learning",
+        "source_url": "https://arxiv.org/abs/2610.16822",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Generalized Hyperrectangular Prediction Sets in Multivariate Conformal Prediction",
+        "source_url": "https://arxiv.org/abs/2611.05543",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "A Unified Framework for Training-Dataset Aggregation and Exact Machine Unlearning via Gibbs Probability Measures",
+        "source_url": "https://arxiv.org/abs/2611.05544",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Near-Minimax Sample Complexity for Multi-Objective Reinforcement Learning under Generative Models",
+        "source_url": "https://arxiv.org/abs/2611.05562",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Generative Modeling for Cascading Extremes via Autoregressive Transformers",
+        "source_url": "https://arxiv.org/abs/2611.05728",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Risk-Sensitive Non-Parametric and Kernel Bandits",
+        "source_url": "https://arxiv.org/abs/2611.06489",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "TestBED: An Open-Source Toolkit for Bayesian Experimental Design",
+        "source_url": "https://arxiv.org/abs/2611.06633",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Alignment Myopia in Generative AI",
+        "source_url": "https://arxiv.org/abs/2611.06830",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Tight Lower Bounds under Matched High-Order H\\\"older Smoothness and Uniform Convexity",
+        "source_url": "https://arxiv.org/abs/2611.05527",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Towards Efficient Whole Page Ranking with One-Pass Inference",
+        "source_url": "https://arxiv.org/abs/2611.05542",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Support Vector Machines Directly Minimise KL Divergence",
+        "source_url": "https://arxiv.org/abs/2611.05557",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Transport along Local Annealing Paths: Wasserstein Geometry and Multimodal Sampling",
+        "source_url": "https://arxiv.org/abs/2611.05605",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Exact signal recovery from generative priors with sigmoid output activation",
+        "source_url": "https://arxiv.org/abs/2611.05626",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "From Type to Token: Petri Nets, Individual Token Philosophy, and Individualized Causal Effects",
+        "source_url": "https://arxiv.org/abs/2611.05703",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Balance-Guided Forest for Causal Effect Estimation",
+        "source_url": "https://arxiv.org/abs/2611.05723",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Discovering like a scientist: Literature-informed dimensionless learning for physical closure of data-driven equations",
+        "source_url": "https://arxiv.org/abs/2611.05780",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Towards the Query Complexity of Sampling under Strong Log-Concavity and Log-Sobolev Inequalities",
+        "source_url": "https://arxiv.org/abs/2611.05813",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "A low-rank decoder bottleneck bounds reliability in foundation-model perturbation prediction",
+        "source_url": "https://arxiv.org/abs/2611.05849",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Prior-data fitted networks for variable selection",
+        "source_url": "https://arxiv.org/abs/2611.05966",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Offline Learning of Reserve Prices from Censored Bids",
+        "source_url": "https://arxiv.org/abs/2611.06067",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Separation Is a Riesz Energy: How Many Environments Does ICA Need?",
+        "source_url": "https://arxiv.org/abs/2611.06228",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Flexible Intensities Matter: A Comprehensive Re-evaluation of Hawkes Processes and Neural Temporal Point Processes",
+        "source_url": "https://arxiv.org/abs/2611.06348",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Understanding the Out-of-Distribution Generalization of Chain-of-Thought Reasoning in LLMs",
+        "source_url": "https://arxiv.org/abs/2611.06438",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Finite-width shift of the edge of chaos in deep neural networks",
+        "source_url": "https://arxiv.org/abs/2611.06582",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Regularization vs. Convolution in Kernel-Based Hypothesis Testing",
+        "source_url": "https://arxiv.org/abs/2611.06778",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Fundamental Limits of Coherent Imaging in The Presence of Atmospheric Turbulence",
+        "source_url": "https://arxiv.org/abs/2611.06784",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Message-passing graph persistence",
+        "source_url": "https://arxiv.org/abs/2611.06801",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Regression with Many Generated Controls",
+        "source_url": "https://arxiv.org/abs/2611.06855",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Quantifying Error Propagation and Model Collapse in Diffusion Models",
+        "source_url": "https://arxiv.org/abs/2602.16601",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Estimating Implicit Regularization in Deep Learning",
+        "source_url": "https://arxiv.org/abs/2605.05436",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Factual recall in linear associative memories: sharp asymptotics and mechanistic insights",
+        "source_url": "https://arxiv.org/abs/2605.10795",
+        "published": "2026-11-05T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Setting a new standard for responsible AI infrastructure",
+        "source_url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+        "published": "2026-11-05T02:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+        "source_url": "https://openai.com/index/openai-to-acquire-pierre",
+        "published": "2026-11-04T14:30:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+        "source_url": "https://openai.com/index/daybreak-red-aws-govcloud",
+        "published": "2026-11-04T07:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "A thousand fewer paths to root",
+        "source_url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+        "published": "2026-11-04T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Introducing Images 2.6",
+        "source_url": "https://openai.com/index/introducing-images-2-6",
+        "published": "2026-11-04T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+        "source_url": "https://openai.com/index/devrev-enterprise-self-service",
+        "published": "2026-11-04T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Accelerating engineering for the physical world",
+        "source_url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+        "published": "2026-11-03T12:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Cisco defends at machine speed with OpenAI",
+        "source_url": "https://openai.com/index/cisco-cyber",
+        "published": "2026-11-03T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Heimstaden is changing residential real estate management with AI",
+        "source_url": "https://openai.com/index/heimstaden",
+        "published": "2026-11-03T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
+        "source_url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
+        "published": "2026-11-03T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Scaling Git at OpenAI",
+        "source_url": "https://openai.com/index/scaling-git-at-openai",
+        "published": "2026-11-02T15:30:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Introducing the Grid Protectors Program",
+        "source_url": "https://openai.com/index/grid-protectors-program",
+        "published": "2026-11-02T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Rewarding defenders with bigger bug bounties",
+        "source_url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+        "published": "2026-11-02T18:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Preparing our next security sprint to harden OpenAI",
+        "source_url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+        "published": "2026-11-02T18:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "LifeVal",
+        "source_url": "https://openai.com/index/lifeval",
+        "published": "2026-11-02T09:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Qodo builds context into AI code review with Codex",
+        "source_url": "https://openai.com/index/qodo-codex-plugin",
+        "published": "2026-11-02T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
+        "source_url": "https://openai.com/index/dan-driscoll-joins-openai",
+        "published": "2026-11-02T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Making it easier for websites to express AI training preferences",
+        "source_url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+        "published": "2026-10-30T09:30:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Community safety report and new protections for teens",
+        "source_url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+        "published": "2026-10-30T09:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Fair use benefits everyone",
+        "source_url": "https://openai.com/index/fair-use-benefits-everyone",
+        "published": "2026-10-30T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "An updated Model Spec for more capable and beneficial AI",
+        "source_url": "https://openai.com/index/updated-model-spec",
+        "published": "2026-10-29T17:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How we detect frontier model misalignment",
+        "source_url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+        "published": "2026-10-29T09:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Ropes & Gray is developing AI for transactional diligence",
+        "source_url": "https://openai.com/index/ropes-gray-ai-diligence",
+        "published": "2026-10-29T07:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot",
+        "source_url": "https://openai.com/index/credit-saison",
+        "published": "2026-10-29T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Evernote turns AI-driven discovery into paid subscriptions",
+        "source_url": "https://openai.com/ads/customers/evernote",
+        "published": "2026-10-28T19:40:49+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+        "source_url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+        "published": "2026-10-28T13:15:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The future of the firm",
+        "source_url": "https://openai.com/index/the-future-of-the-firm",
+        "published": "2026-10-28T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Legora is building the agentic operating system for legal work",
+        "source_url": "https://openai.com/index/legora",
+        "published": "2026-10-28T09:30:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Retell uses OpenAI models to help power 100M monthly calls",
+        "source_url": "https://openai.com/index/retell-ai",
+        "published": "2026-10-27T15:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+        "source_url": "https://openai.com/index/oracle-apps-in-chatgpt",
+        "published": "2026-10-27T07:00:00+00:00"
+      }
+    }
+  ],
+  "ontology": {
+    "repo": "PaperRadar",
+    "category": "research",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "paper.benchmark_result",
+      "paper.citation_snapshot",
+      "paper.code_repository",
+      "paper.editorial_coverage",
+      "paper.paper_release"
+    ],
+    "event_model_mappings": {
+      "paper_release": "paper.paper_release",
+      "editorial_coverage": "paper.editorial_coverage",
+      "code_repository": "paper.code_repository",
+      "citation_snapshot": "paper.citation_snapshot",
+      "benchmark_result": "paper.benchmark_result"
+    },
+    "entity_type_hints": [
+      "research.area",
+      "research.venue",
+      "research.technique"
+    ],
+    "source_role_ids": [
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "arXiv CS.AI": "primary_evidence",
+      "arXiv CS.CL": "primary_evidence",
+      "arXiv CS.LG": "primary_evidence",
+      "arXiv CS.CV": "primary_evidence",
+      "arXiv CS.NE": "primary_evidence",
+      "arXiv Stat.ML": "primary_evidence"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
+}
