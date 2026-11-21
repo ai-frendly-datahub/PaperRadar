@@ -1,0 +1,507 @@
+{
+  "date": "2026-11-21",
+  "category": "research",
+  "article_count": 215,
+  "source_count": 9,
+  "matched_count": 201,
+  "top_entities": [
+    {
+      "name": "ResearchGeneral",
+      "count": 970
+    },
+    {
+      "name": "Research Areas",
+      "count": 81
+    },
+    {
+      "name": "Techniques",
+      "count": 73
+    },
+    {
+      "name": "Tasks",
+      "count": 41
+    },
+    {
+      "name": "Institutions",
+      "count": 32
+    },
+    {
+      "name": "Venues",
+      "count": 28
+    }
+  ],
+  "sources": {
+    "arXiv CS.LG": 30,
+    "Google AI Blog": 20,
+    "OpenAI Blog": 30,
+    "DeepMind Blog": 30,
+    "Microsoft Research": 10,
+    "Hugging Face Blog": 30,
+    "OpenAlex AI Citation Feed": 30,
+    "Towards Data Science": 20,
+    "The Gradient": 15
+  },
+  "generated_at": "2026-11-21T13:52:17.258105+00:00",
+  "articles": [
+    {
+      "event_model_payload": {
+        "title": "PsyWorld: Profile-Conditioned World Modeling for Human Behavior Prediction",
+        "source_url": "https://arxiv.org/abs/2611.24999",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Watch Where You Linearize: Predicting and Correcting Model-Merging Interference",
+        "source_url": "https://arxiv.org/abs/2611.25000",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Density Feedback Control for Transferability of Generative Sparse Adversarial Attacks",
+        "source_url": "https://arxiv.org/abs/2611.25001",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "A Model of Diverse Sampling from Language Models",
+        "source_url": "https://arxiv.org/abs/2611.25003",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "On the Impact of Feature Reduction Techniques on Adversarial Attacks",
+        "source_url": "https://arxiv.org/abs/2611.25004",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Near-Quadratic Sample Compression for All VC Classes",
+        "source_url": "https://arxiv.org/abs/2611.25011",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "HapBO: Harnessed $\\alpha$-$\\pi$ Bayesian Optimization via Expert Natural Language Priors",
+        "source_url": "https://arxiv.org/abs/2611.25100",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Long-Range Video Presentation Attack Detection: A Three-Class Benchmark Across 1-100 m and Two Sensor Types",
+        "source_url": "https://arxiv.org/abs/2611.25108",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Fast and Memory-Light Evaluation of Density-Based Clusterings with the DISCO Index in R",
+        "source_url": "https://arxiv.org/abs/2611.25114",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Auditing Learned Dynamics in Weather Models",
+        "source_url": "https://arxiv.org/abs/2611.25119",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Temporal Extrapolation of Elastic Seismic Wave Propagation in Layered Media Using Neural Operators",
+        "source_url": "https://arxiv.org/abs/2611.25130",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Rate-distortion Assessment for Hierarchical Content Summarization",
+        "source_url": "https://arxiv.org/abs/2611.25151",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Bayesian $\\kappa$-Explorer for Minimax Model Estimation in MDPs",
+        "source_url": "https://arxiv.org/abs/2611.25160",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Separating Interpretability and Reconstruction in Sparse Autoencoders",
+        "source_url": "https://arxiv.org/abs/2611.25165",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Game-Theoretic Data Allocation for Expert Specialization and Routing",
+        "source_url": "https://arxiv.org/abs/2611.25167",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "PDE-State Conditioning for Learned Optimization Using Physics-Informed Neural Networks",
+        "source_url": "https://arxiv.org/abs/2611.25185",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "{\\phi}TD: Distributional Reinforcement Learning using Characteristic Functions",
+        "source_url": "https://arxiv.org/abs/2611.25208",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Learning to Read Events for Exact State Tracking with Frozen Language Models",
+        "source_url": "https://arxiv.org/abs/2611.25211",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Some Memories Must Fade: Persistence and Decay of User Memories in Model Parameters",
+        "source_url": "https://arxiv.org/abs/2611.25235",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Moving Generality from Model to Modeler: LLM Agents for PHM on a Deployment-Style Benchmark",
+        "source_url": "https://arxiv.org/abs/2611.25252",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Process-Knowledge-Guided Latent Diffusion for Generative Design of Porous Architectures: A Case Study in Aerosol Jet Printing",
+        "source_url": "https://arxiv.org/abs/2611.25264",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Learning to Verify: Signature-Guided Training for Adaptive Adversarial Detection",
+        "source_url": "https://arxiv.org/abs/2611.25271",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Scone: Symmetry-aware Neural Combinatorial Optimization for Graph Coloring",
+        "source_url": "https://arxiv.org/abs/2611.25273",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "DS3M: Deep structured state space models for nonlinear system identification on modern hardware",
+        "source_url": "https://arxiv.org/abs/2611.25274",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Intelligent Embedding Pruning for Large-Scale Recommendation Models",
+        "source_url": "https://arxiv.org/abs/2611.25288",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Cross-Question Reliable Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2611.25292",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Federated Learning of Car Aerodynamics Surrogates with Spectral Optimizers",
+        "source_url": "https://arxiv.org/abs/2611.25300",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "SplitReAlign: Partition-Aware Representation Realignment for Split Federated Unlearning",
+        "source_url": "https://arxiv.org/abs/2611.25301",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Prescribed Bayesian Efficiency under Lifetime Adjustment Costs",
+        "source_url": "https://arxiv.org/abs/2611.25311",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Improving Imitation Policies for Multi-Phase Tasks through Residual Learning Allocation",
+        "source_url": "https://arxiv.org/abs/2611.25320",
+        "published": "2026-11-21T05:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Combatting adversarial distillation",
+        "source_url": "https://openai.com/index/combatting-adversarial-distillation",
+        "published": "2026-11-20T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+        "source_url": "https://openai.com/business/customer-stories/hebbia",
+        "published": "2026-11-20T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Can AI help scientists identify promising drug candidates?",
+        "source_url": "https://openai.com/index/introducing-medchembench",
+        "published": "2026-11-20T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+        "source_url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+        "published": "2026-11-19T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Explore the Codex Security Plugin",
+        "source_url": "https://openai.com/business/learn/codex-security-plugin-demo",
+        "published": "2026-11-19T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "See PR scans in action",
+        "source_url": "https://openai.com/business/learn/pr-scans-demo",
+        "published": "2026-11-19T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Get started with Daybreak Blue",
+        "source_url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+        "published": "2026-11-19T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Deploying Daybreak Red",
+        "source_url": "https://openai.com/business/learn/deploying-daybreak-red",
+        "published": "2026-11-19T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The Silent Consensus",
+        "source_url": "https://openai.com/index/the-silent-consensus",
+        "published": "2026-11-18T10:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Sumitomo Life’s leaders helped teams adopt ChatGPT Enterprise",
+        "source_url": "https://openai.com/business/customer-stories/sumitomo-life",
+        "published": "2026-11-18T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Research acceleration: The jagged frontier",
+        "source_url": "https://openai.com/index/research-acceleration-jagged-frontier",
+        "published": "2026-11-18T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Inside the Codex sandbox",
+        "source_url": "https://openai.com/index/inside-the-codex-sandbox",
+        "published": "2026-11-18T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Managing frontier AI risk: From training to deployment",
+        "source_url": "https://openai.com/index/managing-frontier-ai-risk",
+        "published": "2026-11-18T06:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Advancing chip design with OpenAI models",
+        "source_url": "https://openai.com/index/advancing-chip-design-with-our-models",
+        "published": "2026-11-18T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+        "source_url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+        "published": "2026-11-18T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Introducing GPT-6.2 Astra and Sol",
+        "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+        "published": "2026-11-17T17:45:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Strengthening NATO and allied cyber defenses with AI",
+        "source_url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+        "published": "2026-11-17T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Introducing ChatGPT for Sales",
+        "source_url": "https://openai.com/index/introducing-chatgpt-for-sales",
+        "published": "2026-11-17T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Astra for Law leads in legal intelligence",
+        "source_url": "https://openai.com/index/astra-law-6-2",
+        "published": "2026-11-17T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Introducing OpenAI for Chile",
+        "source_url": "https://openai.com/index/introducing-openai-for-chile",
+        "published": "2026-11-17T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Broadening access to AI for scientists",
+        "source_url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+        "published": "2026-11-16T17:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Strengthening the fight against online child sexual abuse with new tools and support",
+        "source_url": "https://openai.com/index/strengthening-online-child-safety",
+        "published": "2026-11-16T17:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Science at the Frontier: How scientists use ChatGPT",
+        "source_url": "https://openai.com/index/science-at-the-frontier",
+        "published": "2026-11-16T12:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "How Revolut raises ambition without lowering the bar",
+        "source_url": "https://openai.com/business/customer-stories/revolut",
+        "published": "2026-11-16T09:30:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
+        "source_url": "https://openai.com/index/lvmh-media-division-partnership",
+        "published": "2026-11-16T09:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Our first phase of embedded assessments",
+        "source_url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+        "published": "2026-11-16T08:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "More ways to move care forward with ChatGPT for Healthcare",
+        "source_url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+        "published": "2026-11-16T06:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "Advancing computer-use agents for healthcare teams",
+        "source_url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+        "published": "2026-11-16T06:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "The King’s Trust and OpenAI launch £1m partnership",
+        "source_url": "https://openai.com/index/the-kings-trust-and-openai",
+        "published": "2026-11-16T00:00:00+00:00"
+      }
+    },
+    {
+      "event_model_payload": {
+        "title": "At Holiday Extras, dots get to work before anyone asks",
+        "source_url": "https://openai.com/business/customer-stories/holiday-extras-dots",
+        "published": "2026-11-16T00:00:00+00:00"
+      }
+    }
+  ],
+  "ontology": {
+    "repo": "PaperRadar",
+    "category": "research",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "paper.benchmark_result",
+      "paper.citation_snapshot",
+      "paper.code_repository",
+      "paper.editorial_coverage",
+      "paper.paper_release"
+    ],
+    "event_model_mappings": {
+      "paper_release": "paper.paper_release",
+      "editorial_coverage": "paper.editorial_coverage",
+      "code_repository": "paper.code_repository",
+      "citation_snapshot": "paper.citation_snapshot",
+      "benchmark_result": "paper.benchmark_result"
+    },
+    "entity_type_hints": [
+      "research.area",
+      "research.venue",
+      "research.technique"
+    ],
+    "source_role_ids": [
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "arXiv CS.AI": "primary_evidence",
+      "arXiv CS.CL": "primary_evidence",
+      "arXiv CS.LG": "primary_evidence",
+      "arXiv CS.CV": "primary_evidence",
+      "arXiv CS.NE": "primary_evidence",
+      "arXiv Stat.ML": "primary_evidence"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
+}
